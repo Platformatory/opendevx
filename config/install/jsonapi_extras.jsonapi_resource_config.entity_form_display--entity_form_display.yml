@@ -36,10 +36,6 @@ resourceFields:
     enhancer:
       id: ''
     disabled: false
-    publicName: _core
-    enhancer:
-      id: ''
-    disabled: false
   id:
     fieldName: id
     publicName: id

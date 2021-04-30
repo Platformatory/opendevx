@@ -3,7 +3,7 @@ type: profile
 description: 'Platform for Enterprise API Programs & Developer Ecosystems'
 version: VERSION
 core: 8.x
-
+core_version_requirement: ^8 || ^9
 distribution:
   name: OpenDevX
   langcode: en
@@ -24,10 +24,8 @@ install:
   - bootstrap_paragraphs
   - bp_callout
   - bp_card
-  - bp_contact
   - bp_quicklinks
   - bp_statistics
-  - bp_webform
   - br_group
   - breakpoint
   - business_rules

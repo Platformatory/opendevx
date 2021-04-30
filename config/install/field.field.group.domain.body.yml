@@ -4,29 +4,6 @@ dependencies:
   config:
     - field.storage.group.body
     - group.type.domain
-    - paragraphs.paragraphs_type.bp_accordion
-    - paragraphs.paragraphs_type.bp_blank
-    - paragraphs.paragraphs_type.bp_block
-    - paragraphs.paragraphs_type.bp_callout
-    - paragraphs.paragraphs_type.bp_card
-    - paragraphs.paragraphs_type.bp_carousel
-    - paragraphs.paragraphs_type.bp_column_wrapper
-    - paragraphs.paragraphs_type.bp_columns
-    - paragraphs.paragraphs_type.bp_columns_three_uneven
-    - paragraphs.paragraphs_type.bp_columns_two_uneven
-    - paragraphs.paragraphs_type.bp_contact
-    - paragraphs.paragraphs_type.bp_image
-    - paragraphs.paragraphs_type.bp_modal
-    - paragraphs.paragraphs_type.bp_quicklinks
-    - paragraphs.paragraphs_type.bp_simple
-    - paragraphs.paragraphs_type.bp_stat
-    - paragraphs.paragraphs_type.bp_statistics
-    - paragraphs.paragraphs_type.bp_tab_section
-    - paragraphs.paragraphs_type.bp_tabs
-    - paragraphs.paragraphs_type.bp_view
-    - paragraphs.paragraphs_type.bp_webform
-    - paragraphs.paragraphs_type.from_library
-    - paragraphs.paragraphs_type.product_feature
   module:
     - entity_reference_revisions
 id: group.domain.body
@@ -43,101 +20,84 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      bp_stat: bp_stat
-      bp_statistics: bp_statistics
-      from_library: from_library
-      product_feature: product_feature
-      bp_accordion: bp_accordion
-      bp_blank: bp_blank
-      bp_block: bp_block
-      bp_callout: bp_callout
-      bp_card: bp_card
-      bp_carousel: bp_carousel
-      bp_column_wrapper: bp_column_wrapper
-      bp_columns: bp_columns
-      bp_columns_three_uneven: bp_columns_three_uneven
-      bp_columns_two_uneven: bp_columns_two_uneven
-      bp_contact: bp_contact
-      bp_image: bp_image
-      bp_modal: bp_modal
-      bp_quicklinks: bp_quicklinks
-      bp_simple: bp_simple
-      bp_tab_section: bp_tab_section
-      bp_tabs: bp_tabs
-      bp_view: bp_view
-      bp_webform: bp_webform
+    target_bundles: null
     target_bundles_drag_drop:
+      benefit:
+        weight: 27
+        enabled: false
       bp_accordion:
-        enabled: true
         weight: 25
+        enabled: false
       bp_accordion_section:
         weight: 26
         enabled: false
       bp_blank:
-        enabled: true
         weight: 27
+        enabled: false
       bp_block:
-        enabled: true
         weight: 28
+        enabled: false
       bp_callout:
-        enabled: true
         weight: 29
+        enabled: false
       bp_card:
-        enabled: true
         weight: 30
+        enabled: false
       bp_carousel:
-        enabled: true
         weight: 31
+        enabled: false
       bp_column_wrapper:
-        enabled: true
         weight: 32
+        enabled: false
       bp_columns:
-        enabled: true
         weight: 33
+        enabled: false
       bp_columns_three_uneven:
-        enabled: true
         weight: 34
+        enabled: false
       bp_columns_two_uneven:
-        enabled: true
         weight: 35
+        enabled: false
       bp_contact:
-        enabled: true
         weight: 36
+        enabled: false
       bp_image:
-        enabled: true
         weight: 37
+        enabled: false
       bp_modal:
-        enabled: true
         weight: 38
+        enabled: false
       bp_quicklinks:
-        enabled: true
         weight: 39
+        enabled: false
       bp_simple:
-        enabled: true
         weight: 40
+        enabled: false
       bp_stat:
-        enabled: true
         weight: 5
+        enabled: false
       bp_statistics:
-        enabled: true
         weight: 6
+        enabled: false
       bp_tab_section:
-        enabled: true
         weight: 43
+        enabled: false
       bp_tabs:
-        enabled: true
         weight: 44
+        enabled: false
       bp_view:
-        enabled: true
         weight: 45
+        enabled: false
       bp_webform:
-        enabled: true
         weight: 46
+        enabled: false
       from_library:
-        enabled: true
         weight: 7
+        enabled: false
+      kpi:
+        weight: 51
+        enabled: false
       product_feature:
-        enabled: true
         weight: 8
+        enabled: false
 field_type: entity_reference_revisions
