@@ -1,0 +1,6 @@
+services:
+  odx_backoffice_guide.event_subscriber:
+    class: Drupal\odx_backoffice_guide\EventSubscriber\OdxBackofficeGuideSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

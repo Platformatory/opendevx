@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies: {  }
+id: searchapisproductsusecasesanddocs
+label: SearchAPIsProductsUseCasesAndDocs
+searchPluginId: BasicTitleSearch
+searchPluginConfig: '{"bundle_filter":{"api":"api","book":"book","news":"news","product":"product","usecase":"usecase"},"language_filter":0,"langcode_includes":{"zxx":0,"und":0}}'
+inputSelectors: '#search'
+numberOfResults: 5
+emptyResult: ''
+viewModes:
+  block: default
+  block_content: default
+  content_moderation_state: default
+  entity_legal_document: default
+  file: default
+  group: default
+  group_content: default
+  media: default
+  menu_link_content: default
+  node: token
+  paragraph: default
+  paragraphs_library_item: default
+  path_alias: default
+  shortcut: default
+  taxonomy_term: default
+  tour: default
+  user: default
+keyMinLength: 1
+keyMaxLength: 10
+allResultsLink: false
+allResultsLinkThreshold: 5
+breakpoint: 0
+resultLocation: ''
+highlightingEnabled: true
+anonymousSearch: true
+cleanUpFiles: true
+filesExpiryTime: '-1 day'

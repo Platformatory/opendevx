@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.auto_renew
+    - node.type.subscription
+id: node.subscription.auto_renew
+field_name: auto_renew
+entity_type: node
+bundle: subscription
+label: 'Auto Renew'
+description: 'Whether this subscription rolls forward automatically at the end of the subscription date'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

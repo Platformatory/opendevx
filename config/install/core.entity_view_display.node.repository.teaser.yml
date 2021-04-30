@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.repository.apis_count
+    - field.field.node.repository.config
+    - field.field.node.repository.credentials
+    - field.field.node.repository.description
+    - field.field.node.repository.env
+    - field.field.node.repository.internal_metadata
+    - field.field.node.repository.mode
+    - field.field.node.repository.provider
+    - field.field.node.repository.sync
+    - field.field.node.repository.version
+    - node.type.repository
+  module:
+    - user
+id: node.repository.teaser
+targetEntityType: node
+bundle: repository
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  apis_count: true
+  config: true
+  credentials: true
+  description: true
+  env: true
+  internal_metadata: true
+  mode: true
+  provider: true
+  sync: true
+  version: true

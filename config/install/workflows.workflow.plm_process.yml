@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.product
+  module:
+    - content_moderation
+id: plm_process
+label: 'PLM Process'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    marketing_review:
+      published: false
+      default_revision: false
+      label: 'Marketing Review'
+      weight: -1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    request_marketing_review:
+      label: 'Request Marketing Review'
+      from:
+        - draft
+      to: marketing_review
+      weight: 2
+  entity_types:
+    node:
+      - product
+  default_moderation_state: draft

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: odx-administration
+label: 'ODX Administration'
+description: 'ODX Menu - Insulate Developer Portal from Drupal land'
+locked: false

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.billing_provider
+    - node.type.billing_engine
+  module:
+    - options
+id: node.billing_engine.billing_provider
+field_name: billing_provider
+entity_type: node
+bundle: billing_engine
+label: 'Billing Provider'
+description: 'Configure the billing engine.'
+required: true
+translatable: true
+default_value:
+  -
+    value: stripe
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,13 @@
+# Main theme library.
+global:
+  js:
+    js/odx-material-admin.js: {}
+  css:
+    theme:
+      css/custom.css: {}
+      css/overrides.css: {}
+# Odx customizations
+material:
+  css:
+    theme:
+      css/materialize.css: {}

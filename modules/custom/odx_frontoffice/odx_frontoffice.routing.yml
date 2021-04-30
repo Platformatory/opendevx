@@ -1,0 +1,149 @@
+odx_frontoffice.global.events:
+  path: '/events'
+  defaults:
+    _title: 'Events'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeGlobalsController::globalEvents'
+  requirements:
+    _permission: 'access content'
+
+odx_frontoffice.global.apps:
+  path: '/apps'
+  defaults:
+    _title: 'My Apps'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeGlobalsController::apps'
+  requirements:
+    _permission: 'create odx apps'
+
+odx_frontoffice.global.subscriptions:
+  path: '/subscriptions'
+  defaults:
+    _title: 'My Subscriptions'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeGlobalsController::subscriptions'
+  requirements:
+    _permission: 'create odx apps'
+
+odx_frontoffice.domain.api_products:
+  path: '/domain/{group}/products'
+  defaults:
+    _title: 'API Products'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeDomainsController::products'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+
+odx_frontoffice.domain.usecases:
+  path: '/domain/{group}/use-cases'
+  defaults:
+    _title: 'Use Cases'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeDomainsController::usecases'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+
+odx_frontoffice.domain.docs:
+  path: '/domain/{group}/docs'
+  defaults:
+    _title: 'Docs'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeDomainsController::docs'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+
+# Products
+odx_frontoffice.products.api:
+  path: '/product/{product}/api'
+  defaults:
+    _title: 'APIs'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeProductsController::api'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      product:
+        type: product_slug
+
+odx_frontoffice.products.docs:
+  path: '/product/{product}/docs'
+  defaults:
+    _title: 'API Docs'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeProductsController::docs'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      product:
+        type: product_slug
+
+odx_frontoffice.products.pricing:
+  path: '/product/{product}/pricing'
+  defaults:
+    _title: 'Pricing Info'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeProductsController::pricing'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      product:
+        type: product_slug
+
+# api spec
+odx_frontoffice.api.spec:
+  path: '/api/{uuid}/spec'
+  defaults:
+    _title: 'Browse the API'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeAPIsController::spec'
+  requirements:
+    _permission: 'access content'
+
+# api pages
+odx_frontoffice.api.browse:
+  path: '/product/{product}/api/{api}/browse'
+  defaults:
+    _title: 'Browse the API'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeAPIsController::browse'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      product:
+        type: product_slug
+      api:
+        type: api_slug
+
+odx_frontoffice.api.try:
+  path: '/product/{product}/api/{api}/try'
+  defaults:
+    _title: 'Try the API'
+    _controller: '\Drupal\odx_frontoffice\Controller\OdxFrontofficeAPIsController::try'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      product:
+        type: product_slug
+      api:
+        type: api_slug
+
+
+# User pages
+
+odx_frontoffice.login:
+  path: '/portal/login'
+  defaults:
+    _title: 'Login'
+    _form: 'Drupal\odx_frontoffice\Form\UserLoginForm'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    _maintenance_access: TRUE
+    _admin_route: TRUE
+    _odx_login: TRUE

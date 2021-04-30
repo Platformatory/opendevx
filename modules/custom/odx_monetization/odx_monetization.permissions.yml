@@ -1,0 +1,4 @@
+administer odx_monetization configuration:
+  title: 'Administer odx_monetization configuration'
+  description: 'Optional description.'
+  restrict access: true

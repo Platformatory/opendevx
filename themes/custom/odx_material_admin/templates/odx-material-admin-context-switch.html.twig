@@ -1,0 +1,20 @@
+<a class='dropdown-trigger btn context-switcher' id='context-switch' href='#' data-target='context-dropdown'>
+  {% if current_context %}
+    {{ current_context }}
+  {% else %}
+    {{ 'Global Context'|t }}
+  {% endif %}
+  <i class="material-icons right">layers</i>
+</a>
+<ul id='context-dropdown' class='dropdown-content' tabindex='0'>
+  {% for context_id,context_name in contexts %}
+  <li>
+    <a href="?context={{ context_id }}">{{ context_name}}</a>
+  </li>
+  {% endfor %}
+  {% if current_context %}
+  <li>
+    <a class="global-context" href="javascript:void(0);">{{ 'Global Context'|t }}</a>
+  </li>
+  {% endif %}
+</ul>

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: api_domain
+label: 'API Domain'
+type: 'canonical_entities:group'
+pattern: 'domain/[group:title]'
+selection_criteria:
+  cc787e0d-d685-4352-81bf-5ad685f68f0f:
+    id: 'entity_bundle:group'
+    bundles:
+      domain: domain
+    negate: false
+    context_mapping:
+      group: group
+    uuid: cc787e0d-d685-4352-81bf-5ad685f68f0f
+selection_logic: and
+weight: -5
+relationships: {  }

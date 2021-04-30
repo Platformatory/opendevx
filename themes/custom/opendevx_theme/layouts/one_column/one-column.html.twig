@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display onecolumn layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout wrapper.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if content %}
+  <section {{ region_attributes.main.addClass('layout__region', 'layout__region--main') }}>
+    {{ content.main }}
+  </section>
+{% endif %}
+

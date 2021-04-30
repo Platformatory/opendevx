@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.billing_engine.billing_provider
+    - field.field.node.billing_engine.credentials
+    - field.field.node.billing_engine.description
+    - field.field.node.billing_engine.env
+    - field.field.node.billing_engine.mode
+    - field.field.node.billing_engine.version
+    - node.type.billing_engine
+  module:
+    - jsonb
+    - options
+    - user
+id: node.billing_engine.default
+targetEntityType: node
+bundle: billing_engine
+mode: default
+content:
+  billing_provider:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  credentials:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: content
+  description:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  env:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mode:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  version:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

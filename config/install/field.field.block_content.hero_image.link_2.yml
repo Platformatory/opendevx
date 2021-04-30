@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_image
+    - field.storage.block_content.link_2
+  module:
+    - link
+id: block_content.hero_image.link_2
+field_name: link_2
+entity_type: block_content
+bundle: hero_image
+label: 'Link 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

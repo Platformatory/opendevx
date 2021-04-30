@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.internal_metadata
+    - node.type.api
+  module:
+    - jsonb
+id: node.api.internal_metadata
+field_name: internal_metadata
+entity_type: node
+bundle: api
+label: 'Internal Metadata'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json

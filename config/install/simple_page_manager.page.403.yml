@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - odx_frontoffice
+  theme:
+    - opendevx_theme
+id: '403'
+label: '403'
+path: /403
+sections:
+  -
+    layout_id: opendevx_one_column
+    layout_settings:
+      label: 'Display message'
+    components:
+      1a22a43c-0b33-4123-b518-39985b4d558b:
+        uuid: 1a22a43c-0b33-4123-b518-39985b4d558b
+        region: main
+        configuration:
+          id: odx_frontoffice_custom_html
+          label: '403 message'
+          provider: odx_frontoffice
+          label_display: '0'
+          html: "<div class=\"text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl\">\r\n              <h2 class=\"text-base font-semibold tracking-wider text-cyan-600 uppercase\">Access denied</h2>\r\n              <p class=\"mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl\">\r\n                You don't have the required permissions to view this page.\r\n              </p>\r\n              <p class=\"mt-5 mx-auto max-w-prose text-xl text-gray-500\">\r\n                Please login or contact the administrator.\r\n              </p>\r\n            </div>"
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+menu:
+  title: ''
+  description: ''
+  weight: 0
+  enabled: false
+  menu_name: main
+  parent: ''
+  expanded: false
+access:
+  type: none
+  options: {  }

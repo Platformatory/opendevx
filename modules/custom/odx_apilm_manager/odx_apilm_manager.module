@@ -1,0 +1,227 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX Apilm Manager module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use \Drupal\node\Entity\Node;
+use Drupal\odx_apilm_manager\Connector;
+
+function odx_apilm_manager_metadata() {
+  return array(
+    'aws' => array(
+      'label' => 'AWS API Gateway',
+      'disabled' => FALSE,
+      'version' => 'v1',
+      'classpath' => 'Drupal\odx_apilm_manager\Connector\AwsApiGateway',
+    ),
+    'azure' => array(
+      'label' => 'Azure API Management',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'apigee_saas' => array(
+      'label' => 'Apigee Enterprise',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => 'Drupal\odx_apilm_manager\Connector\ApigeeEnterprise',
+    ),
+    'apigee_hybrid' => array(
+      'label' => 'Apigee Hybrid',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'kong' => array(
+      'label' => 'Kong Enterprise',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+      ),
+    'wso2' => array(
+      'label' => 'WSO2 API Manager',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'mulesoft' => array(
+      'label' => 'Mulesoft',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'apiconnect' => array(
+      'label' => 'IBM API Connect',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'layer7' => array(
+      'label' => 'Broadcom CA Layer 7',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'axway' => array(
+      'label' => 'Axway API Management',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+    'webmethods' => array(
+      'label' => 'Software AG WebMethods',
+      'disabled' => TRUE,
+      'version' => 'v1',
+      'classpath' => '',
+    ),
+  );
+}
+
+ function odx_apilm_manager_service_instance(Drupal\node\NodeInterface $repository) { // Poor man's plugin manager
+   $provider = $repository->provider->value;
+   $provider_metadata = odx_apilm_manager_metadata();
+   $class = $provider_metadata[$provider]['classpath'];
+   $creds = json_decode($repository->credentials->value, true);
+   $meta = json_decode($repository->internal_metadata->value, true);
+   $apilm = new $class($creds, $meta);
+   return $apilm;
+ }
+
+function odx_apilm_manager_node_presave(Drupal\node\NodeInterface $node) { // TODO: put this into a better place/hook
+  if($node->getType() == 'repository') {
+    $meta = json_decode($node->internal_metadata->value, true);
+    //Drupal::logger('content_entity_example')->notice('pre>'. $met);
+    if(empty($meta['run_dir'])) {
+      $meta['run_dir'] =  _odx_apilm_manager_generate_store_path($node);
+      mkdir($meta['run_dir']);
+    }
+    $meta['uuid'] = $node->uuid();
+    $node->set('internal_metadata', json_encode($meta));
+  }
+  // Don't hit application cred gen logic ever.
+  if($node->getType() == 'application123') {
+    if(!empty($node->credentials->value)) {
+      return; // TODO: implement a flag to revoke or delete old credentials and provision a new one (or perhaps take this code to a separate command)
+    }
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id()); // refactor
+    $product = $node->get('products')->first()->get('entity')->getTarget()->getValue();
+    $grouping = _get_api_groups_by_product($product);
+    $app_metadata = array(
+      'name' => $node->getTitle(),
+      'id' => $node->id(),
+      'version' => $node->version->value,
+      'description' => $node->description->value,
+      'owner' => $user->getEmail(),
+      'product' => $product->rid->value,
+    );
+    $credentials = array();
+    foreach($grouping as $repo_id => $group) {
+      // TODO: replace this with a plugin manager managed instance
+      $apilm = odx_apilm_manager_service_instance($group['repository']);
+      $credentials = array();
+      foreach($group['apis'] as $index => $api) {
+        $app_metadata['apis'][] = array('metadata' => json_decode($api->internal_metadata->value, JSON_OBJECT_AS_ARRAY), 'rid' => $api->rid->value, 'env' => $api->env->value);
+        $apis[] = $api->id();
+      }
+        // Create the app
+      $credentials[] = array(
+        'credentials' => $apilm->createApp($app_metadata),
+        'source' => $repo_id,
+        'valid_for' => $apis
+      );
+    }
+    // Stash credentials into the JSON store
+    $node->set('credentials', json_encode($credentials, JSON_PRETTY_PRINT));
+  }
+  if($node->getType() == 'api') {
+    $existing = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['title' => $node->getTitle(), 'type' => 'product']);
+    if($product = reset($existing)) {
+      return;
+    }
+    if($node->get('is_api_product')->getString() == TRUE) {
+      _create_api_product_from_api($node);
+    }
+  }
+}
+
+function odx_apilm_manager_node_insert(Drupal\node\NodeInterface $node) {
+  if($node->getType() == 'api') {
+    if($node->get('is_api_product')->getString() == TRUE) {
+      _create_api_product_from_api($node);
+    }
+  }
+}
+
+function odx_apilm_manager_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'application') {
+    // $usage = _get_usage_for_app($entity);
+    // do stuff with usage here
+    // $build['foobar']['#plain_text'] = 'ABCD';
+  }
+}
+
+function _get_usage_for_app(\Drupal\node\NodeInterface $entity) {
+  $product = $entity->get('products')->first()->get('entity')->getTarget()->getValue();
+  $app_metadata = array(
+    'name' => $entity->getTitle(),
+    'product' => $product->rid->value,
+    'duration' => array(
+      'start' => date('Y-m-d', strtotime('now -1 week')),
+      'end' => date('Y-m-d', strtotime('now')),
+    ),
+  );
+  $credential_group = json_decode($entity->credentials->value, JSON_OBJECT_AS_ARRAY);
+  $usage = array();
+  foreach($credential_group as $group) {
+    $credential = $group['credentials'];
+    $issuer = odx_apilm_manager_service_instance(Node::load($group['source']));
+    $app_metadata['id'] = $credential['credential_id'];
+    $usage[$credential['credential_id']] = $issuer->getUsage($app_metadata);
+  }
+  return $usage;
+}
+
+
+function _odx_apilm_manager_generate_store_path(Drupal\node\NodeInterface $node) {
+  $path = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $node->getTitle()))) .'__'. $node->uuid();
+  return 'private://gateway-imports/' . $path;
+}
+
+function _get_api_groups_by_product(Drupal\node\NodeInterface $node) {
+  $apis = $node->get('apis')->referencedEntities();
+  $map = array();
+  foreach($apis as $key => $api) {
+    $source = $api->get('source')->first()->get('entity')->getTarget()->getValue();
+    $map[$source->id()]['repository'] = $source;
+    $map[$source->id()]['apis'][$api->id()] = $api;
+  }
+  return $map;
+}
+
+function _create_api_product_from_api(Drupal\node\NodeInterface $api) {
+  $product = [
+    'type' => 'product',
+    'title' => $api->getTitle(),
+    'apis' => $api->id(),
+  ];
+  $node = Node::create($product);
+  $node->save();
+}
+
+function _odx_apilm_app_metadata(Drupal\node\NodeInterface $node) {
+  $product = $node->get('products')->first()->get('entity')->getTarget()->getValue();
+  return array(
+    'name' => $node->getTitle(),
+    'id' => $node->id(),
+    'version' => $node->version->value,
+    'description' => $node->description->value,
+    'owner' => $node->getOwner()->getEmail(),
+    'product' => $product->rid->value,
+  );
+}

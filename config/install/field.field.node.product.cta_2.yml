@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.cta_2
+    - node.type.product
+  module:
+    - link
+id: node.product.cta_2
+field_name: cta_2
+entity_type: node
+bundle: product
+label: 'CTA 2'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/tickets/create'
+    title: 'Get Support'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

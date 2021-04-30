@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display twocolumn layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout wrapper.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <section>
+    <div class="container px-5 py-5 mx-auto flex flex-wrap">
+      <div class="flex flex-wrap -m-4">
+      {% if content.main %}
+        <div class="p-4 lg:w-1/3 md:w-full">
+          {{ content.main }}
+        </div>
+      {% endif %}
+
+      {% if content.sidebar1 %}
+        <div class="p-4 lg:w-1/3 md:w-full">
+          {{ content.sidebar1 }}
+        </div>
+      {% endif %}
+
+      {% if content.sidebar2 %}
+        <div class="p-4 lg:w-1/3 md:w-full">
+          {{ content.sidebar2 }}
+        </div>
+      {% endif %}
+      </div>
+    </div>
+</section>
+{% endif %}
+

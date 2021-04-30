@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.domain.apis_count
+    - field.field.group.domain.applications_count
+    - field.field.group.domain.body
+    - field.field.group.domain.content_types
+    - field.field.group.domain.description
+    - field.field.group.domain.hero_image
+    - field.field.group.domain.image
+    - field.field.group.domain.layout_builder__layout
+    - field.field.group.domain.mode
+    - field.field.group.domain.primary_color
+    - field.field.group.domain.products_count
+    - field.field.group.domain.users_count
+    - group.type.domain
+  module:
+    - color_field
+    - media_library
+    - paragraphs
+id: group.domain.default
+targetEntityType: group
+bundle: domain
+mode: default
+content:
+  body:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  content_types:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  hero_image:
+    type: media_library_widget
+    weight: 7
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  image:
+    type: media_library_widget
+    weight: 6
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  mode:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  primary_color:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+hidden:
+  apis_count: true
+  applications_count: true
+  layout_builder__layout: true
+  path: true
+  products_count: true
+  uid: true
+  users_count: true

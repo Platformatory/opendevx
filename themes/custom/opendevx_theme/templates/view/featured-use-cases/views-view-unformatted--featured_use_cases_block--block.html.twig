@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<h1 class="text-xl text-gray-900 my-4 font-semibold">{{ 'Featured Case studies'|t }}</h1>
+<ul class="divide-y divide-gray-200">
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'relative bg-white py-5 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 border-b-2',
+    ]
+  %}
+  <li{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </li>
+{% endfor %}
+</ul>

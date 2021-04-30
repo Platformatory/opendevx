@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kpi.description
+    - field.field.paragraph.kpi.icon
+    - field.field.paragraph.kpi.stat
+    - paragraphs.paragraphs_type.kpi
+  module:
+    - text
+id: paragraph.kpi.default
+targetEntityType: paragraph
+bundle: kpi
+mode: default
+content:
+  description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  icon:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  stat:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

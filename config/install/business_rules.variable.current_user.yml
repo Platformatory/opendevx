@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: current_user
+label: 'Current user'
+description: 'Represents the current logged user.'
+settings:
+  current_or_defined: current
+tags:
+  defaults: defaults
+type: user_variable
+target_entity_type: user
+target_bundle: user

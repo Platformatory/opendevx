@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.api_type
+    - node.type.api
+  module:
+    - options
+id: node.api.api_type
+field_name: api_type
+entity_type: node
+bundle: api
+label: 'API Type'
+description: 'Choose the type of API you''re trying to onboard.'
+required: true
+translatable: false
+default_value:
+  -
+    value: rest
+default_value_callback: ''
+settings: {  }
+field_type: list_string

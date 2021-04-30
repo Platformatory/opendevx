@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.features
+    - node.type.product
+    - paragraphs.paragraphs_type.product_feature
+  module:
+    - entity_reference_revisions
+id: node.product.features
+field_name: features
+entity_type: node
+bundle: product
+label: Features
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_feature: product_feature
+    target_bundles_drag_drop:
+      product_feature:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

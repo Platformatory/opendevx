@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX Developer Journey module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\checklistapi\ChecklistapiChecklist;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_checklistapi_checklist_info().
+ *
+ * Defines a checklist for the ODX developer experience
+ * .
+ */
+function odx_developer_journey_checklistapi_checklist_info() {
+  $definitions = [];
+  $definitions['developer_journey_checklist'] = [
+    '#title' => t('Ecosystem Developer Guide'),
+    '#path' => '/admin/config/development/developer-journey',
+    '#callback' => 'odx_developer_journey_checklistapi_checklist_items',
+    '#description' => t('An example implementation of the Checklist API.'),
+    '#help' => t('<p>This checklist enables API developers to get started developing apps</p>'),
+    '#storage' => 'state',
+  ];
+  return $definitions;
+}
+
+/**
+ * Implements callback_checklistapi_checklist_items() for example_checklist.
+ */
+function odx_developer_journey_checklistapi_checklist_items() {
+  $checklist = array();
+
+  $checklist['explore_programs'] = array(
+    '#title' => t('Explore API Developer Programs'),
+    'browse_api_domains' => array('#title' => t('Browse API Domain Directory')),
+    'view_api_products_collection' => array('#title' => t('Find featured API Product Curations in a domain')),
+    'search_api_products' => array('#title' => t('Search for relevant API products within or across API domains')),
+    'search_use_cases' => array('#title' => t('Review popular use-cases and find API products fit to purpose')),
+  );
+  
+  $checklist['start_project'] = array(
+    '#title' => t('Start a project'),
+    'browse_api_reference' => array('#title' => t('Internalize a high level overwiew of your target API via OpenAPI documentation and request-response samples')),
+    'register_app' => array('#title' => t('Register an Application against chosen API products')),
+    'try_it_out' => array('#title' => t('Try out an API with your project in the in-browser, interactive console without any coding')),
+    'request_sandbox_access' => array('#title' => t('Request API sandbox access')),
+    'get_started' => array('#title' => t('Use polyglot conde-snippets and SDKs to get started quickly')), 
+  );
+
+  $checklist['deep_dive'] = array(
+    '#title' => t('Take the deeper dive'),
+    'browse_docs' => array('#title' => t('Review detailed how-to guides and polyglot tutorials to understand gotchas in detail')),
+    'get_support' => array('#title' => t('Get white glove assistance from the DevRel, API support teams and the community')),
+    'get_paid_plan' => array('#title' => t('Request production access and activate your production subscription')),
+  ); 
+
+  $checklist['app_operations'] = array(
+    '#title' => t('Operate you app, like a product'),
+    'monitor_api_health' => array('#title' => t('Follow our API health check for transparent reporting and SLA upkeep')),
+    'monitor_app_health' => array('#title' => t('Monitor health and alerting around your app, particularly error rates, quota management and call logs')),
+    'rotate_keys' => array('#title' => t('We recommend rotating your App keys and secrets regularly to ensure you\'ve got your security covered')),
+    'review_billing' => array('#title' => t('Review billing and set billing thresholds and alerts. Also configure how you pay')),
+    'app_lifecycle' => array('#title' => t('Monitor API and Product updates, depreceations and actions needed')),
+  );
+
+  $checklist['co_innovate'] = array(
+    '#title' => t('Co innovate with us'),
+    'get_featured' => array('#title' => t('Get your app, solution featured and co-marketed with us our alliances. For incubator ecosystems and profit')),
+    'make_money' => array('#title' => t('Get better RoI on your apps through rev share and joint goto market opportunities')),
+    'subscribe_content' => array('#title' => t('Subscribe and paricipate in our digest newsletter, events and webinars to stay abreast with our innovation hub')),
+    'feature_requests' => array('#title' => t('Interact with API product managers and Dev Rel Managers on our roadmap and provide us feedback and feature requests')),
+  );  
+
+  return $checklist;
+}

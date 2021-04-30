@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+    - node.type.application
+  module:
+    - gnode
+    - node
+id: domain-group_node-application
+label: 'Domain: Group node (Application)'
+description: 'Adds <em class="placeholder">Application</em> content to groups both publicly and privately.'
+group_type: domain
+content_plugin: 'group_node:application'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

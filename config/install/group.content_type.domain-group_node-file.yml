@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+    - node.type.file
+  module:
+    - gnode
+    - node
+id: domain-group_node-file
+label: 'Domain: Group node (File)'
+description: 'Adds <em class="placeholder">File</em> content to groups both publicly and privately.'
+group_type: domain
+content_plugin: 'group_node:file'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

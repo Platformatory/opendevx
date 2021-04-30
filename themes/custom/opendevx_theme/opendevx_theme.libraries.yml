@@ -1,0 +1,52 @@
+# Main theme library.
+global:
+  js:
+    js/opendevx.js: {}
+  css:
+    theme:
+      dist/css/style.css: {}
+
+highlightjs:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css: { type: external, minified: true }
+
+tabby:
+  js:
+    //cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css: { type: external, minified: true }
+
+redoc:
+  js:
+    //cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js: { type: external }
+
+jquerymodal:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css: { type: external, minified: true }
+
+voyager:
+  js:
+    //cdn.jsdelivr.net/npm/react@16/umd/react.production.min.js: { type: external, minified: true }
+    //cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js: { type: external, minified: true }
+    //cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css: { type: external, minified: true }
+
+asyncapi:
+  js:
+    //cdn.jsdelivr.net/gh/jfveronelli/instant-asyncapi-doc/dist/index.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdn.jsdelivr.net/gh/jfveronelli/instant-asyncapi-doc/dist/index.css: { type: external, minified: true }
+
+      #swagger_api_auth:
+      #js:
+    

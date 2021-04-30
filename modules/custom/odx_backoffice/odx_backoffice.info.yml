@@ -1,0 +1,6 @@
+name: ODX Backoffice
+type: module
+description: All backoffice driven ops go here.
+package: Platformatory
+core: 8.x
+core_version_requirement: ^8 || ^9

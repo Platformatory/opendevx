@@ -1,0 +1,132 @@
+[
+  {
+    "link": "/backoffice/guide",
+    "title": "Help",
+    "children": [
+      {
+        "link": "/backoffice/dashboard",
+        "icon": "dashboard",
+        "title": "Dashboard"
+      },
+      {
+        "link": "/backoffice/guide",
+        "icon": "directions",
+        "title": "Guide"
+      },
+      {
+        "link": "/backoffice/import",
+        "icon": "import_export",
+        "title": "Import Content"
+      }
+    ]
+  },
+  {
+    "link": "/backoffice/discover",
+    "title": "Discover",
+    "children": [
+      {
+        "link": "/backoffice/discover/repositories",
+        "icon": "storage",
+        "title": "Repositories"
+      },
+      {
+        "link": "/backoffice/discover/apis",
+        "icon": "developer_mode",
+        "title": "APIs"
+      },
+      {
+        "link": "/backoffice/discover/users",
+        "icon": "recent_actors",
+        "title": "Developers"
+      },
+      {
+        "link": "/backoffice/discover/applications",
+        "icon": "apps",
+        "title": "Applications"
+      }
+    ]
+  },
+  {
+    "link": "#",
+    "title": "Organize",
+    "children": [
+      {
+        "link": "/backoffice/organize/domains",
+        "icon": "group_work",
+        "title": "Domains"
+      },
+      {
+        "link": "/backoffice/organize/products",
+        "icon": "shop",
+        "title": "Products"
+      },
+      {
+        "link": "/backoffice/organize/content",
+        "icon": "collections",
+        "title": "Content & Docs"
+      },
+      {
+        "link": "/backoffice/organize/operations",
+        "icon": "report",
+        "title": "Operations"
+      }
+    ]
+  },
+  {
+    "link": "#",
+    "title": "Monetize",
+    "children": [
+      {
+        "link": "/backoffice/monetize/billing-engines",
+        "icon": "store_mall_directory",
+        "title": "Billing Engines"
+      },
+      {
+        "link": "/backoffice/monetize/plans",
+        "icon": "data_usage",
+        "title": "Billing Plans"
+      },
+      {
+        "link": "/backoffice/monetize/subscriptions",
+        "icon": "subscriptions",
+        "title": "Subscriptions"
+      }
+    ]
+  },
+  {
+    "link": "#",
+    "title": "Administer",
+    "children": [
+      {
+        "link": "/backoffice/administer/integrations",
+        "icon": "wifi_tethering",
+        "title": "Settings"
+      },
+      {
+        "link": "/backoffice/administer/management-apis",
+        "icon": "ac_unit",
+        "title": "API Docs"
+      },
+      {
+        "link": "/backoffice/administer/workflows",
+        "icon": "linear_scale",
+        "title": "Workflows"
+      },
+      {
+        "link": "/backoffice/administer/rules",
+        "icon": "build",
+        "title": "Rules"
+      },
+      {
+        "link": "/backoffice/administer/iam",
+        "icon": "perm_identity",
+        "title": "Identity & Access"
+      },
+      {
+        "link": "/backoffice/administer/contracts",
+        "icon": "check_box",
+        "title": "Legal Terms & Contracts"
+      }
+    ]
+  }
+]

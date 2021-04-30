@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: community_posts
+label: 'Community Posts'
+type: 'canonical_entities:node'
+pattern: 'blog/[node:title]'
+selection_criteria:
+  924305e8-65f4-4579-ae60-5c0e9fb0f64e:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 924305e8-65f4-4579-ae60-5c0e9fb0f64e
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.description
+    - group.type.domain
+id: group.domain.description
+field_name: description
+entity_type: group
+bundle: domain
+label: Description
+description: 'A description of this API Domain'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

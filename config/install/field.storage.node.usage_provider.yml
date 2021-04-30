@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.usage_provider
+field_name: usage_provider
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: gateway
+      label: 'API Gateway'
+    -
+      value: gateway_proxy
+      label: 'API Edge Proxy'
+    -
+      value: gateway_agent
+      label: 'API Gateway Agent'
+    -
+      value: standard_collector
+      label: 'Standard Log Collector'
+    -
+      value: custom
+      label: Custom
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: odx_administrator
+label: 'ODX Administrator'
+weight: -4
+is_admin: null
+permissions:
+  - 'administer odx backoffice'
+  - 'avatars avatar_generator user gravatar'
+  - 'configure editable domain group layout overrides'
+  - 'create and edit custom blocks'
+  - 'create application content'
+  - 'delete own repository content'
+  - 'edit own application content'
+  - 'use text format markdown'

@@ -1,0 +1,48 @@
+<div class="relative bg-gray-50">
+  <main class="lg:relative">
+    <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+      <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+
+        <div class="mt-8 overflow-hidden">
+          <dl class="-mx-8 -mt-8 flex flex-wrap">
+            <div class="flex flex-col px-8 pt-8">
+              <dd class="order-2 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
+                {{ kpis.0.stat }}
+              </dd>
+              <dt class="order-1 text-base font-medium text-gray-500">
+                {{ kpis.0.description }}
+              </dt>
+            </div>
+            <div class="flex flex-col px-8 pt-8">
+              <dd class="order-2 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
+                {{ kpis.1.stat }}
+              </dd>
+              <dt class="order-1 text-base font-medium text-gray-500">
+                {{ kpis.1.description }}
+              </dt>
+            </div>
+          </dl>
+        </div>
+
+        <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+          {{ description }}
+        </p>
+        <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+          <div class="rounded-md shadow">
+            <a href="{{ cta_link }}?destination={{ dest }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+              Start Project
+            </a>
+          </div>
+          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+            <a href="/node/add/ticket?destination={{ dest }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+              Get Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+      <img class="absolute inset-0 w-full h-full object-cover" src="{{ image_url }}" alt="">
+    </div>
+  </main>
+</div>

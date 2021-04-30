@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kpi.description
+    - field.field.paragraph.kpi.icon
+    - field.field.paragraph.kpi.stat
+    - paragraphs.paragraphs_type.kpi
+  module:
+    - font_awesome
+    - text
+id: paragraph.kpi.default
+targetEntityType: paragraph
+bundle: kpi
+mode: default
+content:
+  description:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  icon:
+    weight: 2
+    settings:
+      default_value: 'fas fa-eye'
+    third_party_settings: {  }
+    type: font_awesome_icon_picker
+    region: content
+  stat:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.end_date
+    - node.type.subscription
+  module:
+    - datetime
+id: node.subscription.end_date
+field_name: end_date
+entity_type: node
+bundle: subscription
+label: 'End Date'
+description: 'End date for this subscription'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+90 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

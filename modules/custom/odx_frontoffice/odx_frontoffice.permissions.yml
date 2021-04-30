@@ -1,0 +1,4 @@
+create odx apps:
+  title: 'Create ODX apps'
+  description: 'This is a portal facing user who can create and manage apps.'
+  restrict access: true

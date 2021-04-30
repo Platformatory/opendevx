@@ -1,0 +1,15 @@
+block.settings.odx_frontoffice_hero_image:
+  type: block_settings
+  label: 'Hero Image block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+block.settings.odx_frontoffice_subscribe_cta_1:
+  type: block_settings
+  label: 'Subscribe CTA 1 block'
+  mapping:
+    foo:
+      type: string
+      label: Foo

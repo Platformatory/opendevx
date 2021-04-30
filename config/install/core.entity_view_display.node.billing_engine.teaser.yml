@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.billing_engine.billing_provider
+    - field.field.node.billing_engine.credentials
+    - field.field.node.billing_engine.description
+    - field.field.node.billing_engine.env
+    - field.field.node.billing_engine.mode
+    - field.field.node.billing_engine.version
+    - node.type.billing_engine
+  module:
+    - user
+id: node.billing_engine.teaser
+targetEntityType: node
+bundle: billing_engine
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  billing_provider: true
+  credentials: true
+  description: true
+  env: true
+  mode: true
+  version: true

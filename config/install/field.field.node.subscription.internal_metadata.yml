@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.internal_metadata
+    - node.type.subscription
+  module:
+    - jsonb
+id: node.subscription.internal_metadata
+field_name: internal_metadata
+entity_type: node
+bundle: subscription
+label: 'Internal Metadata'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'null'
+default_value_callback: ''
+settings: {  }
+field_type: json

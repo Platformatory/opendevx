@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.description
+    - node.type.billing_engine
+id: node.billing_engine.description
+field_name: description
+entity_type: node
+bundle: billing_engine
+label: Description
+description: 'Add a description.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

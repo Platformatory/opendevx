@@ -1,0 +1,20 @@
+<aside>
+  <ul id="sidenav-left" class="sidenav">
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        {% for section in menu %}
+          <li class="bold waves-effect active">
+            <a href="{{ section.link }}" class="collapsible-header" tabindex="0">{{ section.title }}<i class="material-icons chevron">chevron_left</i></a>
+            <div class="collapsible-body" style="display: block;">
+              <ul class="sidenav-menu">
+                {% for item in section.children %}
+                  <li><a href="{{ item.link }}" class="waves-effect"><i class="material-icons small left">{{ item.icon }}</i>{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</aside>

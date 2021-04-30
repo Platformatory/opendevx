@@ -1,0 +1,27 @@
+[
+  {
+    "link": "/user/1/edit",
+    "icon": "dashboard",
+    "title": "Settings"
+  },
+  {
+    "link": "/apps",
+    "icon": "dashboard",
+    "title": "Apps"
+  },
+  {
+    "link": "/subscriptions",
+    "icon": "dashboard",
+    "title": "Subscriptions"
+  },
+  {
+    "link": "/me/dashboard",
+    "icon": "dashboard",
+    "title": "Support"
+  },
+  {
+    "link": "/user/logout",
+    "icon": "dashboard",
+    "title": "Logout"
+  }
+]

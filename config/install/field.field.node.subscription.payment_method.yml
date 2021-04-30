@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.payment_method
+    - node.type.subscription
+  module:
+    - options
+id: node.subscription.payment_method
+field_name: payment_method
+entity_type: node
+bundle: subscription
+label: 'Payment method'
+description: 'Select the payment instrument for this subscription'
+required: false
+translatable: false
+default_value:
+  -
+    value: card
+default_value_callback: ''
+settings: {  }
+field_type: list_string

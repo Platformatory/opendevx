@@ -1,0 +1,6 @@
+name: ODX Apilm Manager
+type: module
+description: Manage ODX interplay with and broker services to API lifecycle systems
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

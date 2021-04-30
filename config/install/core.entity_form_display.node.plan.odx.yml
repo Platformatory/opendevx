@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.odx
+    - field.field.node.plan.billing_engine
+    - field.field.node.plan.currency
+    - field.field.node.plan.description
+    - field.field.node.plan.pricing_rules
+    - field.field.node.plan.products
+    - field.field.node.plan.products_count
+    - field.field.node.plan.subscriptions_count
+    - field.field.node.plan.usage_metric
+    - field.field.node.plan.usage_provider
+    - node.type.plan
+  module:
+    - jsonb
+id: node.plan.odx
+targetEntityType: node
+bundle: plan
+mode: odx
+content:
+  billing_engine:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  currency:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  pricing_rules:
+    type: jsonb_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  products:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  description: true
+  moderation_state: true
+  path: true
+  products_count: true
+  promote: true
+  sticky: true
+  subscriptions_count: true
+  uid: true
+  usage_metric: true
+  usage_provider: true

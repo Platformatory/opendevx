@@ -1,0 +1,5 @@
+<nav aria-label="Global" class="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">
+{% for item in menu %}
+  <a href="{{ item.link }}" class="px-3 py-2 text-gray-900 text-sm font-medium">{{ item.title }}</a>
+{% endfor %}
+</nav>

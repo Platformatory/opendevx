@@ -1,0 +1,157 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.subscription.applications
+    - field.field.node.subscription.auto_renew
+    - field.field.node.subscription.billing_engine
+    - field.field.node.subscription.billing_plan
+    - field.field.node.subscription.config
+    - field.field.node.subscription.current_outstanding
+    - field.field.node.subscription.discount
+    - field.field.node.subscription.end_date
+    - field.field.node.subscription.internal_metadata
+    - field.field.node.subscription.payment_method
+    - field.field.node.subscription.remote
+    - field.field.node.subscription.rev_share
+    - field.field.node.subscription.rid
+    - field.field.node.subscription.start_date
+    - node.type.subscription
+  module:
+    - computed_field
+    - datetime
+    - jsonb
+    - options
+    - user
+id: node.subscription.default
+targetEntityType: node
+bundle: subscription
+mode: default
+content:
+  applications:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  auto_renew:
+    weight: 103
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  billing_engine:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  billing_plan:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  config:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: content
+  current_outstanding:
+    weight: 109
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  discount:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  end_date:
+    weight: 102
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  internal_metadata:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  payment_method:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  remote:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: content
+  rev_share:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  rid:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  start_date:
+    weight: 101
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden: {  }

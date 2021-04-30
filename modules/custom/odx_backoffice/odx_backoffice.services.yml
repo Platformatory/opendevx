@@ -1,0 +1,10 @@
+services:
+  odx_backoffice.breadcrumb:
+    class: Drupal\odx_backoffice\OdxBackofficeBreadcrumbBuilder
+    arguments: ['@menu.active_trail', '@plugin.manager.menu.link']
+    tags:
+      - { name: breadcrumb_builder, priority: 1000 }
+  odx_backoffice.route_subscriber:
+    class: Drupal\odx_backoffice\EventSubscriber\WorkflowManagementRouteSubscriber
+    tags:
+      - { name: event_subscriber }

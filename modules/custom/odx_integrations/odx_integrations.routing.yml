@@ -1,0 +1,19 @@
+odx_integrations.settings_form:
+  path: '/backoffice/govern/api-access'
+  defaults:
+    _title: 'ODX Hub settings'
+    _form: 'Drupal\odx_integrations\Form\SettingsForm'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_integrations.ingest_metrics:
+  path: '/subscriptions/{uuid}/metrics'
+  defaults:
+    _title: 'Ingest Custom Metrics'
+    _controller: '\Drupal\odx_integrations\Controller\OdxInjestCustomMetricsController::metrics'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

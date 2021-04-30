@@ -1,0 +1,172 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.teaser
+    - field.field.group.domain.apis_count
+    - field.field.group.domain.applications_count
+    - field.field.group.domain.body
+    - field.field.group.domain.content_types
+    - field.field.group.domain.description
+    - field.field.group.domain.hero_image
+    - field.field.group.domain.image
+    - field.field.group.domain.layout_builder__layout
+    - field.field.group.domain.mode
+    - field.field.group.domain.primary_color
+    - field.field.group.domain.products_count
+    - field.field.group.domain.users_count
+    - group.type.domain
+  module:
+    - computed_field
+    - entity_reference_revisions
+    - layout_builder
+    - layout_builder_restrictions
+    - media
+    - options
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Chaos Tools': {  }
+        'Content fields':
+          - 'field_block:group:domain:hero_image'
+        'Custom block types': {  }
+        'Custom blocks': {  }
+        Devel: {  }
+        Forms: {  }
+        Group: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        Menus: {  }
+        'ODX Administration': {  }
+        'ODX Backoffice Guide': {  }
+        'ODX Frontend':
+          - 'views_block:community_posts_block-block'
+          - 'views_block:products_block-block'
+          - 'views_block:upcoming_events_block-block'
+        Platformatory: {  }
+        'SimpleSAMLphp Authentication': {  }
+        System: {  }
+        Webform: {  }
+        core: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts:
+        - opendevx_one_column
+        - opendevx_two_column
+        - opendevx_three_column
+id: group.domain.teaser
+targetEntityType: group
+bundle: domain
+mode: teaser
+content:
+  apis_count:
+    weight: 2
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  applications_count:
+    weight: 4
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  body:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  content_types:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  hero_image:
+    type: entity_reference_entity_view
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: link
+      link: false
+    third_party_settings: {  }
+    region: content
+  image:
+    type: media_thumbnail
+    weight: 10
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  mode:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  products_count:
+    weight: 5
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  users_count:
+    weight: 3
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+hidden:
+  changed: true
+  created: true
+  layout_builder__layout: true
+  primary_color: true
+  uid: true

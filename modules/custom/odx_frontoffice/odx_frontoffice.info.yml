@@ -1,0 +1,6 @@
+name: ODX Frontoffice
+type: module
+description: All end user facing components
+package: Platformatory
+core: 8.x
+core_version_requirement: ^8 || ^9

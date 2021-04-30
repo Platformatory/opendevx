@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_feature.description
+    - field.field.paragraph.product_feature.icon
+    - field.field.paragraph.product_feature.name
+    - paragraphs.paragraphs_type.product_feature
+  module:
+    - text
+id: paragraph.product_feature.default
+targetEntityType: paragraph
+bundle: product_feature
+mode: default
+content:
+  description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  icon:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

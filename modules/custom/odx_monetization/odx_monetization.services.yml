@@ -1,0 +1,6 @@
+services:
+  odx_monetization.event_subscriber:
+    class: Drupal\odx_monetization\EventSubscriber\OdxMonetizationSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

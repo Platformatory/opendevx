@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\simple_page_manager\Entity\Page;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+
+/**
+ * @file
+ * Functions to support theming in the opendevx theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function opendevx_theme_preprocess_html(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function opendevx_theme_preprocess_page(&$variables) {
+  $page = \Drupal::routeMatch()->getParameter('page');
+  if ($page instanceof Page) {
+    $user = \Drupal::currentUser();
+    $variables['is_odx_admin'] = $user->hasPermission('administer pages');
+    $variables['lb_url'] = $page->toUrl()->toString() . '/layout';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function opendevx_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('page')) {
+    $suggestions[] = 'page__simple_page';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function opendevx_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($variables['node']->getType() == 'application') {
+    $variables['credentials'] = json_decode($node->credentials->value, true);
+  }
+}
+
+function opendevx_theme_preprocess_file_link(&$variables) {
+  $file = $variables['file'];
+  $variables['url'] = $url = $file->createFileUrl(FALSE);
+}

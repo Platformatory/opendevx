@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application.config
+    - field.field.node.application.credentials
+    - field.field.node.application.description
+    - field.field.node.application.products
+    - field.field.node.application.remote
+    - field.field.node.application.rid
+    - field.field.node.application.tags
+    - field.field.node.application.version
+    - node.type.application
+  module:
+    - jsonb
+    - user
+id: node.application.teaser
+targetEntityType: node
+bundle: application
+mode: teaser
+content:
+  credentials:
+    type: jsonb_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  version:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  config: true
+  content_moderation_control: true
+  product: true
+  products: true
+  remote: true
+  rid: true
+  tags: true

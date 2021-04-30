@@ -1,0 +1,93 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.plan.billing_engine
+    - field.field.node.plan.currency
+    - field.field.node.plan.description
+    - field.field.node.plan.pricing_rules
+    - field.field.node.plan.products
+    - field.field.node.plan.products_count
+    - field.field.node.plan.subscriptions_count
+    - field.field.node.plan.usage_metric
+    - field.field.node.plan.usage_provider
+    - node.type.plan
+  module:
+    - jsonb
+id: node.plan.default
+targetEntityType: node
+bundle: plan
+mode: default
+content:
+  billing_engine:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  currency:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  description:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  pricing_rules:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: jsonb_textarea
+    region: content
+  products:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  usage_metric:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  usage_provider:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  path: true
+  products_count: true
+  promote: true
+  sticky: true
+  subscriptions_count: true
+  uid: true

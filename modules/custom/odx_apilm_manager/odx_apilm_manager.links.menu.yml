@@ -1,0 +1,6 @@
+odx_apilm_manager.settings_form:
+  title: ODX Apilm Manager
+  description: Configure ODX Apilm Manager.
+  parent: system.admin_config_system
+  route_name: odx_apilm_manager.settings_form
+  weight: 10

@@ -1,0 +1,51 @@
+opendevx_one_column:
+  label: 'ODX One Column Bare'
+  category: 'ODX Layouts'
+  path: layouts/one_column
+  template: one-column
+  regions:
+    main:
+      label: Main content
+  default_region: main
+  icon_map:
+    - [main]
+
+opendevx_two_column:
+  label: 'ODX One Section Container'
+  category: 'ODX Layouts'
+  path: layouts/two_column
+  template: two-column
+  regions:
+    main:
+      label: Main content
+  default_region: main
+  icon_map:
+    - [main]
+
+opendevx_three_column:
+  label: 'ODX Three Sections'
+  category: 'ODX Layouts'
+  path: layouts/three_column
+  template: three-column
+  regions:
+    main:
+      label: Main content
+    sidebar1:
+      label: Sidebar 1
+    sidebar2:
+      label: Sidebar 2
+  default_region: main
+  icon_map:
+    - [main, sidebar1, sidebar2]
+
+opendevx_body_section:
+  label: 'Body Section'
+  category: 'ODX Layouts'
+  path: layouts/body_section
+  template: body-section
+  regions:
+    main:
+      label: Main content
+  default_region: main
+  icon_map:
+    - [main]

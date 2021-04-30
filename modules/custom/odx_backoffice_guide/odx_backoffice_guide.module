@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX Backoffice Guide module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\checklistapi\ChecklistapiChecklist;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_checklistapi_checklist_info().
+ *
+ * Defines a checklist for the ODX backoffice experience
+ * .
+ */
+function odx_backoffice_guide_checklistapi_checklist_info() {
+  $definitions = [];
+  $definitions['backoffice_checklist'] = [
+    '#title' => t('OpenDevX Setup Checklist'),
+    '#callback' => 'odx_backoffice_guide_checklistapi_checklist_items',
+    '#description' => t('An example implementation of the Checklist API.'),
+    '#help' => t('<p>This checklist enables prospective API teams to organize their API programs from scratch.</p>'),
+    '#storage' => 'state',
+  ];
+  return $definitions;
+}
+
+/**
+ * Implements callback_checklistapi_checklist_items() for example_checklist.
+ */
+function odx_backoffice_guide_checklistapi_checklist_items() {
+  $checklist = array();
+  $checklist['configure_odx'] = array(
+    '#title' => t('Configure basic details and setup ODX for your organization'),
+    'configure_site_name' => array(
+       '#title' => t('Configure site name, email and other basic information'),
+     ),
+    'configure_look_feel' => array(
+       '#title' => t('Configure your global look and feel, including administration theme'),
+     ),
+    'configure_iam' => array(
+       '#title' => t('Setup your idP: Choices of SAML and OIDC. Optionally, setup a whitelist of partner email domains'),
+    ),
+    'configure_odx_hub' => array(
+       '#title' => t('Setup ODX Hub and configure your credentials (For ODX Enterprise customers only)'),
+    ),
+  );
+
+  $checklist['source_apis'] = array(
+    '#title' => t('Setup your API sources and specs'),
+    'configure_api_lms' => array(
+      '#title' => t('Configure your API lifecycle manager. This sets up your APIs to be sourced auaomatically'),
+    ),
+    'manually_source_apis' => array(
+      '#title' => t('Manually add APIs. Useful if you\'re not using ODX hub or don\'t use an API lifecycle manager'),
+    ),
+    'enrich_api_metadata' => array(
+      '#title' => t(' Add classification, taxonomy and semantic description to your APIs. In addition, add arbitrary attribute data'),
+    ),
+  );
+
+  $checklist['build_api_program'] = array(
+    '#title' => t('Organize and build an API Program'),
+    'add_api_domain' => array(
+      '#title' => t('Add an API Domain'),
+    ),
+    'add_api_team' => array(
+      '#title' => t('Add your API team members'),
+    ),
+    'customize_portal' => array(
+      '#title' => t('Customize your domain\'s developer portal'),
+    ),
+    'create_api_products' => array(
+      '#title' => t('Create an API Product'),
+    ),
+    'customize_api_products' => array(
+      '#title' => t('Customize your API Product display'),
+    ),
+    'add_docs' => array(
+      '#title' => t('Add Documentation to your API Product'),
+    ),
+    'publish_api_products' => array(
+      '#title' => t('Publish and optionally promote your API products into featured collections'),
+    ),
+    'review_apps_access' => array(
+      '#title' => t('Review Application and Access requests to your products'),
+    ),
+    'review_support' => array(
+      '#title' => t('Review support requests, issues & incidents reported by users'),
+    ),
+  );
+
+  $checklist['setup_monetization'] = array(
+    '#title' => t('Setup API Monetization'),
+    'package_apis' => array(
+      '#title' => t('Package your API Products'),
+    ),
+    'add_pricing_plans' => array(
+      '#title' => t('Add your pricing and usage plans'),
+    ),
+    'configure_service_units' => array(
+      '#title' => t('Configure service units and billing rules for metered usage'),
+    ),
+    'review_subscriptions' => array(
+      '#title' => t('Review your active subscriptions. Manage billing adjustments and subscription administration'),
+    ),
+  );
+
+  $checklist['manage_devrel'] = array(
+    '#title' => t('Market your APIs and manage DevRel'),
+    'create_use_cases' => array(
+      '#title' => t('Create use-cases around your API products'),
+    ),
+    'create_webinar' => array(
+      '#title' => t('Run a webinar or podcast'),
+    ),
+    'publish_white_paper' => array(
+      '#title' => t('Publish an authoritative whitepaper around your API product'),
+    ),
+    'create_solution_showcase' => array(
+      '#title' => t('Create a solution showcase'),
+    ),
+    'create_a_newsletter' => array(
+      '#title' => t('Create a product or program newsletter'),
+    ),
+  );
+
+  $checklist['customize_opendevx'] = array(
+    '#title' => t('Customize OpenDevX for your unique needs'),
+    'integrate_dev_workflow' => array(
+      '#title' => t('Automate OpenDevX side by side with your API lifecycle management. Setup an API product CI/CD pipeline'),
+    ),
+    'customize_worklfows_developer' => array(
+      '#title' => t('Customize how you onboard developers, including manual approvals needed'),
+    ),
+    'customize_apps_workflow' => array(
+      '#title' => t('Customize the app lifecycle for developers, including manual approvals needed'),
+    ),
+    'setup_legal_terms' => array(
+      '#title' => t('Setup EULA for API Usage, Pricing agreements'),
+    ),
+    'customize_appearance' => array(
+      '#title' => t('Modify your portal\'s look and feel and personalize with your logo/artwork and component library'),
+    ),
+    'review_integrations' => array(
+      '#title' => t('Review ODX integrations & plugins'),
+    ),
+    'manage_upgrades' => array(
+      '#title' => t('Manage OpenDevX upgrades and updates'),
+    ),
+    'extend_opendevx' => array(
+      '#title' => t('Build and extend OpenDevX with your own themes and plugins')
+    ),
+  );
+
+  return $checklist;
+}

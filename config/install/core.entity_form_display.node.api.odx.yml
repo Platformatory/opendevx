@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.odx
+    - field.field.node.api.api_type
+    - field.field.node.api.apis_count
+    - field.field.node.api.config
+    - field.field.node.api.description
+    - field.field.node.api.env
+    - field.field.node.api.internal_metadata
+    - field.field.node.api.is_api_product
+    - field.field.node.api.remote
+    - field.field.node.api.rid
+    - field.field.node.api.source
+    - field.field.node.api.spec
+    - field.field.node.api.tags
+    - node.type.api
+    - workflows.workflow.api_governance
+  module:
+    - content_moderation
+id: node.api.odx
+targetEntityType: node
+bundle: api
+mode: odx
+content:
+  api_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  source:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  tags:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  apis_count: true
+  config: true
+  created: true
+  env: true
+  internal_metadata: true
+  is_api_product: true
+  path: true
+  promote: true
+  remote: true
+  rid: true
+  spec: true
+  sticky: true
+  uid: true

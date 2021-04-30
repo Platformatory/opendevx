@@ -1,0 +1,9 @@
+# odx_backoffice_guide.example:
+#   path: '/odx-backoffice-guide/example'
+#   defaults:
+#     _title: 'Example'
+#     _controller: '\Drupal\odx_backoffice_guide\Controller\OdxBackofficeGuideController::build'
+#   requirements:
+#     _permission: 'access content'
+#   options:
+#     _admin_route: TRUE

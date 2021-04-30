@@ -1,0 +1,4 @@
+administer odx_backoffice_guide configuration:
+  title: 'Administer odx_backoffice_guide configuration'
+  description: 'Optional description.'
+  restrict access: true

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.name
+    - paragraphs.paragraphs_type.benefit
+id: paragraph.benefit.name
+field_name: name
+entity_type: paragraph
+bundle: benefit
+label: Audience
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

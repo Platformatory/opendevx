@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.docs
+  module:
+    - views
+  theme:
+    - opendevx_theme
+id: docs
+label: Docs
+path: /docs
+sections:
+  -
+    layout_id: opendevx_two_column
+    layout_settings:
+      label: Docs
+    components:
+      cd93c74f-a7b2-4093-9659-1bcbad1af3b9:
+        uuid: cd93c74f-a7b2-4093-9659-1bcbad1af3b9
+        region: main
+        configuration:
+          id: 'views_block:docs-end_user'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+menu:
+  title: ''
+  description: ''
+  weight: 0
+  enabled: false
+  menu_name: main
+  parent: ''
+  expanded: false
+access:
+  type: none
+  options: {  }

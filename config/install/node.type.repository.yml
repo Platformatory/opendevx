@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'API Lifecycle Manager'
+type: repository
+description: 'Add an upstream API Repository. This could be a an API gateway, an actual code repository or an API lifecycle management system, depending on what you use to manage the lifecycle of your APIs'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,82 @@
+    <div id="odx-page">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="navbar primary-bg">
+          <div class="nav-wrapper row">
+            <div class="brand-logo-content col l3">
+              <a href="#!" data-target="sidenav-left" class="sidenav-trigger left">
+                <i class="material-icons white-text small">menu</i>
+              </a>
+              <a href="#!" class="brand-logo">OpenDevX Backoffice</a><sup><i>beta</i></sup>
+            </div>
+            <div class="col l5">
+            </div>
+            <div class="col l4 header-right-block">
+              <div class="block block-odx-backoffice block-odx-backoffice-group-switcher">
+                {{ drupal_block('odx_backoffice_group_switcher') }}
+              </div>
+              <ul id="nav-mobile" class="right user-nav">
+                <li class="hide-on-med-and-down">
+                  <a href="#!" data-target="notifications-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons small">notifications</i></a>
+                  <div id="notifications-dropdown" class="dropdown-content notifications" tabindex="0">
+                    <div class="notifications-title" tabindex="0">notifications</div>
+                      <div class="card" tabindex="0">
+                        <div class="card-content"><span class="card-title">admin created a domain</span>
+                          <p>Real Estate OpenAPI Program</p>
+                        </div>
+                        <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+                      </div>
+                      <div class="card" tabindex="0">
+                        <div class="card-content"><span class="card-title">24 new APIs synchronized</span>
+                          <p>Check Logs for details</p>
+                        </div>
+                        <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+                      </div>
+                      <div class="card" tabindex="0">
+                        <div class="card-content"><span class="card-title">admin created a product</span>
+                          <p>Open Real Estate APIs</p>
+                        </div>
+                        <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+                      </div>
+                    </div>
+                  </li>
+                <li>
+                  <a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons small">person_outline</i></a>
+                  <div id="chat-dropdown" class="dropdown-content dropdown-tabbed" tabindex="0">
+                    <div id="friends" class="col s12 active" tabindex="0">
+                      <ul class="collection flush">
+                        <li class="collection-item">
+                          <span class="title">Account</span>
+                        </li>
+                        <li class="collection-item">
+                          <span class="title">Logout</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+  <div class="row layout-content-wrapper">
+    {{ drupal_block('odx_backoffice_side_nav') }}
+    <section class="col l12 s12 layout-content">
+      <div class="breadcrumb-section-wrapper">
+        <nav class="breadcrumb-nav">
+          <div class="nav-wrapper">
+            {{ page.breadcrumb }}
+          </div>
+        </nav>
+      </div>
+      {% include '@material_admin/misc/notification-drawer.html.twig' %}
+      <div class="section-wrapper">
+        {{ page.content }}
+      </div>
+    </section>
+  </div>
+</main>
+</div>

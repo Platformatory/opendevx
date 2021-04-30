@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - group
+id: group.users_count
+field_name: users_count
+entity_type: group
+type: computed_integer
+settings:
+  unsigned: false
+  size: normal
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

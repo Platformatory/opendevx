@@ -1,0 +1,382 @@
+<?php
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * @file
+ * Primary module hooks for ODX backoffice module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+ function odx_backoffice_entity_operation_alter(array &$operations, \Drupal\Core\Entity\EntityInterface $entity) {
+   $route = \Drupal::routeMatch()->getRouteObject();
+   if (!$route->getOption('_odx')) {
+     return;
+   }
+   if (!in_array($entity->getEntityTypeId(), array('user', 'group' ,'node'))) {
+     return;
+   }
+   $bundle = $entity->bundle();
+   if ($bundle == 'repository') {
+     $operations = _odx_backoffice_repository_actions($entity);
+   }
+   if ($bundle == 'api') {
+     $operations = _odx_backoffice_api_actions($entity);
+   }
+   if ($bundle == 'application') {
+     $operations = _odx_backoffice_application_actions($entity);
+   }
+   if ($bundle == 'product') {
+     $operations = _odx_backoffice_product_actions($entity);
+   }
+   if ($bundle == 'plan') {
+     $operations = _odx_backoffice_plan_actions($entity);
+   }
+   if ($bundle == 'subscription') {
+     $operations = _odx_backoffice_subscription_actions($entity);
+   }
+   if($bundle == 'billing_engine') {
+     $operations = _odx_backoffice_billing_engine_actions($entity);
+   }
+   if($bundle == 'user') { // User entity, user bundle
+     $operations = _odx_backoffice_user_actions($entity);
+   }
+   if($bundle == 'domain') { // Group entity, domain bundle
+     $operations = _odx_backoffice_domain_actions($entity);
+   }
+}
+
+function _odx_backoffice_repository_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+  $options = array('query' => array('destination' => $current_path = \Drupal::service('path.current')->getPath()));
+
+    return [
+      'edit' => [ // Edit the API Gateway
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'sync' => [ // Sync all watched object refs
+        'title' => t('Sync'),
+        'url' => Url::fromUri('base:/backoffice/apilm/'. $entity->uuid() . '/sync', $options),
+        'weight' => 1,
+      ],
+      'explore' => [ // Explore the APILM Constituents. Let the user cherry pick and import
+        'title' => t('Explore'),
+        'url' => Url::fromUri('base:/backoffice/apilm/'. $entity->uuid() . '/explore'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_api_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [ // Edit the API
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'organize' => [ // Add the API to specific domains
+        'title' => t('Organize'),
+	'url' => Url::fromUri('base:/backoffice/api/'. $entity->uuid() . '/organize'),
+	'weight' => 0,
+      ],
+      'generate_sdks' => [ // Generate SDKs. Should happen on Cron
+        'title' => t('Generate SDKs'),
+        'url' => Url::fromUri('base:/backoffice/api/'. $entity->uuid() . '/generate-sdk'),
+        'weight' => 1,
+      ],
+      'generate_postman' => [ // Generate Postman collections
+        'title' => t('Generate Postman Collection'),
+       	'url' => Url::fromUri('base:/backoffice/api/'. $entity->uuid() . '/generate-postman'),
+        'weight' => 1,
+      ],
+      'generate_sandbox' => [ // Generate and deploy a mock/sandbox service with fake or introspected data
+        'title' => t('Generate Sandbox'),
+        'url' => Url::fromUri('base:/backoffice/apilm/'. $entity->uuid() . '/generate-sandbox'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_application_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'manage_credentials' => [ // Revoke, Rotate Credentials
+        'title' => t('Manage Credentials'),
+        'url' => Url::fromUri('base:/backoffice/application/'. $entity->uuid() . '/manage-credentials'),
+        'weight' => 1,
+      ],
+      'monitor_usage' => [ // View recent logs and metrics
+        'title' => t('Monitor Usage'),
+        'url' => Url::fromUri('base:/backoffice/application/'. $entity->uuid() . '/monitor'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_product_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'manage_display' => [ // Manage Display
+        'title' => t('Manage Display'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/layout'),
+        'weight' => 1,
+      ],
+      'manage_docs' => [ // Manage Docs
+        'title' => t('Manage Docs'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/docs'),
+        'weight' => 1,
+      ],
+      'manage_content' => [ // Manage other content
+        'title' => t('Manage Content'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/content'),
+        'weight' => 1,
+      ],
+      'view_reports' => [ // Redir to reports page, filter on this product as an expression
+        'title' => t('View Reports'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/reports'),
+        'weight' => 1,
+      ],
+      'pending_actions' => [ // Pending actions -- app access requests, moderation, incidents and other things
+        'title' => t('Pending Actions'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/pending-actions'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_subscription_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [ // Directly edit the entity and modify period, quantity etc. Cancel subscription also goes here
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'usage_report' => [ // Get a usage report with real time metrics
+        'title' => t('Generate Usage Report'),
+        'url' => Url::fromUri('base:/backoffice/subscription/'. $entity->uuid() . '/usage-report'),
+        'weight' => 1,
+      ],
+      'manage_invoicing' => [ // See present, past invoices. Maybe make billing adjustments
+        'title' => t('Manage Invoicing'),
+        'url' => Url::fromUri('base:/backoffice/subscription/'. $entity->uuid() . '/manage-invoicing'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_plan_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit_gateway' => [
+        'title' => t('Edit'),
+        'url' => _odx_build_edit_link($entity),
+        'weight' => 0,
+      ],
+      'custom_service_units' => [
+        'title' => t('Manage CSUs'),
+        'url' => Url::fromUri('base:/backoffice/apilm/'. $entity->uuid() . '/sync'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_billing_engine_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [ // Edit the Billing Engine
+        'title' => t('Edit'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/edit'),
+        'weight' => 0,
+      ],
+      'sync' => [ // Sync all watched object refs
+        'title' => t('Sync'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/sync'),
+        'weight' => 1,
+      ],
+      'explore' => [ // Explore the Billing Engine Constituents. Let the user cherry pick and import
+        'title' => t('Explore'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/explore'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_domain_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    $content_url = Url::fromUri('base:/backoffice/organize/content');
+    $content_url->setOption('query', [ 'context' => $entity->id() ]);
+    return [
+      'edit' => [
+        'title' => t('Edit'),
+        'url' => Url::fromUri('base:/backoffice/domain/'. $entity->uuid() . '/edit'),
+        'weight' => 0,
+      ],
+      'manage_display' => [ // Manage Display
+        'title' => t('Manage Display'),
+        'url' => Url::fromUri('base:/group/'. $entity->id() . '/layout'),
+        'weight' => 1,
+      ],
+      'manage_users' => [ // Manage Users
+        'title' => t('Manage Users'),
+        'url' => Url::fromUri('base:/backoffice'. $entity->toUrl()->toString() . '/members'),
+        'weight' => 1,
+      ],
+      'manage_content' => [ // Manage other content
+        'title' => t('Manage Content'),
+         'url' => $content_url,
+         'weight' => 1,
+      ],
+      'view_reports' => [ // Redir to reports page, filter on this domain  as an expression
+        'title' => t('View Reports'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/reports'),
+        'weight' => 1,
+      ],
+      'pending_actions' => [ // Pending actions -- app access requests, moderation, incidents and other things
+        'title' => t('Pending Actions'),
+        'url' => Url::fromUri('base:/backoffice/product/'. $entity->uuid() . '/pending-actions'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_backoffice_user_actions(\Drupal\Core\Entity\EntityInterface $entity) {
+    return [
+      'edit' => [
+        'title' => t('Edit'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/edit'),
+        'weight' => 0,
+      ],
+      'manage_domains' => [ // Manage typically internal domains the user is part of, including invites etc
+        'title' => t('Manage Domain Associations'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/domains'),
+        'weight' => 1,
+      ],
+      'manage_companies' => [ // Manage companies (exernal) that the user is part of
+        'title' => t('Manage Company Associattions'),
+        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/companies'),
+        'weight' => 1,
+      ],
+  ];
+}
+
+function _odx_build_edit_link($entity) {
+    $route_name = \Drupal::routeMatch()->getRouteName();
+    $param_url = Url::fromRoute($route_name);
+    $query_params = [
+      'destination' => $param_url->toString(),
+    ];
+    $route_params = [
+      'entity_type' => $entity->bundle(),
+      'uuid' => $entity->uuid(),
+    ];
+    $url = Url::fromRoute('odx_forms.edit_odx_entity_show_form', $route_params);
+    $url->setOption('query', $query_params);
+    return $url;
+  }
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function odx_backoffice_theme() {
+  return [
+    'side_nav' => [
+      'variables' => [
+        'menu' => NULL,
+      ],
+    ],
+    'saml_settings' => [
+      'variables' => [
+        'basic_settings' => NULL,
+        'local_auth' => NULL,
+        'user_info_and_sync' => NULL,
+      ],
+    ],
+    'content_add' => [
+      'variables' => [
+        'usecase' => NULL,
+        'blog' => NULL,
+        'event' => NULL,
+      ],
+    ],
+    'business_rules' => [
+      'variables' => [
+        'rules' => NULL,
+        'actions' => NULL,
+        'conditions' => NULL,
+        'variables' => NULL,
+        'schedule' => NULL,
+        'settings' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+* Implements hook_ENTITY_TYPE_insert().
+* If the URL has a context ID, the content added
+* will be added to the context(domain group) automatically.
+*/
+function odx_backoffice_node_insert(Drupal\node\NodeInterface $node) {
+  $context_id = \Drupal::request()->query->get('context');
+  if ($context_id) {
+    $bundle = $node->getType();
+    // TODO: check if bundle is in selected bundle types of group
+    $group = \Drupal::service('entity_type.manager')->getStorage('group')->load($context_id);
+    $group->addContent($node, 'group_node:'.$node->getType());
+  }
+  if ($node->getType() !== 'product') {
+    return;
+  } else {
+    if (empty($node->docs->entity)) {
+      $node->docs->entity = Node::create([
+                'type' => 'book',
+                'title' => 'Docs for ' . $node->getTitle(),
+                'book' => ['bid' => 'new'],
+              ]);
+      $node->save();
+    }
+  }
+
+}
+
+/**
+* Implements hook_FORM_ID_form_alter().
+* If the URL has a context ID, the redirect will
+* carry it forward
+*/
+function odx_backoffice_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if($route->getOption('_odx')) {
+     $form['actions']['submit']['#submit'][] = '_odx_backoffice_node_form_submit';
+  }
+}
+
+function _odx_backoffice_node_form_submit(&$form, FormStateInterface $form_state) {
+  // set redirect to param
+  $context_id = \Drupal::request()->query->get('context');
+  if ($context_id) {
+    // get context ID and set here
+    $options = [
+      'context' => $context_id,
+    ];
+    $destination = \Drupal::request()->query->get('destination');
+    $url = \Drupal::service('path.validator')->getUrlIfValid($destination);
+    // TODO: this is not working
+    if ($url) {
+      $url->setOption('query', $options);
+      $form_state->setRedirectUrl($url);
+    }
+  }
+}

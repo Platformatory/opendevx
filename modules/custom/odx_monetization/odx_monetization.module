@@ -1,0 +1,158 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX Monetization module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+ use \Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_theme().
+ */
+function odx_monetization_theme() {
+  return [
+    'app_usage' => [
+      'variables' => [
+        'usage' => NULL,
+        'credentials' => NULL,
+      ],
+    ],
+    'invoice' => [
+      'variables' => [
+        'invoice' => NULL,
+        'start_date' => NULL,
+        'end_date' => NULL,
+      ],
+    ],
+  ];
+}
+
+
+function odx_monetization_node_presave(Drupal\node\NodeInterface $node) {
+  if($node->getType() == 'plan') {
+    if($node->usage_provider->value == 'gateway') { // get the provider and provision this to the gateway directly
+      $grouped_api_map = array();
+      $products = $node->get('products')->referencedEntities();
+      foreach($products as $product) {
+        $grouped_api_map[] = _get_api_groups_by_product($product);
+      }
+    }
+  }
+  if($node->getType == 'subscription') {
+    //
+  }
+}
+
+function odx_monetization_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'application') {
+    $usage = _odx_monetization_get_usage_for_app($entity);
+    // do stuff with usage here
+    $build['app_usage'] = [
+      '#theme' => 'app_usage',
+      '#usage' => $usage,
+      '#credentials' => json_decode($entity->credentials->value, true),
+    ];
+  }
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'subscription') {
+    $billing = _odx_monetization_compute_billing($entity);
+    // do stuff with the billing here
+    $build['invoice'] = [
+      '#theme' => 'invoice',
+      '#invoice' => $billing,
+    ];
+    if ($view_mode == 'full') {
+      $build['past_invoices'] = [];
+      $vids = \Drupal::service('entity_type.manager')->getStorage('node')->revisionIds($entity);
+      $revisions = \Drupal::service('entity_type.manager')->getStorage('node')->loadMultipleRevisions($vids);
+      foreach ($revisions as $revision) {
+        $billing = _odx_monetization_compute_billing($revision);
+        $build['past_invoices'][] = [
+            '#theme' => 'invoice',
+            '#invoice' => $billing,
+            '#start_date' => $revision->start_date->date->format('jS M Y'),
+            '#end_date' => $revision->end_date->date->format('jS M Y'),
+            '#prefix' => '<div class="container px-5 py-5 mx-auto flex flex-wrap"><div class="flex-1 truncate">',
+            '#suffix' => '</div></div>',
+        ];
+      }
+    }
+  }
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'product' && $view_mode == "hero") {
+    $build['product_uuid']['#plain_text'] = $entity->uuid();
+  }
+}
+
+function _odx_monetization_get_usage_for_app(\Drupal\node\NodeInterface $entity, $duration = FALSE) {
+  $product = $entity->get('products')->first()->get('entity')->getTarget()->getValue();
+  if(empty($duration)) {
+    $duration = array(
+      'start' => date('Y-m-d', strtotime('now -1 week')),
+      'end' => date('Y-m-d', strtotime('now')),
+    );
+  }
+  $app_metadata = array(
+    'name' => $entity->getTitle(),
+    'product' => $product->rid->value,
+    'duration' => $duration,
+  );
+  $credential_group = json_decode($entity->credentials->value, JSON_OBJECT_AS_ARRAY);
+  $usage = array();
+  foreach($credential_group as $group) {
+    $credential = $group['credentials'];
+    $issuer = odx_apilm_manager_service_instance(Node::load($group['source'])); // TODO:  we need to distance getUsage() from APILM implementations
+    $app_metadata['id'] = $credential['credential_id'];
+    $usage[$credential['credential_id']] = $issuer->getUsage($app_metadata);
+  }
+  return $usage;
+}
+
+function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscription) {
+  $app = $subscription->get('applications')->first()->get('entity')->getTarget()->getValue();
+  $plan = $subscription->get('billing_plan')->first()->get('entity')->getTarget()->getValue();
+  $duration = array(
+    'start' => $subscription->start_date->date->format('Y-m-d'),
+    'end' => $subscription->end_date->date->format('Y-m-d'),
+  );
+  $usage_details = _odx_monetization_get_usage_for_app($app, $duration);
+  $usage_details = reset($usage_details);
+  $usage = $usage_details['usage'];
+  $pricing = json_decode($plan->pricing_rules->value, JSON_OBJECT_AS_ARRAY);
+  $bill = array();
+  $bill['total'] = '';
+  $bill['li'] = array();
+  $currency = ' ' . $plan->currency->value;
+  foreach($pricing as $tier) {
+    // Full tier needs to be billed
+    if($usage >= $tier['from'] && $usage >= $tier['up_to']) {
+      $tier_units = $tier['up_to'] - $tier['from'];
+      $units_label = \Drupal::translation()->formatPlural($tier_units, '1 unit', '@count units');
+      $bill['li'][] = array(
+        'label' => $units_label . ' @ '. $tier['unit_price'],
+        'charges' => $tier_units * $tier['unit_price'] . $currency,
+      );
+      $bill['total'] += $tier_units * $tier['unit_price'];
+    }
+    // Partial tier needs to be billed
+    if($usage > $tier['from'] && $usage <= $tier['up_to']) {
+      $tier_units = $usage - $tier['from'];
+      $units_label = \Drupal::translation()->formatPlural($tier_units, '1 unit', '@count units');
+      $bill['li'][] = array(
+        'label' => $units_label . ' @ '. $tier['unit_price'],
+        'charges' => $tier_units * $tier['unit_price'] . $currency,
+      );
+      $bill['total'] += $tier_units * $tier['unit_price'];
+    }
+    // Tier should not be billed
+    if($usage < $tier['from']) {
+    }
+  }
+  if ($bill['total']) {
+    $bill['total'] = $bill['total'] . $currency;
+  }
+  return $bill;
+}

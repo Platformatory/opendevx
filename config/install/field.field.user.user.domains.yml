@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.domains
+  module:
+    - computed_field
+    - user
+id: user.user.domains
+field_name: domains
+entity_type: user
+bundle: user
+label: Domains
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: computed_string

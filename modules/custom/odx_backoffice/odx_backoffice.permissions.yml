@@ -1,0 +1,3 @@
+administer odx backoffice:
+  title: 'Administer ODX backoffice'
+  restrict access: true

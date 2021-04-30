@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.application
+  module:
+    - content_moderation
+id: developer_access
+label: 'Developer Access'
+type: content_moderation
+type_settings:
+  states:
+    api_team_review:
+      published: false
+      default_revision: false
+      label: 'API Team Review'
+      weight: -1
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      published: true
+      default_revision: true
+      label: 'Production Access'
+      weight: 1
+    sandbox_access:
+      published: false
+      default_revision: false
+      label: 'Sandbox Access'
+      weight: 0
+  transitions:
+    await_api_team_approval:
+      label: 'Request API Team Approval'
+      from:
+        - draft
+      to: api_team_review
+      weight: -1
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -2
+      from:
+        - draft
+        - published
+    provision_sandbox_acceess:
+      label: 'Provision Sandbox Acceess'
+      from:
+        - api_team_review
+        - draft
+      to: sandbox_access
+      weight: 0
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - application
+  default_moderation_state: draft

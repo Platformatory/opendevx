@@ -1,0 +1,32 @@
+odx_forms.add_odx_entity_show_form:
+  path: '/backoffice/{entity_type}/add'
+  defaults:
+    _title_callback: '\Drupal\odx_forms\Controller\OdxFormsController::title'
+    _controller: '\Drupal\odx_forms\Controller\OdxFormsController::build'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_forms.edit_odx_entity_show_form:
+  path: '/backoffice/{entity_type}/{uuid}/edit'
+  defaults:
+    _title: 'Edit'
+    _controller: '\Drupal\odx_forms\Controller\OdxFormsEditController::build'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_forms.add_gateway.multistep_form:
+  path: '/add-gateway'
+  defaults:
+    _form: '\Drupal\odx_forms\Form\AddGatewayMultistepForm'
+    _title: 'Add Gateway'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE

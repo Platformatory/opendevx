@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display twocolumn layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout wrapper.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <section {{ region_attributes.main.addClass('layout__region', 'layout__region--main') }}>
+    <div class="container px-5 py-5 mx-auto flex flex-wrap">
+      {{ content.main }}
+    </div>
+  </section>
+{% endif %}

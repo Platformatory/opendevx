@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_legal.document.api_monetization_contract
+    - field.field.entity_legal_document_version.api_monetization_contract.entity_legal_document_text
+  module:
+    - text
+id: entity_legal_document_version.api_monetization_contract.default
+targetEntityType: entity_legal_document_version
+bundle: api_monetization_contract
+mode: default
+content:
+  entity_legal_document_text:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

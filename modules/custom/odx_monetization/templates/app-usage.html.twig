@@ -1,0 +1,26 @@
+{% for credential in credentials %}
+    {% set credential_id = credential.credentials.credential_id %}
+    {% set usage_data = usage[credential_id] %}
+    {% if usage_data %}
+      <div class="mt-10 pb-12 bg-white sm:pb-16 hidden" id="usage-{{ credential_id }}">
+        <div class="flex -mx-1 border-b py-2 items-start">
+            <div class="flex-1 px-1">
+                <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Date</p>
+            </div>
+            <div class="px-1 w-20 text-right">
+                <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Units Consumed</p>
+            </div>
+        </div>
+      {% for date,calls in usage_data.details %}
+        <div class="flex -mx-1 py-2 border-b">
+            <div class="flex-1 px-1">
+                <p class="text-gray-800">{{ date }}</p>
+            </div>
+            <div class="px-1 w-20 text-right">
+                <p class="text-gray-800">{{ calls.0 }}/{{ calls.1 }}</p>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+{% endfor %}

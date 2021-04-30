@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs" id="business-rules">
+        <li class="tab col s2"><a class="active" href="#rules">{{ 'Rules'|t }}</a></li>
+        <li class="tab col s2"><a href="#actions">{{ 'Actions'|t }}</a></li>
+        <li class="tab col s2"><a href="#conditions">{{'Conditions'|t}}</a></li>
+        <li class="tab col s2"><a href="#variables">{{'Variables'|t}}</a></li>
+        <li class="tab col s2"><a href="#schedule">{{'Schedule'|t}}</a></li>
+        <li class="tab col s2"><a href="#settings">{{'Settings'|t}}</a></li>
+      </ul>
+    </div>
+    <div id="rules" class="col s12">
+      <a href="/admin/config/workflow/business_rules/add" class="button button-action waves-effect waves-light" data-drupal-link-system-path="admin/config/workflow/business_rules/add">Add Rule</a>
+      {{ rules }}
+    </div>
+    <div id="actions" class="col s12">
+      <a href="/admin/config/workflow/business_rules/action/add" class="button button-action waves-effect waves-light" data-drupal-link-system-path="admin/config/workflow/business_rules/action/add">Add Action</a>
+      {{ actions }}
+    </div>
+    <div id="conditions" class="col s12">
+      <a href="/admin/config/workflow/business_rules/condition/add" class="button button-action waves-effect waves-light" data-drupal-link-system-path="admin/config/workflow/business_rules/condition/add">Add Condition</a>
+      {{ conditions }}
+    </div>
+    <div id="variables" class="col s12">
+      <a href="/admin/config/workflow/business_rules/variable/add" class="button button-action waves-effect waves-light" data-drupal-link-system-path="admin/config/workflow/business_rules/variable/add">Add Variable</a>
+      {{ variables }}
+    </div>
+    <div id="schedule" class="col s12">
+      <a href="/admin/config/workflow/business_rules/schedule/add" class="button button-action waves-effect waves-light" data-drupal-link-system-path="admin/config/workflow/business_rules/schedule/add">Add Schedule</a>
+      {{ schedule }}
+    </div>
+    <div id="settings" class="col s12">
+      {{ settings }}
+    </div>
+</div>

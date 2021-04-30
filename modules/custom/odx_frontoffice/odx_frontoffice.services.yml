@@ -1,0 +1,18 @@
+services:
+  odx_frontoffice.domain_param_converter:
+    class: Drupal\odx_frontoffice\DomainSlugParamConverter
+    arguments: ['@database']
+    tags:
+      - { name: paramconverter }
+
+  odx_frontoffice.product_param_converter:
+    class: Drupal\odx_frontoffice\ProductSlugParamConverter
+    arguments: ['@database']
+    tags:
+      - { name: paramconverter }
+
+  odx_frontoffice.foo_param_converter:
+    class: Drupal\odx_frontoffice\ApiSlugParamConverter
+    arguments: ['@database']
+    tags:
+      - { name: paramconverter }

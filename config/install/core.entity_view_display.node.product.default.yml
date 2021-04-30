@@ -1,0 +1,357 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.apis
+    - field.field.node.product.apis_count
+    - field.field.node.product.applications_count
+    - field.field.node.product.benefits
+    - field.field.node.product.body
+    - field.field.node.product.category
+    - field.field.node.product.config
+    - field.field.node.product.cta_1
+    - field.field.node.product.cta_2
+    - field.field.node.product.description
+    - field.field.node.product.docs
+    - field.field.node.product.features
+    - field.field.node.product.hero_image
+    - field.field.node.product.image
+    - field.field.node.product.internal_metadata
+    - field.field.node.product.kpis
+    - field.field.node.product.layout_builder__layout
+    - field.field.node.product.media
+    - field.field.node.product.quota
+    - field.field.node.product.related
+    - field.field.node.product.remote
+    - field.field.node.product.rid
+    - field.field.node.product.source
+    - field.field.node.product.tags
+    - node.type.product
+    - views.view.product_hero_1
+  module:
+    - computed_field
+    - entity_reference_revisions
+    - jsonb
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+    - views
+  theme:
+    - opendevx_theme
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: opendevx_one_column
+        layout_settings:
+          label: Hero
+        components:
+          7a5bbdac-9a25-4a91-8fe4-fbc84f7ddbf9:
+            uuid: 7a5bbdac-9a25-4a91-8fe4-fbc84f7ddbf9
+            region: main
+            configuration:
+              id: 'views_block:product_hero_1-product'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: opendevx_body_section
+        layout_settings:
+          label: Body
+        components:
+          d4ce24e9-78d7-4bc7-aba3-5690d4cb75ca:
+            uuid: d4ce24e9-78d7-4bc7-aba3-5690d4cb75ca
+            region: main
+            configuration:
+              id: 'field_block:node:product:features'
+              label: Features
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          cdf89ddc-e85d-454b-81f9-6b2a3e347b80:
+            uuid: cdf89ddc-e85d-454b-81f9-6b2a3e347b80
+            region: main
+            configuration:
+              id: 'field_block:node:product:benefits'
+              label: Benefits
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Business Rules': {  }
+        'Chaos Tools': {  }
+        'Content fields':
+          - 'field_block:node:product:benefits'
+          - 'field_block:node:product:features'
+        'Custom block types': {  }
+        'Custom blocks': {  }
+        'DX Core': {  }
+        Devel: {  }
+        Forms: {  }
+        Group: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        'ODX Administration': {  }
+        'ODX Backoffice Guide': {  }
+        'ODX Frontend': {  }
+        'ODX Frontoffice':
+          - 'views_block:product_hero_1-product'
+        'OpenID Connect': {  }
+        Platformatory: {  }
+        'SimpleSAMLphp Authentication': {  }
+        System: {  }
+        Webform: {  }
+        core: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  apis:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  apis_count:
+    weight: 107
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  applications_count:
+    weight: 109
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  benefits:
+    type: entity_reference_revisions_entity_view
+    weight: 114
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  category:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  config:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: main
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  cta_1:
+    weight: 125
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  cta_2:
+    weight: 126
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  docs:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  features:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  hero_image:
+    type: entity_reference_entity_view
+    weight: 116
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  image:
+    type: entity_reference_entity_view
+    weight: 115
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  internal_metadata:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: main
+  kpis:
+    type: entity_reference_revisions_entity_view
+    weight: 113
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  media:
+    type: entity_reference_entity_view
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  quota:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: main
+  related:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  remote:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: jsonb_default
+    region: main
+  rid:
+    weight: 120
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  source:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: main
+  tags:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  layout_builder__layout: true

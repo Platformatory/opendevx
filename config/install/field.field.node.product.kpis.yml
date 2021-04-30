@@ -1,0 +1,105 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.kpis
+    - node.type.product
+    - paragraphs.paragraphs_type.kpi
+  module:
+    - entity_reference_revisions
+id: node.product.kpis
+field_name: kpis
+entity_type: node
+bundle: product
+label: KPIs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      kpi: kpi
+    target_bundles_drag_drop:
+      benefit:
+        weight: 27
+        enabled: false
+      bp_accordion:
+        weight: 28
+        enabled: false
+      bp_accordion_section:
+        weight: 29
+        enabled: false
+      bp_blank:
+        weight: 30
+        enabled: false
+      bp_block:
+        weight: 31
+        enabled: false
+      bp_callout:
+        weight: 32
+        enabled: false
+      bp_card:
+        weight: 33
+        enabled: false
+      bp_carousel:
+        weight: 34
+        enabled: false
+      bp_column_wrapper:
+        weight: 35
+        enabled: false
+      bp_columns:
+        weight: 36
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 37
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 38
+        enabled: false
+      bp_contact:
+        weight: 39
+        enabled: false
+      bp_image:
+        weight: 40
+        enabled: false
+      bp_modal:
+        weight: 41
+        enabled: false
+      bp_quicklinks:
+        weight: 42
+        enabled: false
+      bp_simple:
+        weight: 43
+        enabled: false
+      bp_stat:
+        weight: 44
+        enabled: false
+      bp_statistics:
+        weight: 45
+        enabled: false
+      bp_tab_section:
+        weight: 46
+        enabled: false
+      bp_tabs:
+        weight: 47
+        enabled: false
+      bp_view:
+        weight: 48
+        enabled: false
+      bp_webform:
+        weight: 49
+        enabled: false
+      from_library:
+        weight: 50
+        enabled: false
+      kpi:
+        enabled: true
+        weight: 51
+      product_feature:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

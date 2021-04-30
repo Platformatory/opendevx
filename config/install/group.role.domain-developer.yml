@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+id: domain-developer
+label: Developer
+weight: 101
+internal: false
+audience: member
+group_type: domain
+permissions_ui: true
+permissions:
+  - 'create group_node:application content'
+  - 'create group_node:application entity'
+  - 'create group_node:ticket content'
+  - 'create group_node:ticket entity'
+  - 'delete own group_node:application content'
+  - 'delete own group_node:application entity'
+  - 'delete own group_node:ticket content'
+  - 'leave group'
+  - 'update own group_membership content'
+  - 'update own group_node:application entity'
+  - 'update own group_node:ticket entity'
+  - 'view group'
+  - 'view group_node:api entity'
+  - 'view group_node:book entity'
+  - 'view group_node:event entity'
+  - 'view group_node:faq entity'
+  - 'view group_node:media entity'
+  - 'view group_node:news entity'
+  - 'view group_node:page entity'
+  - 'view group_node:product entity'
+  - 'view group_node:ticket entity'
+  - 'view group_node:usecase entity'

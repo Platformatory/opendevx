@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "watch": "parcel watch ./src/scss/style.scss --out-dir=./dist/css --public-url ./",
+    "build": "parcel build ./src/scss/style.scss --out-dir=./dist/css --public-url ./"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/ui": "^0.7.2",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,30 @@
+odx_apilm_manager.api_sync_form:
+  path: '/backoffice/apilm/{uuid}/sync'
+  defaults:
+    _title: 'Sync'
+    _controller: '\Drupal\odx_apilm_manager\Controller\OdxApilmManagerController::sync'
+  requirements:
+    _permission: 'access content'
+  options:
+    _maintenance_access: TRUE
+    _admin_route: TRUE
+    _odx_login: TRUE
+
+odx_apilm_manager.apilm_dashboard:
+  path: '/backoffice/apilm/{nid}/dashboard'
+  defaults:
+    _title: 'Sync Form'
+    _controller: '\Drupal\odx_apilm_manager\Controller\OdxApilmDashboardController::build'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_apilm_manager.settings_form:
+  path: '/admin/config/system/odx-apilm-manager'
+  defaults:
+    _title: 'ODX Apilm Manager settings'
+    _form: 'Drupal\odx_apilm_manager\Form\SettingsForm'
+  requirements:
+    _permission: 'administer odx_apilm_manager configuration'

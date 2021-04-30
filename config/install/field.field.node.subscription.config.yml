@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.config
+    - node.type.subscription
+  module:
+    - jsonb
+id: node.subscription.config
+field_name: config
+entity_type: node
+bundle: subscription
+label: Config
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'null'
+default_value_callback: ''
+settings: {  }
+field_type: json

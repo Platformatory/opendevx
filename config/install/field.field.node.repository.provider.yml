@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.provider
+    - node.type.repository
+  module:
+    - options
+id: node.repository.provider
+field_name: provider
+entity_type: node
+bundle: repository
+label: Provider
+description: 'The Provider for this repository, as supported by OpenDevX API hub. To roll your own provider, please consult the documentation.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+odx_monetization.billing_generator:
+  path: '/backoffice/apilm/{uuid}/sync'
+  defaults:
+    _title: 'Sync'
+    _controller: '\Drupal\odx_apilm_manager\Controller\OdxApilmManagerController::sync'
+  requirements:
+    _permission: 'access content'
+  options:
+    _maintenance_access: TRUE
+    _admin_route: TRUE
+    _odx_login: TRUE
+
+odx_monetization.settings_form:
+  path: '/admin/config/system/odx-monetization'
+  defaults:
+    _title: 'ODX Monetization settings'
+    _form: 'Drupal\odx_monetization\Form\SettingsForm'
+  requirements:
+    _permission: 'administer odx_monetization configuration'

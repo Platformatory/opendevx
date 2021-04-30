@@ -1,0 +1,6 @@
+odx_monetization.settings_form:
+  title: ODX Monetization
+  description: Configure ODX Monetization.
+  parent: system.admin_config_system
+  route_name: odx_monetization.settings_form
+  weight: 10

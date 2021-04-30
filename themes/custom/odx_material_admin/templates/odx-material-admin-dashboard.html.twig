@@ -1,0 +1,128 @@
+<div class="row pt-6 width-100">
+   <section>
+      <div class="row dashboard-content">
+         <div class="col s2 center apis cont-block">
+            <div class="numbers-block">
+               <div class="icon blue-bg">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h2 class="value">
+                     {{ apis.value }}
+                  </h2>
+                  <h5>{{ apis.title }} <i class="material-icons large green-text left">arrow_drop_up</i></h5>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center products cont-block">
+            <div class="numbers-block">
+               <div class="icon yellow-bg">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h2 class="value">{{ products.value }}</h2>
+                  <h5>{{ products.title }} <i class="material-icons large green-text left">arrow_drop_up</i></h5>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center developers cont-block">
+            <div class="numbers-block">
+               <div class="icon meroon-bg">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h2 class="value">{{ developers.value }}</h2>
+                  <h5>{{ developers.title }}<i class="material-icons large red-text left">arrow_drop_down</i></h5>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center apps cont-block">
+            <div class="numbers-block">
+               <div class="icon green-bg">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h2 class="value">{{ apps.value }}</h2>
+                  <h5>{{ apps.title }} <i class="material-icons large red-text left">arrow_drop_down</i></h5>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center revenue cont-block">
+            <div class="numbers-block">
+               <div class="icon pink-bg">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h2 class="value">{{ revenue.value }}</h2>
+                  <h5>{{ revenue. title }} <i class="material-icons large green-text left">arrow_drop_up</i></h5>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row dashboard-content dshboard-two">
+         <div class="col s2 center apis cont-block">
+            <div class="numbers-block blue-bg">
+               <div class="icon">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                    <h5>{{ hits.title }}</h5>
+                  <h2 class="value"> {{ hits.value }}</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center products cont-block">
+            <div class="numbers-block yellow-bg">
+               <div class="icon">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                <h5>{{ duration.title }}</h5>
+                <h2 class="value">{{ duration.value }}</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center developers cont-block">
+            <div class="numbers-block meroon-bg">
+               <div class="icon">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h5>{{ support_cycle.title }}</h5>
+                  <h2 class="value">{{ support_cycle.value }}</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center apps cont-block">
+            <div class="numbers-block green-bg">
+               <div class="icon">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h5>{{ app_abandonment.title }}</h5>
+                  <h2 class="value">{{ app_abandonment.value }}</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col s2 center revenue cont-block">
+            <div class="numbers-block pink-bg">
+               <div class="icon">
+                  <i class="material-icons">developer_board</i>
+               </div>
+               <div class="context">
+                  <h5>{{ arpd.title }}</h5>
+                  <h2 class="value">{{ arpd.value }}</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>
+
+
+<div class="row">
+  <div class="col s4 center">
+    <h1>{{ performance.title }}</h1>
+    {{ performance.graph }}
+  </div>
+</div>

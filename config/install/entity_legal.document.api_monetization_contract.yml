@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: api_monetization_contract
+label: 'API Monetization COntract'
+require_signup: false
+require_existing: false
+settings:
+  new_users:
+    require: false
+    require_method: form_link
+  existing_users:
+    require: false
+    require_method: popup
+  title_pattern: '[entity_legal_document:label]'

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: use_cases
+label: 'Use Cases'
+type: 'canonical_entities:node'
+pattern: 'use-cases/[node:title]'
+selection_criteria:
+  9cd33b50-9d8b-4175-b58d-10fd9abf1dd0:
+    id: node_type
+    bundles:
+      usecase: usecase
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9cd33b50-9d8b-4175-b58d-10fd9abf1dd0
+selection_logic: and
+weight: -5
+relationships: {  }

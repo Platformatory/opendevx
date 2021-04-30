@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.benefit.description
+    - field.field.paragraph.benefit.icon
+    - field.field.paragraph.benefit.name
+    - paragraphs.paragraphs_type.benefit
+  module:
+    - text
+id: paragraph.benefit.default
+targetEntityType: paragraph
+bundle: benefit
+mode: default
+content:
+  description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  icon:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

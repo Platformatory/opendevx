@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.mode
+    - node.type.repository
+  module:
+    - options
+id: node.repository.mode
+field_name: mode
+entity_type: node
+bundle: repository
+label: Mode
+description: 'Choose the operating mode'
+required: false
+translatable: true
+default_value:
+  -
+    value: rw
+default_value_callback: ''
+settings: {  }
+field_type: list_string

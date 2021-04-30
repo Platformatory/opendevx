@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.config
+    - node.type.repository
+  module:
+    - jsonb
+id: node.repository.config
+field_name: config
+entity_type: node
+bundle: repository
+label: Config
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'null'
+default_value_callback: ''
+settings: {  }
+field_type: json

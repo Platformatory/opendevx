@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stat
+    - paragraphs.paragraphs_type.kpi
+id: paragraph.kpi.stat
+field_name: stat
+entity_type: paragraph
+bundle: kpi
+label: Stat
+description: 'Add a stat or number'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

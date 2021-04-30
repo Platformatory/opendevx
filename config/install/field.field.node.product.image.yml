@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.image
+    - media.type.image
+    - node.type.product
+id: node.product.image
+field_name: image
+entity_type: node
+bundle: product
+label: Image
+description: 'Add a representative image for this product. Maybe used in listings.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * Implements hook_update_N().
+ */
+function odx_integrations_update_8001() {
+
+    $database = \Drupal::database();
+    $schema = $database->schema();
+    $table_name = 'api_metrics';
+    $table_schema = [
+      'description' => 'Table to store custom API metrics.',
+      'fields' => [
+        'id' => [
+          'type' => 'serial',
+          'not null' => TRUE,
+          'description' => 'Primary Key: Unique record ID.',
+        ],
+        'uuid' => [
+          'type' => 'char',
+          'length' => 36,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'The subscription UUID for the record.',
+        ],
+        'name' => [
+          'type' => 'varchar_ascii',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Metric name.',
+        ],
+        'created' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => 'Timestamp when the record was created.',
+        ],
+        'data' => [
+          'type' => 'float',
+          'not null' => TRUE,
+          'default' => 0.0,
+          'description' => 'The metric data for the item.',
+        ],
+      ],
+      'primary key' => ['id'],
+      'indexes' => [
+        'name' => ['name'],
+        'uuid' => ['uuid'],
+      ],
+    ];
+  
+    $schema->createTable($table_name, $table_schema);
+  }
+  

@@ -1,0 +1,6 @@
+odx_integrations.settings_form:
+  title: ODX Hub
+  description: Configure ODX Hub.
+  parent: system.admin_config_system
+  route_name: odx_integrations.settings_form
+  weight: 10

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.icon
+    - paragraphs.paragraphs_type.benefit
+id: paragraph.benefit.icon
+field_name: icon
+entity_type: paragraph
+bundle: benefit
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

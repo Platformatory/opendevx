@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.usage_provider
+    - node.type.plan
+  module:
+    - options
+id: node.plan.usage_provider
+field_name: usage_provider
+entity_type: node
+bundle: plan
+label: 'Usage Provider'
+description: "For APIs to be monetized, ODX requires usage information that can be queried and filtered against the consuming application or customer ID. This can be retrieved directly through the gateway (consult documentation if your gateway supports this) or via a custom gateway proxy or agent based instrumentation that collects this and forwards it to OpenDevX(consult documentation on support); \r\n\r\nOpenDevX also provides APIs so that usage information can be \"push\" reported via external systems."
+required: true
+translatable: false
+default_value:
+  -
+    value: gateway
+default_value_callback: ''
+settings: {  }
+field_type: list_string

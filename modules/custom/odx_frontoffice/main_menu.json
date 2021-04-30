@@ -1,0 +1,22 @@
+[
+  {
+    "link": "/domains",
+    "icon": "dashboard",
+    "title": "Domains"
+  },
+  {
+    "link": "/products",
+    "icon": "dashboard",
+    "title": "Products"
+  },
+  {
+    "link": "/docs",
+    "icon": "dashboard",
+    "title": "Docs"
+  },
+  {
+    "link": "/use-cases",
+    "icon": "dashboard",
+    "title": "Use-cases"
+  }
+]

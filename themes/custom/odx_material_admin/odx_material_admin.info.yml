@@ -1,0 +1,22 @@
+name: ODX Material Admin
+type: theme
+base theme: material_admin
+description: ODX specific overrides on top of material admin.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - odx_material_admin/global
+regions:
+  header: 'Header'
+  status: 'Status area'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+logo: logo.png

@@ -1,0 +1,94 @@
+#odx-page nav.navbar .brand-logo-content sup {
+  top: -1.5em;
+}
+.dashboard-content .cont-block {
+	width: 20% !important;
+    padding: 0px 6px 0px 6px;
+}
+
+.dashboard-content .cont-block .numbers-block {
+    box-shadow: 0 0px 2px 0 rgb(0 0 0 / 10%), 0 1px 3px 0 rgb(0 0 0 / 15%);
+    padding: 10px;
+    margin: auto;
+    height: 110px;
+    display: flex;
+    align-items: center;
+	position: relative;
+}
+
+.dashboard-content .numbers-block .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px 10px 0px 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+}
+
+.dashboard-content .numbers-block .context h2.value {
+	font-size: 2.4rem;
+    font-weight: 900;
+    text-align: left;
+	margin: 0;
+}
+
+.dashboard-content .numbers-block .context h5 {
+    font-size: .8rem;
+    line-height: 100%;
+    margin: .4rem 0 0rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-content .numbers-block .context h5 i.material-icons {
+    font-size: 1.6rem;
+    float: none !important;
+    line-height: 0px;
+    margin-right: 0;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.dashboard-content {
+	padding: 15px;
+}
+
+.dashboard-two .numbers-block .icon{
+	position: absolute;
+    right: 5px;
+    top: 5px;
+    margin-right: 0;
+    opacity: .8;
+    width: 40px;
+    height: 40px;
+}
+
+.dashboard-two .numbers-block .context {
+    padding-left: 10px;
+}
+
+
+.dashboard-two .numbers-block .context h2.value {
+    margin: 20px 0px 10px;
+}
+
+.user-nav .dropdown-content {
+    width: 100% !important;
+    max-width: 360px;
+    padding: 10px;
+    top: 56px !important;
+}
+
+.user-nav .notifications-title {
+	padding: 0px 10px;
+}
+
+.user-nav .card .card-content {
+    padding: 12px;
+    border-radius: 0 0 2px 2px;
+}

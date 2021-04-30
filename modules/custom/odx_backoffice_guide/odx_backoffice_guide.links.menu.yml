@@ -1,0 +1,6 @@
+#odx_backoffice_guide.admin_checklist:
+#  title: API Program Checklist
+#  description: A guide towards successful OpenDevX usage to build an API program.
+#  route_name: odx_backoffice_guide.admin_checklist
+#  parent: system.admin_config_development
+

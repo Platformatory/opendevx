@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+id: domain-dev_rel
+label: 'Dev Rel'
+weight: 104
+internal: false
+audience: member
+group_type: domain
+permissions_ui: true
+permissions: {  }

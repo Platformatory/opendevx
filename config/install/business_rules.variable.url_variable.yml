@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: url_variable
+label: 'Url variable'
+description: 'Represents the current URL'
+settings: {  }
+tags:
+  defaults: defaults
+type: url_variable
+target_entity_type: null
+target_bundle: null

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.applications_count
+    - group.type.domain
+  module:
+    - computed_field
+id: group.domain.applications_count
+field_name: applications_count
+entity_type: group
+bundle: domain
+label: 'Applications Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  prefix: ''
+  suffix: ''
+field_type: computed_integer

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX forms module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+ /**
+ * Implements hook_entity_type_alter().
+ */
+function odx_forms_entity_type_alter(array &$entity_types) {
+  // for nodes
+  $odx_node_type = $entity_types['node'];
+  $default_handler_class = $odx_node_type->getHandlerClasses()['form']['default'];
+  $odx_node_type->setFormClass('odx', $default_handler_class);
+
+  // for groups
+  $odx_group_type = $entity_types['group'];
+  $default_handler_class = $odx_group_type->getHandlerClasses()['form']['add'];
+  $odx_group_type->setFormClass('odx', $default_handler_class);
+}

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.remote
+    - node.type.application
+  module:
+    - jsonb
+id: node.application.remote
+field_name: remote
+entity_type: node
+bundle: application
+label: Remote
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'null'
+default_value_callback: ''
+settings: {  }
+field_type: json

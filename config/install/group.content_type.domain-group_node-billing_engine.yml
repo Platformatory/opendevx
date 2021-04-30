@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+    - node.type.billing_engine
+  module:
+    - gnode
+    - node
+id: domain-group_node-billing_engine
+label: 'Domain: Group node (Billing Engine)'
+description: 'Adds <em class="placeholder">Billing Engine</em> content to groups both publicly and privately.'
+group_type: domain
+content_plugin: 'group_node:billing_engine'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

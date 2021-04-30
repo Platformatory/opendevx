@@ -1,0 +1,319 @@
+odx_backoffice.login:
+  path: '/backoffice/login'
+  defaults:
+    _form: '\Drupal\odx_backoffice\Form\UserLoginForm'
+    _title: 'Log in'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    _maintenance_access: TRUE
+    _admin_route: TRUE
+    _odx_login: TRUE
+
+
+# Discover
+odx_backoffice.discover_repositories:
+  path: '/backoffice/discover/repositories'
+  defaults:
+    _title: 'Repositories'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::repositories'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.discover_apis:
+  path: '/backoffice/discover/apis'
+  defaults:
+    _title: 'APIs'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::apis'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.discover_developers:
+  path: '/backoffice/discover/applications'
+  defaults:
+    _title: 'Apps'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::applications'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.discover_users:
+  path: '/backoffice/discover/users'
+  defaults:
+    _title: 'Users'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::users'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+# Organize
+odx_backoffice.organize_domains:
+  path: '/backoffice/organize/domains'
+  defaults:
+    _title: 'Domains'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::domains'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.organize_products:
+  path: '/backoffice/organize/products'
+  defaults:
+    _title: 'Products'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::products'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.organize_content:
+  path: '/backoffice/organize/content'
+  defaults:
+    _title: 'Content & Docs'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::content'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.organize_operations:
+  path: '/backoffice/organize/operations'
+  defaults:
+    _title: 'Support & Operations'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::operations'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+# Monetize
+
+odx_backoffice.monetize_blling_engines:
+  path: '/backoffice/monetize/billing-engines'
+  defaults:
+    _title: 'Billing Engines'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::billing_engines'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.monetize_plans:
+  path: '/backoffice/monetize/plans'
+  defaults:
+    _title: 'Billing Plans'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::plans'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.monetize_subscriptions:
+  path: '/backoffice/monetize/subscriptions'
+  defaults:
+    _title: 'Billing Plans'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::subscriptions'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+# Administer & Govern
+odx_backoffice.administer_integrations:
+  path: '/backoffice/administer/integrations'
+  defaults:
+    _title: 'Integrations & Plugins'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::integrations'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_api:
+  path: '/backoffice/administer/management-apis'
+  defaults:
+    _title: 'Management API Docs'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::management_apis'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_branding:
+  path: '/backoffice/administer/branding'
+  defaults:
+    _title: 'Administer Branding & Theming'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::branding'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_iam:
+  path: '/backoffice/administer/iam'
+  defaults:
+    _title: 'Identity & Access Management'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::iam'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_workflows:
+  path: '/backoffice/administer/workflows'
+  defaults:
+    _title: 'Manage Workflows'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::workflows'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_rules:
+  path: '/backoffice/administer/rules'
+  defaults:
+    _title: 'Manage Business rules'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::rules'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.administer_contracts:
+  path: '/backoffice/administer/contracts'
+  defaults:
+    _title: 'Administer Legal, Contracting & Compliance'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::legal'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.dashboard:
+  path: '/backoffice/dashboard'
+  defaults:
+    _title: 'Dashboard'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::discover'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.custom_actions:
+    # Singular noun of ODX object
+  path: '/backoffice/{type}/{uuid}/{action}'
+  defaults:
+    # This route returns a Response object so also uses _controller
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeCustomActionsController::handle'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    # Enable the admin theme for this route.
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.guide:
+  path: '/backoffice/guide'
+  defaults:
+    _title: 'OpenDevX Setup Checklist'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::guide'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.content_import:
+  path: '/backoffice/import'
+  defaults:
+    _title: 'Content import'
+    _form: 'Drupal\odx_backoffice\Form\ContentImportForm'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    _admin_route: TRUE
+    _odx: TRUE
+
+# group mgmt ops
+odx_backoffice.domain.membership:
+  path: '/backoffice/domain/{group}/members'
+  defaults:
+    _title: 'Members'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::members'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+    _admin_route: TRUE
+    _odx: TRUE
+
+# group mgmt ops
+odx_backoffice.domain.membership.add:
+  path: '/backoffice/domain/{group}/members/add'
+  defaults:
+    _title: 'Add Member'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::addMember'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.domain.membership.edit:
+  path: '/backoffice/domain/{group}/members/{id}/edit'
+  defaults:
+    _title: 'Edit Membership'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::editMember'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+    _admin_route: TRUE
+    _odx: TRUE
+
+odx_backoffice.domain.membership.delete:
+  path: '/backoffice/domain/{group}/members/{id}/delete'
+  defaults:
+    _title: 'Delete Membership'
+    _controller: '\Drupal\odx_backoffice\Controller\OdxBackofficeController::deleteMember'
+  requirements:
+    _permission: 'administer odx backoffice'
+  options:
+    parameters:
+      group:
+        type: domain_slug
+    _admin_route: TRUE
+    _odx: TRUE

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - options
+id: group.mode
+field_name: mode
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: api_consumer
+      label: 'API Consumer'
+    -
+      value: api_store
+      label: 'API Store'
+    -
+      value: api_exchange
+      label: 'API Exchange'
+    -
+      value: api_publisher
+      label: 'API Publisher'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

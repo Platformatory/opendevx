@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.version
+    - node.type.application
+id: node.application.version
+field_name: version
+entity_type: node
+bundle: application
+label: Version
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

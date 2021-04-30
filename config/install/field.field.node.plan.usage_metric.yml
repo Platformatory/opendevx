@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.usage_metric
+    - node.type.plan
+  module:
+    - options
+id: node.plan.usage_metric
+field_name: usage_metric
+entity_type: node
+bundle: plan
+label: 'Usage Metric'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: api_call
+default_value_callback: ''
+settings: {  }
+field_type: list_string

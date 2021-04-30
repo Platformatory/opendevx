@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.domain
+id: domain-marketer
+label: Marketer
+weight: 105
+internal: false
+audience: member
+group_type: domain
+permissions_ui: true
+permissions: {  }

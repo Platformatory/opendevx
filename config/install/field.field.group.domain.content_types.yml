@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.content_types
+    - group.type.domain
+    - node.type.api
+    - node.type.application
+    - node.type.book
+    - node.type.event
+    - node.type.faq
+    - node.type.file
+    - node.type.media
+    - node.type.news
+    - node.type.page
+    - node.type.plan
+    - node.type.product
+    - node.type.repository
+    - node.type.subscription
+    - node.type.ticket
+    - node.type.usecase
+    - node.type.webform
+id: group.domain.content_types
+field_name: content_types
+entity_type: group
+bundle: domain
+label: 'Content Types'
+description: 'Select a list of content bundles enabled for this domain.'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: dd5e7ef0-18e2-409d-a833-8eedfcfc20bd
+  -
+    target_uuid: 34199f86-b92b-485e-89de-16f6117841a2
+  -
+    target_uuid: 47a1555c-1010-4b91-965f-ca1dfb91d8f9
+  -
+    target_uuid: 51e744e2-543c-4895-a8e1-230b88b6729d
+  -
+    target_uuid: 524085f5-f8eb-47e7-a483-50e41e181d2e
+  -
+    target_uuid: 1ae331ad-6c27-471f-925f-e58de751fc4a
+  -
+    target_uuid: a1f504fd-0d98-4d62-993d-91f3e87a2866
+  -
+    target_uuid: 54d45e46-cfa8-4599-809e-cb531425bd9d
+  -
+    target_uuid: bbb07e81-656b-4931-8b85-8cff26a48624
+  -
+    target_uuid: 2c9971e6-4550-4534-a385-ebf0144f9fe2
+  -
+    target_uuid: 551f874f-deb9-4ef3-85d0-c729513cdd5c
+  -
+    target_uuid: ab31832b-4a29-4b62-a5cd-87a99ba7cece
+  -
+    target_uuid: 18822809-2681-4e99-83da-c58966c4366e
+  -
+    target_uuid: ba93a975-c222-4ba6-ae3c-95d9f3a43422
+  -
+    target_uuid: fd566c28-90fb-4017-9d22-04db7c750105
+  -
+    target_uuid: 9c1fab97-aafc-4c1b-8a97-ebabfd54f770
+default_value_callback: ''
+settings:
+  handler: 'default:node_type'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

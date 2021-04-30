@@ -1,0 +1,194 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ODX Frontoffice module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function odx_frontoffice_theme() {
+  return [
+    'user_nav' => [
+      'variables' => [
+        'menu' => NULL,
+        'user_image_url' => NULL,
+      ],
+    ],
+    'main_menu_nav' => [
+      'variables' => [
+        'menu' => NULL,
+        'user_image_url' => NULL,
+      ],
+    ],
+    'user_nav_mobile' => [
+      'variables' => [
+        'menu' => NULL,
+      ],
+    ],
+    'contextual_navigation' => [
+      'variables' => [
+        'primary_color' => NULL,
+        // 'secondary_color' => NULL,
+      ],
+    ],
+    'domain_navigation' => [
+      'variables' => [
+        'label' => NULL,
+        'url' => NULL,
+      ],
+    ],
+    'domain_breadcrumb' => [
+      'variables' => [
+        'label' => NULL,
+        'url' => NULL,
+        'entity' => NULL,
+      ],
+    ],
+    'generic_breadcrumb' => [
+      'variables' => [
+        'entity' => NULL,
+      ],
+    ],
+    'product_navigation' => [
+      'variables' => [
+        'label' => NULL,
+        'url' => NULL,
+        'api_count' => NULL,
+        'try_url' => NULL,
+        'browse_url' => NULL,
+      ],
+    ],
+    'product_api' => [
+      'variables' => [
+        'try_url' => NULL,
+        'browse_url' => NULL,
+      ],
+    ],
+    'redoc' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+    'voyager' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+    'async_api' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+    'product_breadcrumb' => [
+      'variables' => [
+        'label' => NULL,
+        'url' => NULL,
+        'entity' => NULL,
+      ],
+    ],
+    'custom_html_block' => [
+      'variables' => [
+        'custom_html' => NULL,
+      ],
+    ],
+    'hero_with_3_blocks' => [
+      'variables' => [
+        'cta_title' => NULL,
+      ],
+    ],
+    'hero_with_signup' => [
+      'variables' => [],
+    ],
+    'product_pricing' => [
+      'variables' => [],
+    ],
+    'domain_hero_1' => [
+      'variables' => [
+        'image_url' => NULL,
+        'url' => NULL,
+      ],
+    ],
+    'product_hero_1' => [
+      'variables' => [
+        'image_url' => NULL,
+        'kpis' => NULL,
+        'description' => NULL,
+        'cta_link' => NULL,
+        'dest' => NULL,
+      ],
+    ],
+    'product_features_block' => [
+      'variables' => ['features' => NULL],
+    ],
+    'product_benefits_block' => [
+      'variables' => ['benefits' => NULL],
+    ],
+    'swagger' => [
+      'variables' => [],
+    ],
+    'rdocs' => [
+      'variables' => [],
+    ],
+    'api_credentials' => [
+      'variables' => [
+        'credentials' => NULL,
+        'id' => NULL,
+      ],
+    ],
+    'subscriptions_table' => [
+      'variables' => [
+        'subscriptions' => NULL,
+        'past_invoices' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function odx_frontoffice_local_tasks_alter(&$local_tasks) {
+  // foreach($local_tasks as $key => $local_task) {
+  //   if ($local_task['title'] == 'Outline') {
+  //     unset($local_tasks[$key]);
+  //   }
+  //   if ($local_task['title'] == 'Revisions') {
+  //     unset($local_tasks[$key]);
+  //   }
+  //   if ($local_task['title'] == 'Usage') {
+  //     unset($local_tasks[$key]);
+  //   }
+  //   if ($local_task['title'] == 'Devel') {
+  //     unset($local_tasks[$key]);
+  //   }
+  // }
+}
+
+function odx_frontoffice_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'application') {
+    $build['credentials_list'] = [
+      '#theme' => 'api_credentials',
+      '#credentials' => json_decode($entity->credentials->value, true),
+      '#id' => $entity->id(),
+    ];
+  }
+  if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'product' && $view_mode == 'full') {
+    $apis = $entity->get('apis')->referencedEntities();
+    $first_api = reset($apis);
+    $build['navigation'] = [
+      '#theme' => 'product_navigation',
+      '#label' => $entity->getTitle(),
+      '#url' => $entity->toUrl()->toString(),
+      '#api_count' => count($apis),
+      '#try_url' => $entity->toUrl()->toString() . $first_api->toUrl()->toString() . '/try',
+      '#browse_url' => $entity->toUrl()->toString() . $first_api->toUrl()->toString() . '/browse',
+    ];
+  }
+}

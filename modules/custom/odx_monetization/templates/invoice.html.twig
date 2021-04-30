@@ -1,0 +1,40 @@
+<div class="mt-2 pb-12 bg-white sm:pb-16">
+{% if invoice.total == 0 %}
+    <h3 class="text-gray-600 text-sm font-medium truncate">{{ 'No units consumed for this period.'|t }}</h3>
+{% else %}
+    {% if start_date %}
+    <h3 class="mt-2 text-gray-600 text-md font-medium truncate">From {{ start_date }} to {{ end_date }}</h3>
+    {% endif %}
+    <div class="flex -mx-1 border-b py-2 items-start">
+      <div class="flex-1 px-1">
+        <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Description</p>
+      </div>
+
+      <div class="px-1 w-20 text-right">
+        <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Charges</p>
+      </div>
+    </div>
+
+    {% for line_item in invoice.li  %}
+    <div class="flex px-1 py-2 border-b">
+      <div class="flex-1 px-1">
+        <p class="text-gray-800">{{ line_item.label }}</p>
+      </div>
+
+      <div class="px-1 w-20 text-right">
+        <p class="text-gray-800">{{ line_item.charges }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="flex px-1 py-2 bg-gray-200 border-b font-bold">
+      <div class="flex-1 px-1">
+        <p class="text-gray-800">{{ 'Total'|t }}</p>
+      </div>
+
+      <div class="px-1 w-20 text-right">
+        <p class="text-gray-800">{{ invoice.total }}</p>
+      </div>
+    </div>
+{% endif %}
+</div>
+
