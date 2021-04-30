@@ -21,7 +21,7 @@
     "require": {
         "apigee/apigee-client-php": "^2.0",
         "aws/aws-sdk-php": "^3.176",
-        "composer/installers": "^1.9",
+        "composer/installers": "^1.11",
         "cweagans/composer-patches": "^1.7",
         "drupal/address": "^1.9",
         "drupal/admin_login_path": "^1.1",
@@ -94,6 +94,7 @@
         "drupal/views_bulk_operations": "^3.10",
         "drupal/webform": "^6.0",
         "drush/drush": "^10.3",
+	    "mnsami/composer-custom-directory-installer": "^2.0",
         "php-http/guzzle6-adapter": "^1.1.1",
         "platformsh/config-reader": "^2.4",
         "protitude/markdown": "9999999-dev",
@@ -149,6 +150,7 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
+                "swagger-api/swagger-ui",
                 "type:drupal-library",
                 "type:npm-asset"
             ],

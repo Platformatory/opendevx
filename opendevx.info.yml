@@ -80,7 +80,6 @@ install:
   - jquery_ui
   - jquery_ui_datepicker
   - jquery_ui_slider
-  - jquery_ui_touch_punch
   - jsonapi
   - jsonapi_extras
   - jsonb
@@ -172,7 +171,6 @@ dependencies:
  - block
  - views
  - book
- - hook_event_dispatcher
 
 themes:
   - bartik
