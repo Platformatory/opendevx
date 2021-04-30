@@ -1,0 +1,14 @@
+diff --git a/js/responsive_menu.config.js b/js/responsive_menu.config.js
+index 528d199..73459f7 100644
+--- a/js/responsive_menu.config.js
++++ b/js/responsive_menu.config.js
+@@ -35,7 +35,8 @@
+           },
+           drag: {
+             open: settings.drag
+-          }
++          },
++          "slidingSubmenus" : false,
+         };
+ 
+         if (pagedim !== 'none') {

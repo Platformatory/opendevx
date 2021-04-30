@@ -1,0 +1,38 @@
+diff --git a/js/notifications.js b/js/notifications.js
+index 0644b73..dca5f53 100644
+--- a/js/notifications.js
++++ b/js/notifications.js
+@@ -43,11 +43,11 @@
+           if (thisMessageSize <= messageMax) {
+             var thisItem = $(this).closest($('.messages'));
+             var itemContent = $(this).text();
+-            M.toast({
+-              html: itemContent,
+-              displayLength: 5000,
+-              classes: statusType,
+-            });
++            // M.toast({
++            //   html: itemContent,
++            //   displayLength: 5000,
++            //   classes: statusType,
++            // });
+             messageInbox(statusType, thisItem);
+           }
+           if (thisMessageSize >= messageMax) {
+@@ -58,11 +58,11 @@
+             messageInbox(statusType, thisItem);
+             // only display if message prompt setting is 0.
+             if (drupalSettings.material_admin.material_admin_message_prompt) {
+-              M.toast({
+-                html: messageNotice,
+-                displayLength: 5000,
+-                classes: statusType,
+-              });
++              // M.toast({
++              //   html: messageNotice,
++              //   displayLength: 5000,
++              //   classes: statusType,
++              // });
+            }
+           }
+         });

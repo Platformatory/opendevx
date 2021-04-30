@@ -1,0 +1,104 @@
+diff --git a/simple_page_manager.links.task.yml b/simple_page_manager.links.task.yml
+new file mode 100644
+index 0000000..f7076da
+--- /dev/null
++++ b/simple_page_manager.links.task.yml
+@@ -0,0 +1,3 @@
++simple_page_manager:
++  deriver: '\Drupal\simple_page_manager\Plugin\Derivative\SimplePageManagerLocalTaskDeriver'
++
+diff --git a/src/Plugin/Derivative/SimplePageManagerLocalTaskDeriver.php b/src/Plugin/Derivative/SimplePageManagerLocalTaskDeriver.php
+new file mode 100644
+index 0000000..fa84fca
+--- /dev/null
++++ b/src/Plugin/Derivative/SimplePageManagerLocalTaskDeriver.php
+@@ -0,0 +1,89 @@
++<?php
++
++namespace Drupal\simple_page_manager\Plugin\Derivative;
++
++use Drupal\Component\Plugin\Derivative\DeriverBase;
++use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
++use Drupal\Core\StringTranslation\StringTranslationTrait;
++use Symfony\Component\DependencyInjection\ContainerInterface;
++
++/**
++ * Provides local task definitions for the pages user interface.
++ *
++ * @internal
++ *   Plugin derivers are internal.
++ */
++class SimplePageManagerLocalTaskDeriver extends DeriverBase implements ContainerDeriverInterface {
++
++  use StringTranslationTrait;
++
++  /**
++   * The page storage.
++   *
++   * @var \Drupal\Core\Entity\EntityStorageInterface
++   */
++  protected $pageStorage;
++
++  /**
++   * Constructs a new SimplePageManagerLocalTaskDeriver.
++   *
++   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
++   *   The entity type manager.
++   */
++  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
++    $this->pageStorage = $entity_type_manager->getStorage('page');
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function create(ContainerInterface $container, $base_plugin_id) {
++    return new static(
++      $container->get('entity_type.manager')
++    );
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getDerivativeDefinitions($base_plugin_definition) {
++    /** @var \Drupal\simple_page_manager\Entity\Page[] $pages */
++    $pages = $this->pageStorage->loadMultiple();
++
++    foreach ($pages as $page_id => $page) {
++      $this->derivatives["entity.page.${page_id}.canonical"] = $base_plugin_definition + [
++        'route_name' => "entity.page.${page_id}.canonical",
++        'title' => $this->t('View'),
++        'base_route' => "entity.page.${page_id}.canonical"
++      ];
++      $this->derivatives["entity.page.${page_id}.edit_form"] = $base_plugin_definition + [
++        'route_name' => 'entity.page.edit_form',
++        'route_parameters' => [
++          'page' => $page_id,
++        ],
++        'title' => $this->t('Edit'),
++        'base_route' => "entity.page.${page_id}.canonical"
++      ];
++      $this->derivatives["layout_builder.page.${page_id}.view"] = $base_plugin_definition + [
++        'route_name' => 'layout_builder.page.view',
++        'route_parameters' => [
++          'page' => $page_id,
++        ],
++        'title' => $this->t('Layout'),
++        'base_route' => "entity.page.${page_id}.canonical"
++        ];
++      $this->derivatives["entity.page.${page_id}.delete_form"] = $base_plugin_definition + [
++        'route_name' => 'entity.page.delete_form',
++        'route_parameters' => [
++          'page' => $page_id,
++        ],
++        'title' => $this->t('Delete'),
++        'base_route' => "entity.page.${page_id}.canonical"
++      ];
++    }
++
++    return $this->derivatives;
++  }
++
++}

@@ -1,0 +1,14 @@
+diff --git a/src/Plugin/Field/FieldWidget/JsonbWidget.php b/src/Plugin/Field/FieldWidget/JsonbWidget.php
+index d4520ab..87a31bc 100644
+--- a/src/Plugin/Field/FieldWidget/JsonbWidget.php
++++ b/src/Plugin/Field/FieldWidget/JsonbWidget.php
+@@ -28,6 +28,9 @@ class JsonbWidget extends StringTextareaWidget {
+   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
+     $widget = parent::formElement($items, $delta, $element, $form, $form_state);
+     $widget['#element_validate'][] = [static::class, 'validateJsonStructure'];
++    $json = $widget['value']['#default_value'];
++    $decoded = Json::decode($json);
++    $widget['value']['#default_value'] = json_encode($decoded, JSON_PRETTY_PRINT);
+     return $widget;
+   }
+ 

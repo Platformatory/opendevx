@@ -1,0 +1,13 @@
+diff --git a/avatars_gravatar/avatars_gravatar.info.yml b/avatars_gravatar/avatars_gravatar.info.yml
+index 2fe62bf..8d59282 100644
+--- a/avatars_gravatar/avatars_gravatar.info.yml
++++ b/avatars_gravatar/avatars_gravatar.info.yml
+@@ -2,6 +2,6 @@ name: Gravatar
+ type: module
+ description: 'Adds Gravatar.com avatar generators for Avatar Kit.'
+ package: Avatars
+-core: 8.x
++core_version_requirement: ^8.8 || ^9
+ dependencies:
+   - avatars
+\ No newline at end of file
