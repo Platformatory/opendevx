@@ -154,9 +154,6 @@
                 "type:drupal-library",
                 "type:npm-asset"
             ],
-            "libraries/swagger_ui": [
-                "swagger-api/swagger-ui"
-            ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
