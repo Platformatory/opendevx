@@ -5,7 +5,7 @@ dependencies:
     - system
   theme:
     - opendevx_theme
-id: opendevx_breadcrumbs
+id: opendevx_theme_breadcrumbs
 theme: opendevx_theme
 region: header
 weight: 0

@@ -3,7 +3,7 @@ status: true
 dependencies:
   theme:
     - opendevx_theme
-id: opendevx_secondary_local_tasks
+id: opendevx_theme_secondary_local_tasks
 theme: opendevx_theme
 region: header
 weight: 1

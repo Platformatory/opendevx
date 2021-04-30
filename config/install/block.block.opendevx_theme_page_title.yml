@@ -3,7 +3,7 @@ status: false
 dependencies:
   theme:
     - opendevx_theme
-id: opendevx_page_title
+id: opendevx_theme_page_title
 theme: opendevx_theme
 region: header
 weight: -3
