@@ -94,7 +94,7 @@
         "drupal/views_bulk_operations": "^3.10",
         "drupal/webform": "^6.0",
         "drush/drush": "^10.3",
-	    "mnsami/composer-custom-directory-installer": "^2.0",
+	"mnsami/composer-custom-directory-installer": "^2.0",
         "php-http/guzzle6-adapter": "^1.1.1",
         "platformsh/config-reader": "^2.4",
         "protitude/markdown": "9999999-dev",
@@ -120,6 +120,7 @@
                 "web-root": "web/"
             }
         },
+	"enable-patching": true,
         "patches": {
             "drupal/avatars": {
                 "Version bump up": "patches/avatar-version-bump-2021-04-06.patch"
