@@ -12,10 +12,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/protitude/module_markdown"
         }
     ],
     "require": {
@@ -97,7 +93,6 @@
 	"mnsami/composer-custom-directory-installer": "^2.0",
         "php-http/guzzle6-adapter": "^1.1.1",
         "platformsh/config-reader": "^2.4",
-        "protitude/markdown": "9999999-dev",
         "swagger-api/swagger-ui": "^3.48",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
