@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.news.body
-    - node.type.news
+  - core.entity_view_mode.node.teaser
+  - field.field.node.news.body
+  - node.type.news
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.news.teaser
 targetEntityType: node
 bundle: news
@@ -19,11 +19,11 @@ content:
     weight: 101
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
-hidden: {  }
+hidden: {}

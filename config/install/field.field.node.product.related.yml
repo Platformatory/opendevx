@@ -2,20 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.related
-    - node.type.product
+  - field.storage.node.related
+  - node.type.product
 id: node.product.related
 field_name: related
 entity_type: node
 bundle: product
-label: 'Related Products'
-description: 'Add a list of related products. This improves the ODX''s ability to show contextual content'
+label: Related Products
+description: Add a list of related products. This improves the ODX's ability to show
+  contextual content
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:node'
+  handler: default:node
   handler_settings:
     target_bundles:
       product: product
@@ -23,5 +24,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

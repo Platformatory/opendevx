@@ -2,28 +2,25 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - options
+  - node
+  - options
 id: node.payment_method
 field_name: payment_method
 entity_type: node
 type: list_string
 settings:
   allowed_values:
-    -
-      value: bank_transfer
-      label: 'Bank Transfer'
-    -
-      value: card
-      label: Card
-    -
-      value: other
-      label: Other
-  allowed_values_function: ''
+  - value: bank_transfer
+    label: Bank Transfer
+  - value: card
+    label: Card
+  - value: other
+    label: Other
+  allowed_values_function: ""
 module: options
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

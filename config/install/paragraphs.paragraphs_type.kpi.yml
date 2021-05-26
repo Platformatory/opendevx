@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: kpi
 label: KPI
 icon_uuid: null
 icon_default: null
-description: 'Add a KPI'
-behavior_plugins: {  }
+description: Add a KPI
+behavior_plugins: {}

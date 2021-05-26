@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: node_unpublish_action
-label: 'Unpublish content'
+label: Unpublish content
 type: node
-plugin: 'entity:unpublish_action:node'
-configuration: {  }
+plugin: entity:unpublish_action:node
+configuration: {}

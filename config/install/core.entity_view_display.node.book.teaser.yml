@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.book.body
-    - field.field.node.book.image
-    - node.type.book
+  - core.entity_view_mode.node.teaser
+  - field.field.node.book.body
+  - field.field.node.book.image
+  - node.type.book
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.book.teaser
 targetEntityType: node
 bundle: book
@@ -21,7 +21,7 @@ content:
     region: content
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings: {}
   links:
     weight: 101
     region: content

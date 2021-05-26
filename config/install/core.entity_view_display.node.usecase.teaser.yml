@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.usecase.body
-    - field.field.node.usecase.image
-    - node.type.usecase
+  - core.entity_view_mode.node.teaser
+  - field.field.node.usecase.body
+  - field.field.node.usecase.image
+  - node.type.usecase
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.usecase.teaser
 targetEntityType: node
 bundle: usecase
@@ -20,12 +20,12 @@ content:
     weight: 101
     settings:
       trim_length: 300
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   image: true

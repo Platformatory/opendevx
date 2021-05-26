@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - content_moderation
+  - content_moderation
 id: editorial
-label: 'Marketing Content'
+label: Marketing Content
 type: content_moderation
 type_settings:
   states:
@@ -27,34 +27,34 @@ type_settings:
     archive:
       label: Archive
       from:
-        - published
+      - published
       to: archived
       weight: 2
     archived_draft:
-      label: 'Restore to Draft'
+      label: Restore to Draft
       from:
-        - archived
+      - archived
       to: draft
       weight: 3
     archived_published:
       label: Restore
       from:
-        - archived
+      - archived
       to: published
       weight: 4
     create_new_draft:
-      label: 'Create New Draft'
+      label: Create New Draft
       to: draft
       weight: 0
       from:
-        - draft
-        - published
+      - draft
+      - published
     publish:
       label: Publish
       to: published
       weight: 1
       from:
-        - draft
-        - published
-  entity_types: {  }
+      - draft
+      - published
+  entity_types: {}
   default_moderation_state: draft

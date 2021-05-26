@@ -2,21 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.mode
-    - node.type.billing_engine
+  - field.storage.node.mode
+  - node.type.billing_engine
   module:
-    - options
+  - options
 id: node.billing_engine.mode
 field_name: mode
 entity_type: node
 bundle: billing_engine
 label: Mode
-description: "Choose the operating mode for this billing provider. \r\n\r\nIn the read-only mode, billing entities are managed authoritatively on the provider and synced downstream into OpenDevX for usage. \r\nIn the write-only mode, billing entities are managed externally. OpenDevX exports product & pricing configuration data to the provider.\r\nIn the read-write mode, OpenDevX can mix and match."
+description: "Choose the operating mode for this billing provider. \r\n\r\nIn the
+  read-only mode, billing entities are managed authoritatively on the provider and
+  synced downstream into OpenDevX for usage. \r\nIn the write-only mode, billing entities
+  are managed externally. OpenDevX exports product & pricing configuration data to
+  the provider.\r\nIn the read-write mode, OpenDevX can mix and match."
 required: true
 translatable: false
 default_value:
-  -
-    value: rw
-default_value_callback: ''
-settings: {  }
+- value: rw
+default_value_callback: ""
+settings: {}
 field_type: list_string

@@ -3,9 +3,9 @@ status: false
 dependencies:
   enforced:
     module:
-      - book
+    - book
   module:
-    - node
+  - node
 id: node.print
 label: Print
 targetEntityType: node

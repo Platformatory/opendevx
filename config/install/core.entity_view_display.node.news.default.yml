@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
-    - node.type.news
+  - field.field.node.news.body
+  - node.type.news
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -16,12 +16,12 @@ content:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+    settings: {}
+    third_party_settings: {}
+hidden: {}

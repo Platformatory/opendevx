@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.product_feature.description
-    - field.field.paragraph.product_feature.icon
-    - field.field.paragraph.product_feature.name
-    - paragraphs.paragraphs_type.product_feature
+  - field.field.paragraph.product_feature.description
+  - field.field.paragraph.product_feature.icon
+  - field.field.paragraph.product_feature.name
+  - paragraphs.paragraphs_type.product_feature
   module:
-    - text
+  - text
 id: paragraph.product_feature.default
 targetEntityType: paragraph
 bundle: product_feature
@@ -16,8 +16,8 @@ content:
   description:
     weight: 1
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
   icon:
@@ -25,7 +25,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   name:
@@ -33,7 +33,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
-hidden: {  }
+hidden: {}

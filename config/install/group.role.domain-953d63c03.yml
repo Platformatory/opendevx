@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
+  - group.type.domain
   enforced:
     config:
-      - user.role.odx_administrator
+    - user.role.odx_administrator
 id: domain-953d63c03
-label: 'ODX Administrator'
+label: ODX Administrator
 weight: 7
 internal: true
 audience: outsider
 group_type: domain
 permissions_ui: false
-permissions: {  }
+permissions: {}

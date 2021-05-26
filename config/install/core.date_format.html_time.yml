@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: html_time
-label: 'HTML Time'
+label: HTML Time
 locked: true
-pattern: 'H:i:s'
+pattern: H:i:s

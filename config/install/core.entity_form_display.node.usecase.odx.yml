@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.usecase.body
-    - field.field.node.usecase.image
-    - node.type.usecase
+  - core.entity_form_mode.node.odx
+  - field.field.node.usecase.body
+  - field.field.node.usecase.image
+  - node.type.usecase
   module:
-    - media_library
-    - text
+  - media_library
+  - text
 id: node.usecase.odx
 targetEntityType: node
 bundle: usecase
@@ -20,32 +20,32 @@ content:
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ''
+      placeholder: ""
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   image:
     type: media_library_widget
     weight: 1
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 3
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   created: true
   moderation_state: true

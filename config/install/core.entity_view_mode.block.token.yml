@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block
+  - block
 id: block.token
 label: Token
 targetEntityType: block

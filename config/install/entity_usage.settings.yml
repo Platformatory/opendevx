@@ -1,44 +1,44 @@
 track_enabled_base_fields: false
 local_task_enabled_entity_types:
-  - node
-  - paragraphs_library_item
+- node
+- paragraphs_library_item
 usage_controller_items_per_page: 25
 track_enabled_source_entity_types:
-  - block_content
-  - comment
-  - contact_message
-  - group_content
-  - group
-  - menu_link_content
-  - node
-  - path_alias
-  - shortcut
-  - taxonomy_term
-  - paragraph
+- block_content
+- comment
+- contact_message
+- group_content
+- group
+- menu_link_content
+- node
+- path_alias
+- shortcut
+- taxonomy_term
+- paragraph
 track_enabled_target_entity_types:
-  - block_content
-  - comment
-  - contact_message
-  - group_content
-  - group
-  - menu_link_content
-  - node
-  - path_alias
-  - shortcut
-  - taxonomy_term
-  - paragraph
+- block_content
+- comment
+- contact_message
+- group_content
+- group
+- menu_link_content
+- node
+- path_alias
+- shortcut
+- taxonomy_term
+- paragraph
 edit_warning_message_entity_types:
-  - paragraphs_library_item
+- paragraphs_library_item
 delete_warning_message_entity_types:
-  - paragraphs_library_item
+- paragraphs_library_item
 track_enabled_plugins:
-  - dynamic_entity_reference
-  - link
-  - html_link
-  - layout_builder
-  - media_embed
-  - linkit
-  - block_field
-  - entity_reference
-  - entity_embed
-site_domains: {  }
+- dynamic_entity_reference
+- link
+- html_link
+- layout_builder
+- media_embed
+- linkit
+- block_field
+- entity_reference
+- entity_embed
+site_domains: {}

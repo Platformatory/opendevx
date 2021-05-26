@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: html_year
-label: 'HTML Year'
+label: HTML Year
 locked: true
-pattern: 'Y'
+pattern: "Y"

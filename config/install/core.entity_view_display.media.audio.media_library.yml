@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.media_library
-    - field.field.media.audio.field_media_audio_file
-    - image.style.thumbnail
-    - media.type.audio
+  - core.entity_view_mode.media.media_library
+  - field.field.media.audio.field_media_audio_file
+  - image.style.thumbnail
+  - media.type.audio
   module:
-    - image
+  - image
 id: media.audio.media_library
 targetEntityType: media
 bundle: audio
@@ -20,8 +20,8 @@ content:
     label: hidden
     settings:
       image_style: thumbnail
-      image_link: ''
-    third_party_settings: {  }
+      image_link: ""
+    third_party_settings: {}
 hidden:
   created: true
   field_media_audio_file: true

@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - help
+  - help
   theme:
-    - odx_material_admin
+  - odx_material_admin
 id: odx_material_admin_help
 theme: odx_material_admin
 region: highlighted
@@ -15,5 +15,5 @@ settings:
   id: help_block
   label: Help
   provider: help
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

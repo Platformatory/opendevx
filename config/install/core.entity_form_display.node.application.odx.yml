@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.application.config
-    - field.field.node.application.credentials
-    - field.field.node.application.description
-    - field.field.node.application.products
-    - field.field.node.application.remote
-    - field.field.node.application.rid
-    - field.field.node.application.tags
-    - field.field.node.application.version
-    - node.type.application
-    - workflows.workflow.developer_access
+  - core.entity_form_mode.node.odx
+  - field.field.node.application.config
+  - field.field.node.application.credentials
+  - field.field.node.application.description
+  - field.field.node.application.products
+  - field.field.node.application.remote
+  - field.field.node.application.rid
+  - field.field.node.application.tags
+  - field.field.node.application.version
+  - node.type.application
+  - workflows.workflow.developer_access
   module:
-    - content_moderation
+  - content_moderation
 id: node.application.odx
 targetEntityType: node
 bundle: application
@@ -24,20 +24,20 @@ content:
     weight: 1
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 5
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   products:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   status:
@@ -46,15 +46,15 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
   tags:
     weight: 4
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete_tags
     region: content
   title:
@@ -63,14 +63,14 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
   version:
     weight: 2
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
 hidden:

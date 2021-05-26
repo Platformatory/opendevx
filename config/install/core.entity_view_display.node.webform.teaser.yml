@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.webform.body
-    - field.field.node.webform.webform
-    - node.type.webform
+  - core.entity_view_mode.node.teaser
+  - field.field.node.webform.body
+  - field.field.node.webform.webform
+  - node.type.webform
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.webform.teaser
 targetEntityType: node
 bundle: webform
@@ -20,12 +20,12 @@ content:
     weight: 101
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
 hidden:
   webform: true

@@ -3,8 +3,8 @@ status: true
 dependencies:
   enforced:
     module:
-      - devel
+    - devel
 id: devel
 label: Development
-description: 'Links related to Devel module.'
+description: Links related to Devel module.
 locked: true

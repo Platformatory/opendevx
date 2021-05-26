@@ -2,38 +2,38 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.product.apis
-    - field.field.node.product.apis_count
-    - field.field.node.product.applications_count
-    - field.field.node.product.benefits
-    - field.field.node.product.body
-    - field.field.node.product.category
-    - field.field.node.product.config
-    - field.field.node.product.cta_1
-    - field.field.node.product.cta_2
-    - field.field.node.product.description
-    - field.field.node.product.docs
-    - field.field.node.product.features
-    - field.field.node.product.hero_image
-    - field.field.node.product.image
-    - field.field.node.product.internal_metadata
-    - field.field.node.product.kpis
-    - field.field.node.product.layout_builder__layout
-    - field.field.node.product.media
-    - field.field.node.product.quota
-    - field.field.node.product.related
-    - field.field.node.product.remote
-    - field.field.node.product.rid
-    - field.field.node.product.source
-    - field.field.node.product.tags
-    - node.type.product
-    - workflows.workflow.plm_process
+  - core.entity_form_mode.node.odx
+  - field.field.node.product.apis
+  - field.field.node.product.apis_count
+  - field.field.node.product.applications_count
+  - field.field.node.product.benefits
+  - field.field.node.product.body
+  - field.field.node.product.category
+  - field.field.node.product.config
+  - field.field.node.product.cta_1
+  - field.field.node.product.cta_2
+  - field.field.node.product.description
+  - field.field.node.product.docs
+  - field.field.node.product.features
+  - field.field.node.product.hero_image
+  - field.field.node.product.image
+  - field.field.node.product.internal_metadata
+  - field.field.node.product.kpis
+  - field.field.node.product.layout_builder__layout
+  - field.field.node.product.media
+  - field.field.node.product.quota
+  - field.field.node.product.related
+  - field.field.node.product.remote
+  - field.field.node.product.rid
+  - field.field.node.product.source
+  - field.field.node.product.tags
+  - node.type.product
+  - workflows.workflow.plm_process
   module:
-    - content_moderation
-    - media_library
-    - paragraphs
-    - text
+  - content_moderation
+  - media_library
+  - paragraphs
+  - text
 id: node.product.odx
 targetEntityType: node
 bundle: product
@@ -41,8 +41,8 @@ mode: odx
 content:
   apis:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   benefits:
@@ -54,37 +54,37 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   body:
     type: text_textarea_with_summary
     weight: 10
     settings:
       rows: 3
-      placeholder: ''
+      placeholder: ""
       summary_rows: 2
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   category:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   description:
     weight: 2
     settings:
       rows: 3
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   features:
@@ -96,29 +96,29 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   hero_image:
     type: media_library_widget
     weight: 7
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
   image:
     type: media_library_widget
     weight: 8
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
   kpis:
     type: paragraphs
     weight: 5
@@ -128,32 +128,32 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   media:
     type: media_library_widget
     weight: 9
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 13
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   related:
     weight: 11
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   status:
@@ -162,15 +162,15 @@ content:
       display_label: true
     weight: 14
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   tags:
     weight: 12
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete_tags
     region: content
   title:
@@ -179,8 +179,8 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   apis_count: true
   applications_count: true

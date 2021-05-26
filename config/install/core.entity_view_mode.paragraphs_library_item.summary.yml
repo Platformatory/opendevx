@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs_library
+  - paragraphs_library
 id: paragraphs_library_item.summary
 label: Summary
 targetEntityType: paragraphs_library_item

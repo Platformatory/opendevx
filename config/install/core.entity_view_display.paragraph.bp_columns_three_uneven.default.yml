@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_columns_three_uneven.bp_background
-    - field.field.paragraph.bp_columns_three_uneven.bp_column_content_3
-    - field.field.paragraph.bp_columns_three_uneven.bp_column_style_3
-    - field.field.paragraph.bp_columns_three_uneven.bp_header
-    - field.field.paragraph.bp_columns_three_uneven.bp_width
-    - paragraphs.paragraphs_type.bp_columns_three_uneven
+  - field.field.paragraph.bp_columns_three_uneven.bp_background
+  - field.field.paragraph.bp_columns_three_uneven.bp_column_content_3
+  - field.field.paragraph.bp_columns_three_uneven.bp_column_style_3
+  - field.field.paragraph.bp_columns_three_uneven.bp_header
+  - field.field.paragraph.bp_columns_three_uneven.bp_width
+  - paragraphs.paragraphs_type.bp_columns_three_uneven
   module:
-    - entity_reference_revisions
-    - options
+  - entity_reference_revisions
+  - options
 id: paragraph.bp_columns_three_uneven.default
 targetEntityType: paragraph
 bundle: bp_columns_three_uneven
@@ -19,8 +19,8 @@ content:
   bp_background:
     weight: 1
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
   bp_column_content_3:
@@ -29,15 +29,15 @@ content:
     label: hidden
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
+      link: ""
+    third_party_settings: {}
     region: content
   bp_column_style_3:
     type: list_key
     weight: 2
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   bp_header:
     type: string
@@ -46,12 +46,12 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
   bp_width:
     weight: 0
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
 hidden:

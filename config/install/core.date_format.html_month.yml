@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: html_month
-label: 'HTML Month'
+label: HTML Month
 locked: true
 pattern: Y-m

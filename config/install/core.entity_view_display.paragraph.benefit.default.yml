@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.benefit.description
-    - field.field.paragraph.benefit.icon
-    - field.field.paragraph.benefit.name
-    - paragraphs.paragraphs_type.benefit
+  - field.field.paragraph.benefit.description
+  - field.field.paragraph.benefit.icon
+  - field.field.paragraph.benefit.name
+  - paragraphs.paragraphs_type.benefit
   module:
-    - text
+  - text
 id: paragraph.benefit.default
 targetEntityType: paragraph
 bundle: benefit
@@ -16,8 +16,8 @@ content:
   description:
     weight: 2
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
   icon:
@@ -25,7 +25,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   name:
@@ -33,7 +33,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
-hidden: {  }
+hidden: {}

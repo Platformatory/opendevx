@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - contact.form.personal
+  - contact.form.personal
 id: contact_message--personal
 disabled: true
 path: contact_message/personal
@@ -12,53 +12,53 @@ resourceFields:
     fieldName: uuid
     publicName: uuid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   contact_form:
     fieldName: contact_form
     publicName: contact_form
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   name:
     fieldName: name
     publicName: name
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   mail:
     fieldName: mail
     publicName: mail
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   subject:
     fieldName: subject
     publicName: subject
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   message:
     fieldName: message
     publicName: message
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   copy:
     fieldName: copy
     publicName: copy
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   recipient:
     fieldName: recipient
     publicName: recipient
     enhancer:
-      id: ''
+      id: ""
     disabled: false

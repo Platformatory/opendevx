@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.email
+  - field.storage.user.email
   module:
-    - user
+  - user
 id: user.user.email
 field_name: email
 entity_type: user
 bundle: user
 label: Email
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: email

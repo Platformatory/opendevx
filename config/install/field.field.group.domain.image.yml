@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.image
-    - group.type.domain
-    - media.type.image
+  - field.storage.group.image
+  - group.type.domain
+  - media.type.image
 id: group.domain.image
 field_name: image
 entity_type: group
 bundle: domain
 label: Image
-description: 'Add a single representative image to accompany this item in listings.'
+description: Add a single representative image to accompany this item in listings.
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:media'
+  handler: default:media
   handler_settings:
     target_bundles:
       image: image
@@ -24,5 +24,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: true
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

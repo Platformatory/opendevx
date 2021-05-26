@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.is_api_product
-    - node.type.api
+  - field.storage.node.is_api_product
+  - node.type.api
 id: node.api.is_api_product
 field_name: is_api_product
 entity_type: node
 bundle: api
-label: 'Is API Product'
-description: 'This setting generates an API product for this API automatically.'
+label: Is API Product
+description: This setting generates an API product for this API automatically.
 required: false
 translatable: false
 default_value:
-  -
-    value: 0
-default_value_callback: ''
+- value: 0
+default_value_callback: ""
 settings:
-  on_label: 'Yes'
-  off_label: 'No'
+  on_label: "Yes"
+  off_label: "No"
 field_type: boolean

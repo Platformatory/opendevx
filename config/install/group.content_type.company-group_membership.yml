@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.company
+  - group.type.company
   module:
-    - user
+  - user
 id: company-group_membership
 label: 'Company: Group membership'
-description: 'Adds users to groups as members.'
+description: Adds users to groups as members.
 group_type: company
 content_plugin: group_membership
 plugin_config:

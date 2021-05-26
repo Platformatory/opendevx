@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.bp_link
-    - paragraphs.paragraphs_type.bp_image
+  - field.storage.paragraph.bp_link
+  - paragraphs.paragraphs_type.bp_image
   module:
-    - link
+  - link
 id: paragraph.bp_image.bp_link
 field_name: bp_link
 entity_type: paragraph
 bundle: bp_image
 label: Link
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   link_type: 17
   title: 0

@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.from_library.field_reusable_paragraph
-    - paragraphs.paragraphs_type.from_library
+  - field.field.paragraph.from_library.field_reusable_paragraph
+  - paragraphs.paragraphs_type.from_library
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -15,8 +15,8 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete
     region: content
 hidden:

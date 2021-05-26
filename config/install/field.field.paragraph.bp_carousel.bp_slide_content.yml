@@ -2,34 +2,34 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.bp_slide_content
-    - paragraphs.paragraphs_type.bp_accordion
-    - paragraphs.paragraphs_type.bp_blank
-    - paragraphs.paragraphs_type.bp_block
-    - paragraphs.paragraphs_type.bp_carousel
-    - paragraphs.paragraphs_type.bp_column_wrapper
-    - paragraphs.paragraphs_type.bp_columns
-    - paragraphs.paragraphs_type.bp_columns_three_uneven
-    - paragraphs.paragraphs_type.bp_columns_two_uneven
-    - paragraphs.paragraphs_type.bp_image
-    - paragraphs.paragraphs_type.bp_modal
-    - paragraphs.paragraphs_type.bp_simple
-    - paragraphs.paragraphs_type.bp_tabs
-    - paragraphs.paragraphs_type.bp_view
+  - field.storage.paragraph.bp_slide_content
+  - paragraphs.paragraphs_type.bp_accordion
+  - paragraphs.paragraphs_type.bp_blank
+  - paragraphs.paragraphs_type.bp_block
+  - paragraphs.paragraphs_type.bp_carousel
+  - paragraphs.paragraphs_type.bp_column_wrapper
+  - paragraphs.paragraphs_type.bp_columns
+  - paragraphs.paragraphs_type.bp_columns_three_uneven
+  - paragraphs.paragraphs_type.bp_columns_two_uneven
+  - paragraphs.paragraphs_type.bp_image
+  - paragraphs.paragraphs_type.bp_modal
+  - paragraphs.paragraphs_type.bp_simple
+  - paragraphs.paragraphs_type.bp_tabs
+  - paragraphs.paragraphs_type.bp_view
   module:
-    - entity_reference_revisions
+  - entity_reference_revisions
 id: paragraph.bp_carousel.bp_slide_content
 field_name: bp_slide_content
 entity_type: paragraph
 bundle: bp_carousel
-label: 'Slide Content'
-description: ''
+label: Slide Content
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: default:paragraph
   handler_settings:
     target_bundles:
       bp_simple: bp_simple

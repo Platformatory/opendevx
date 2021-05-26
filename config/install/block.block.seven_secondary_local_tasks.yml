@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - seven
+  - seven
 id: seven_secondary_local_tasks
 theme: seven
 region: pre_content
@@ -11,9 +11,9 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs'
+  label: Secondary tabs
   provider: core
-  label_display: '0'
+  label_display: "0"
   primary: false
   secondary: true
-visibility: {  }
+visibility: {}

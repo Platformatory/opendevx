@@ -3,9 +3,9 @@ status: true
 dependencies:
   enforced:
     module:
-      - webform
+    - webform
 id: country_names
-label: 'Country names'
+label: Country names
 category: Geographic
 likert: false
-options: ''
+options: ""

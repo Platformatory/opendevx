@@ -2,40 +2,33 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - options
+  - node
+  - options
 id: node.api_type
 field_name: api_type
 entity_type: node
 type: list_string
 settings:
   allowed_values:
-    -
-      value: rest
-      label: REST
-    -
-      value: soap
-      label: SOAP
-    -
-      value: graphql
-      label: GraphQL
-    -
-      value: asyncapi
-      label: AsyncAPI
-    -
-      value: cloudevents
-      label: CloudEvents
-    -
-      value: grpc
-      label: gRPC
-    -
-      value: other
-      label: Others
-  allowed_values_function: ''
+  - value: rest
+    label: REST
+  - value: soap
+    label: SOAP
+  - value: graphql
+    label: GraphQL
+  - value: asyncapi
+    label: AsyncAPI
+  - value: cloudevents
+    label: CloudEvents
+  - value: grpc
+    label: gRPC
+  - value: other
+    label: Others
+  allowed_values_function: ""
 module: options
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

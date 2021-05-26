@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-    - views
-    - viewsreference
+  - paragraphs
+  - views
+  - viewsreference
 id: paragraph.bp_view
 field_name: bp_view
 entity_type: paragraph
@@ -15,6 +15,6 @@ module: viewsreference
 locked: false
 cardinality: -1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

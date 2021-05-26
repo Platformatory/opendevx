@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://OpenDevX-logo_0.png'
+  path: public://OpenDevX-logo_0.png
 favicon:
   use_default: 1
 material_admin_node_actions: 0
@@ -13,7 +13,7 @@ material_admin_portal_login: 1
 material_admin_jqueryui_dialog_background: 0
 material_admin_jqueryui_dialog_close: 0
 material_admin_collapse_module_list: 0
-material_admin_message_length: ''
+material_admin_message_length: ""
 material_admin_message_prompt: 0
-material_admin_datepicker_select_years: ''
+material_admin_datepicker_select_years: ""
 material_admin_select_default: 0

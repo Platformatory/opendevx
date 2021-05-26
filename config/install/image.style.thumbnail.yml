@@ -1,8 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 name: thumbnail
-label: 'Thumbnail (100×100)'
+label: Thumbnail (100×100)
 effects:
   1cfec298-8620-4749-b100-ccb6c4500779:
     uuid: 1cfec298-8620-4749-b100-ccb6c4500779

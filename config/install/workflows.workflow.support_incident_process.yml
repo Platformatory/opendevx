@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - content_moderation
+  - content_moderation
 id: support_incident_process
-label: 'Support Incident Process'
+label: Support Incident Process
 type: content_moderation
 type_settings:
   states:
@@ -25,17 +25,17 @@ type_settings:
       weight: 1
   transitions:
     create_new_draft:
-      label: 'Create New Draft'
+      label: Create New Draft
       to: draft
       weight: 0
       from:
-        - draft
-        - published
+      - draft
+      - published
     publish:
       label: Publish
       to: published
       weight: 1
       from:
-        - draft
-        - published
-  entity_types: {  }
+      - draft
+      - published
+  entity_types: {}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - business_rules
+id: business_rules_schedule.token
+label: Token
+targetEntityType: business_rules_schedule
+cache: true

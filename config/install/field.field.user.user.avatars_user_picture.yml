@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.avatars_user_picture
+  - field.storage.user.avatars_user_picture
   module:
-    - image
-    - user
+  - image
+  - user
 id: user.user.avatars_user_picture
 field_name: avatars_user_picture
 entity_type: user
 bundle: user
-label: 'User picture upload'
-description: 'An image representing your user account.'
+label: User picture upload
+description: An image representing your user account.
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: png gif jpg jpeg
   file_directory: pictures
-  max_filesize: '128 KB'
+  max_filesize: 128 KB
   max_resolution: 1024x1024
   min_resolution: 100x100
   alt_field: false
@@ -28,10 +28,10 @@ settings:
   title_field_required: false
   default_image:
     uuid: null
-    alt: ''
-    title: ''
+    alt: ""
+    title: ""
     width: null
     height: null
-  handler: 'default:file'
-  handler_settings: {  }
+  handler: default:file
+  handler_settings: {}
 field_type: image

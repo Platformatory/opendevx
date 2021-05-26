@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.currency
-    - node.type.plan
+  - field.storage.node.currency
+  - node.type.plan
 id: node.plan.currency
 field_name: currency
 entity_type: node
 bundle: plan
 label: Currency
-description: 'ISO 4217 Currency Code for this plan'
+description: ISO 4217 Currency Code for this plan
 required: true
 translatable: false
 default_value:
-  -
-    value: USD
-default_value_callback: ''
-settings: {  }
+- value: USD
+default_value_callback: ""
+settings: {}
 field_type: string

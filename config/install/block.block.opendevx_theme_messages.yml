@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
+  - system
   theme:
-    - opendevx_theme
+  - opendevx_theme
 id: opendevx_theme_messages
 theme: opendevx_theme
 region: header
@@ -13,7 +13,7 @@ provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: 'Status messages'
+  label: Status messages
   provider: system
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

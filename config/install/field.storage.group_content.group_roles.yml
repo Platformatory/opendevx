@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - group
+  - group
 id: group_content.group_roles
 field_name: group_roles
 entity_type: group_content
@@ -13,6 +13,6 @@ module: core
 locked: true
 cardinality: -1
 translatable: false
-indexes: {  }
+indexes: {}
 persist_with_no_fields: true
 custom_storage: false

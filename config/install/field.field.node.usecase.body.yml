@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.usecase
+  - field.storage.node.body
+  - node.type.usecase
   module:
-    - text
+  - text
 id: node.usecase.body
 field_name: body
 entity_type: node
 bundle: usecase
 label: Body
-description: ''
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   display_summary: true
   required_summary: false

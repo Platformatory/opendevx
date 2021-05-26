@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - odx_material_admin
+  - odx_material_admin
 id: odx_material_admin_local_actions
 theme: odx_material_admin
 region: content
@@ -11,7 +11,7 @@ provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions (Material Admin)'
+  label: Primary admin actions (Material Admin)
   provider: core
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

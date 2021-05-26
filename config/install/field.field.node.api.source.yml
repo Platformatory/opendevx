@@ -2,21 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.source
-    - node.type.api
-    - node.type.repository
+  - field.storage.node.source
+  - node.type.api
+  - node.type.repository
 id: node.api.source
 field_name: source
 entity_type: node
 bundle: api
 label: Source
-description: 'The API Lifecycle Management System (Repository) that this API is associated with.'
+description: The API Lifecycle Management System (Repository) that this API is associated
+  with.
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:node'
+  handler: default:node
   handler_settings:
     target_bundles:
       repository: repository
@@ -24,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

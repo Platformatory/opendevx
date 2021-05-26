@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.api.api_type
-    - field.field.node.api.apis_count
-    - field.field.node.api.config
-    - field.field.node.api.description
-    - field.field.node.api.env
-    - field.field.node.api.internal_metadata
-    - field.field.node.api.is_api_product
-    - field.field.node.api.remote
-    - field.field.node.api.rid
-    - field.field.node.api.source
-    - field.field.node.api.spec
-    - field.field.node.api.tags
-    - node.type.api
+  - core.entity_view_mode.node.teaser
+  - field.field.node.api.api_type
+  - field.field.node.api.apis_count
+  - field.field.node.api.config
+  - field.field.node.api.description
+  - field.field.node.api.env
+  - field.field.node.api.internal_metadata
+  - field.field.node.api.is_api_product
+  - field.field.node.api.remote
+  - field.field.node.api.rid
+  - field.field.node.api.source
+  - field.field.node.api.spec
+  - field.field.node.api.tags
+  - node.type.api
   module:
-    - options
-    - user
+  - options
+  - user
 id: node.api.teaser
 targetEntityType: node
 bundle: api
@@ -29,15 +29,15 @@ content:
     weight: 0
     region: content
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   description:
     type: basic_string
     weight: 1
     region: content
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   apis_count: true
   config: true

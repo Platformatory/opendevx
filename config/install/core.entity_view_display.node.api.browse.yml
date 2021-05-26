@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.browse
-    - field.field.node.api.api_type
-    - field.field.node.api.apis_count
-    - field.field.node.api.config
-    - field.field.node.api.description
-    - field.field.node.api.env
-    - field.field.node.api.internal_metadata
-    - field.field.node.api.is_api_product
-    - field.field.node.api.remote
-    - field.field.node.api.rid
-    - field.field.node.api.source
-    - field.field.node.api.spec
-    - field.field.node.api.tags
-    - node.type.api
+  - core.entity_view_mode.node.browse
+  - field.field.node.api.api_type
+  - field.field.node.api.apis_count
+  - field.field.node.api.config
+  - field.field.node.api.description
+  - field.field.node.api.env
+  - field.field.node.api.internal_metadata
+  - field.field.node.api.is_api_product
+  - field.field.node.api.remote
+  - field.field.node.api.rid
+  - field.field.node.api.source
+  - field.field.node.api.spec
+  - field.field.node.api.tags
+  - node.type.api
   module:
-    - layout_builder
-    - user
+  - layout_builder
+  - user
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -31,8 +31,8 @@ content:
   description:
     weight: 0
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: basic_string
     region: content
 hidden:

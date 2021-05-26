@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: html_date
-label: 'HTML Date'
+label: HTML Date
 locked: true
 pattern: Y-m-d

@@ -1,8 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: api_monetization_contract
-label: 'API Monetization COntract'
+label: API Monetization COntract
 require_signup: false
 require_existing: false
 settings:

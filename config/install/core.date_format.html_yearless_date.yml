@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: html_yearless_date
-label: 'HTML Yearless date'
+label: HTML Yearless date
 locked: true
 pattern: m-d

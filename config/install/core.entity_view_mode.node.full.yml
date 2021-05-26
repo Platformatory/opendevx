@@ -2,8 +2,8 @@ langcode: en
 status: false
 dependencies:
   module:
-    - node
+  - node
 id: node.full
-label: 'Full content'
+label: Full content
 targetEntityType: node
 cache: true

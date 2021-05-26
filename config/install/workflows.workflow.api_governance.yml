@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.api
+  - node.type.api
   module:
-    - content_moderation
+  - content_moderation
 id: api_governance
-label: 'API Governance'
+label: API Governance
 type: content_moderation
 type_settings:
   states:
@@ -18,12 +18,12 @@ type_settings:
     enterprise_architecture_review:
       published: false
       default_revision: false
-      label: 'Enterprise Architecture Review'
+      label: Enterprise Architecture Review
       weight: -2
     product_review:
       published: false
       default_revision: false
-      label: 'Product Review'
+      label: Product Review
       weight: 0
     published:
       label: Published
@@ -33,48 +33,48 @@ type_settings:
     security_review:
       published: false
       default_revision: false
-      label: 'Security Review'
+      label: Security Review
       weight: -1
   transitions:
     create_new_draft:
-      label: 'Create New Draft'
+      label: Create New Draft
       to: draft
       weight: 0
       from:
-        - draft
-        - published
+      - draft
+      - published
     publish:
       label: Publish
       to: published
       weight: 1
       from:
-        - draft
-        - published
+      - draft
+      - published
     publish_without_review:
-      label: 'Request EA & Architecture Board Review'
+      label: Request EA & Architecture Board Review
       from:
-        - draft
-        - product_review
-        - security_review
+      - draft
+      - product_review
+      - security_review
       to: enterprise_architecture_review
       weight: 2
     request_product_domain_review:
-      label: 'Request Product & Domain Review'
+      label: Request Product & Domain Review
       from:
-        - draft
-        - enterprise_architecture_review
-        - security_review
+      - draft
+      - enterprise_architecture_review
+      - security_review
       to: product_review
       weight: 4
     request_security_review:
-      label: 'Request Security Review'
+      label: Request Security Review
       from:
-        - draft
-        - enterprise_architecture_review
-        - product_review
+      - draft
+      - enterprise_architecture_review
+      - product_review
       to: security_review
       weight: 3
   entity_types:
     node:
-      - api
+    - api
   default_moderation_state: draft

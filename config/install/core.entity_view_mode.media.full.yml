@@ -2,8 +2,8 @@ langcode: en
 status: false
 dependencies:
   module:
-    - media
+  - media
 id: media.full
-label: 'Full content'
+label: Full content
 targetEntityType: media
 cache: true

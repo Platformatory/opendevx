@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: node_make_unsticky_action
-label: 'Make content unsticky'
+label: Make content unsticky
 type: node
 plugin: node_make_unsticky_action
-configuration: {  }
+configuration: {}
