@@ -1,0 +1,11 @@
+opendevx.backoffice:
+  title: 'OpenDevX API Backoffice'
+  description: 'Coordinate all backoffice API management activities'
+  parent: system.admin
+  route_name: odx_backoffice.discover_apis
+  weight: -100
+  # The menu link is enabled by default, we can override it with:
+  enabled: 1
+  # route_parameters: { key: 'value' }
+  # If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: administration 
