@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.kpis
-    - node.type.product
-    - paragraphs.paragraphs_type.kpi
+  - field.storage.node.kpis
+  - node.type.product
+  - paragraphs.paragraphs_type.kpi
   module:
-    - entity_reference_revisions
+  - entity_reference_revisions
 id: node.product.kpis
 field_name: kpis
 entity_type: node
 bundle: product
 label: KPIs
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: default:paragraph
   handler_settings:
     negate: 0
     target_bundles:

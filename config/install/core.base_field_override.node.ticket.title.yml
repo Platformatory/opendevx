@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.ticket
+  - node.type.ticket
 id: node.ticket.title
 field_name: title
 entity_type: node
 bundle: ticket
 label: Subject
-description: ''
+description: ""
 required: true
 translatable: true
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string

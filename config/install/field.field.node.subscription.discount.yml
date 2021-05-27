@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.discount
-    - node.type.subscription
+  - field.storage.node.discount
+  - node.type.subscription
 id: node.subscription.discount
 field_name: discount
 entity_type: node
 bundle: subscription
 label: Discount
-description: 'Add discounts to be applied to this subscription, if any'
+description: Add discounts to be applied to this subscription, if any
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   min: 0.1
   max: 99.9
-  prefix: ''
+  prefix: ""
   suffix: '%'
 field_type: decimal

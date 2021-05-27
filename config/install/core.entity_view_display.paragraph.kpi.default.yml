@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.kpi.description
-    - field.field.paragraph.kpi.icon
-    - field.field.paragraph.kpi.stat
-    - paragraphs.paragraphs_type.kpi
+  - field.field.paragraph.kpi.description
+  - field.field.paragraph.kpi.icon
+  - field.field.paragraph.kpi.stat
+  - paragraphs.paragraphs_type.kpi
   module:
-    - text
+  - text
 id: paragraph.kpi.default
 targetEntityType: paragraph
 bundle: kpi
@@ -16,8 +16,8 @@ content:
   description:
     weight: 1
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
   icon:
@@ -25,7 +25,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   stat:
@@ -33,7 +33,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
-hidden: {  }
+hidden: {}

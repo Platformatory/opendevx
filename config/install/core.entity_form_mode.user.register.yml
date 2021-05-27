@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - user
+  - user
 id: user.register
 label: Register
 targetEntityType: user

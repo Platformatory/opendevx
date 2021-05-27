@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.end_date
-    - field.storage.node.start_date
-    - node.type.subscription
+  - field.storage.node.end_date
+  - field.storage.node.start_date
+  - node.type.subscription
   module:
-    - datetime
-    - node
-    - user
+  - datetime
+  - node
+  - user
 id: invoices
 label: Invoices
 module: views
-description: ''
-tag: ''
+description: ""
+tag: ""
 base_table: node_field_revision
 base_field: vid
 display:
@@ -26,25 +26,25 @@ display:
       access:
         type: perm
         options:
-          perm: 'view all revisions'
+          perm: view all revisions
       cache:
         type: tag
-        options: {  }
+        options: {}
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: ''
-          query_tags: {  }
+          query_comment: ""
+          query_tags: {}
       exposed_form:
         type: basic
         options:
           submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: Sort by
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -64,7 +64,7 @@ display:
           field: title
           entity_type: node
           entity_field: title
-          label: ''
+          label: ""
           alter:
             alter_text: false
             make_link: false
@@ -81,22 +81,22 @@ display:
           plugin_id: field
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           exclude: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_alter_empty: true
           click_sort_column: value
           type: string
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -111,55 +111,55 @@ display:
           field: start_date
           relationship: nid
           group_type: group
-          admin_label: ''
-          label: 'Start date'
+          admin_label: ""
+          label: Start date
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: datetime_default
           settings:
-            timezone_override: ''
+            timezone_override: ""
             format_type: html_date
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -175,55 +175,55 @@ display:
           field: end_date
           relationship: nid
           group_type: group
-          admin_label: ''
-          label: 'End Date'
+          admin_label: ""
+          label: End Date
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: datetime_default
           settings:
-            timezone_override: ''
+            timezone_override: ""
             format_type: html_date
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -235,7 +235,7 @@ display:
           plugin_id: field
       filters:
         status:
-          value: '1'
+          value: "1"
           table: node_field_revision
           field: status
           plugin_id: boolean
@@ -243,9 +243,9 @@ display:
           entity_field: status
           id: status
           expose:
-            operator: ''
+            operator: ""
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           group: 1
         type:
           id: type
@@ -259,8 +259,8 @@ display:
           plugin_id: bundle
           expose:
             operator_limit_selection: false
-            operator_list: {  }
-      sorts: {  }
+            operator_list: {}
+      sorts: {}
       relationships:
         nid:
           id: nid
@@ -268,42 +268,42 @@ display:
           field: nid
           relationship: none
           group_type: group
-          admin_label: 'Get the actual content from a content revision.'
+          admin_label: Get the actual content from a content revision.
           required: true
           entity_type: node
           entity_field: nid
           plugin_id: standard
       title: Invoices
-      header: {  }
-      footer: {  }
-      empty: {  }
-      arguments: {  }
-      display_extenders: {  }
+      header: {}
+      footer: {}
+      empty: {}
+      arguments: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
+      - languages:language_content
+      - languages:language_interface
+      - user.node_grants:view
+      - user.permissions
       tags:
-        - 'config:field.storage.node.end_date'
-        - 'config:field.storage.node.start_date'
+      - config:field.storage.node.end_date
+      - config:field.storage.node.start_date
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Past Invoices'
+    display_title: Past Invoices
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
+      display_extenders: {}
+      display_description: ""
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
+      - languages:language_content
+      - languages:language_interface
+      - user.node_grants:view
+      - user.permissions
       tags:
-        - 'config:field.storage.node.end_date'
-        - 'config:field.storage.node.start_date'
+      - config:field.storage.node.end_date
+      - config:field.storage.node.start_date

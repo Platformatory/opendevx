@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.products_count
-    - node.type.plan
+  - field.storage.node.products_count
+  - node.type.plan
   module:
-    - computed_field
+  - computed_field
 id: node.plan.products_count
 field_name: products_count
 entity_type: node
 bundle: plan
-label: 'Products Count'
-description: ''
+label: Products Count
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  prefix: ''
-  suffix: ''
+  prefix: ""
+  suffix: ""
 field_type: computed_integer

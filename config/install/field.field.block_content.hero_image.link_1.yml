@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero_image
-    - field.storage.block_content.link_1
+  - block_content.type.hero_image
+  - field.storage.block_content.link_1
   module:
-    - link
+  - link
 id: block_content.hero_image.link_1
 field_name: link_1
 entity_type: block_content
 bundle: hero_image
-label: 'Link 1'
-description: ''
+label: Link 1
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   link_type: 17
   title: 2

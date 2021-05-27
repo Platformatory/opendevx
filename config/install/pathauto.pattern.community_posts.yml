@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: community_posts
-label: 'Community Posts'
-type: 'canonical_entities:node'
-pattern: 'blog/[node:title]'
+label: Community Posts
+type: canonical_entities:node
+pattern: blog/[node:title]
 selection_criteria:
   924305e8-65f4-4579-ae60-5c0e9fb0f64e:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: 924305e8-65f4-4579-ae60-5c0e9fb0f64e
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

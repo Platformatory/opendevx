@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.user.compact
-    - field.field.user.user.apps_count
-    - field.field.user.user.avatars_avatar_generator
-    - field.field.user.user.avatars_user_picture
-    - field.field.user.user.companies
-    - field.field.user.user.domains
-    - field.field.user.user.email
-    - field.field.user.user.image
-    - field.field.user.user.job_profile
-    - field.field.user.user.languages
-    - field.field.user.user.user_picture
+  - core.entity_view_mode.user.compact
+  - field.field.user.user.apps_count
+  - field.field.user.user.avatars_avatar_generator
+  - field.field.user.user.avatars_user_picture
+  - field.field.user.user.companies
+  - field.field.user.user.domains
+  - field.field.user.user.email
+  - field.field.user.user.image
+  - field.field.user.user.job_profile
+  - field.field.user.user.languages
+  - field.field.user.user.user_picture
   module:
-    - user
+  - user
 id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
-content: {  }
+content: {}
 hidden:
   apps_count: true
   avatars_avatar_generator: true

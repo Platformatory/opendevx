@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: subscription
 label: Subscription
-type: 'canonical_entities:node'
-pattern: '/subscription/[node:nid]'
+type: canonical_entities:node
+pattern: /subscription/[node:nid]
 selection_criteria:
   baf299c3-b761-4a8e-81c2-adbd1383ad9b:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: baf299c3-b761-4a8e-81c2-adbd1383ad9b
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

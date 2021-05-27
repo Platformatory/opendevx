@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.pricing_rules
-    - node.type.plan
+  - field.storage.node.pricing_rules
+  - node.type.plan
   module:
-    - jsonb
+  - jsonb
 id: node.plan.pricing_rules
 field_name: pricing_rules
 entity_type: node
 bundle: plan
-label: 'Pricing Rules'
-description: 'Insert tiered pricing rules in the JSON syntax.'
+label: Pricing Rules
+description: Insert tiered pricing rules in the JSON syntax.
 required: true
 translatable: false
 default_value:
-  -
-    value: "[{\r\n\"up_to\": \" \",\r\n\"unit_price\": \" \"\r\n}]"
-default_value_callback: ''
-settings: {  }
+- value: "[{\r\n\"up_to\": \" \",\r\n\"unit_price\": \" \"\r\n}]"
+default_value_callback: ""
+settings: {}
 field_type: json

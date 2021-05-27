@@ -3,9 +3,9 @@ status: true
 dependencies:
   enforced:
     module:
-      - webform
+    - webform
 id: time_zones
-label: 'Time zones'
-category: 'Date and time'
+label: Time zones
+category: Date and time
 likert: false
-options: ''
+options: ""

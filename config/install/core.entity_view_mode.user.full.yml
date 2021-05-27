@@ -2,8 +2,8 @@ langcode: en
 status: false
 dependencies:
   module:
-    - user
+  - user
 id: user.full
-label: 'User account'
+label: User account
 targetEntityType: user
 cache: true

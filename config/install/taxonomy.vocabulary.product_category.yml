@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
-name: 'Product Category'
+dependencies: {}
+name: Product Category
 vid: product_category
-description: ''
+description: ""
 weight: 0

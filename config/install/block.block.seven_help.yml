@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - help
+  - help
   theme:
-    - seven
+  - seven
 id: seven_help
 theme: seven
 region: help
@@ -15,5 +15,5 @@ settings:
   id: help_block
   label: Help
   provider: help
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

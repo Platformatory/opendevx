@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.location
-    - node.type.event
+  - field.storage.node.location
+  - node.type.event
 id: node.event.location
 field_name: location
 entity_type: node
 bundle: event
 label: Location
-description: ''
+description: ""
 required: false
 translatable: false
 default_value:
-  -
-    value: Virtual
-default_value_callback: ''
-settings: {  }
+- value: Virtual
+default_value_callback: ""
+settings: {}
 field_type: string

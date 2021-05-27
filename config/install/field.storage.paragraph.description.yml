@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-    - text
+  - paragraphs
+  - text
 id: paragraph.description
 field_name: description
 entity_type: paragraph
 type: text_with_summary
-settings: {  }
+settings: {}
 module: text
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

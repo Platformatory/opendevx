@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.faq.body
-    - node.type.faq
+  - field.field.node.faq.body
+  - node.type.faq
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.faq.default
 targetEntityType: node
 bundle: faq
@@ -16,12 +16,12 @@ content:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
-hidden: {  }
+hidden: {}

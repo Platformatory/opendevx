@@ -2,75 +2,75 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.token
-    - field.field.node.product.apis
-    - field.field.node.product.apis_count
-    - field.field.node.product.applications_count
-    - field.field.node.product.benefits
-    - field.field.node.product.body
-    - field.field.node.product.category
-    - field.field.node.product.config
-    - field.field.node.product.cta_1
-    - field.field.node.product.cta_2
-    - field.field.node.product.description
-    - field.field.node.product.docs
-    - field.field.node.product.features
-    - field.field.node.product.hero_image
-    - field.field.node.product.image
-    - field.field.node.product.internal_metadata
-    - field.field.node.product.kpis
-    - field.field.node.product.layout_builder__layout
-    - field.field.node.product.media
-    - field.field.node.product.quota
-    - field.field.node.product.related
-    - field.field.node.product.remote
-    - field.field.node.product.rid
-    - field.field.node.product.source
-    - field.field.node.product.tags
-    - node.type.product
+  - core.entity_view_mode.node.token
+  - field.field.node.product.apis
+  - field.field.node.product.apis_count
+  - field.field.node.product.applications_count
+  - field.field.node.product.benefits
+  - field.field.node.product.body
+  - field.field.node.product.category
+  - field.field.node.product.config
+  - field.field.node.product.cta_1
+  - field.field.node.product.cta_2
+  - field.field.node.product.description
+  - field.field.node.product.docs
+  - field.field.node.product.features
+  - field.field.node.product.hero_image
+  - field.field.node.product.image
+  - field.field.node.product.internal_metadata
+  - field.field.node.product.kpis
+  - field.field.node.product.layout_builder__layout
+  - field.field.node.product.media
+  - field.field.node.product.quota
+  - field.field.node.product.related
+  - field.field.node.product.remote
+  - field.field.node.product.rid
+  - field.field.node.product.source
+  - field.field.node.product.tags
+  - node.type.product
   module:
-    - computed_field
-    - entity_reference_revisions
-    - layout_builder
-    - layout_builder_restrictions
-    - text
-    - user
+  - computed_field
+  - entity_reference_revisions
+  - layout_builder
+  - layout_builder_restrictions
+  - text
+  - user
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
   layout_builder_restrictions:
-    allowed_block_categories: {  }
+    allowed_block_categories: {}
     entity_view_mode_restriction:
       whitelisted_blocks:
-        'Business Rules': {  }
-        'Chaos Tools': {  }
-        'Content fields':
-          - 'field_block:node:product:benefits'
-          - 'field_block:node:product:features'
-        'Custom block types': {  }
-        'Custom blocks': {  }
-        'DX Core': {  }
-        Devel: {  }
-        Forms: {  }
-        Group: {  }
-        Help: {  }
-        'Inline blocks': {  }
-        'Lists (Views)': {  }
-        Menus: {  }
-        'ODX Administration': {  }
-        'ODX Backoffice Guide': {  }
-        'ODX Frontend': {  }
-        'ODX Frontoffice':
-          - 'views_block:product_hero_1-product'
-        'OpenID Connect': {  }
-        Platformatory: {  }
-        'SimpleSAMLphp Authentication': {  }
-        System: {  }
-        Webform: {  }
-        core: {  }
-      blacklisted_blocks: {  }
-      allowed_layouts: {  }
+        Business Rules: {}
+        Chaos Tools: {}
+        Content fields:
+        - field_block:node:product:benefits
+        - field_block:node:product:features
+        Custom block types: {}
+        Custom blocks: {}
+        DX Core: {}
+        Devel: {}
+        Forms: {}
+        Group: {}
+        Help: {}
+        Inline blocks: {}
+        Lists (Views): {}
+        Menus: {}
+        ODX Administration: {}
+        ODX Backoffice Guide: {}
+        ODX Frontend: {}
+        ODX Frontoffice:
+        - views_block:product_hero_1-product
+        OpenID Connect: {}
+        Platformatory: {}
+        SimpleSAMLphp Authentication: {}
+        System: {}
+        Webform: {}
+        core: {}
+      blacklisted_blocks: {}
+      allowed_layouts: {}
 id: node.product.token
 targetEntityType: node
 bundle: product
@@ -81,7 +81,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   apis_count:
@@ -90,9 +90,9 @@ content:
     settings:
       cache_unit: -1
       cache_duration: 1
-      thousand_separator: ''
+      thousand_separator: ""
       prefix_suffix: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: computed_integer
     region: content
   applications_count:
@@ -101,9 +101,9 @@ content:
     settings:
       cache_unit: -1
       cache_duration: 1
-      thousand_separator: ''
+      thousand_separator: ""
       prefix_suffix: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: computed_integer
     region: content
   benefits:
@@ -112,34 +112,34 @@ content:
     label: above
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
+      link: ""
+    third_party_settings: {}
     region: content
   body:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   category:
     weight: 105
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   content_moderation_control:
     weight: -20
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   description:
     weight: 102
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: basic_string
     region: content
   docs:
@@ -147,7 +147,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   features:
@@ -156,8 +156,8 @@ content:
     label: above
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
+      link: ""
+    third_party_settings: {}
     region: content
   hero_image:
     type: entity_reference_entity_view
@@ -166,7 +166,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   image:
     type: entity_reference_entity_view
@@ -175,7 +175,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   kpis:
     type: entity_reference_revisions_entity_view
@@ -183,13 +183,13 @@ content:
     label: above
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
+      link: ""
+    third_party_settings: {}
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   media:
     type: entity_reference_entity_view
@@ -198,14 +198,14 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   related:
     weight: 112
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   tags:
@@ -213,7 +213,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
 hidden:

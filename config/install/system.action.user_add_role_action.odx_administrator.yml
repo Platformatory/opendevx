@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - user.role.odx_administrator
+  - user.role.odx_administrator
   module:
-    - user
+  - user
 id: user_add_role_action.odx_administrator
-label: 'Add the ODX Administrator role to the selected user(s)'
+label: Add the ODX Administrator role to the selected user(s)
 type: user
 plugin: user_add_role_action
 configuration:

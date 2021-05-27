@@ -1,7 +1,7 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: ''
+  path: ""
+  url: ""
   use_default: false
 features:
   comment_user_picture: true
@@ -9,8 +9,8 @@ features:
   favicon: true
   node_user_picture: false
 logo:
-  path: 'public://OpenDevX-logo.png'
-  url: ''
+  path: public://OpenDevX-logo.png
+  url: ""
   use_default: false
 material_admin_node_actions: false
 material_admin_portal_login: true

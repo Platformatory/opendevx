@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_columns_three_uneven.bp_background
-    - field.field.paragraph.bp_columns_three_uneven.bp_column_content_3
-    - field.field.paragraph.bp_columns_three_uneven.bp_column_style_3
-    - field.field.paragraph.bp_columns_three_uneven.bp_header
-    - field.field.paragraph.bp_columns_three_uneven.bp_width
-    - paragraphs.paragraphs_type.bp_columns_three_uneven
+  - field.field.paragraph.bp_columns_three_uneven.bp_background
+  - field.field.paragraph.bp_columns_three_uneven.bp_column_content_3
+  - field.field.paragraph.bp_columns_three_uneven.bp_column_style_3
+  - field.field.paragraph.bp_columns_three_uneven.bp_header
+  - field.field.paragraph.bp_columns_three_uneven.bp_width
+  - paragraphs.paragraphs_type.bp_columns_three_uneven
   module:
-    - paragraphs
+  - paragraphs
 id: paragraph.bp_columns_three_uneven.default
 targetEntityType: paragraph
 bundle: bp_columns_three_uneven
@@ -17,8 +17,8 @@ mode: default
 content:
   bp_background:
     weight: 0
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   bp_column_content_3:
@@ -30,13 +30,13 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
+      default_paragraph_type: ""
+    third_party_settings: {}
     region: content
   bp_column_style_3:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   bp_header:
@@ -45,12 +45,12 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
   bp_width:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
 hidden:

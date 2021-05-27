@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.plan
+  - node.type.plan
 id: node.plan.title
 field_name: title
 entity_type: node
 bundle: plan
 label: Name
-description: ''
+description: ""
 required: true
 translatable: true
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string

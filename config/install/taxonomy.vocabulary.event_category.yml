@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
-name: 'Event Category'
+dependencies: {}
+name: Event Category
 vid: event_category
-description: ''
+description: ""
 weight: 0

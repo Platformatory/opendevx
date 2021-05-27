@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: searchapisproductsusecasesanddocs
 label: SearchAPIsProductsUseCasesAndDocs
 searchPluginId: BasicTitleSearch
 searchPluginConfig: '{"bundle_filter":{"api":"api","book":"book","news":"news","product":"product","usecase":"usecase"},"language_filter":0,"langcode_includes":{"zxx":0,"und":0}}'
 inputSelectors: '#search'
 numberOfResults: 5
-emptyResult: ''
+emptyResult: ""
 viewModes:
   block: default
   block_content: default
@@ -31,8 +31,8 @@ keyMaxLength: 10
 allResultsLink: false
 allResultsLinkThreshold: 5
 breakpoint: 0
-resultLocation: ''
+resultLocation: ""
 highlightingEnabled: true
 anonymousSearch: true
 cleanUpFiles: true
-filesExpiryTime: '-1 day'
+filesExpiryTime: -1 day

@@ -3,10 +3,10 @@ status: true
 dependencies:
   enforced:
     module:
-      - webform_node
+    - webform_node
   module:
-    - node
-    - webform
+  - node
+  - webform
 id: node.webform
 field_name: webform
 entity_type: node
@@ -17,6 +17,6 @@ module: webform
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

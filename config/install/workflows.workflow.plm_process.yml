@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.product
+  - node.type.product
   module:
-    - content_moderation
+  - content_moderation
 id: plm_process
-label: 'PLM Process'
+label: PLM Process
 type: content_moderation
 type_settings:
   states:
@@ -18,7 +18,7 @@ type_settings:
     marketing_review:
       published: false
       default_revision: false
-      label: 'Marketing Review'
+      label: Marketing Review
       weight: -1
     published:
       label: Published
@@ -27,26 +27,26 @@ type_settings:
       weight: 0
   transitions:
     create_new_draft:
-      label: 'Create New Draft'
+      label: Create New Draft
       to: draft
       weight: 0
       from:
-        - draft
-        - published
+      - draft
+      - published
     publish:
       label: Publish
       to: published
       weight: 1
       from:
-        - draft
-        - published
+      - draft
+      - published
     request_marketing_review:
-      label: 'Request Marketing Review'
+      label: Request Marketing Review
       from:
-        - draft
+      - draft
       to: marketing_review
       weight: 2
   entity_types:
     node:
-      - product
+    - product
   default_moderation_state: draft

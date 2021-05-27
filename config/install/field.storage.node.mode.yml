@@ -2,28 +2,25 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - options
+  - node
+  - options
 id: node.mode
 field_name: mode
 entity_type: node
 type: list_string
 settings:
   allowed_values:
-    -
-      value: ro
-      label: Read-Only
-    -
-      value: wo
-      label: Write-Only
-    -
-      value: rw
-      label: Read-Write
-  allowed_values_function: ''
+  - value: ro
+    label: Read-Only
+  - value: wo
+    label: Write-Only
+  - value: rw
+    label: Read-Write
+  allowed_values_function: ""
 module: options
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

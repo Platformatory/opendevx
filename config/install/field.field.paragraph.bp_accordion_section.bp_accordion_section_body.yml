@@ -2,31 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.bp_accordion_section_body
-    - paragraphs.paragraphs_type.bp_accordion_section
-    - paragraphs.paragraphs_type.bp_blank
-    - paragraphs.paragraphs_type.bp_block
-    - paragraphs.paragraphs_type.bp_columns
-    - paragraphs.paragraphs_type.bp_columns_three_uneven
-    - paragraphs.paragraphs_type.bp_columns_two_uneven
-    - paragraphs.paragraphs_type.bp_image
-    - paragraphs.paragraphs_type.bp_modal
-    - paragraphs.paragraphs_type.bp_simple
-    - paragraphs.paragraphs_type.bp_view
+  - field.storage.paragraph.bp_accordion_section_body
+  - paragraphs.paragraphs_type.bp_accordion_section
+  - paragraphs.paragraphs_type.bp_blank
+  - paragraphs.paragraphs_type.bp_block
+  - paragraphs.paragraphs_type.bp_columns
+  - paragraphs.paragraphs_type.bp_columns_three_uneven
+  - paragraphs.paragraphs_type.bp_columns_two_uneven
+  - paragraphs.paragraphs_type.bp_image
+  - paragraphs.paragraphs_type.bp_modal
+  - paragraphs.paragraphs_type.bp_simple
+  - paragraphs.paragraphs_type.bp_view
   module:
-    - entity_reference_revisions
+  - entity_reference_revisions
 id: paragraph.bp_accordion_section.bp_accordion_section_body
 field_name: bp_accordion_section_body
 entity_type: paragraph
 bundle: bp_accordion_section
-label: 'Accordion Section Body'
-description: ''
+label: Accordion Section Body
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: default:paragraph
   handler_settings:
     target_bundles:
       bp_simple: bp_simple

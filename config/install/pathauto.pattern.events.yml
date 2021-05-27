@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: events
 label: Events
-type: 'canonical_entities:node'
-pattern: 'events/[node:title]'
+type: canonical_entities:node
+pattern: events/[node:title]
 selection_criteria:
   5893e204-0683-486b-961e-5ad27fa4c59d:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: 5893e204-0683-486b-961e-5ad27fa4c59d
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

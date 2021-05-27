@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.bp_statistic
-    - paragraphs.paragraphs_type.bp_stat
-    - paragraphs.paragraphs_type.bp_statistics
+  - field.storage.paragraph.bp_statistic
+  - paragraphs.paragraphs_type.bp_stat
+  - paragraphs.paragraphs_type.bp_statistics
   module:
-    - entity_reference_revisions
+  - entity_reference_revisions
 id: paragraph.bp_statistics.bp_statistic
 field_name: bp_statistic
 entity_type: paragraph
 bundle: bp_statistics
 label: Statistic
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: default:paragraph
   handler_settings:
     negate: 0
     target_bundles:

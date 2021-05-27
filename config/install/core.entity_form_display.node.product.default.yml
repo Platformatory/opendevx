@@ -2,39 +2,39 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.product.apis
-    - field.field.node.product.apis_count
-    - field.field.node.product.applications_count
-    - field.field.node.product.benefits
-    - field.field.node.product.body
-    - field.field.node.product.category
-    - field.field.node.product.config
-    - field.field.node.product.cta_1
-    - field.field.node.product.cta_2
-    - field.field.node.product.description
-    - field.field.node.product.docs
-    - field.field.node.product.features
-    - field.field.node.product.hero_image
-    - field.field.node.product.image
-    - field.field.node.product.internal_metadata
-    - field.field.node.product.kpis
-    - field.field.node.product.layout_builder__layout
-    - field.field.node.product.media
-    - field.field.node.product.quota
-    - field.field.node.product.related
-    - field.field.node.product.remote
-    - field.field.node.product.rid
-    - field.field.node.product.source
-    - field.field.node.product.tags
-    - node.type.product
-    - workflows.workflow.plm_process
+  - field.field.node.product.apis
+  - field.field.node.product.apis_count
+  - field.field.node.product.applications_count
+  - field.field.node.product.benefits
+  - field.field.node.product.body
+  - field.field.node.product.category
+  - field.field.node.product.config
+  - field.field.node.product.cta_1
+  - field.field.node.product.cta_2
+  - field.field.node.product.description
+  - field.field.node.product.docs
+  - field.field.node.product.features
+  - field.field.node.product.hero_image
+  - field.field.node.product.image
+  - field.field.node.product.internal_metadata
+  - field.field.node.product.kpis
+  - field.field.node.product.layout_builder__layout
+  - field.field.node.product.media
+  - field.field.node.product.quota
+  - field.field.node.product.related
+  - field.field.node.product.remote
+  - field.field.node.product.rid
+  - field.field.node.product.source
+  - field.field.node.product.tags
+  - node.type.product
+  - workflows.workflow.plm_process
   module:
-    - content_moderation
-    - jsonb
-    - link
-    - media_library
-    - paragraphs
-    - text
+  - content_moderation
+  - jsonb
+  - link
+  - media_library
+  - paragraphs
+  - text
 id: node.product.default
 targetEntityType: node
 bundle: product
@@ -42,8 +42,8 @@ mode: default
 content:
   apis:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   benefits:
@@ -55,61 +55,61 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   body:
     type: text_textarea_with_summary
     weight: 7
     settings:
       rows: 3
-      placeholder: ''
+      placeholder: ""
       summary_rows: 2
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   category:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   config:
     weight: 27
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   cta_1:
     weight: 34
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
+      placeholder_url: ""
+      placeholder_title: ""
+    third_party_settings: {}
     type: link_default
     region: content
   cta_2:
     weight: 35
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
+      placeholder_url: ""
+      placeholder_title: ""
+    third_party_settings: {}
     type: link_default
     region: content
   description:
     weight: 2
     settings:
       rows: 3
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   docs:
@@ -118,8 +118,8 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete
     region: content
   features:
@@ -131,35 +131,35 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   hero_image:
     type: media_library_widget
     weight: 8
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
     region: content
   image:
     type: media_library_widget
     weight: 9
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
     region: content
   internal_metadata:
     weight: 28
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   kpis:
@@ -171,63 +171,63 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: ""
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   media:
     type: media_library_widget
     weight: 10
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 14
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   promote:
     type: boolean_checkbox
     weight: 16
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
   quota:
     weight: 32
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   related:
     weight: 11
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   remote:
     weight: 30
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   rid:
     weight: 29
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
   source:
@@ -236,8 +236,8 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete
     region: content
   status:
@@ -246,15 +246,15 @@ content:
       display_label: true
     weight: 15
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   tags:
     weight: 12
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete_tags
     region: content
   title:
@@ -263,8 +263,8 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   apis_count: true
   applications_count: true

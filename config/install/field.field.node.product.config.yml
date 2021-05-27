@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.config
-    - node.type.product
+  - field.storage.node.config
+  - node.type.product
   module:
-    - jsonb
+  - jsonb
 id: node.product.config
 field_name: config
 entity_type: node
 bundle: product
 label: Config
-description: ''
+description: ""
 required: false
 translatable: true
 default_value:
-  -
-    value: 'null'
-default_value_callback: ''
-settings: {  }
+- value: "null"
+default_value_callback: ""
+settings: {}
 field_type: json

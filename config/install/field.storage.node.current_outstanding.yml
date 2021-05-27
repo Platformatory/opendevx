@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - computed_field
-    - node
+  - computed_field
+  - node
 id: node.current_outstanding
 field_name: current_outstanding
 entity_type: node
@@ -15,6 +15,6 @@ module: computed_field
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

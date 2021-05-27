@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_media_image
-    - image.style.large
-    - media.type.image
+  - field.field.media.image.field_media_image
+  - image.style.large
+  - media.type.image
   module:
-    - image
+  - image
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -16,8 +16,8 @@ content:
     label: visually_hidden
     settings:
       image_style: large
-      image_link: ''
-    third_party_settings: {  }
+      image_link: ""
+    third_party_settings: {}
     type: image
     weight: 1
     region: content

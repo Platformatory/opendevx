@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.end_date
-    - node.type.event
+  - field.storage.node.end_date
+  - node.type.event
   module:
-    - datetime
+  - datetime
 id: node.event.end_date
 field_name: end_date
 entity_type: node
 bundle: event
-label: 'End Date'
-description: ''
+label: End Date
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: datetime

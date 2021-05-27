@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - computed_field
-    - user
+  - computed_field
+  - user
 id: user.apps_count
 field_name: apps_count
 entity_type: user
@@ -15,6 +15,6 @@ module: computed_field
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

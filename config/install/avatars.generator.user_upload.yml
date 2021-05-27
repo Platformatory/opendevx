@@ -1,9 +1,9 @@
 langcode: en
 status: false
-dependencies: {  }
+dependencies: {}
 id: user_upload
-label: 'User upload'
+label: User upload
 weight: -9
 plugin: user
 provider: avatars
-settings: {  }
+settings: {}

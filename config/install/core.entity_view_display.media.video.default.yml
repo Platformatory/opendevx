@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_media_video_file
-    - media.type.video
+  - field.field.media.video.field_media_video_file
+  - media.type.video
   module:
-    - file
+  - file
 id: media.video.default
 targetEntityType: media
 bundle: video
@@ -23,7 +23,7 @@ content:
       autoplay: false
       loop: false
       multiple_file_display_type: tags
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
 hidden:
   created: true

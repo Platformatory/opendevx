@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraphs_library_item.summary
+  - core.entity_view_mode.paragraphs_library_item.summary
   module:
-    - paragraphs
-    - paragraphs_library
+  - paragraphs
+  - paragraphs_library
 id: paragraphs_library_item.paragraphs_library_item.summary
 targetEntityType: paragraphs_library_item
 bundle: paragraphs_library_item
@@ -18,13 +18,13 @@ content:
     region: content
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
   paragraphs:
     label: hidden
     type: paragraph_summary
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   content_moderation_control: true

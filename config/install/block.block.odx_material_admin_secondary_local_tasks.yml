@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - odx_material_admin
+  - odx_material_admin
 id: odx_material_admin_secondary_local_tasks
 theme: odx_material_admin
 region: highlighted
@@ -11,9 +11,9 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs (Material Admin)'
+  label: Secondary tabs (Material Admin)
   provider: core
-  label_display: '0'
+  label_display: "0"
   primary: false
   secondary: true
-visibility: {  }
+visibility: {}

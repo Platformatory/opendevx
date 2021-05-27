@@ -2,7 +2,7 @@ langcode: en
 status: false
 dependencies:
   module:
-    - node
+  - node
 id: node.rss
 label: RSS
 targetEntityType: node

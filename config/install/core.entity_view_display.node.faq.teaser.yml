@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.faq.body
-    - node.type.faq
+  - core.entity_view_mode.node.teaser
+  - field.field.node.faq.body
+  - node.type.faq
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.faq.teaser
 targetEntityType: node
 bundle: faq
@@ -19,11 +19,11 @@ content:
     weight: 101
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
-hidden: {  }
+hidden: {}

@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.media
-    - media.type.image
-    - media.type.remote_video
-    - media.type.video
-    - node.type.product
+  - field.storage.node.media
+  - media.type.image
+  - media.type.remote_video
+  - media.type.video
+  - node.type.product
 id: node.product.media
 field_name: media
 entity_type: node
 bundle: product
 label: Media
-description: 'Media attachments for this product. Can be used in a gallery.'
+description: Media attachments for this product. Can be used in a gallery.
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:media'
+  handler: default:media
   handler_settings:
     target_bundles:
       image: image

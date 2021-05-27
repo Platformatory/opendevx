@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.benefit.description
-    - field.field.paragraph.benefit.icon
-    - field.field.paragraph.benefit.name
-    - paragraphs.paragraphs_type.benefit
+  - field.field.paragraph.benefit.description
+  - field.field.paragraph.benefit.icon
+  - field.field.paragraph.benefit.name
+  - paragraphs.paragraphs_type.benefit
   module:
-    - font_awesome
-    - text
+  - font_awesome
+  - text
 id: paragraph.benefit.default
 targetEntityType: paragraph
 bundle: benefit
@@ -19,24 +19,24 @@ content:
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ''
+      placeholder: ""
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: text_textarea_with_summary
     region: content
   icon:
     weight: 2
     settings:
-      default_value: 'fas fa-eye'
-    third_party_settings: {  }
+      default_value: fas fa-eye
+    third_party_settings: {}
     type: font_awesome_icon_picker
     region: content
   name:
     weight: 0
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
 hidden:

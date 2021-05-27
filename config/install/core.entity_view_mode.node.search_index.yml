@@ -2,8 +2,8 @@ langcode: en
 status: false
 dependencies:
   module:
-    - node
+  - node
 id: node.search_index
-label: 'Search index'
+label: Search index
 targetEntityType: node
 cache: true

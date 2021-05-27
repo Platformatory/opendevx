@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.featured
-    - field.field.node.news.body
-    - node.type.news
+  - core.entity_view_mode.node.featured
+  - field.field.node.news.body
+  - node.type.news
   module:
-    - layout_builder
-    - text
-    - user
+  - layout_builder
+  - text
+  - user
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -24,11 +24,11 @@ content:
     weight: 101
     settings:
       trim_length: 300
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+    settings: {}
+    third_party_settings: {}
+hidden: {}

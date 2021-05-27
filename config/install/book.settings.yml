@@ -1,8 +1,8 @@
 allowed_types:
-  - book
-  - faq
-  - usecase
+- book
+- faq
+- usecase
 block:
   navigation:
-    mode: 'all pages'
+    mode: all pages
 child_type: book

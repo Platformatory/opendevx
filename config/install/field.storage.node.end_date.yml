@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - datetime
-    - node
+  - datetime
+  - node
 id: node.end_date
 field_name: end_date
 entity_type: node
@@ -14,6 +14,6 @@ module: datetime
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: docs
 label: Docs
-type: 'canonical_entities:node'
-pattern: 'doc/[node:title]'
+type: canonical_entities:node
+pattern: doc/[node:title]
 selection_criteria:
   a3a8544c-b0eb-4674-86bf-859a259dc747:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: a3a8544c-b0eb-4674-86bf-859a259dc747
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

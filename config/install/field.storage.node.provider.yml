@@ -2,52 +2,41 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - options
+  - node
+  - options
 id: node.provider
 field_name: provider
 entity_type: node
 type: list_string
 settings:
   allowed_values:
-    -
-      value: github
-      label: Github
-    -
-      value: apigee_saas
-      label: 'Apigee Enterprise'
-    -
-      value: apigee_hybrid
-      label: 'Apigee Hybrid'
-    -
-      value: aws
-      label: 'AWS API Gateway'
-    -
-      value: azure
-      label: 'Azure API Management'
-    -
-      value: istio
-      label: Istio
-    -
-      value: layer7
-      label: 'CA Layer 7'
-    -
-      value: kong
-      label: 'Kong API Gateway'
-    -
-      value: mulesoft
-      label: Mulesoft
-    -
-      value: webmethods
-      label: Webmethods
-    -
-      value: wso2
-      label: WSO2
-  allowed_values_function: ''
+  - value: github
+    label: Github
+  - value: apigee_saas
+    label: Apigee Enterprise
+  - value: apigee_hybrid
+    label: Apigee Hybrid
+  - value: aws
+    label: AWS API Gateway
+  - value: azure
+    label: Azure API Management
+  - value: istio
+    label: Istio
+  - value: layer7
+    label: CA Layer 7
+  - value: kong
+    label: Kong API Gateway
+  - value: mulesoft
+    label: Mulesoft
+  - value: webmethods
+    label: Webmethods
+  - value: wso2
+    label: WSO2
+  allowed_values_function: ""
 module: options
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

@@ -2,25 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.subscription.applications
-    - field.field.node.subscription.auto_renew
-    - field.field.node.subscription.billing_engine
-    - field.field.node.subscription.billing_plan
-    - field.field.node.subscription.config
-    - field.field.node.subscription.current_outstanding
-    - field.field.node.subscription.discount
-    - field.field.node.subscription.end_date
-    - field.field.node.subscription.internal_metadata
-    - field.field.node.subscription.payment_method
-    - field.field.node.subscription.remote
-    - field.field.node.subscription.rev_share
-    - field.field.node.subscription.rid
-    - field.field.node.subscription.start_date
-    - node.type.subscription
+  - core.entity_form_mode.node.odx
+  - field.field.node.subscription.applications
+  - field.field.node.subscription.auto_renew
+  - field.field.node.subscription.billing_engine
+  - field.field.node.subscription.billing_plan
+  - field.field.node.subscription.config
+  - field.field.node.subscription.current_outstanding
+  - field.field.node.subscription.discount
+  - field.field.node.subscription.end_date
+  - field.field.node.subscription.internal_metadata
+  - field.field.node.subscription.payment_method
+  - field.field.node.subscription.remote
+  - field.field.node.subscription.rev_share
+  - field.field.node.subscription.rid
+  - field.field.node.subscription.start_date
+  - node.type.subscription
   module:
-    - content_moderation
-    - datetime
+  - datetime
 id: node.subscription.odx
 targetEntityType: node
 bundle: subscription
@@ -28,15 +27,15 @@ mode: odx
 content:
   applications:
     weight: 4
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   auto_renew:
     weight: 6
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: boolean_checkbox
     region: content
   billing_plan:
@@ -47,30 +46,30 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
   end_date:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: datetime_default
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 7
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   payment_method:
     weight: 5
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   start_date:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: datetime_default
     region: content
   status:
@@ -79,15 +78,15 @@ content:
       display_label: true
     weight: 8
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   billing_engine: true
   config: true

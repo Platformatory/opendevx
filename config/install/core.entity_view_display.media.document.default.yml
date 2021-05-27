@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.document.field_media_document
-    - media.type.document
+  - field.field.media.document.field_media_document
+  - media.type.document
   module:
-    - file
+  - file
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -13,8 +13,8 @@ mode: default
 content:
   field_media_document:
     label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: file_default
     weight: 1
     region: content

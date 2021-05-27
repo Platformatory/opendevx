@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.description
-    - field.storage.group.image
-    - group.type.domain
+  - field.storage.group.description
+  - field.storage.group.image
+  - group.type.domain
   module:
-    - group
-    - media
+  - group
+  - media
 id: domains_block
-label: 'Domains Block'
+label: Domains Block
 module: views
-description: ''
-tag: ''
+description: ""
+tag: ""
 base_table: groups_field_data
 base_field: id
 display:
@@ -24,25 +24,25 @@ display:
     display_options:
       access:
         type: none
-        options: {  }
+        options: {}
       cache:
         type: tag
-        options: {  }
+        options: {}
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: ''
-          query_tags: {  }
+          query_comment: ""
+          query_tags: {}
       exposed_form:
         type: basic
         options:
           submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: Sort by
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -65,53 +65,53 @@ display:
           plugin_id: field
           relationship: none
           group_type: group
-          admin_label: ''
-          label: ''
+          admin_label: ""
+          label: ""
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings: {}
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -126,53 +126,53 @@ display:
           field: description
           relationship: none
           group_type: group
-          admin_label: ''
-          label: ''
+          admin_label: ""
+          label: ""
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: basic_string
-          settings: {  }
+          settings: {}
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -188,45 +188,45 @@ display:
           field: image
           relationship: none
           group_type: group
-          admin_label: ''
-          label: ''
+          admin_label: ""
+          label: ""
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -235,7 +235,7 @@ display:
           settings:
             view_mode: link
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -251,45 +251,45 @@ display:
           field: view_group
           relationship: none
           group_type: group
-          admin_label: ''
-          label: ''
+          admin_label: ""
+          label: ""
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -310,12 +310,12 @@ display:
           plugin_id: bundle
           expose:
             operator_limit_selection: false
-            operator_list: {  }
-      sorts: {  }
-      title: 'Domains Block'
-      header: {  }
-      footer: {  }
-      empty: {  }
+            operator_list: {}
+      sorts: {}
+      title: Domains Block
+      header: {}
+      footer: {}
+      empty: {}
       relationships:
         image:
           id: image
@@ -326,29 +326,29 @@ display:
           admin_label: 'image: Media'
           required: false
           plugin_id: standard
-      arguments: {  }
-      display_extenders: {  }
+      arguments: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
+      - languages:language_content
+      - languages:language_interface
       tags:
-        - 'config:field.storage.group.description'
-        - 'config:field.storage.group.image'
+      - config:field.storage.group.description
+      - config:field.storage.group.image
   block:
     display_plugin: block
     id: block
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
-      block_category: 'ODX Frontend'
+      display_extenders: {}
+      block_category: ODX Frontend
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
+      - languages:language_content
+      - languages:language_interface
       tags:
-        - 'config:field.storage.group.description'
-        - 'config:field.storage.group.image'
+      - config:field.storage.group.description
+      - config:field.storage.group.image

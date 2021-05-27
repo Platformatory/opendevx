@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - fac
+  - fac
 id: fac_config--fac_config
 disabled: true
 path: fac_config/fac_config
@@ -12,137 +12,137 @@ resourceFields:
     fieldName: uuid
     publicName: uuid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   status:
     fieldName: status
     publicName: status
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   dependencies:
     fieldName: dependencies
     publicName: dependencies
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   third_party_settings:
     fieldName: third_party_settings
     publicName: third_party_settings
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   id:
     fieldName: id
     publicName: id
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   label:
     fieldName: label
     publicName: label
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   searchPluginId:
     fieldName: searchPluginId
     publicName: searchPluginId
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   searchPluginConfig:
     fieldName: searchPluginConfig
     publicName: searchPluginConfig
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   inputSelectors:
     fieldName: inputSelectors
     publicName: inputSelectors
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   numberOfResults:
     fieldName: numberOfResults
     publicName: numberOfResults
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   emptyResult:
     fieldName: emptyResult
     publicName: emptyResult
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   viewModes:
     fieldName: viewModes
     publicName: viewModes
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   keyMinLength:
     fieldName: keyMinLength
     publicName: keyMinLength
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   keyMaxLength:
     fieldName: keyMaxLength
     publicName: keyMaxLength
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   allResultsLink:
     fieldName: allResultsLink
     publicName: allResultsLink
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   allResultsLinkThreshold:
     fieldName: allResultsLinkThreshold
     publicName: allResultsLinkThreshold
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   breakpoint:
     fieldName: breakpoint
     publicName: breakpoint
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   resultLocation:
     fieldName: resultLocation
     publicName: resultLocation
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   highlightingEnabled:
     fieldName: highlightingEnabled
     publicName: highlightingEnabled
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   anonymousSearch:
     fieldName: anonymousSearch
     publicName: anonymousSearch
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   cleanUpFiles:
     fieldName: cleanUpFiles
     publicName: cleanUpFiles
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   filesExpiryTime:
     fieldName: filesExpiryTime
     publicName: filesExpiryTime
     enhancer:
-      id: ''
+      id: ""
     disabled: false

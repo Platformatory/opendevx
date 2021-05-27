@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_legal.document.api_monetization_contract
-    - field.field.entity_legal_document_version.api_monetization_contract.entity_legal_document_text
+  - entity_legal.document.api_monetization_contract
+  - field.field.entity_legal_document_version.api_monetization_contract.entity_legal_document_text
   module:
-    - text
+  - text
 id: entity_legal_document_version.api_monetization_contract.default
 targetEntityType: entity_legal_document_version
 bundle: api_monetization_contract
@@ -17,8 +17,8 @@ content:
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ''
+      placeholder: ""
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
-hidden: {  }
+hidden: {}

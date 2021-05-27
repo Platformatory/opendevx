@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.company
+  - group.type.company
   enforced:
     config:
-      - user.role.administrator
+    - user.role.administrator
 id: company-a416e6833
 label: Administrator
 weight: -8
@@ -13,4 +13,4 @@ internal: true
 audience: outsider
 group_type: company
 permissions_ui: false
-permissions: {  }
+permissions: {}

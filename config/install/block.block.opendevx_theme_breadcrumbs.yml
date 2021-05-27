@@ -2,9 +2,9 @@ langcode: en
 status: false
 dependencies:
   module:
-    - system
+  - system
   theme:
-    - opendevx_theme
+  - opendevx_theme
 id: opendevx_theme_breadcrumbs
 theme: opendevx_theme
 region: header
@@ -13,7 +13,7 @@ provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: 'Breadcrumbs (Material Admin)'
+  label: Breadcrumbs (Material Admin)
   provider: system
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

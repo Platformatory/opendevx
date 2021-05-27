@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - webform
+  - webform
 id: webform_submission_make_unlock_action
-label: 'Unlock submission'
+label: Unlock submission
 type: webform_submission
 plugin: webform_submission_make_unlock_action
-configuration: {  }
+configuration: {}

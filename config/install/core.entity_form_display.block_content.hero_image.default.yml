@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero_image
-    - field.field.block_content.hero_image.blurb
-    - field.field.block_content.hero_image.image
-    - field.field.block_content.hero_image.link_1
-    - field.field.block_content.hero_image.link_2
-    - image.style.thumbnail
+  - block_content.type.hero_image
+  - field.field.block_content.hero_image.blurb
+  - field.field.block_content.hero_image.image
+  - field.field.block_content.hero_image.link_1
+  - field.field.block_content.hero_image.link_2
+  - image.style.thumbnail
   module:
-    - image
-    - link
+  - image
+  - link
 id: block_content.hero_image.default
 targetEntityType: block_content
 bundle: hero_image
@@ -20,8 +20,8 @@ content:
     weight: 29
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   image:
@@ -29,7 +29,7 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings: {}
     type: image_image
     region: content
   info:
@@ -38,22 +38,22 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
   link_1:
     weight: 27
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
+      placeholder_url: ""
+      placeholder_title: ""
+    third_party_settings: {}
     type: link_default
     region: content
   link_2:
     weight: 28
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
+      placeholder_url: ""
+      placeholder_title: ""
+    third_party_settings: {}
     type: link_default
     region: content
-hidden: {  }
+hidden: {}

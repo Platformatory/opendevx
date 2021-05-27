@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.file.download
-    - field.field.node.file.tags
-    - node.type.file
+  - field.field.node.file.download
+  - field.field.node.file.tags
+  - node.type.file
   module:
-    - file_url
-    - user
+  - file_url
+  - user
 id: node.file.default
 targetEntityType: node
 bundle: file
@@ -18,20 +18,20 @@ content:
     label: above
     settings:
       mode: link
-    third_party_settings: {  }
+    third_party_settings: {}
     type: file_url_default
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   tags:
     weight: 102
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
-hidden: {  }
+hidden: {}

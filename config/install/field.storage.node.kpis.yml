@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
-    - node
-    - paragraphs
+  - entity_reference_revisions
+  - node
+  - paragraphs
 id: node.kpis
 field_name: kpis
 entity_type: node
@@ -15,6 +15,6 @@ module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

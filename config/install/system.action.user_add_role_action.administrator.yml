@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - user.role.administrator
+  - user.role.administrator
   module:
-    - user
+  - user
 id: user_add_role_action.administrator
-label: 'Add the Administrator role to the selected user(s)'
+label: Add the Administrator role to the selected user(s)
 type: user
 plugin: user_add_role_action
 configuration:

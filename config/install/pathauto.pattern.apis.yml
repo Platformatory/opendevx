@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: apis
 label: APIs
-type: 'canonical_entities:node'
-pattern: '/api/[node:title]'
+type: canonical_entities:node
+pattern: /api/[node:title]
 selection_criteria:
   a2225cf7-de88-4726-91d5-8a673ce0878e:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: a2225cf7-de88-4726-91d5-8a673ce0878e
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

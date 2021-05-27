@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
+  - group.type.domain
 id: domain-architect
 label: Architect
 weight: 103
@@ -10,4 +10,4 @@ internal: false
 audience: member
 group_type: domain
 permissions_ui: true
-permissions: {  }
+permissions: {}

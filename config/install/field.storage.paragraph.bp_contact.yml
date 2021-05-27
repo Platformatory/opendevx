@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - contact
-    - paragraphs
+  - contact
+  - paragraphs
 id: paragraph.bp_contact
 field_name: bp_contact
 entity_type: paragraph
@@ -14,6 +14,6 @@ module: core
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

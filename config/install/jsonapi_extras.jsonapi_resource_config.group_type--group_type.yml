@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - group
+  - group
 id: group_type--group_type
 disabled: true
 path: group_type/group_type
@@ -12,65 +12,65 @@ resourceFields:
     fieldName: uuid
     publicName: uuid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   status:
     fieldName: status
     publicName: status
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   dependencies:
     fieldName: dependencies
     publicName: dependencies
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   third_party_settings:
     fieldName: third_party_settings
     publicName: third_party_settings
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   id:
     fieldName: id
     publicName: id
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   label:
     fieldName: label
     publicName: label
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   description:
     fieldName: description
     publicName: description
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   creator_membership:
     fieldName: creator_membership
     publicName: creator_membership
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   creator_wizard:
     fieldName: creator_wizard
     publicName: creator_wizard
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   creator_roles:
     fieldName: creator_roles
     publicName: creator_roles
     enhancer:
-      id: ''
+      id: ""
     disabled: false

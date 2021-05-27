@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.version
-    - node.type.repository
+  - field.storage.node.version
+  - node.type.repository
 id: node.repository.version
 field_name: version
 entity_type: node
 bundle: repository
 label: Version
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string

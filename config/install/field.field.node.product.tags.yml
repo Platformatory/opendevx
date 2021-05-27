@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.tags
-    - node.type.product
-    - taxonomy.vocabulary.tags
+  - field.storage.node.tags
+  - node.type.product
+  - taxonomy.vocabulary.tags
 id: node.product.tags
 field_name: tags
 entity_type: node
 bundle: product
 label: Tags
-description: 'Add tags to label your products better'
+description: Add tags to label your products better
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:taxonomy_term'
+  handler: default:taxonomy_term
   handler_settings:
     target_bundles:
       tags: tags
@@ -24,5 +24,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

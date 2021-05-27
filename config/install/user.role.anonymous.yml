@@ -1,16 +1,16 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: anonymous
-label: 'Anonymous user'
+label: Anonymous user
 weight: -10
 is_admin: false
 permissions:
-  - 'access comments'
-  - 'access content'
-  - 'access group overview'
-  - 'access site-wide contact form'
-  - 'search content'
-  - 'use text format restricted_html'
-  - 'view media'
-  - 'view the administration theme'
+- access comments
+- access content
+- access group overview
+- access site-wide contact form
+- search content
+- use text format restricted_html
+- view media
+- view the administration theme

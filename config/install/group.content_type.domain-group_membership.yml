@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
+  - group.type.domain
   module:
-    - user
+  - user
 id: domain-group_membership
 label: 'Domain: Group membership'
-description: 'Adds users to groups as members.'
+description: Adds users to groups as members.
 group_type: domain
 content_plugin: group_membership
 plugin_config:

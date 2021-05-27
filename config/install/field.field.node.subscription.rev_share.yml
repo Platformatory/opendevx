@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.rev_share
-    - node.type.subscription
+  - field.storage.node.rev_share
+  - node.type.subscription
 id: node.subscription.rev_share
 field_name: rev_share
 entity_type: node
 bundle: subscription
-label: 'Rev Share'
-description: 'A developer or revenue share, or chargeback, if applicable'
+label: Rev Share
+description: A developer or revenue share, or chargeback, if applicable
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   min: 0.1
   max: 99.9
-  prefix: ''
+  prefix: ""
   suffix: '%'
 field_type: decimal

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - avatars
+id: avatars_preview.token
+label: Token
+targetEntityType: avatars_preview
+cache: true

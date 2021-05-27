@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.sync
-    - node.type.repository
+  - field.storage.node.sync
+  - node.type.repository
   module:
-    - jsonb
+  - jsonb
 id: node.repository.sync
 field_name: sync
 entity_type: node
 bundle: repository
-label: 'Sync Properties'
-description: 'Add sync properties.'
+label: Sync Properties
+description: Add sync properties.
 required: false
 translatable: false
 default_value:
-  -
-    value: "{\r\n\"schedule_crontab\": \" \",\r\n\"timeout_ms\": \" \",\r\n\"retries_max\": \" \",\r\n\"sleep_ms\": \" \"\r\n}"
-default_value_callback: ''
-settings: {  }
+- value: "{\r\n\"schedule_crontab\": \" \",\r\n\"timeout_ms\": \" \",\r\n\"retries_max\":
+    \" \",\r\n\"sleep_ms\": \" \"\r\n}"
+default_value_callback: ""
+settings: {}
 field_type: json
