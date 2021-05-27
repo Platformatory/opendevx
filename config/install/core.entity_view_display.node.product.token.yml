@@ -4,8 +4,6 @@ dependencies:
   config:
   - core.entity_view_mode.node.token
   - field.field.node.product.apis
-  - field.field.node.product.apis_count
-  - field.field.node.product.applications_count
   - field.field.node.product.benefits
   - field.field.node.product.body
   - field.field.node.product.category
@@ -29,7 +27,6 @@ dependencies:
   - field.field.node.product.tags
   - node.type.product
   module:
-  - computed_field
   - entity_reference_revisions
   - layout_builder
   - layout_builder_restrictions
@@ -83,28 +80,6 @@ content:
       link: true
     third_party_settings: {}
     type: entity_reference_label
-    region: content
-  apis_count:
-    weight: 107
-    label: above
-    settings:
-      cache_unit: -1
-      cache_duration: 1
-      thousand_separator: ""
-      prefix_suffix: true
-    third_party_settings: {}
-    type: computed_integer
-    region: content
-  applications_count:
-    weight: 109
-    label: above
-    settings:
-      cache_unit: -1
-      cache_duration: 1
-      thousand_separator: ""
-      prefix_suffix: true
-    third_party_settings: {}
-    type: computed_integer
     region: content
   benefits:
     type: entity_reference_revisions_entity_view

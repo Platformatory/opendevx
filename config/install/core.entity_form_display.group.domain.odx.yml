@@ -12,14 +12,49 @@ dependencies:
   - group.type.domain
   module:
   - color_field
+  - field_group
   - media_library
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+      - label
+      - description
+      - visibility
+      parent_name: ""
+      weight: 0
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Metadata
+    group_branding:
+      children:
+      - image
+      - hero_image
+      - primary_color
+      parent_name: ""
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Branding
 id: group.domain.odx
 targetEntityType: group
 bundle: domain
 mode: odx
 content:
   description:
-    weight: 1
+    weight: 2
     settings:
       rows: 2
       placeholder: ""
@@ -28,35 +63,35 @@ content:
     region: content
   hero_image:
     type: media_library_widget
-    weight: 4
+    weight: 3
     region: content
     settings:
       media_types: {}
     third_party_settings: {}
   image:
     type: media_library_widget
-    weight: 3
+    weight: 2
     region: content
     settings:
       media_types: {}
     third_party_settings: {}
   label:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ""
     third_party_settings: {}
   primary_color:
-    weight: 5
+    weight: 4
     settings: {}
     third_party_settings: {}
     type: color_field_widget_html5
     region: content
   visibility:
     type: options_buttons
-    weight: 2
+    weight: 3
     region: content
     settings: {}
     third_party_settings: {}
