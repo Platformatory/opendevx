@@ -48,6 +48,7 @@ module:
   entityqueue_smartqueue: 0
   fac: 0
   field: 0
+  field_group: 0
   field_name_prefix_remove: 0
   field_ui: 0
   file: 0

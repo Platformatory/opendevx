@@ -4,8 +4,6 @@ dependencies:
   config:
   - core.entity_view_mode.node.teaser
   - field.field.node.product.apis
-  - field.field.node.product.apis_count
-  - field.field.node.product.applications_count
   - field.field.node.product.benefits
   - field.field.node.product.body
   - field.field.node.product.category
@@ -63,8 +61,6 @@ content:
     third_party_settings: {}
 hidden:
   apis: true
-  apis_count: true
-  applications_count: true
   benefits: true
   category: true
   config: true

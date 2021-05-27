@@ -5,10 +5,8 @@ dependencies:
   - core.entity_view_mode.node.teaser
   - field.field.node.subscription.applications
   - field.field.node.subscription.auto_renew
-  - field.field.node.subscription.billing_engine
   - field.field.node.subscription.billing_plan
   - field.field.node.subscription.config
-  - field.field.node.subscription.current_outstanding
   - field.field.node.subscription.discount
   - field.field.node.subscription.end_date
   - field.field.node.subscription.internal_metadata
@@ -52,10 +50,8 @@ content:
 hidden:
   applications: true
   auto_renew: true
-  billing_engine: true
   billing_plan: true
   config: true
-  current_outstanding: true
   discount: true
   internal_metadata: true
   payment_method: true
