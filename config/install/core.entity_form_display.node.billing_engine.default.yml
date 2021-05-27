@@ -6,10 +6,10 @@ dependencies:
   - field.field.node.billing_engine.credentials
   - field.field.node.billing_engine.description
   - field.field.node.billing_engine.env
-  - field.field.node.billing_engine.mode
   - field.field.node.billing_engine.version
   - node.type.billing_engine
   module:
+  - content_moderation
   - jsonb
 id: node.billing_engine.default
 targetEntityType: node
@@ -37,12 +37,6 @@ content:
       placeholder: ""
     third_party_settings: {}
     type: string_textarea
-    region: content
-  mode:
-    weight: 4
-    settings: {}
-    third_party_settings: {}
-    type: options_buttons
     region: content
   moderation_state:
     type: moderation_state_default

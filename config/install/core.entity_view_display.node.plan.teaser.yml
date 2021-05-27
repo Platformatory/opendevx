@@ -8,8 +8,6 @@ dependencies:
   - field.field.node.plan.description
   - field.field.node.plan.pricing_rules
   - field.field.node.plan.products
-  - field.field.node.plan.products_count
-  - field.field.node.plan.subscriptions_count
   - field.field.node.plan.usage_metric
   - field.field.node.plan.usage_provider
   - node.type.plan
@@ -31,7 +29,5 @@ hidden:
   description: true
   pricing_rules: true
   products: true
-  products_count: true
-  subscriptions_count: true
   usage_metric: true
   usage_provider: true

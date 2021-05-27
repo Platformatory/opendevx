@@ -6,7 +6,6 @@ dependencies:
   - field.field.node.billing_engine.credentials
   - field.field.node.billing_engine.description
   - field.field.node.billing_engine.env
-  - field.field.node.billing_engine.mode
   - field.field.node.billing_engine.version
   - node.type.billing_engine
   module:
@@ -51,13 +50,6 @@ content:
     weight: 100
     settings: {}
     third_party_settings: {}
-    region: content
-  mode:
-    weight: 106
-    label: above
-    settings: {}
-    third_party_settings: {}
-    type: list_default
     region: content
   version:
     weight: 109

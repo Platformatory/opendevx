@@ -4,10 +4,8 @@ dependencies:
   config:
   - field.field.node.subscription.applications
   - field.field.node.subscription.auto_renew
-  - field.field.node.subscription.billing_engine
   - field.field.node.subscription.billing_plan
   - field.field.node.subscription.config
-  - field.field.node.subscription.current_outstanding
   - field.field.node.subscription.discount
   - field.field.node.subscription.end_date
   - field.field.node.subscription.internal_metadata
@@ -18,7 +16,6 @@ dependencies:
   - field.field.node.subscription.start_date
   - node.type.subscription
   module:
-  - computed_field
   - datetime
   - jsonb
   - options
@@ -46,14 +43,6 @@ content:
     third_party_settings: {}
     type: boolean
     region: content
-  billing_engine:
-    weight: 111
-    label: above
-    settings:
-      link: true
-    third_party_settings: {}
-    type: entity_reference_label
-    region: content
   billing_plan:
     weight: 110
     label: above
@@ -68,17 +57,6 @@ content:
     settings: {}
     third_party_settings: {}
     type: jsonb_default
-    region: content
-  current_outstanding:
-    weight: 109
-    label: above
-    settings:
-      cache_unit: -1
-      cache_duration: 1
-      thousand_separator: ""
-      prefix_suffix: true
-    third_party_settings: {}
-    type: computed_integer
     region: content
   discount:
     weight: 106

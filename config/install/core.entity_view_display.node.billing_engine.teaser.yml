@@ -7,7 +7,6 @@ dependencies:
   - field.field.node.billing_engine.credentials
   - field.field.node.billing_engine.description
   - field.field.node.billing_engine.env
-  - field.field.node.billing_engine.mode
   - field.field.node.billing_engine.version
   - node.type.billing_engine
   module:
@@ -27,5 +26,4 @@ hidden:
   credentials: true
   description: true
   env: true
-  mode: true
   version: true
