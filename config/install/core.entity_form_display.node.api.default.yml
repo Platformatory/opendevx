@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
   - field.field.node.api.api_type
-  - field.field.node.api.apis_count
   - field.field.node.api.config
   - field.field.node.api.description
   - field.field.node.api.env
@@ -124,7 +123,6 @@ content:
       placeholder: ""
     third_party_settings: {}
 hidden:
-  apis_count: true
   created: true
   path: true
   promote: true

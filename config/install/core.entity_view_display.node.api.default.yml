@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
   - field.field.node.api.api_type
-  - field.field.node.api.apis_count
   - field.field.node.api.config
   - field.field.node.api.description
   - field.field.node.api.env
@@ -16,7 +15,6 @@ dependencies:
   - field.field.node.api.tags
   - node.type.api
   module:
-  - computed_field
   - jsonb
   - options
   - user
@@ -31,17 +29,6 @@ content:
     settings: {}
     third_party_settings: {}
     type: list_default
-    region: content
-  apis_count:
-    weight: 110
-    label: above
-    settings:
-      cache_unit: -1
-      cache_duration: 1
-      thousand_separator: ""
-      prefix_suffix: true
-    third_party_settings: {}
-    type: computed_integer
     region: content
   config:
     weight: 117

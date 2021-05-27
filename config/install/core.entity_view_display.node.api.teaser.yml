@@ -4,7 +4,6 @@ dependencies:
   config:
   - core.entity_view_mode.node.teaser
   - field.field.node.api.api_type
-  - field.field.node.api.apis_count
   - field.field.node.api.config
   - field.field.node.api.description
   - field.field.node.api.env
@@ -39,7 +38,6 @@ content:
     settings: {}
     third_party_settings: {}
 hidden:
-  apis_count: true
   config: true
   content_moderation_control: true
   env: true

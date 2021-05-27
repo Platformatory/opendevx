@@ -4,7 +4,6 @@ dependencies:
   config:
   - core.entity_form_mode.node.odx
   - field.field.node.api.api_type
-  - field.field.node.api.apis_count
   - field.field.node.api.config
   - field.field.node.api.description
   - field.field.node.api.env
@@ -19,46 +18,98 @@ dependencies:
   - workflows.workflow.api_governance
   module:
   - content_moderation
+  - field_group
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+      - api_type
+      - title
+      - description
+      - env
+      - source
+      - tags
+      parent_name: ""
+      weight: 0
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Metadata
+    group_interface:
+      children:
+      - spec
+      parent_name: ""
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Interface
 id: node.api.odx
 targetEntityType: node
 bundle: api
 mode: odx
 content:
   api_type:
-    weight: 1
+    weight: 2
     settings: {}
     third_party_settings: {}
     type: options_buttons
     region: content
   description:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ""
     third_party_settings: {}
     type: string_textarea
     region: content
+  env:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ""
+    third_party_settings: {}
   moderation_state:
     type: moderation_state_default
-    weight: 6
+    weight: 2
     region: content
     settings: {}
     third_party_settings: {}
   source:
-    weight: 5
+    weight: 6
     settings: {}
     third_party_settings: {}
     type: options_select
     region: content
+  spec:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 10
+      placeholder: ""
+    third_party_settings: {}
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {}
   tags:
-    weight: 4
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -69,23 +120,20 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: 0
+    weight: 3
     region: content
     settings:
       size: 60
       placeholder: ""
     third_party_settings: {}
 hidden:
-  apis_count: true
   config: true
   created: true
-  env: true
   internal_metadata: true
   is_api_product: true
   path: true
   promote: true
   remote: true
   rid: true
-  spec: true
   sticky: true
   uid: true
