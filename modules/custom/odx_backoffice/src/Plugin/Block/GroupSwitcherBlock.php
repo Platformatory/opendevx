@@ -86,6 +86,14 @@ class GroupSwitcherBlock extends BlockBase implements ContainerFactoryPluginInte
   /**
    * {@inheritdoc}
    */
+  public function getCacheTags() {
+    return Cache::mergeTags(parent::getCacheTags(), ['group_list']);
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
   public function getCacheContexts() {
     return Cache::mergeContexts(parent::getCacheContexts(), ['url.query_args:context']);
   }
