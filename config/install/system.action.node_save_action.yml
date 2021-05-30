@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: node_save_action
-label: 'Save content'
+label: Save content
 type: node
-plugin: 'entity:save_action:node'
-configuration: {  }
+plugin: entity:save_action:node
+configuration: {}

@@ -2,23 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.api.api_type
-    - field.field.node.api.apis_count
-    - field.field.node.api.config
-    - field.field.node.api.description
-    - field.field.node.api.env
-    - field.field.node.api.internal_metadata
-    - field.field.node.api.is_api_product
-    - field.field.node.api.remote
-    - field.field.node.api.rid
-    - field.field.node.api.source
-    - field.field.node.api.spec
-    - field.field.node.api.tags
-    - node.type.api
-    - workflows.workflow.api_governance
+  - field.field.node.api.api_type
+  - field.field.node.api.config
+  - field.field.node.api.description
+  - field.field.node.api.env
+  - field.field.node.api.internal_metadata
+  - field.field.node.api.is_api_product
+  - field.field.node.api.remote
+  - field.field.node.api.rid
+  - field.field.node.api.source
+  - field.field.node.api.spec
+  - field.field.node.api.tags
+  - node.type.api
+  - workflows.workflow.api_governance
   module:
-    - content_moderation
-    - jsonb
+  - content_moderation
+  - jsonb
 id: node.api.default
 targetEntityType: node
 bundle: api
@@ -26,83 +25,83 @@ mode: default
 content:
   api_type:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   config:
     weight: 28
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   description:
     weight: 2
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   env:
     weight: 26
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
   internal_metadata:
     weight: 8
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   is_api_product:
     weight: 27
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: boolean_checkbox
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 7
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   remote:
     weight: 29
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   rid:
     weight: 9
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
   source:
     weight: 6
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   spec:
     weight: 4
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
     region: content
   tags:
@@ -111,8 +110,8 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: entity_reference_autocomplete_tags
     region: content
   title:
@@ -121,10 +120,9 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
-  apis_count: true
   created: true
   path: true
   promote: true

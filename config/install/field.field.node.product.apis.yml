@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.apis
-    - node.type.api
-    - node.type.product
+  - field.storage.node.apis
+  - node.type.api
+  - node.type.product
 id: node.product.apis
 field_name: apis
 entity_type: node
 bundle: product
 label: APIs
-description: 'Select APIs part of this product'
+description: Select APIs part of this product
 required: true
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:node'
+  handler: default:node
   handler_settings:
     target_bundles:
       api: api
@@ -24,5 +24,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

@@ -1,10 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: domain
 label: Domain
-description: ''
+description: ""
 creator_membership: true
 creator_wizard: true
 creator_roles:
-  - domain-admin
+- domain-admin

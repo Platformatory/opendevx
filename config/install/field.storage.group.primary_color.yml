@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - color_field
-    - group
+  - color_field
+  - group
 id: group.primary_color
 field_name: primary_color
 entity_type: group
@@ -14,6 +14,6 @@ module: color_field
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

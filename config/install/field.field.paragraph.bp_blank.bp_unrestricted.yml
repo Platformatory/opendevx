@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.bp_unrestricted
-    - paragraphs.paragraphs_type.bp_blank
+  - field.storage.paragraph.bp_unrestricted
+  - paragraphs.paragraphs_type.bp_blank
   module:
-    - text
+  - text
 id: paragraph.bp_blank.bp_unrestricted
 field_name: bp_unrestricted
 entity_type: paragraph
 bundle: bp_blank
 label: Unrestricted
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: text_long

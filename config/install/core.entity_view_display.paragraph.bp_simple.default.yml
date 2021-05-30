@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_simple.bp_background
-    - field.field.paragraph.bp_simple.bp_header
-    - field.field.paragraph.bp_simple.bp_text
-    - field.field.paragraph.bp_simple.bp_width
-    - paragraphs.paragraphs_type.bp_simple
+  - field.field.paragraph.bp_simple.bp_background
+  - field.field.paragraph.bp_simple.bp_header
+  - field.field.paragraph.bp_simple.bp_text
+  - field.field.paragraph.bp_simple.bp_width
+  - paragraphs.paragraphs_type.bp_simple
   module:
-    - options
-    - text
+  - options
+  - text
 id: paragraph.bp_simple.default
 targetEntityType: paragraph
 bundle: bp_simple
@@ -18,8 +18,8 @@ content:
   bp_background:
     weight: 0
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
   bp_header:
@@ -29,19 +29,19 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
   bp_text:
     weight: 3
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
   bp_width:
     weight: 1
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
 hidden:

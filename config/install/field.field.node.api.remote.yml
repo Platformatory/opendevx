@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.remote
-    - node.type.api
+  - field.storage.node.remote
+  - node.type.api
   module:
-    - jsonb
+  - jsonb
 id: node.api.remote
 field_name: remote
 entity_type: node
 bundle: api
 label: Remote
-description: ''
+description: ""
 required: false
 translatable: false
 default_value:
-  -
-    value: 'null'
-default_value_callback: ''
-settings: {  }
+- value: "null"
+default_value_callback: ""
+settings: {}
 field_type: json

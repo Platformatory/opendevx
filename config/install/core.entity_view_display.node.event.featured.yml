@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.featured
-    - field.field.node.event.body
-    - field.field.node.event.end_date
-    - field.field.node.event.location
-    - field.field.node.event.media
-    - field.field.node.event.start_date
-    - node.type.event
+  - core.entity_view_mode.node.featured
+  - field.field.node.event.body
+  - field.field.node.event.end_date
+  - field.field.node.event.location
+  - field.field.node.event.media
+  - field.field.node.event.start_date
+  - node.type.event
   module:
-    - datetime
-    - layout_builder
-    - text
-    - user
+  - datetime
+  - layout_builder
+  - text
+  - user
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -27,29 +27,29 @@ content:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   end_date:
     weight: 104
     label: hidden
     settings:
-      timezone_override: ''
-      date_format: 'M jS, Y'
-    third_party_settings: {  }
+      timezone_override: ""
+      date_format: M jS, Y
+    third_party_settings: {}
     type: datetime_custom
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   location:
     weight: 105
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   media:
@@ -57,16 +57,16 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   start_date:
     weight: 103
     label: hidden
     settings:
-      timezone_override: ''
-      date_format: 'M jS, Y'
-    third_party_settings: {  }
+      timezone_override: ""
+      date_format: M jS, Y
+    third_party_settings: {}
     type: datetime_custom
     region: content
-hidden: {  }
+hidden: {}

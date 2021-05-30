@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_contact.bp_background
-    - field.field.paragraph.bp_contact.bp_contact
-    - field.field.paragraph.bp_contact.bp_width
-    - paragraphs.paragraphs_type.bp_contact
+  - field.field.paragraph.bp_contact.bp_background
+  - field.field.paragraph.bp_contact.bp_contact
+  - field.field.paragraph.bp_contact.bp_width
+  - paragraphs.paragraphs_type.bp_contact
 id: paragraph.bp_contact.default
 targetEntityType: paragraph
 bundle: bp_contact
@@ -13,20 +13,20 @@ mode: default
 content:
   bp_background:
     weight: 0
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   bp_contact:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   bp_width:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
 hidden:

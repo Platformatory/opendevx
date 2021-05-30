@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
+  - system
   theme:
-    - bartik
+  - bartik
 id: bartik_branding
 theme: bartik
 region: header
@@ -13,10 +13,10 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: Site branding
   provider: system
-  label_display: '0'
+  label_display: "0"
   use_site_logo: true
   use_site_name: true
   use_site_slogan: true
-visibility: {  }
+visibility: {}

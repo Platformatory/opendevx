@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.languages
-    - taxonomy.vocabulary.languages
+  - field.storage.user.languages
+  - taxonomy.vocabulary.languages
   module:
-    - user
+  - user
 id: user.user.languages
 field_name: languages
 entity_type: user
 bundle: user
-label: 'Programming Languages'
-description: ''
+label: Programming Languages
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:taxonomy_term'
+  handler: default:taxonomy_term
   handler_settings:
     target_bundles:
       languages: languages
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: true
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

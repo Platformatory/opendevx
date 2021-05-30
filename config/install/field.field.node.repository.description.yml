@@ -2,17 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.description
-    - node.type.repository
+  - field.storage.node.description
+  - node.type.repository
 id: node.repository.description
 field_name: description
 entity_type: node
 bundle: repository
 label: Description
-description: 'Description of this API. Maybe used for providing additional context to the user.'
+description: Description of this API. Maybe used for providing additional context
+  to the user.
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string_long

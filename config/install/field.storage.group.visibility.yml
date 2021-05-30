@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - group
+  - options
+id: group.visibility
+field_name: visibility
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+  - value: public
+    label: Public
+  - value: protected
+    label: Protected
+  - value: private
+    label: Private
+  allowed_values_function: ""
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {}
+persist_with_no_fields: false
+custom_storage: false

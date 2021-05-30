@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.book.body
-    - field.field.node.book.image
-    - node.type.book
+  - field.field.node.book.body
+  - field.field.node.book.image
+  - node.type.book
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.book.default
 targetEntityType: node
 bundle: book
@@ -18,17 +18,17 @@ content:
     type: text_default
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   image:
     weight: 102
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden: {}

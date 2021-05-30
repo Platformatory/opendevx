@@ -2,35 +2,33 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.product.apis
-    - field.field.node.product.apis_count
-    - field.field.node.product.applications_count
-    - field.field.node.product.benefits
-    - field.field.node.product.body
-    - field.field.node.product.category
-    - field.field.node.product.config
-    - field.field.node.product.cta_1
-    - field.field.node.product.cta_2
-    - field.field.node.product.description
-    - field.field.node.product.docs
-    - field.field.node.product.features
-    - field.field.node.product.hero_image
-    - field.field.node.product.image
-    - field.field.node.product.internal_metadata
-    - field.field.node.product.kpis
-    - field.field.node.product.layout_builder__layout
-    - field.field.node.product.media
-    - field.field.node.product.quota
-    - field.field.node.product.related
-    - field.field.node.product.remote
-    - field.field.node.product.rid
-    - field.field.node.product.source
-    - field.field.node.product.tags
-    - node.type.product
+  - core.entity_view_mode.node.teaser
+  - field.field.node.product.apis
+  - field.field.node.product.benefits
+  - field.field.node.product.body
+  - field.field.node.product.category
+  - field.field.node.product.config
+  - field.field.node.product.cta_1
+  - field.field.node.product.cta_2
+  - field.field.node.product.description
+  - field.field.node.product.docs
+  - field.field.node.product.features
+  - field.field.node.product.hero_image
+  - field.field.node.product.image
+  - field.field.node.product.internal_metadata
+  - field.field.node.product.kpis
+  - field.field.node.product.layout_builder__layout
+  - field.field.node.product.media
+  - field.field.node.product.quota
+  - field.field.node.product.related
+  - field.field.node.product.remote
+  - field.field.node.product.rid
+  - field.field.node.product.source
+  - field.field.node.product.tags
+  - node.type.product
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.product.teaser
 targetEntityType: node
 bundle: product
@@ -42,29 +40,27 @@ content:
     weight: 2
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   content_moderation_control:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   description:
     type: basic_string
     weight: 3
     region: content
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   links:
     weight: 1
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   apis: true
-  apis_count: true
-  applications_count: true
   benefits: true
   category: true
   config: true

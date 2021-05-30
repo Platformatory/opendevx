@@ -2,50 +2,106 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.plan.billing_engine
-    - field.field.node.plan.currency
-    - field.field.node.plan.description
-    - field.field.node.plan.pricing_rules
-    - field.field.node.plan.products
-    - field.field.node.plan.products_count
-    - field.field.node.plan.subscriptions_count
-    - field.field.node.plan.usage_metric
-    - field.field.node.plan.usage_provider
-    - node.type.plan
+  - core.entity_form_mode.node.odx
+  - field.field.node.plan.billing_engine
+  - field.field.node.plan.currency
+  - field.field.node.plan.description
+  - field.field.node.plan.pricing_rules
+  - field.field.node.plan.products
+  - field.field.node.plan.usage_metric
+  - field.field.node.plan.usage_provider
+  - node.type.plan
   module:
-    - jsonb
+  - field_group
+  - jsonb
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+      - title
+      - description
+      - products
+      - usage_metric
+      parent_name: ""
+      weight: 0
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Metadata
+    group_pricing:
+      children:
+      - currency
+      - pricing_rules
+      parent_name: ""
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Pricing
+    group_advanced_configuration:
+      children:
+      - usage_provider
+      - billing_engine
+      parent_name: ""
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ""
+        classes: ""
+        description: ""
+        formatter: closed
+        required_fields: true
+      label: Advanced Configuration
 id: node.plan.odx
 targetEntityType: node
 bundle: plan
 mode: odx
 content:
   billing_engine:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    weight: 4
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   currency:
-    weight: 3
+    weight: 2
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
-  pricing_rules:
-    type: jsonb_textarea
-    weight: 4
+  description:
+    type: string_textarea
+    weight: 2
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
+  pricing_rules:
+    type: jsonb_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ""
+    third_party_settings: {}
   products:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    weight: 3
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   status:
@@ -54,24 +110,31 @@ content:
       display_label: true
     weight: 5
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
+  usage_metric:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {}
+    third_party_settings: {}
+  usage_provider:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {}
+    third_party_settings: {}
 hidden:
   created: true
-  description: true
   moderation_state: true
   path: true
-  products_count: true
   promote: true
   sticky: true
-  subscriptions_count: true
   uid: true
-  usage_metric: true
-  usage_provider: true

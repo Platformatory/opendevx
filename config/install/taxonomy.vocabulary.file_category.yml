@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
-name: 'File Category'
+dependencies: {}
+name: File Category
 vid: file_category
-description: ''
+description: ""
 weight: 0

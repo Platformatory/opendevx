@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.usecase.body
-    - field.field.node.usecase.image
-    - node.type.usecase
+  - field.field.node.usecase.body
+  - field.field.node.usecase.image
+  - node.type.usecase
   module:
-    - text
-    - user
+  - text
+  - user
 id: node.usecase.default
 targetEntityType: node
 bundle: usecase
@@ -17,20 +17,20 @@ content:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   image:
     weight: 102
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+    settings: {}
+    third_party_settings: {}
+hidden: {}

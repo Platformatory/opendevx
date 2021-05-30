@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_browser
-    - paragraphs
-    - paragraphs_library
+  - entity_browser
+  - paragraphs
+  - paragraphs_library
 id: paragraphs_library_browser
-label: 'Paragraphs library browser'
+label: Paragraphs library browser
 module: views
-description: ''
-tag: ''
+description: ""
+tag: ""
 base_table: paragraphs_library_item_field_data
 base_field: id
 display:
@@ -21,25 +21,25 @@ display:
     display_options:
       access:
         type: none
-        options: {  }
+        options: {}
       cache:
         type: tag
-        options: {  }
+        options: {}
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: ''
-          query_tags: {  }
+          query_comment: ""
+          query_tags: {}
       exposed_form:
         type: basic
         options:
           submit_button: Filter
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: Sort by
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -52,8 +52,8 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_label: Items per page
+            items_per_page_options: 5, 10, 25, 50
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
@@ -64,14 +64,14 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
-          row_class: ''
+          grouping: {}
+          row_class: ""
           default_row_class: true
           override: true
           sticky: false
-          caption: ''
-          summary: ''
-          description: ''
+          caption: ""
+          summary: ""
+          description: ""
           columns:
             label: label
             type: type
@@ -82,37 +82,37 @@ display:
             label:
               sortable: false
               default_sort_order: asc
-              align: ''
-              separator: ''
+              align: ""
+              separator: ""
               empty_column: false
-              responsive: ''
+              responsive: ""
             type:
               sortable: false
               default_sort_order: asc
-              align: ''
-              separator: ''
+              align: ""
+              separator: ""
               empty_column: false
-              responsive: ''
+              responsive: ""
             id:
               sortable: false
               default_sort_order: asc
-              align: ''
-              separator: ''
+              align: ""
+              separator: ""
               empty_column: false
-              responsive: ''
+              responsive: ""
             count:
               sortable: false
               default_sort_order: asc
               align: views-align-right
-              separator: ''
+              separator: ""
               empty_column: false
-              responsive: ''
+              responsive: ""
             operations:
-              align: ''
-              separator: ''
+              align: ""
+              separator: ""
               empty_column: false
-              responsive: ''
-          default: '-1'
+              responsive: ""
+          default: "-1"
           empty_table: true
       row:
         type: fields
@@ -123,45 +123,45 @@ display:
           field: entity_browser_select
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Select
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -174,45 +174,45 @@ display:
           field: label
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Label
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -221,7 +221,7 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -239,45 +239,45 @@ display:
           field: type
           relationship: paragraphs__target_id
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Type
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -286,7 +286,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -304,51 +304,51 @@ display:
           field: paragraphs__target_id
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Paragraphs
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
           type: paragraph_summary
-          settings: {  }
+          settings: {}
           group_column: entity_id
           group_columns:
             target_id: target_id
@@ -370,45 +370,45 @@ display:
           field: changed
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Changed
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -416,10 +416,10 @@ display:
           type: timestamp
           settings:
             date_format: medium
-            custom_date_format: ''
-            timezone: ''
+            custom_date_format: ""
+            timezone: ""
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -438,15 +438,15 @@ display:
           field: label
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           operator: contains
-          value: ''
+          value: ""
           group: 1
           exposed: true
           expose:
             operator_id: label_op
             label: Label
-            description: ''
+            description: ""
             use_operator: false
             operator: label_op
             identifier: label
@@ -455,10 +455,10 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
+              anonymous: "0"
+              administrator: "0"
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           is_grouped: false
           group_info:
             label: Label
@@ -469,11 +469,11 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
+            default_group_multiple: {}
             group_items:
-              1: {  }
-              2: {  }
-              3: {  }
+              1: {}
+              2: {}
+              3: {}
           entity_type: paragraphs_library_item
           entity_field: label
           plugin_id: string
@@ -483,15 +483,15 @@ display:
           field: type
           relationship: paragraphs__target_id
           group_type: group
-          admin_label: ''
+          admin_label: ""
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
             operator_id: type_op
             label: Type
-            description: ''
+            description: ""
             use_operator: false
             operator: type_op
             identifier: type
@@ -500,23 +500,23 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
+              anonymous: "0"
+              administrator: "0"
             reduce: false
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: ""
+            description: ""
+            identifier: ""
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
           entity_type: paragraph
           entity_field: type
           plugin_id: bundle
@@ -526,37 +526,37 @@ display:
           field: default_langcode
           relationship: none
           group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
+          admin_label: ""
+          operator: =
+          value: "1"
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
+            operator_id: ""
+            label: ""
+            description: ""
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: ""
+            identifier: ""
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: ""
+            description: ""
+            identifier: ""
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
           entity_type: paragraphs_library_item
           entity_field: default_langcode
           plugin_id: boolean
@@ -566,44 +566,44 @@ display:
           field: default_langcode
           relationship: paragraphs__target_id
           group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
+          admin_label: ""
+          operator: =
+          value: "1"
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
+            operator_id: ""
+            label: ""
+            description: ""
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: ""
+            identifier: ""
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: ""
+            description: ""
+            identifier: ""
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
           entity_type: paragraph
           entity_field: default_langcode
           plugin_id: boolean
-      sorts: {  }
-      title: 'Paragraphs library'
-      header: {  }
-      footer: {  }
+      sorts: {}
+      title: Paragraphs library
+      header: {}
+      footer: {}
       empty:
         area_text_custom:
           id: area_text_custom
@@ -611,10 +611,10 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           empty: true
           tokenize: false
-          content: 'No library items available.'
+          content: No library items available.
           plugin_id: text_custom
       relationships:
         paragraphs__target_id:
@@ -628,8 +628,8 @@ display:
           entity_type: paragraphs_library_item
           entity_field: paragraphs
           plugin_id: standard
-      arguments: {  }
-      display_extenders: {  }
+      arguments: {}
+      display_extenders: {}
       filter_groups:
         operator: AND
         groups:
@@ -639,23 +639,23 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags: {  }
+      - languages:language_content
+      - languages:language_interface
+      - url
+      - url.query_args
+      tags: {}
   entity_browser:
     display_plugin: entity_browser
     id: entity_browser
-    display_title: 'Entity browser'
+    display_title: Entity browser
     position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders: {}
       rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags: {  }
+      - languages:language_interface
+      - url
+      - url.query_args
+      tags: {}

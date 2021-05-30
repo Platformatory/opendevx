@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
+  - system
   theme:
-    - bartik
+  - bartik
 id: bartik_breadcrumbs
 theme: bartik
 region: breadcrumb
@@ -15,5 +15,5 @@ settings:
   id: system_breadcrumb_block
   label: Breadcrumbs
   provider: system
-  label_display: '0'
-visibility: {  }
+  label_display: "0"
+visibility: {}

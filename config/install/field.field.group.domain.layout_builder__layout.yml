@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.layout_builder__layout
-    - group.type.domain
+  - field.storage.group.layout_builder__layout
+  - group.type.domain
   module:
-    - layout_builder
+  - layout_builder
 id: group.domain.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: group
 bundle: domain
 label: Layout
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: layout_section

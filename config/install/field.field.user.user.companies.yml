@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.companies
+  - field.storage.user.companies
   module:
-    - computed_field
-    - user
+  - computed_field
+  - user
 id: user.user.companies
 field_name: companies
 entity_type: user
 bundle: user
 label: Companies
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: computed_string

@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.job_profile
-    - taxonomy.vocabulary.job_role
+  - field.storage.user.job_profile
+  - taxonomy.vocabulary.job_role
   module:
-    - user
+  - user
 id: user.user.job_profile
 field_name: job_profile
 entity_type: user
 bundle: user
-label: 'Job Profile'
-description: ''
+label: Job Profile
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:taxonomy_term'
+  handler: default:taxonomy_term
   handler_settings:
     target_bundles:
       job_role: job_role
@@ -25,5 +25,5 @@ settings:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

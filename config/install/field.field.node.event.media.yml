@@ -2,23 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.media
-    - media.type.document
-    - media.type.image
-    - media.type.remote_video
-    - node.type.event
+  - field.storage.node.media
+  - media.type.document
+  - media.type.image
+  - media.type.remote_video
+  - node.type.event
 id: node.event.media
 field_name: media
 entity_type: node
 bundle: event
 label: Media
-description: ''
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:media'
+  handler: default:media
   handler_settings:
     target_bundles:
       document: document

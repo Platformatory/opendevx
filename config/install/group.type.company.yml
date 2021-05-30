@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: company
 label: Company
-description: ''
+description: ""
 creator_membership: false
 creator_wizard: true
-creator_roles: {  }
+creator_roles: {}

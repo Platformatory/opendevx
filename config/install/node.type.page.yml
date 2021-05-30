@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - menu_ui
+  - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
+    - main
     parent: 'main:'
 name: Page
 type: page
-description: 'Add a static page.'
-help: ''
+description: Add a static page.
+help: ""
 new_revision: true
 preview_mode: 1
 display_submitted: false

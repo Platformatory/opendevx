@@ -2,8 +2,8 @@ langcode: en
 status: false
 dependencies:
   module:
-    - node
+  - node
 id: node.search_result
-label: 'Search result highlighting input'
+label: Search result highlighting input
 targetEntityType: node
 cache: true

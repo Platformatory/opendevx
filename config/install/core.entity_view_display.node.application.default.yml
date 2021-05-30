@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.application.config
-    - field.field.node.application.credentials
-    - field.field.node.application.description
-    - field.field.node.application.products
-    - field.field.node.application.remote
-    - field.field.node.application.rid
-    - field.field.node.application.tags
-    - field.field.node.application.version
-    - node.type.application
+  - field.field.node.application.config
+  - field.field.node.application.credentials
+  - field.field.node.application.description
+  - field.field.node.application.products
+  - field.field.node.application.remote
+  - field.field.node.application.rid
+  - field.field.node.application.tags
+  - field.field.node.application.version
+  - node.type.application
   module:
-    - jsonb
-    - user
+  - jsonb
+  - user
 id: node.application.default
 targetEntityType: node
 bundle: application
@@ -22,47 +22,47 @@ content:
   config:
     weight: 110
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   content_moderation_control:
     weight: -20
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   credentials:
     weight: 109
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   description:
     weight: 101
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: basic_string
     region: content
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   products:
     weight: 108
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   remote:
     weight: 112
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   rid:
@@ -70,7 +70,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   tags:
@@ -78,7 +78,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   version:
@@ -86,7 +86,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
 hidden:

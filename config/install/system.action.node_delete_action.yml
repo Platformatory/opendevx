@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+  - node
 id: node_delete_action
-label: 'Delete content'
+label: Delete content
 type: node
-plugin: 'entity:delete_action:node'
-configuration: {  }
+plugin: entity:delete_action:node
+configuration: {}

@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: searchodxadministrativeentities
 label: SearchODXAdministrativeEntities
 searchPluginId: BasicTitleSearch
 searchPluginConfig: '{"bundle_filter":{"api":"api","application":"application","plan":"plan","product":"product","repository":"repository","subscription":"subscription","ticket":"ticket"},"language_filter":0,"langcode_includes":{"zxx":0,"und":0}}'
 inputSelectors: input.form-search
 numberOfResults: 5
-emptyResult: ''
+emptyResult: ""
 viewModes:
   block: default
   block_content: default
@@ -30,8 +30,8 @@ keyMaxLength: 10
 allResultsLink: true
 allResultsLinkThreshold: 0
 breakpoint: 0
-resultLocation: ''
+resultLocation: ""
 highlightingEnabled: false
 anonymousSearch: true
 cleanUpFiles: true
-filesExpiryTime: '-1 day'
+filesExpiryTime: -1 day

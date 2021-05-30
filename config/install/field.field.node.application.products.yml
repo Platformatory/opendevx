@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.products
-    - node.type.application
-    - node.type.product
+  - field.storage.node.products
+  - node.type.application
+  - node.type.product
 id: node.application.products
 field_name: products
 entity_type: node
 bundle: application
 label: Products
-description: 'Products this application is registered against'
+description: Products this application is registered against
 required: true
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:node'
+  handler: default:node
   handler_settings:
     target_bundles:
       product: product
@@ -24,5 +24,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

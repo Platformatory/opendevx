@@ -2,16 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
-    - node.type.book
+  - group.type.domain
+  - node.type.book
   module:
-    - gnode
-    - node
+  - gnode
+  - node
 id: domain-group_node-book
 label: 'Domain: Group node (Docs)'
-description: 'Adds <em class="placeholder">Docs</em> content to groups both publicly and privately.'
+description: Adds <em class="placeholder">Docs</em> content to groups both publicly
+  and privately.
 group_type: domain
-content_plugin: 'group_node:book'
+content_plugin: group_node:book
 plugin_config:
   group_cardinality: 0
   entity_cardinality: 1

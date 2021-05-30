@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - content_moderation
+  - content_moderation
 id: content_moderation_state.token
 label: Token
 targetEntityType: content_moderation_state

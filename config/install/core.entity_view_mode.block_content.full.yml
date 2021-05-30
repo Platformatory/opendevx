@@ -2,7 +2,7 @@ langcode: en
 status: false
 dependencies:
   module:
-    - block_content
+  - block_content
 id: block_content.full
 label: Full
 targetEntityType: block_content

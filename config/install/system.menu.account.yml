@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: account
-label: 'User account menu'
-description: 'Links related to the active user account'
+label: User account menu
+description: Links related to the active user account
 locked: true

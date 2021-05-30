@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
+  - system
   theme:
-    - opendevx_theme
+  - opendevx_theme
 id: opendevx_theme_sitebranding
 theme: opendevx_theme
 region: header
@@ -13,9 +13,9 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding (Material Admin)'
+  label: Site branding (Material Admin)
   provider: system
-  label_display: '0'
+  label_display: "0"
   use_site_logo: true
   use_site_name: false
   use_site_slogan: false
@@ -24,4 +24,4 @@ visibility:
     id: request_path
     pages: "/user/login\r\n/user/password\r\n/user/register"
     negate: false
-    context_mapping: {  }
+    context_mapping: {}

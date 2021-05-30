@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: current_user
-label: 'Current user'
-description: 'Represents the current logged user.'
+label: Current user
+description: Represents the current logged user.
 settings:
   current_or_defined: current
 tags:

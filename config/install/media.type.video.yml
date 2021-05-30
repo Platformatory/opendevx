@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: video
 label: Video
-description: 'A locally hosted video file.'
+description: A locally hosted video file.
 source: video_file
 queue_thumbnail_downloads: false
 new_revision: true

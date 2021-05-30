@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.company
+  - group.type.company
 id: group--company
 disabled: true
 path: group/company
@@ -12,59 +12,59 @@ resourceFields:
     fieldName: id
     publicName: id
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   uuid:
     fieldName: uuid
     publicName: uuid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   type:
     fieldName: type
     publicName: type
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   uid:
     fieldName: uid
     publicName: uid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   label:
     fieldName: label
     publicName: label
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   created:
     fieldName: created
     publicName: created
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   changed:
     fieldName: changed
     publicName: changed
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   path:
     fieldName: path
     publicName: path
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   default_langcode:
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false

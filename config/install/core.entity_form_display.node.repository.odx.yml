@@ -2,38 +2,38 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.odx
-    - field.field.node.repository.apis_count
-    - field.field.node.repository.config
-    - field.field.node.repository.credentials
-    - field.field.node.repository.description
-    - field.field.node.repository.env
-    - field.field.node.repository.internal_metadata
-    - field.field.node.repository.mode
-    - field.field.node.repository.provider
-    - field.field.node.repository.sync
-    - field.field.node.repository.version
-    - node.type.repository
+  - core.entity_form_mode.node.odx
+  - field.field.node.repository.config
+  - field.field.node.repository.credentials
+  - field.field.node.repository.description
+  - field.field.node.repository.env
+  - field.field.node.repository.internal_metadata
+  - field.field.node.repository.provider
+  - field.field.node.repository.sync
+  - field.field.node.repository.version
+  - node.type.repository
   module:
-    - jsonb
+  - jsonb
 id: node.repository.odx
 targetEntityType: node
 bundle: repository
 mode: odx
 content:
-  description:
+  credentials:
+    type: jsonb_textarea
     weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ""
+    third_party_settings: {}
+  description:
+    weight: 4
     settings:
       rows: 2
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
-    region: content
-  mode:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   moderation_state:
     type: string_textfield
@@ -41,20 +41,20 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
   provider:
     weight: 0
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   sync:
-    weight: 5
+    weight: 3
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   title:
@@ -63,13 +63,11 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
-  apis_count: true
   config: true
   created: true
-  credentials: true
   env: true
   internal_metadata: true
   path: true

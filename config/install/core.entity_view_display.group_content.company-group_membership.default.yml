@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_content.company-group_membership.group_roles
-    - group.content_type.company-group_membership
+  - field.field.group_content.company-group_membership.group_roles
+  - group.content_type.company-group_membership
 id: group_content.company-group_membership.default
 targetEntityType: group_content
 bundle: company-group_membership
@@ -15,7 +15,7 @@ content:
     settings:
       link: false
     weight: -4
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
 hidden:
   entity_id: true

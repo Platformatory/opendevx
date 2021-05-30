@@ -2,7 +2,7 @@ langcode: en
 status: false
 dependencies:
   module:
-    - entity_legal
+  - entity_legal
 id: entity_legal_document.full
 label: Full
 targetEntityType: entity_legal_document

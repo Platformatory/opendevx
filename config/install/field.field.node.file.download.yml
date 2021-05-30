@@ -2,25 +2,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.download
-    - node.type.file
+  - field.storage.node.download
+  - node.type.file
   module:
-    - file_url
+  - file_url
 id: node.file.download
 field_name: download
 entity_type: node
 bundle: file
 label: Download
-description: 'Add a file for Download'
+description: Add a file for Download
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt zip gz pdf'
-  max_filesize: ''
+  file_extensions: txt zip gz pdf
+  max_filesize: ""
   description_field: false
-  handler: 'file_url_default:file'
-  handler_settings: {  }
+  handler: file_url_default:file
+  handler_settings: {}
 field_type: file_url

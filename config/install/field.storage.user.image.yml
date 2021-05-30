@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - file
-    - image
-    - user
+  - file
+  - image
+  - user
 id: user.image
 field_name: image
 entity_type: user
@@ -12,9 +12,9 @@ type: image
 settings:
   uri_scheme: public
   default_image:
-    uuid: ''
-    alt: ''
-    title: ''
+    uuid: ""
+    alt: ""
+    title: ""
     width: null
     height: null
   target_type: file
@@ -24,6 +24,6 @@ module: image
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

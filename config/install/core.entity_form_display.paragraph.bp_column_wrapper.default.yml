@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_column_wrapper.bp_column_content_w
-    - paragraphs.paragraphs_type.bp_column_wrapper
+  - field.field.paragraph.bp_column_wrapper.bp_column_content_w
+  - paragraphs.paragraphs_type.bp_column_wrapper
   module:
-    - paragraphs
+  - paragraphs
 id: paragraph.bp_column_wrapper.default
 targetEntityType: paragraph
 bundle: bp_column_wrapper
@@ -20,7 +20,7 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
 hidden:
   created: true

@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: bp_quicklinks
 label: Quicklinks
 icon_uuid: null
 icon_default: null
-description: ''
-behavior_plugins: {  }
+description: ""
+behavior_plugins: {}

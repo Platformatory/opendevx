@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_content
+  - block_content
 id: block_content.blurb
 field_name: blurb
 entity_type: block_content
@@ -13,6 +13,6 @@ module: core
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

@@ -3,9 +3,9 @@ status: true
 dependencies:
   enforced:
     module:
-      - webform
+    - webform
 id: languages
 label: Languages
 category: Language
 likert: false
-options: ''
+options: ""

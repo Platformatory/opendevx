@@ -2,24 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.api.api_type
-    - field.field.node.api.apis_count
-    - field.field.node.api.config
-    - field.field.node.api.description
-    - field.field.node.api.env
-    - field.field.node.api.internal_metadata
-    - field.field.node.api.is_api_product
-    - field.field.node.api.remote
-    - field.field.node.api.rid
-    - field.field.node.api.source
-    - field.field.node.api.spec
-    - field.field.node.api.tags
-    - node.type.api
+  - field.field.node.api.api_type
+  - field.field.node.api.config
+  - field.field.node.api.description
+  - field.field.node.api.env
+  - field.field.node.api.internal_metadata
+  - field.field.node.api.is_api_product
+  - field.field.node.api.remote
+  - field.field.node.api.rid
+  - field.field.node.api.source
+  - field.field.node.api.spec
+  - field.field.node.api.tags
+  - node.type.api
   module:
-    - computed_field
-    - jsonb
-    - options
-    - user
+  - jsonb
+  - options
+  - user
 id: node.api.default
 targetEntityType: node
 bundle: api
@@ -28,38 +26,27 @@ content:
   api_type:
     weight: 108
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_default
-    region: content
-  apis_count:
-    weight: 110
-    label: above
-    settings:
-      cache_unit: -1
-      cache_duration: 1
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: computed_integer
     region: content
   config:
     weight: 117
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   content_moderation_control:
     weight: -20
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   description:
     weight: 101
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: basic_string
     region: content
   env:
@@ -67,14 +54,14 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   internal_metadata:
     weight: 112
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   is_api_product:
@@ -82,21 +69,21 @@ content:
     label: above
     settings:
       format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
+      format_custom_false: ""
+      format_custom_true: ""
+    third_party_settings: {}
     type: boolean
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   remote:
     weight: 118
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: jsonb_default
     region: content
   rid:
@@ -104,7 +91,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   source:
@@ -113,14 +100,14 @@ content:
     settings:
       view_mode: try
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_entity_view
     region: content
   spec:
     weight: 114
     label: above
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: basic_string
     region: content
   tags:
@@ -128,7 +115,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
-hidden: {  }
+hidden: {}

@@ -2,11 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.ticket.body
-    - node.type.ticket
+  - field.field.node.ticket.body
+  - node.type.ticket
   module:
-    - content_moderation
-    - text
+  - text
 id: node.ticket.default
 targetEntityType: node
 bundle: ticket
@@ -18,31 +17,31 @@ content:
     settings:
       rows: 9
       summary_rows: 3
-      placeholder: ''
+      placeholder: ""
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 2
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   status:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 3
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   created: true
   path: true

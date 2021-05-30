@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.featured
-    - field.field.node.usecase.body
-    - field.field.node.usecase.image
-    - node.type.usecase
+  - core.entity_view_mode.node.featured
+  - field.field.node.usecase.body
+  - field.field.node.usecase.image
+  - node.type.usecase
   module:
-    - layout_builder
-    - text
-    - user
+  - layout_builder
+  - text
+  - user
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -25,19 +25,19 @@ content:
     weight: 101
     settings:
       trim_length: 300
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
   image:
     weight: 102
     label: above
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_label
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+    settings: {}
+    third_party_settings: {}
+hidden: {}

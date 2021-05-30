@@ -2,25 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.cta_1
-    - node.type.product
+  - field.storage.node.cta_1
+  - node.type.product
   module:
-    - link
+  - link
 id: node.product.cta_1
 field_name: cta_1
 entity_type: node
 bundle: product
-label: 'CTA 1'
-description: ''
+label: CTA 1
+description: ""
 required: false
 translatable: false
 default_value:
-  -
-    attributes: {  }
-    uri: 'internal:/apps/create?destination=/apps'
-    title: 'Create a new app'
-    options: {  }
-default_value_callback: ''
+- attributes: {}
+  uri: internal:/apps/create?destination=/apps
+  title: Create a new app
+  options: {}
+default_value_callback: ""
 settings:
   link_type: 17
   title: 1

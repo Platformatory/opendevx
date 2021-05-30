@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero_image
-    - field.storage.block_content.blurb
+  - block_content.type.hero_image
+  - field.storage.block_content.blurb
 id: block_content.hero_image.blurb
 field_name: blurb
 entity_type: block_content
 bundle: hero_image
 label: Blurb
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string_long

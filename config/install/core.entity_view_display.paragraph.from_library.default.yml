@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.from_library.field_reusable_paragraph
-    - paragraphs.paragraphs_type.from_library
+  - field.field.paragraph.from_library.field_reusable_paragraph
+  - paragraphs.paragraphs_type.from_library
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library
@@ -15,7 +15,7 @@ content:
     settings:
       link: true
       view_mode: default
-    third_party_settings: {  }
+    third_party_settings: {}
     type: entity_reference_entity_view
     region: content
-hidden: {  }
+hidden: {}

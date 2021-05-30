@@ -3,9 +3,14 @@ status: true
 dependencies:
   enforced:
     module:
-      - webform
+    - webform
 id: titles
 label: Titles
 category: Demographic
 likert: false
-options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"
+options: |
+  Miss: Miss
+  Ms: Ms
+  Mr: Mr
+  Mrs: Mrs
+  Dr: Dr

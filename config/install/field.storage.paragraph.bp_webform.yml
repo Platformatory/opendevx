@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-    - webform
+  - paragraphs
+  - webform
 id: paragraph.bp_webform
 field_name: bp_webform
 entity_type: paragraph
@@ -14,6 +14,6 @@ module: webform
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

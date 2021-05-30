@@ -2,25 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.subscription.applications
-    - field.field.node.subscription.auto_renew
-    - field.field.node.subscription.billing_engine
-    - field.field.node.subscription.billing_plan
-    - field.field.node.subscription.config
-    - field.field.node.subscription.current_outstanding
-    - field.field.node.subscription.discount
-    - field.field.node.subscription.end_date
-    - field.field.node.subscription.internal_metadata
-    - field.field.node.subscription.payment_method
-    - field.field.node.subscription.remote
-    - field.field.node.subscription.rev_share
-    - field.field.node.subscription.rid
-    - field.field.node.subscription.start_date
-    - node.type.subscription
+  - field.field.node.subscription.applications
+  - field.field.node.subscription.auto_renew
+  - field.field.node.subscription.billing_plan
+  - field.field.node.subscription.config
+  - field.field.node.subscription.discount
+  - field.field.node.subscription.end_date
+  - field.field.node.subscription.internal_metadata
+  - field.field.node.subscription.payment_method
+  - field.field.node.subscription.remote
+  - field.field.node.subscription.rev_share
+  - field.field.node.subscription.rid
+  - field.field.node.subscription.start_date
+  - node.type.subscription
   module:
-    - content_moderation
-    - datetime
-    - jsonb
+  - content_moderation
+  - datetime
+  - jsonb
 id: node.subscription.default
 targetEntityType: node
 bundle: subscription
@@ -28,83 +26,77 @@ mode: default
 content:
   applications:
     weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   auto_renew:
     weight: 5
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
     type: boolean_checkbox
-    region: content
-  billing_engine:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   billing_plan:
     weight: 26
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   config:
     weight: 30
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   end_date:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: datetime_default
     region: content
   internal_metadata:
     weight: 28
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 6
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   payment_method:
     weight: 4
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   remote:
     weight: 31
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   rid:
     weight: 29
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textfield
     region: content
   start_date:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: datetime_default
     region: content
   status:
@@ -113,18 +105,17 @@ content:
       display_label: true
     weight: 7
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   created: true
-  current_outstanding: true
   discount: true
   path: true
   promote: true

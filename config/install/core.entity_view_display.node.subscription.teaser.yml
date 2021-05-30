@@ -2,25 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.subscription.applications
-    - field.field.node.subscription.auto_renew
-    - field.field.node.subscription.billing_engine
-    - field.field.node.subscription.billing_plan
-    - field.field.node.subscription.config
-    - field.field.node.subscription.current_outstanding
-    - field.field.node.subscription.discount
-    - field.field.node.subscription.end_date
-    - field.field.node.subscription.internal_metadata
-    - field.field.node.subscription.payment_method
-    - field.field.node.subscription.remote
-    - field.field.node.subscription.rev_share
-    - field.field.node.subscription.rid
-    - field.field.node.subscription.start_date
-    - node.type.subscription
+  - core.entity_view_mode.node.teaser
+  - field.field.node.subscription.applications
+  - field.field.node.subscription.auto_renew
+  - field.field.node.subscription.billing_plan
+  - field.field.node.subscription.config
+  - field.field.node.subscription.discount
+  - field.field.node.subscription.end_date
+  - field.field.node.subscription.internal_metadata
+  - field.field.node.subscription.payment_method
+  - field.field.node.subscription.remote
+  - field.field.node.subscription.rev_share
+  - field.field.node.subscription.rid
+  - field.field.node.subscription.start_date
+  - node.type.subscription
   module:
-    - datetime
-    - user
+  - datetime
+  - user
 id: node.subscription.teaser
 targetEntityType: node
 bundle: subscription
@@ -32,30 +30,28 @@ content:
     region: content
     label: above
     settings:
-      timezone_override: ''
+      timezone_override: ""
       format_type: html_date
-    third_party_settings: {  }
+    third_party_settings: {}
   links:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   start_date:
     type: datetime_default
     weight: 1
     region: content
     label: above
     settings:
-      timezone_override: ''
+      timezone_override: ""
       format_type: html_date
-    third_party_settings: {  }
+    third_party_settings: {}
 hidden:
   applications: true
   auto_renew: true
-  billing_engine: true
   billing_plan: true
   config: true
-  current_outstanding: true
   discount: true
   internal_metadata: true
   payment_method: true

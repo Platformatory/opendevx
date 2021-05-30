@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.company
+  - group.type.company
   enforced:
     config:
-      - user.role.odx_administrator
+    - user.role.odx_administrator
 id: company-953d63c03
-label: 'ODX Administrator'
+label: ODX Administrator
 weight: -4
 internal: true
 audience: outsider
 group_type: company
 permissions_ui: false
-permissions: {  }
+permissions: {}

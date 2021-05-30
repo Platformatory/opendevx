@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 name: Languages
 vid: languages
-description: ''
+description: ""
 weight: 0

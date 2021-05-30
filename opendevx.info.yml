@@ -58,6 +58,7 @@ install:
   - entityqueue_smartqueue
   - fac
   - field
+  - field_group
   - field_name_prefix_remove
   - field_ui
   - file

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero_image
+  - block_content.type.hero_image
 id: block_content--hero_image
 disabled: true
 path: block_content/hero_image
@@ -12,113 +12,113 @@ resourceFields:
     fieldName: id
     publicName: id
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   uuid:
     fieldName: uuid
     publicName: uuid
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_id:
     fieldName: revision_id
     publicName: revision_id
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   type:
     fieldName: type
     publicName: type
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_created:
     fieldName: revision_created
     publicName: revision_created
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_user:
     fieldName: revision_user
     publicName: revision_user
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_log:
     fieldName: revision_log
     publicName: revision_log
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   status:
     fieldName: status
     publicName: status
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   info:
     fieldName: info
     publicName: info
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   changed:
     fieldName: changed
     publicName: changed
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   reusable:
     fieldName: reusable
     publicName: reusable
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   default_langcode:
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_default:
     fieldName: revision_default
     publicName: revision_default
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   revision_translation_affected:
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   blurb:
     fieldName: blurb
     publicName: blurb
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   image:
     fieldName: image
     publicName: image
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   link_1:
     fieldName: link_1
     publicName: link_1
     enhancer:
-      id: ''
+      id: ""
     disabled: false
   link_2:
     fieldName: link_2
     publicName: link_2
     enhancer:
-      id: ''
+      id: ""
     disabled: false

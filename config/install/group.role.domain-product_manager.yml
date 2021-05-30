@@ -2,191 +2,191 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
+  - group.type.domain
 id: domain-product_manager
-label: 'Product Manager'
+label: Product Manager
 weight: 102
 internal: false
 audience: member
 group_type: domain
 permissions_ui: true
 permissions:
-  - 'access content overview'
-  - 'access group_node overview'
-  - 'administer group'
-  - 'administer members'
-  - 'create group_node:api content'
-  - 'create group_node:api entity'
-  - 'create group_node:application content'
-  - 'create group_node:application entity'
-  - 'create group_node:book content'
-  - 'create group_node:book entity'
-  - 'create group_node:event content'
-  - 'create group_node:event entity'
-  - 'create group_node:faq content'
-  - 'create group_node:faq entity'
-  - 'create group_node:file content'
-  - 'create group_node:file entity'
-  - 'create group_node:media content'
-  - 'create group_node:media entity'
-  - 'create group_node:news content'
-  - 'create group_node:news entity'
-  - 'create group_node:page content'
-  - 'create group_node:page entity'
-  - 'create group_node:product content'
-  - 'create group_node:product entity'
-  - 'create group_node:repository content'
-  - 'create group_node:repository entity'
-  - 'create group_node:ticket content'
-  - 'create group_node:ticket entity'
-  - 'create group_node:usecase content'
-  - 'create group_node:usecase entity'
-  - 'delete any group_node:api content'
-  - 'delete any group_node:api entity'
-  - 'delete any group_node:application content'
-  - 'delete any group_node:application entity'
-  - 'delete any group_node:book content'
-  - 'delete any group_node:book entity'
-  - 'delete any group_node:event content'
-  - 'delete any group_node:event entity'
-  - 'delete any group_node:faq content'
-  - 'delete any group_node:faq entity'
-  - 'delete any group_node:file content'
-  - 'delete any group_node:file entity'
-  - 'delete any group_node:media content'
-  - 'delete any group_node:media entity'
-  - 'delete any group_node:news content'
-  - 'delete any group_node:news entity'
-  - 'delete any group_node:page content'
-  - 'delete any group_node:page entity'
-  - 'delete any group_node:product content'
-  - 'delete any group_node:product entity'
-  - 'delete any group_node:repository content'
-  - 'delete any group_node:repository entity'
-  - 'delete any group_node:ticket content'
-  - 'delete any group_node:ticket entity'
-  - 'delete any group_node:usecase content'
-  - 'delete any group_node:usecase entity'
-  - 'delete group'
-  - 'delete own group_node:api content'
-  - 'delete own group_node:api entity'
-  - 'delete own group_node:application content'
-  - 'delete own group_node:application entity'
-  - 'delete own group_node:book content'
-  - 'delete own group_node:book entity'
-  - 'delete own group_node:event content'
-  - 'delete own group_node:event entity'
-  - 'delete own group_node:faq content'
-  - 'delete own group_node:faq entity'
-  - 'delete own group_node:file content'
-  - 'delete own group_node:file entity'
-  - 'delete own group_node:media content'
-  - 'delete own group_node:media entity'
-  - 'delete own group_node:news content'
-  - 'delete own group_node:news entity'
-  - 'delete own group_node:page content'
-  - 'delete own group_node:page entity'
-  - 'delete own group_node:product content'
-  - 'delete own group_node:product entity'
-  - 'delete own group_node:repository content'
-  - 'delete own group_node:repository entity'
-  - 'delete own group_node:ticket content'
-  - 'delete own group_node:ticket entity'
-  - 'delete own group_node:usecase content'
-  - 'delete own group_node:usecase entity'
-  - 'edit group'
-  - 'leave group'
-  - 'update any group_node:api content'
-  - 'update any group_node:api entity'
-  - 'update any group_node:application content'
-  - 'update any group_node:application entity'
-  - 'update any group_node:book content'
-  - 'update any group_node:book entity'
-  - 'update any group_node:event content'
-  - 'update any group_node:event entity'
-  - 'update any group_node:faq content'
-  - 'update any group_node:faq entity'
-  - 'update any group_node:file content'
-  - 'update any group_node:file entity'
-  - 'update any group_node:media content'
-  - 'update any group_node:media entity'
-  - 'update any group_node:news content'
-  - 'update any group_node:news entity'
-  - 'update any group_node:page content'
-  - 'update any group_node:page entity'
-  - 'update any group_node:product content'
-  - 'update any group_node:product entity'
-  - 'update any group_node:repository content'
-  - 'update any group_node:repository entity'
-  - 'update any group_node:ticket content'
-  - 'update any group_node:ticket entity'
-  - 'update any group_node:usecase content'
-  - 'update any group_node:usecase entity'
-  - 'update own group_membership content'
-  - 'update own group_node:api content'
-  - 'update own group_node:api entity'
-  - 'update own group_node:application content'
-  - 'update own group_node:application entity'
-  - 'update own group_node:book content'
-  - 'update own group_node:book entity'
-  - 'update own group_node:event content'
-  - 'update own group_node:event entity'
-  - 'update own group_node:faq content'
-  - 'update own group_node:faq entity'
-  - 'update own group_node:file content'
-  - 'update own group_node:file entity'
-  - 'update own group_node:media content'
-  - 'update own group_node:media entity'
-  - 'update own group_node:news content'
-  - 'update own group_node:news entity'
-  - 'update own group_node:page content'
-  - 'update own group_node:page entity'
-  - 'update own group_node:product content'
-  - 'update own group_node:product entity'
-  - 'update own group_node:repository content'
-  - 'update own group_node:repository entity'
-  - 'update own group_node:ticket content'
-  - 'update own group_node:ticket entity'
-  - 'update own group_node:usecase content'
-  - 'update own group_node:usecase entity'
-  - 'view group'
-  - 'view group_membership content'
-  - 'view group_node:api content'
-  - 'view group_node:api entity'
-  - 'view group_node:application content'
-  - 'view group_node:application entity'
-  - 'view group_node:book content'
-  - 'view group_node:book entity'
-  - 'view group_node:event content'
-  - 'view group_node:event entity'
-  - 'view group_node:faq content'
-  - 'view group_node:faq entity'
-  - 'view group_node:file content'
-  - 'view group_node:file entity'
-  - 'view group_node:media content'
-  - 'view group_node:media entity'
-  - 'view group_node:news content'
-  - 'view group_node:news entity'
-  - 'view group_node:page content'
-  - 'view group_node:page entity'
-  - 'view group_node:product content'
-  - 'view group_node:product entity'
-  - 'view group_node:repository content'
-  - 'view group_node:repository entity'
-  - 'view group_node:ticket content'
-  - 'view group_node:ticket entity'
-  - 'view group_node:usecase content'
-  - 'view group_node:usecase entity'
-  - 'view unpublished group_node:api entity'
-  - 'view unpublished group_node:application entity'
-  - 'view unpublished group_node:book entity'
-  - 'view unpublished group_node:event entity'
-  - 'view unpublished group_node:faq entity'
-  - 'view unpublished group_node:file entity'
-  - 'view unpublished group_node:media entity'
-  - 'view unpublished group_node:news entity'
-  - 'view unpublished group_node:page entity'
-  - 'view unpublished group_node:product entity'
-  - 'view unpublished group_node:repository entity'
-  - 'view unpublished group_node:ticket entity'
-  - 'view unpublished group_node:usecase entity'
+- access content overview
+- access group_node overview
+- administer group
+- administer members
+- create group_node:api content
+- create group_node:api entity
+- create group_node:application content
+- create group_node:application entity
+- create group_node:book content
+- create group_node:book entity
+- create group_node:event content
+- create group_node:event entity
+- create group_node:faq content
+- create group_node:faq entity
+- create group_node:file content
+- create group_node:file entity
+- create group_node:media content
+- create group_node:media entity
+- create group_node:news content
+- create group_node:news entity
+- create group_node:page content
+- create group_node:page entity
+- create group_node:product content
+- create group_node:product entity
+- create group_node:repository content
+- create group_node:repository entity
+- create group_node:ticket content
+- create group_node:ticket entity
+- create group_node:usecase content
+- create group_node:usecase entity
+- delete any group_node:api content
+- delete any group_node:api entity
+- delete any group_node:application content
+- delete any group_node:application entity
+- delete any group_node:book content
+- delete any group_node:book entity
+- delete any group_node:event content
+- delete any group_node:event entity
+- delete any group_node:faq content
+- delete any group_node:faq entity
+- delete any group_node:file content
+- delete any group_node:file entity
+- delete any group_node:media content
+- delete any group_node:media entity
+- delete any group_node:news content
+- delete any group_node:news entity
+- delete any group_node:page content
+- delete any group_node:page entity
+- delete any group_node:product content
+- delete any group_node:product entity
+- delete any group_node:repository content
+- delete any group_node:repository entity
+- delete any group_node:ticket content
+- delete any group_node:ticket entity
+- delete any group_node:usecase content
+- delete any group_node:usecase entity
+- delete group
+- delete own group_node:api content
+- delete own group_node:api entity
+- delete own group_node:application content
+- delete own group_node:application entity
+- delete own group_node:book content
+- delete own group_node:book entity
+- delete own group_node:event content
+- delete own group_node:event entity
+- delete own group_node:faq content
+- delete own group_node:faq entity
+- delete own group_node:file content
+- delete own group_node:file entity
+- delete own group_node:media content
+- delete own group_node:media entity
+- delete own group_node:news content
+- delete own group_node:news entity
+- delete own group_node:page content
+- delete own group_node:page entity
+- delete own group_node:product content
+- delete own group_node:product entity
+- delete own group_node:repository content
+- delete own group_node:repository entity
+- delete own group_node:ticket content
+- delete own group_node:ticket entity
+- delete own group_node:usecase content
+- delete own group_node:usecase entity
+- edit group
+- leave group
+- update any group_node:api content
+- update any group_node:api entity
+- update any group_node:application content
+- update any group_node:application entity
+- update any group_node:book content
+- update any group_node:book entity
+- update any group_node:event content
+- update any group_node:event entity
+- update any group_node:faq content
+- update any group_node:faq entity
+- update any group_node:file content
+- update any group_node:file entity
+- update any group_node:media content
+- update any group_node:media entity
+- update any group_node:news content
+- update any group_node:news entity
+- update any group_node:page content
+- update any group_node:page entity
+- update any group_node:product content
+- update any group_node:product entity
+- update any group_node:repository content
+- update any group_node:repository entity
+- update any group_node:ticket content
+- update any group_node:ticket entity
+- update any group_node:usecase content
+- update any group_node:usecase entity
+- update own group_membership content
+- update own group_node:api content
+- update own group_node:api entity
+- update own group_node:application content
+- update own group_node:application entity
+- update own group_node:book content
+- update own group_node:book entity
+- update own group_node:event content
+- update own group_node:event entity
+- update own group_node:faq content
+- update own group_node:faq entity
+- update own group_node:file content
+- update own group_node:file entity
+- update own group_node:media content
+- update own group_node:media entity
+- update own group_node:news content
+- update own group_node:news entity
+- update own group_node:page content
+- update own group_node:page entity
+- update own group_node:product content
+- update own group_node:product entity
+- update own group_node:repository content
+- update own group_node:repository entity
+- update own group_node:ticket content
+- update own group_node:ticket entity
+- update own group_node:usecase content
+- update own group_node:usecase entity
+- view group
+- view group_membership content
+- view group_node:api content
+- view group_node:api entity
+- view group_node:application content
+- view group_node:application entity
+- view group_node:book content
+- view group_node:book entity
+- view group_node:event content
+- view group_node:event entity
+- view group_node:faq content
+- view group_node:faq entity
+- view group_node:file content
+- view group_node:file entity
+- view group_node:media content
+- view group_node:media entity
+- view group_node:news content
+- view group_node:news entity
+- view group_node:page content
+- view group_node:page entity
+- view group_node:product content
+- view group_node:product entity
+- view group_node:repository content
+- view group_node:repository entity
+- view group_node:ticket content
+- view group_node:ticket entity
+- view group_node:usecase content
+- view group_node:usecase entity
+- view unpublished group_node:api entity
+- view unpublished group_node:application entity
+- view unpublished group_node:book entity
+- view unpublished group_node:event entity
+- view unpublished group_node:faq entity
+- view unpublished group_node:file entity
+- view unpublished group_node:media entity
+- view unpublished group_node:news entity
+- view unpublished group_node:page entity
+- view unpublished group_node:product entity
+- view unpublished group_node:repository entity
+- view unpublished group_node:ticket entity
+- view unpublished group_node:usecase entity

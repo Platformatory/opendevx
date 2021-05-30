@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: audio
 label: Audio
-description: 'A locally hosted audio file.'
+description: A locally hosted audio file.
 source: audio_file
 queue_thumbnail_downloads: false
 new_revision: true

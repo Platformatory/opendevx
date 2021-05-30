@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.group.visibility
+  - group.type.domain
+  module:
+  - options
+id: group.domain.visibility
+field_name: visibility
+entity_type: group
+bundle: domain
+label: Visibility
+description: "Public API domains are visible and available for self service registration
+  of apps\r\nProtected API domains are listed, but require approval of app requests
+  \r\nPrivate API domains are not listed and are by invite only"
+required: true
+translatable: false
+default_value: {}
+default_value_callback: ""
+settings: {}
+field_type: list_string

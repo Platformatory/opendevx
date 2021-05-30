@@ -1,10 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: url_variable
-label: 'Url variable'
-description: 'Represents the current URL'
-settings: {  }
+label: Url variable
+description: Represents the current URL
+settings: {}
 tags:
   defaults: defaults
 type: url_variable

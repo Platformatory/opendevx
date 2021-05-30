@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.version
-    - node.type.billing_engine
+  - field.storage.node.version
+  - node.type.billing_engine
 id: node.billing_engine.version
 field_name: version
 entity_type: node
 bundle: billing_engine
 label: Version
-description: 'API Version.'
+description: API Version.
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: string

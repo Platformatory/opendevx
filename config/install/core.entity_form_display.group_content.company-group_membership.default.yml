@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_content.company-group_membership.group_roles
-    - group.content_type.company-group_membership
+  - field.field.group_content.company-group_membership.group_roles
+  - group.content_type.company-group_membership
   module:
-    - path
+  - path
 id: group_content.company-group_membership.default
 targetEntityType: group_content
 bundle: company-group_membership
@@ -17,21 +17,21 @@ content:
     settings:
       match_operator: CONTAINS
       size: 60
-      placeholder: ''
+      placeholder: ""
       match_limit: 10
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   group_roles:
     type: options_buttons
     weight: 31
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
   path:
     type: path
     weight: 30
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   uid: true

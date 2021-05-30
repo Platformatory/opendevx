@@ -2,19 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.plan.billing_engine
-    - field.field.node.plan.currency
-    - field.field.node.plan.description
-    - field.field.node.plan.pricing_rules
-    - field.field.node.plan.products
-    - field.field.node.plan.products_count
-    - field.field.node.plan.subscriptions_count
-    - field.field.node.plan.usage_metric
-    - field.field.node.plan.usage_provider
-    - node.type.plan
+  - core.entity_view_mode.node.teaser
+  - field.field.node.plan.billing_engine
+  - field.field.node.plan.currency
+  - field.field.node.plan.description
+  - field.field.node.plan.pricing_rules
+  - field.field.node.plan.products
+  - field.field.node.plan.usage_metric
+  - field.field.node.plan.usage_provider
+  - node.type.plan
   module:
-    - user
+  - user
 id: node.plan.teaser
 targetEntityType: node
 bundle: plan
@@ -22,8 +20,8 @@ mode: teaser
 content:
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
 hidden:
   billing_engine: true
@@ -31,7 +29,5 @@ hidden:
   description: true
   pricing_rules: true
   products: true
-  products_count: true
-  subscriptions_count: true
   usage_metric: true
   usage_provider: true

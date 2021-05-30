@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_media_audio_file
-    - media.type.audio
+  - field.field.media.audio.field_media_audio_file
+  - media.type.audio
   module:
-    - file
+  - file
 id: media.audio.default
 targetEntityType: media
 bundle: audio
@@ -20,7 +20,7 @@ content:
       autoplay: false
       loop: false
       multiple_file_display_type: tags
-    third_party_settings: {  }
+    third_party_settings: {}
     region: content
 hidden:
   created: true

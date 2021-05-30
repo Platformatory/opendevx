@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_stat.bp_statistic_description
-    - field.field.paragraph.bp_stat.bp_statistic_header
-    - field.field.paragraph.bp_stat.bp_statistic_item
-    - paragraphs.paragraphs_type.bp_stat
+  - field.field.paragraph.bp_stat.bp_statistic_description
+  - field.field.paragraph.bp_stat.bp_statistic_header
+  - field.field.paragraph.bp_stat.bp_statistic_item
+  - paragraphs.paragraphs_type.bp_stat
 id: paragraph.bp_stat.default
 targetEntityType: paragraph
 bundle: bp_stat
@@ -16,7 +16,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   bp_statistic_header:
@@ -24,7 +24,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
   bp_statistic_item:
@@ -32,7 +32,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     type: string
     region: content
-hidden: {  }
+hidden: {}

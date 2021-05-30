@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - group.type.domain
+  - group.type.domain
 id: domain-outsider
 label: Outsider
 weight: -101
@@ -10,4 +10,4 @@ internal: true
 audience: outsider
 group_type: domain
 permissions_ui: true
-permissions: {  }
+permissions: {}

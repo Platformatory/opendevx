@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.bp_blank.bp_background
-    - field.field.paragraph.bp_blank.bp_header
-    - field.field.paragraph.bp_blank.bp_unrestricted
-    - field.field.paragraph.bp_blank.bp_width
-    - paragraphs.paragraphs_type.bp_blank
+  - field.field.paragraph.bp_blank.bp_background
+  - field.field.paragraph.bp_blank.bp_header
+  - field.field.paragraph.bp_blank.bp_unrestricted
+  - field.field.paragraph.bp_blank.bp_width
+  - paragraphs.paragraphs_type.bp_blank
   module:
-    - options
-    - text
+  - options
+  - text
 id: paragraph.bp_blank.default
 targetEntityType: paragraph
 bundle: bp_blank
@@ -18,8 +18,8 @@ content:
   bp_background:
     weight: 0
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
   bp_header:
@@ -29,19 +29,19 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
   bp_unrestricted:
     weight: 3
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
   bp_width:
     weight: 1
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: list_key
     region: content
 hidden:

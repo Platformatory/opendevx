@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_legal
-    - user
+  - entity_legal
+  - user
 id: legal_document_acceptances
-label: 'Legal document acceptances'
+label: Legal document acceptances
 module: views
-description: ''
-tag: ''
+description: ""
+tag: ""
 base_table: entity_legal_document_acceptance
 base_field: aid
 display:
@@ -20,25 +20,25 @@ display:
     display_options:
       access:
         type: none
-        options: {  }
+        options: {}
       cache:
         type: tag
-        options: {  }
+        options: {}
       query:
         type: views_query
         options:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_comment: ''
-          query_tags: {  }
+          query_comment: ""
+          query_tags: {}
       exposed_form:
         type: basic
         options:
           submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: Sort by
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -51,17 +51,17 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_label: Items per page
+            items_per_page_options: 5, 10, 25, 50
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: ‹ Previous
+            next: Next ›
+            first: « First
+            last: Last »
           quantity: 9
       style:
         type: table
@@ -74,45 +74,45 @@ display:
           field: document_version_name
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Document_version_name
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -121,7 +121,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -139,45 +139,45 @@ display:
           field: name
           relationship: uid
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Name
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -186,7 +186,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -204,45 +204,45 @@ display:
           field: acceptance_date
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: ""
           label: Accepted
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: ""
             make_link: false
-            path: ''
+            path: ""
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
+            alt: ""
+            rel: ""
+            link_class: ""
+            prefix: ""
+            suffix: ""
+            target: ""
             nl2br: false
             max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            more_link_text: ""
+            more_link_path: ""
             strip_tags: false
             trim: false
-            preserve_tags: ''
+            preserve_tags: ""
             html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
+          element_type: ""
+          element_class: ""
+          element_label_type: ""
+          element_label_class: ""
           element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: ""
+          element_wrapper_class: ""
           element_default_classes: true
-          empty: ''
+          empty: ""
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -250,10 +250,10 @@ display:
           type: timestamp
           settings:
             date_format: medium
-            custom_date_format: ''
-            timezone: ''
+            custom_date_format: ""
+            timezone: ""
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -272,15 +272,15 @@ display:
           field: uid
           relationship: uid
           group_type: group
-          admin_label: ''
+          admin_label: ""
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
             operator_id: uid_op
-            label: 'User name'
-            description: ''
+            label: User name
+            description: ""
             use_operator: false
             operator: uid_op
             identifier: uid
@@ -289,31 +289,31 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
+              anonymous: "0"
+              administrator: "0"
             reduce: false
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: ""
+            description: ""
+            identifier: ""
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
           entity_type: user
           entity_field: uid
           plugin_id: user_name
-      sorts: {  }
-      title: 'Legal document acceptances'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      sorts: {}
+      title: Legal document acceptances
+      header: {}
+      footer: {}
+      empty: {}
       relationships:
         document_version_name:
           id: document_version_name
@@ -321,7 +321,7 @@ display:
           field: document_version_name
           relationship: none
           group_type: group
-          admin_label: 'Version name'
+          admin_label: Version name
           required: false
           entity_type: entity_legal_document_acceptance
           entity_field: document_version_name
@@ -340,20 +340,20 @@ display:
           field: document_name
           relationship: document_version_name
           group_type: group
-          admin_label: ''
-          default_action: 'access denied'
+          admin_label: ""
+          default_action: access denied
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: false
-          title: ''
+          title: ""
           default_argument_type: fixed
           default_argument_options:
-            argument: ''
+            argument: ""
           default_argument_skip_url: false
           summary_options:
-            base_path: ''
+            base_path: ""
             count: true
             items_per_page: 25
             override: false
@@ -364,8 +364,8 @@ display:
           specify_validation: false
           validate:
             type: none
-            fail: 'not found'
-          validate_options: {  }
+            fail: not found
+          validate_options: {}
           glossary: false
           limit: 0
           case: none
@@ -375,37 +375,37 @@ display:
           entity_type: entity_legal_document_version
           entity_field: document_name
           plugin_id: string
-      display_extenders: {  }
+      display_extenders: {}
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags: {  }
+      - languages:language_content
+      - languages:language_interface
+      - url
+      - url.query_args
+      tags: {}
   page_1:
     display_plugin: page
     id: page_1
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders: {}
       path: admin/structure/legal/manage/%entity_legal_document/acceptances
       menu:
         type: tab
         title: Acceptances
-        description: ''
+        description: ""
         expanded: false
-        parent: ''
+        parent: ""
         weight: 5
-        context: '0'
+        context: "0"
         menu_name: main
     cache_metadata:
       max-age: 0
       contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags: {  }
+      - languages:language_content
+      - languages:language_interface
+      - url
+      - url.query_args
+      tags: {}

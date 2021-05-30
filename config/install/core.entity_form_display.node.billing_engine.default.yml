@@ -2,16 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.billing_engine.billing_provider
-    - field.field.node.billing_engine.credentials
-    - field.field.node.billing_engine.description
-    - field.field.node.billing_engine.env
-    - field.field.node.billing_engine.mode
-    - field.field.node.billing_engine.version
-    - node.type.billing_engine
+  - field.field.node.billing_engine.billing_provider
+  - field.field.node.billing_engine.credentials
+  - field.field.node.billing_engine.description
+  - field.field.node.billing_engine.env
+  - field.field.node.billing_engine.version
+  - node.type.billing_engine
   module:
-    - content_moderation
-    - jsonb
+  - content_moderation
+  - jsonb
 id: node.billing_engine.default
 targetEntityType: node
 bundle: billing_engine
@@ -19,53 +18,47 @@ mode: default
 content:
   billing_provider:
     weight: 0
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_buttons
     region: content
   credentials:
     weight: 3
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: jsonb_textarea
     region: content
   description:
     weight: 2
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
     type: string_textarea
-    region: content
-  mode:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   moderation_state:
     type: moderation_state_default
     weight: 6
-    settings: {  }
+    settings: {}
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   status:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 7
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 1
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   created: true
   env: true
