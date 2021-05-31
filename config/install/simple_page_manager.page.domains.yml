@@ -1,10 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-  - views.view.domains
-  module:
-  - views
   theme:
   - opendevx_theme
 id: domains

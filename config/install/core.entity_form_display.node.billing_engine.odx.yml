@@ -10,7 +10,6 @@ dependencies:
   - field.field.node.billing_engine.version
   - node.type.billing_engine
   module:
-  - content_moderation
   - jsonb
 id: node.billing_engine.odx
 targetEntityType: node
