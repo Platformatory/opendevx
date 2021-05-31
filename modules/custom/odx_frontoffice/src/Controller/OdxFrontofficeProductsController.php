@@ -89,9 +89,19 @@ class OdxFrontofficeProductsController extends ControllerBase {
       '#try_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/try',
       '#browse_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/browse',
     ];
-    $build['pricing'] = [
-      '#theme' => 'product_pricing',
-    ];
+    $plans = \Drupal\node\Entity\Node::loadMultiple([9]);
+    $view_build = \Drupal::entityTypeManager()->getViewBuilder('node');
+    $plan = $view_build->view(reset($plans), 'full');
+    $build['products'] = $plan;
     return $build;
+  }
+
+  protected function getPlans(\Drupal\node\NodeInterface $product) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'plan')
+      ->condition('products', $product->id());
+    $nids = $query->execute();
+    $plan_nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+    return $plan_nodes;
   }
 }
