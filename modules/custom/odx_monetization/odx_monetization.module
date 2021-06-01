@@ -64,6 +64,8 @@ function odx_monetization_node_view(array &$build, \Drupal\Core\Entity\EntityInt
     $build['invoice'] = [
       '#theme' => 'invoice',
       '#invoice' => $billing,
+      '#start_date' => $entity->start_date->date->format('jS M Y'),
+      '#end_date' => $entity->end_date->date->format('jS M Y'),
     ];
     if ($view_mode == 'full') {
       $build['past_invoices'] = [];
@@ -133,6 +135,8 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
       $units_label = \Drupal::translation()->formatPlural($tier_units, '1 unit', '@count units');
       $bill['li'][] = array(
         'label' => $units_label . ' @ '. $tier['unit_price'],
+        'unit_price' => $tier['unit_price'] . $currency,
+        'units' => $tier_units,
         'charges' => $tier_units * $tier['unit_price'] . $currency,
       );
       $bill['total'] += $tier_units * $tier['unit_price'];
@@ -143,6 +147,8 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
       $units_label = \Drupal::translation()->formatPlural($tier_units, '1 unit', '@count units');
       $bill['li'][] = array(
         'label' => $units_label . ' @ '. $tier['unit_price'],
+        'unit_price' => $tier['unit_price'] . $currency,
+        'units' => $tier_units,
         'charges' => $tier_units * $tier['unit_price'] . $currency,
       );
       $bill['total'] += $tier_units * $tier['unit_price'];
