@@ -53,9 +53,11 @@ class AppCreateForm extends FormBase {
 
     $plan_uuid = \Drupal::request()->query->get('plan');
 
-    $plan = \Drupal::service('entity_type.manager')->getStorage('node')
-          ->loadByProperties(['uuid' => $plan_uuid, 'type' => 'plan']);
-    $plan = reset($plan);
+    if ($plan_uuid) {
+      $plan = \Drupal::service('entity_type.manager')->getStorage('node')
+            ->loadByProperties(['uuid' => $plan_uuid, 'type' => 'plan']);
+      $plan = reset($plan);
+    }
 
     if ($plan) {
       $form['billing_plan'] = [
