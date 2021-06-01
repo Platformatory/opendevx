@@ -89,10 +89,27 @@ class OdxFrontofficeProductsController extends ControllerBase {
       '#try_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/try',
       '#browse_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/browse',
     ];
-    $plans = \Drupal\node\Entity\Node::loadMultiple([9]);
+    $build['products'] = [
+      '#prefix' => '<div class="container px-5 py-5 mx-auto">',
+      '#suffix' => '</div>',
+      '#cache' => [
+         'tags' => ['node_list:plan'],
+       ]   
+    ];
+    $plans = $this->getPlans($product);
     $view_build = \Drupal::entityTypeManager()->getViewBuilder('node');
-    $plan = $view_build->view(reset($plans), 'full');
-    $build['products'] = $plan;
+    foreach($plans as $plan) {
+      $build['products'][$plan->id()] = [
+        '#theme' => 'pricing_plan',
+        '#pricing_rules' => json_decode($plan->pricing_rules->value, true),
+        '#product_uuid' => $product->uuid(),
+        '#plan_uuid' => $plan->uuid(),
+        '#name' => $plan->label(),
+        '#description' => $plan->description->value,
+        '#product_url' => $product->toUrl()->toString(),
+        '#currency' => $plan->currency->value,
+      ];
+    }
     return $build;
   }
 

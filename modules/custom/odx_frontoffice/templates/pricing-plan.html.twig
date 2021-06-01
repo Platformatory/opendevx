@@ -1,9 +1,9 @@
-<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+<div class="my-6 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
   <div class="md:flex">
     <div class="p-4 w-1/2">
-      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ node.label }}</div>
+      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ name }}</div>
       <p class="mt-2 text-gray-500">
-      {{ content.description }}
+      {{ description }}
       </p>
     </div>
     <div class="md:flex-shrink-0 p-4 w-1/2">
@@ -15,17 +15,17 @@
         <li class="bg-gray-200 bg-opacity-50 py-4 px-4 flex items-center font-bold text-black">
           <span class="ml-3">Price per call</span>
         </li>
-      {% for pricing_rule in node.pricing_rules.value|striptags|json_decode %}
+      {% for pricing_rule in pricing_rules %}
         <li class="bg-gray-200 bg-opacity-50 py-4 px-4 flex items-center text-base text-black">
           <span class="ml-3">{{ pricing_rule.from }} - {{ pricing_rule.up_to }}</span>
         </li>
       
         <li class="bg-gray-200 bg-opacity-50 py-4 px-4 flex items-center text-base text-black">
-          <span class="ml-3">{{ pricing_rule.unit_price }} {{ node.currency.value }}</span>
+          <span class="ml-3">{{ pricing_rule.unit_price }} {{ currency }}</span>
         </li>
         {% endfor %}
       </ul>
-      <a href="#" class="mt-10 block w-full bg-gray-800 border border-gray-800 rounded-md 5 py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Basic</a>
+      <a href="/apps/create?destination={{ product_url }}&product={{ product_uuid }}&plan={{ plan_uuid }}" class="mt-10 block w-full bg-gray-800 border border-gray-800 rounded-md 5 py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy {{ name }}</a>
     </div>
   </div>
 </div>
