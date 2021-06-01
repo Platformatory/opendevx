@@ -5,6 +5,8 @@ tmp/
 profiles/opendevx/themes/custom/*/node_modules
 composer.lock
 
+/config/install/core.extension.yml
+
 # Ignore sensitive information
 sites/*/settings.php
 sites/*/settings.local.php

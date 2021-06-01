@@ -17,7 +17,6 @@ dependencies:
   - field.field.node.subscription.start_date
   - node.type.subscription
   module:
-  - content_moderation
   - datetime
   - field_group
 third_party_settings:
