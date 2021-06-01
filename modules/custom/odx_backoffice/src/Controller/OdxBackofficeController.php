@@ -200,8 +200,85 @@ class OdxBackofficeController extends OdxBaseController {
   }
 
   public function discover() {
-    $build['summary'] = views_embed_view('google_analytics_summary', 'block_2');
-    $build['top_pages'] = views_embed_view('google_analytics_summary', 'attachment_top_pages');
+    $performance = [
+      '#data' => [
+        'labels' => ['Blue', 'Red', 'Grey'],
+        'datasets' => [
+          [
+            'label' => 'Dataset 1',
+            'data' => [180, 500, 300],
+            'backgroundColor' => ['#00557f', '#f8413c', '#666666'],
+            'hoverBackgroundColor' => ['#004060', '#9b2926', '#333333'],
+          ],
+        ],
+      ],
+      '#graph_type' => 'halfdonut',
+      '#id' => 'mychart',
+      '#options' => [
+        'title' => [
+          'text' => 980,
+        ],
+      ],
+      '#plugins' => ['halfdonutTotal'],
+      '#type' => 'chartjs_api',
+    ];
+
+    $build['dashboard'] = [
+      '#theme' => 'odx_material_admin_dashboard',
+      '#apis' => [
+        'title' => 'APIs',
+        'value' => 500,
+        'delta' => 'up',
+      ],
+      '#products' => [
+        'title' => 'Products',
+        'value' => 258,
+        'delta' => 'up',
+      ],
+      '#developers' => [
+        'title' => 'Developers',
+        'value' => 3420,
+        'delta' => 'down',
+      ],
+      '#apps' => [
+        'title' => 'Apps',
+        'value' => 9384,
+        'delta' => 'down',
+      ],
+      '#revenue' => [
+        'title' => 'Total Revenue',
+        'value' => '$9.8M',
+        'delta' => 'up',
+      ],
+      '#hits' => [
+        'title' => 'Total Hits',
+        'value' => '300K',
+      ],
+      '#duration' => [
+        'title' => 'Avg Duration',
+        'value' => '1:15',
+      ],
+      '#support_cycle' => [
+        'title' => 'Support Cycle Time',
+        'value' => '76h',
+      ],
+      '#app_abandonment' => [
+        'title' => 'App Abandonment',
+        'value' => '32.5%',
+      ],
+      '#arpd' => [
+        'title' => 'ARPD',
+        'value' => '$1044',
+      ],
+      '#performance' => [
+        'title' => 'Program performance',
+        'graph' => $performance,
+      ],
+    ];
+    // Program performance
+    // Top products
+    // Top developers
+    // Top apps
     return $build;
   }
 
