@@ -3,9 +3,7 @@ status: true
 dependencies:
   config:
   - views.view.community_posts_block
-  - views.view.domains
   - views.view.featured_use_cases_block
-  - views.view.products
   - views.view.upcoming_events_block
   module:
   - odx_frontoffice

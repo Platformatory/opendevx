@@ -1,4 +1,4 @@
-name: Acme Developer Exchange
+name: Acme Developer eXchange
 mail: admin@opendevx.io
 slogan: ""
 page:
@@ -44,3 +44,4 @@ site_footer: "  <footer class=\"bg-white border-t border-gray-200\">\r\n    <div
   \     </div>\r\n      <p class=\"mt-8 text-center text-base text-gray-400\">\r\n
   \       &copy; OpenDevX is a Product from Platformatory. All rights reserved\r\n
   \     </p>\r\n    </div>\r\n  </footer>"
+register_hub: 1
