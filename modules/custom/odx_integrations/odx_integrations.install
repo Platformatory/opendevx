@@ -24,20 +24,24 @@ function odx_integrations_update_8001() {
           'default' => '',
           'description' => 'The subscription UUID for the record.',
         ],
-        'name' => [
+        'units' => [
           'type' => 'varchar_ascii',
           'length' => 255,
           'not null' => TRUE,
           'default' => '',
           'description' => 'Metric name.',
         ],
-        'created' => [
+        'start_period' => [
           'type' => 'int',
           'not null' => TRUE,
           'default' => 0,
-          'description' => 'Timestamp when the record was created.',
         ],
-        'data' => [
+        'end_period' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+        'usage' => [
           'type' => 'float',
           'not null' => TRUE,
           'default' => 0.0,

@@ -51,16 +51,30 @@ class AppCreateForm extends FormBase {
       '#value' => $product->id(),
     ];
 
-    $plans = $this->getPlans($product);
-    // show billing plans if the product is
-    // associated with one or more of them
-    if ($plans) {
+    $plan_uuid = \Drupal::request()->query->get('plan');
+
+    $plan = \Drupal::service('entity_type.manager')->getStorage('node')
+          ->loadByProperties(['uuid' => $plan_uuid, 'type' => 'plan']);
+    $plan = reset($plan);
+
+    if ($plan) {
       $form['billing_plan'] = [
-        '#type' => 'radios',
-        '#title' => t('Billing plan'),
-        '#options' => $plans,
-        '#description' => t('Choose an appropriate billing plan for your app.'),
-      ];
+        '#type' => 'hidden',
+        '#title' => t('Product'),
+        '#value' => $plan->id(),
+      ];  
+    } else {
+      $plans = $this->getPlans($product);
+      // show billing plans if the product is
+      // associated with one or more of them
+      if ($plans) {
+        $form['billing_plan'] = [
+          '#type' => 'radios',
+          '#title' => t('Billing plan'),
+          '#options' => $plans,
+          '#description' => t('Choose an appropriate billing plan for your app.'),
+        ];
+    }
       $subscription_period_options = [
         'monthly' => t('Monthly'),
         'weekly' => t('Weekly'),

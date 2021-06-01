@@ -63,11 +63,7 @@ class OdxFrontofficeGlobalsController extends ControllerBase {
         'start' => $node->start_date->date->format('jS M Y'),
         'end' => $node->end_date->date->format('jS M Y'),
         'current_bill' => $billing['total'],
-        'current_invoice' => [
-          '#theme' => 'invoice',
-          '#invoice' => $billing,
-        ],
-        'past_invoices' => $past_invoices,
+        'url' => $node->toUrl()->toString(),
       ];
     }
     return $subscriptions;

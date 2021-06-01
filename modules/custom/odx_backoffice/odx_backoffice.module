@@ -196,17 +196,17 @@ function _odx_backoffice_billing_engine_actions(\Drupal\Core\Entity\EntityInterf
     return [
       'edit' => [ // Edit the Billing Engine
         'title' => t('Edit'),
-        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/edit'),
+        'url' => Url::fromUri('base:/backoffice/billing_engine/'. $entity->uuid() . '/edit'),
         'weight' => 0,
       ],
       'sync' => [ // Sync all watched object refs
         'title' => t('Sync'),
-        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/sync'),
+        'url' => Url::fromUri('base:/backoffice/billing_engine/'. $entity->uuid() . '/sync'),
         'weight' => 1,
       ],
       'explore' => [ // Explore the Billing Engine Constituents. Let the user cherry pick and import
         'title' => t('Explore'),
-        'url' => Url::fromUri('base:/backoffice/billing-engine/'. $entity->uuid() . '/explore'),
+        'url' => Url::fromUri('base:/backoffice/billing_engine/'. $entity->uuid() . '/explore'),
         'weight' => 1,
       ],
   ];

@@ -38,18 +38,12 @@
                 {{ subscription.current_bill }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#current-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800" rel="modal:open">View current invoice</a>
-                <a href="#previous-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800" rel="modal:open">View previous invoice</a>
-                <a href="#previous-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800" rel="modal:open">Set billing alert</a>
-                <a href="#previous-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800" rel="modal:open">Deactivate subscription</a>
+                <a href="{{ subscription.url }}#current" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">View current invoice</a>
+                <a href="{{ subscription.url }}#past" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">View previous invoice</a>
+                <a href="#previous-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">Set billing alert</a>
+                <a href="#previous-{{ index }}" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">Deactivate subscription</a>
               </td>
             </tr>
-            <div class="mt-10 pb-12 bg-white sm:pb-16 hidden" id="current-{{ index }}">
-              {{ subscription.current_invoice }}
-            </div>
-            <div class="mt-10 pb-12 bg-white sm:pb-16 hidden" id="previous-{{ index }}">
-              {{ subscription.past_invoices }}
-            </div>
             {% endfor %}
           </tbody>
         </table>

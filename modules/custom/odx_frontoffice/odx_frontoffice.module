@@ -106,8 +106,16 @@ function odx_frontoffice_theme() {
     'hero_with_signup' => [
       'variables' => [],
     ],
-    'product_pricing' => [
-      'variables' => [],
+    'pricing_plan' => [
+      'variables' => [
+        'pricing_rules' => NULL,
+        'product_uuid' => NULL,
+        'plan_uuid' => NULL,
+        'name' => NULL,
+        'description' => NULL,
+        'product_url' => NULL,
+        'currency' => NULL,
+      ],
     ],
     'domain_hero_1' => [
       'variables' => [

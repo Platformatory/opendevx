@@ -47,13 +47,14 @@ class OdxInjestCustomMetricsController extends ControllerBase {
     // TODO: should we check if $uuid is of valid subscription
     $request = \Drupal::request();
     $payload = json_decode($request->getContent(), TRUE);
-    $query = $this->connection->insert('api_metrics')->fields(['uuid', 'name', 'created', 'data']);
+    $query = $this->connection->insert('api_metrics')->fields(['uuid', 'units', 'start_period', 'end_period', 'usage']);
     foreach ($payload as $metric) {
       $record = [
         'uuid' => $uuid,
-        'name' => $metric['name'],
-        'created' => strtotime($metric['created']),
-        'data' => $metric['data'],
+        'units' => $metric['units'],
+        'start_period' => strtotime($metric['start_period']),
+        'end_period' => strtotime($metric['end_period']),
+        'usage' => $metric['usage'],
       ];
       $query->values($record);
     }

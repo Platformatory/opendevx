@@ -1,40 +1,55 @@
-<div class="mt-2 pb-12 bg-white sm:pb-16">
-{% if invoice.total == 0 %}
-    <h3 class="text-gray-600 text-sm font-medium truncate">{{ 'No units consumed for this period.'|t }}</h3>
-{% else %}
-    {% if start_date %}
-    <h3 class="mt-2 text-gray-600 text-md font-medium truncate">From {{ start_date }} to {{ end_date }}</h3>
-    {% endif %}
-    <div class="flex -mx-1 border-b py-2 items-start">
-      <div class="flex-1 px-1">
-        <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Description</p>
-      </div>
-
-      <div class="px-1 w-20 text-right">
-        <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Charges</p>
-      </div>
+<div class="p-6 sm:p-10 text-left print:p-0">
+    <div class="w-240 p-16 rounded-2xl shadow bg-card print:w-auto print:rounded-none print:shadow-none print:bg-transparent">
+        <div class="flex items-start justify-between">
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+                <div class="text-4xl tracking-tight text-secondary">INVOICE</div>
+                <div class="text-4xl">#9-0004</div>
+                <div class="font-medium tracking-tight text-secondary">INVOICE DATE</div>
+                <div class="font-medium">{{ end_date }}</div>
+                <div class="font-medium tracking-tight text-secondary">START DATE</div>
+                <div class="font-medium">{{ start_date }}</div>
+                <div class="font-medium tracking-tight text-secondary">TOTAL DUE</div>
+                <div class="font-medium">{{ invoice.total }}</div>
+            </div>
+            <div class="grid auto-cols-max grid-flow-col gap-x-8 -mr-16 py-6 px-8 rounded-l-2xl bg-accent dark">
+                <div class="place-self-center w-24">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow" class="w-24">
+                </div>
+                <div class="pl-10 border-l text-md">
+                    <div class="font-medium">Acme API Inc.</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-md mt-12">
+            <div class="text-xl font-medium">Brian Hughes</div>
+            <div>9301 Wood Street Philadelphia, PA 19111</div>
+            <div>hughes.brian@company.com</div>
+        </div>
+        <div class="grid grid-cols-12 gap-x-1 mt-12">
+            <div class="col-span-8 font-medium text-md text-secondary">SERVICE</div>
+            <div class="font-medium text-md text-right text-secondary">RATE</div>
+            <div class="font-medium text-md text-right text-secondary">QTY</div>
+            <div class="col-span-2 font-medium text-md text-right text-secondary">TOTAL</div>
+            <div class="col-span-12 my-4 border-b"></div>
+            {% for line_item in invoice.li  %}
+            <div class="col-span-8 text-lg font-medium">{{ line_item.label }}</div>
+            <div class="self-center text-right">{{ line_item.unit_price }}</div>
+            <div class="self-center text-right">{{ line_item.units }}</div>
+            <div class="col-span-2 self-center text-right">{{ line_item.charges }}</div>
+            <div class="col-span-12 my-4 border-b"></div>
+            {% endfor %}
+            <div class="col-span-12 mt-16"></div>
+            <div class="col-span-10 self-center font-medium tracking-tight text-secondary">SUBTOTAL</div>
+            <div class="col-span-2 text-right text-lg">{{ invoice.total }}</div>
+            <div class="col-span-12 my-3 border-b"></div>
+            <div class="col-span-10 self-center font-medium tracking-tight text-secondary">TAX</div>
+            <div class="col-span-2 text-right text-lg">-</div>
+            <div class="col-span-12 my-3 border-b"></div>
+            <div class="col-span-10 self-center font-medium tracking-tight text-secondary">DISCOUNT</div>
+            <div class="col-span-2 text-right text-lg">-</div>
+            <div class="col-span-12 my-3 border-b"></div>
+            <div class="col-span-10 self-center text-2xl font-medium tracking-tight text-secondary">TOTAL</div>
+            <div class="col-span-2 text-right text-2xl font-medium">{{ invoice.total }}</div>
+        </div>
     </div>
-
-    {% for line_item in invoice.li  %}
-    <div class="flex px-1 py-2 border-b">
-      <div class="flex-1 px-1">
-        <p class="text-gray-800">{{ line_item.label }}</p>
-      </div>
-
-      <div class="px-1 w-20 text-right">
-        <p class="text-gray-800">{{ line_item.charges }}</p>
-      </div>
-    </div>
-    {% endfor %}
-    <div class="flex px-1 py-2 bg-gray-200 border-b font-bold">
-      <div class="flex-1 px-1">
-        <p class="text-gray-800">{{ 'Total'|t }}</p>
-      </div>
-
-      <div class="px-1 w-20 text-right">
-        <p class="text-gray-800">{{ invoice.total }}</p>
-      </div>
-    </div>
-{% endif %}
 </div>
-

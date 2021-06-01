@@ -89,9 +89,36 @@ class OdxFrontofficeProductsController extends ControllerBase {
       '#try_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/try',
       '#browse_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/browse',
     ];
-    $build['pricing'] = [
-      '#theme' => 'product_pricing',
+    $build['products'] = [
+      '#prefix' => '<div class="container px-5 py-5 mx-auto">',
+      '#suffix' => '</div>',
+      '#cache' => [
+         'tags' => ['node_list:plan'],
+       ]   
     ];
+    $plans = $this->getPlans($product);
+    $view_build = \Drupal::entityTypeManager()->getViewBuilder('node');
+    foreach($plans as $plan) {
+      $build['products'][$plan->id()] = [
+        '#theme' => 'pricing_plan',
+        '#pricing_rules' => json_decode($plan->pricing_rules->value, true),
+        '#product_uuid' => $product->uuid(),
+        '#plan_uuid' => $plan->uuid(),
+        '#name' => $plan->label(),
+        '#description' => $plan->description->value,
+        '#product_url' => $product->toUrl()->toString(),
+        '#currency' => $plan->currency->value,
+      ];
+    }
     return $build;
+  }
+
+  protected function getPlans(\Drupal\node\NodeInterface $product) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'plan')
+      ->condition('products', $product->id());
+    $nids = $query->execute();
+    $plan_nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+    return $plan_nodes;
   }
 }
