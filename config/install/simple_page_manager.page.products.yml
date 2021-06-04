@@ -1,38 +1,43 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.products
+  module:
+    - views
   theme:
-  - opendevx_theme
+    - bootstrap_barrio
 id: products
 label: Products
 path: /products
 sections:
-- layout_id: opendevx_two_column
-  layout_settings:
-    label: Products
-  components:
-    b10bb95a-a7b2-4145-ac45-dcb8121b29b7:
-      uuid: b10bb95a-a7b2-4145-ac45-dcb8121b29b7
-      region: main
-      configuration:
-        id: views_block:products-end_user
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: Products
+    components:
+      b10bb95a-a7b2-4145-ac45-dcb8121b29b7:
+        uuid: b10bb95a-a7b2-4145-ac45-dcb8121b29b7
+        region: first
+        configuration:
+          id: 'views_block:products-end_user'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
 menu:
-  title: ""
-  description: ""
+  title: ''
+  description: ''
   weight: 0
   enabled: false
   menu_name: main
-  parent: ""
+  parent: ''
   expanded: false
 access:
   type: none
-  options: {}
+  options: {  }

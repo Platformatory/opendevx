@@ -2,144 +2,129 @@ langcode: en
 status: true
 dependencies:
   config:
-  - views.view.community_posts_block
-  - views.view.featured_use_cases_block
-  - views.view.upcoming_events_block
+    - views.view.community_posts_block
+    - views.view.domains
+    - views.view.featured_use_cases_block
+    - views.view.products
+    - views.view.upcoming_events_block
   module:
-  - odx_frontoffice
-  - views
+    - odx_frontoffice
+    - views
   theme:
-  - opendevx_theme
+    - bootstrap_barrio
 id: home_page
-label: Home Page
+label: 'Home Page'
 path: /home
 sections:
-- layout_id: opendevx_one_column
-  layout_settings:
-    label: Hero
-  components:
-    63c62fed-cf77-4d56-90a6-08c276211ddd:
-      uuid: 63c62fed-cf77-4d56-90a6-08c276211ddd
-      region: main
-      configuration:
-        id: odx_frontoffice_hero_with_3_blocks_configurable
-        label: Hero with 3 blocks
-        provider: odx_frontoffice
-        label_display: "0"
-        cta_title: One API platform for Multiple Data Sources - edited
-        context_mapping: {}
-      additional: {}
-      weight: 1
-    b7ee2e3c-dc00-419e-a4b1-be4a7a7ce4f8:
-      uuid: b7ee2e3c-dc00-419e-a4b1-be4a7a7ce4f8
-      region: main
-      configuration:
-        id: odx_frontoffice_custom_html
-        label: Custom HTML
-        provider: odx_frontoffice
-        label_display: "0"
-        html: "<div class=\"bg-indigo-700\">\r\n  <div class=\"max-w-2xl mx-auto text-center
-          py-16 px-4 sm:py-20 sm:px-6 lg:px-8\">\r\n    <h2 class=\"text-3xl font-extrabold
-          text-white sm:text-4xl\">\r\n      <span class=\"block\">Boost your productivity.</span>\r\n
-          \     <span class=\"block\">Start using Workflow today.</span>\r\n    </h2>\r\n
-          \   <p class=\"mt-4 text-lg leading-6 text-indigo-200\">Ac euismod vel sit
-          maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis
-          vel nulla nec.</p>\r\n    <a href=\"#\" class=\"mt-8 w-full inline-flex
-          items-center justify-center px-5 py-3 border border-transparent text-base
-          font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto\">\r\n
-          \     Sign up for free\r\n    </a>\r\n  </div>\r\n</div>"
-        context_mapping: {}
-      additional: {}
-      weight: 2
-  third_party_settings: {}
-- layout_id: opendevx_two_column
-  layout_settings:
-    label: Domains
-  components:
-    7bdaa75d-8889-497c-938c-b2a358b707b2:
-      uuid: 7bdaa75d-8889-497c-938c-b2a358b707b2
-      region: main
-      configuration:
-        id: views_block:domains-end_user
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
-- layout_id: opendevx_two_column
-  layout_settings:
-    label: Products
-  components:
-    de861804-5a23-419f-90d0-949c2a7108d7:
-      uuid: de861804-5a23-419f-90d0-949c2a7108d7
-      region: main
-      configuration:
-        id: views_block:products-end_user
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
-- layout_id: opendevx_three_column
-  layout_settings:
-    label: Misc sections
-  components:
-    f3c31d12-0337-401f-8313-4a7e4f2d6249:
-      uuid: f3c31d12-0337-401f-8313-4a7e4f2d6249
-      region: main
-      configuration:
-        id: views_block:featured_use_cases_block-block
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-    25721c16-0e4e-47cf-a34d-8a292757feb1:
-      uuid: 25721c16-0e4e-47cf-a34d-8a292757feb1
-      region: sidebar1
-      configuration:
-        id: views_block:upcoming_events_block-block
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-    354318fb-b371-48fe-8fb8-ead31aa23232:
-      uuid: 354318fb-b371-48fe-8fb8-ead31aa23232
-      region: sidebar2
-      configuration:
-        id: views_block:community_posts_block-home
-        label: ""
-        provider: views
-        label_display: "0"
-        views_label: ""
-        items_per_page: none
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: Hero
+    components:
+      eaed850a-16cb-4d86-8dd8-6fcd86771e6c:
+        uuid: eaed850a-16cb-4d86-8dd8-6fcd86771e6c
+        region: first
+        configuration:
+          id: odx_frontoffice_custom_html
+          label: 'Custom HTML'
+          provider: odx_frontoffice
+          label_display: '0'
+          html: "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      Add\r\n    </div>\r\n    <div class=\"col\">\r\n      your\r\n    </div>\r\n    <div class=\"col\">\r\n      custom content\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: Domains
+    components:
+      7bdaa75d-8889-497c-938c-b2a358b707b2:
+        uuid: 7bdaa75d-8889-497c-938c-b2a358b707b2
+        region: first
+        configuration:
+          id: 'views_block:domains-end_user'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: Products
+    components:
+      de861804-5a23-419f-90d0-949c2a7108d7:
+        uuid: de861804-5a23-419f-90d0-949c2a7108d7
+        region: first
+        configuration:
+          id: 'views_block:products-end_user'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: 'Misc Sections'
+    components:
+      f3c31d12-0337-401f-8313-4a7e4f2d6249:
+        uuid: f3c31d12-0337-401f-8313-4a7e4f2d6249
+        region: first
+        configuration:
+          id: 'views_block:featured_use_cases_block-block'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+      25721c16-0e4e-47cf-a34d-8a292757feb1:
+        uuid: 25721c16-0e4e-47cf-a34d-8a292757feb1
+        region: first
+        configuration:
+          id: 'views_block:upcoming_events_block-block'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+      354318fb-b371-48fe-8fb8-ead31aa23232:
+        uuid: 354318fb-b371-48fe-8fb8-ead31aa23232
+        region: first
+        configuration:
+          id: 'views_block:community_posts_block-home'
+          label: ''
+          provider: views
+          label_display: '0'
+          views_label: ''
+          items_per_page: none
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
 menu:
-  title: ""
-  description: ""
+  title: ''
+  description: ''
   weight: 0
   enabled: false
   menu_name: main
-  parent: ""
+  parent: ''
   expanded: false
 access:
   type: none
-  options: {}
+  options: {  }

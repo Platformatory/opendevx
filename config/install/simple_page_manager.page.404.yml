@@ -2,46 +2,39 @@ langcode: en
 status: true
 dependencies:
   module:
-  - odx_frontoffice
+    - odx_frontoffice
   theme:
-  - opendevx_theme
-id: "404"
-label: "404"
+    - bootstrap_barrio
+id: '404'
+label: '404'
 path: /404
 sections:
-- layout_id: opendevx_one_column
-  layout_settings:
-    label: Display message
-  components:
-    a1ed81e3-188f-4936-8ee6-f6254b35c391:
-      uuid: a1ed81e3-188f-4936-8ee6-f6254b35c391
-      region: main
-      configuration:
-        id: odx_frontoffice_custom_html
-        label: 404 msg
-        provider: odx_frontoffice
-        label_display: "0"
-        html: "<div class=\"text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6
-          lg:px-8 lg:max-w-7xl\">\r\n              <h2 class=\"text-base font-semibold
-          tracking-wider text-cyan-600 uppercase\">Not found</h2>\r\n              <p
-          class=\"mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl\">\r\n
-          \               The page you're looking for isn't there\r\n              </p>\r\n
-          \             <p class=\"mt-5 mx-auto max-w-prose text-xl text-gray-500\">\r\n
-          \               Phasellus lorem quam molestie id quisque diam aenean nulla
-          in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum
-          id viverra nulla.\r\n              </p>\r\n            </div>"
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
+  -
+    layout_id: barrio_cardbasic
+    layout_settings:
+      label: Message
+    components:
+      a1ed81e3-188f-4936-8ee6-f6254b35c391:
+        uuid: a1ed81e3-188f-4936-8ee6-f6254b35c391
+        region: first
+        configuration:
+          id: odx_frontoffice_custom_html
+          label: '404 msg'
+          provider: odx_frontoffice
+          label_display: '0'
+          html: "<div class=\"text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl\">\r\n              <h2 class=\"text-base font-semibold tracking-wider text-cyan-600 uppercase\">Not found</h2>\r\n              <p class=\"mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl\">\r\n                The page you're looking for isn't there\r\n              </p>\r\n              <p class=\"mt-5 mx-auto max-w-prose text-xl text-gray-500\">\r\n                Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.\r\n              </p>\r\n            </div>"
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
 menu:
-  title: ""
-  description: ""
+  title: ''
+  description: ''
   weight: 0
   enabled: false
   menu_name: main
-  parent: ""
+  parent: ''
   expanded: false
 access:
   type: none
-  options: {}
+  options: {  }

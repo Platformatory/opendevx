@@ -42,15 +42,16 @@ class AppCreateForm extends FormBase {
 
     $product_uuid = \Drupal::request()->query->get('product');
 
-    $product = \Drupal::service('entity_type.manager')->getStorage('node')
-          ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
-    $product = reset($product);
-    $form['product'] = [
-      '#type' => 'hidden',
-      '#title' => t('Product'),
-      '#value' => $product->id(),
-    ];
-
+    if ($product_uuid) {
+      $product = \Drupal::service('entity_type.manager')->getStorage('node')
+            ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
+      $product = reset($product);
+      $form['product'] = [
+        '#type' => 'hidden',
+        '#title' => t('Product'),
+        '#value' => $product->id(),
+      ];
+    }
     $plan_uuid = \Drupal::request()->query->get('plan');
 
     if ($plan_uuid) {
@@ -66,7 +67,7 @@ class AppCreateForm extends FormBase {
         '#value' => $plan->id(),
       ];  
     } else {
-      $plans = $this->getPlans($product);
+      $plans = $product ? $this->getPlans($product):[];
       // show billing plans if the product is
       // associated with one or more of them
       if ($plans) {
