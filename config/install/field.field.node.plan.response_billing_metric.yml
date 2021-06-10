@@ -2,21 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.usage_metric
+    - field.storage.node.response_billing_metric
     - node.type.plan
   module:
     - options
-id: node.plan.usage_metric
-field_name: usage_metric
+id: node.plan.response_billing_metric
+field_name: response_billing_metric
 entity_type: node
 bundle: plan
-label: 'Usage Metric'
+label: 'Response Billing Metric'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    value: api_call
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

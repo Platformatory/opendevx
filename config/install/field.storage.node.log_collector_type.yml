@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.log_collector_type
+field_name: log_collector_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: elastic
+      label: Elastic
+    -
+      value: prometheus
+      label: Prometheus
+    -
+      value: apache_skywalking
+      label: 'Apache Skywalking'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
