@@ -90,8 +90,8 @@ class OdxFrontofficeProductsController extends ControllerBase {
       '#browse_url' => $product->toUrl()->toString() . $api->toUrl()->toString() . '/browse',
     ];
     $build['products'] = [
-      '#prefix' => '<div class="container px-5 py-5 mx-auto">',
-      '#suffix' => '</div>',
+      '#prefix' => '<div class="container px-5 py-5 mx-auto"><div class="grid grid-cols-2 gap-4">',
+      '#suffix' => '</div></div>',
       '#cache' => [
          'tags' => ['node_list:plan'],
        ]   
