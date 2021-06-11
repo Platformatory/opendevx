@@ -92,6 +92,7 @@
         "drupal/views_bulk_operations": "^3.10",
         "drupal/webform": "^6.0",
         "drush/drush": "^10.3",
+        "league/commonmark": "^1.6",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "php-http/guzzle6-adapter": "^1.1.1",
         "platformsh/config-reader": "^2.4",
