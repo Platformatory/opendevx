@@ -2,143 +2,130 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.group.domain.description
-  - field.field.group.domain.hero_image
-  - field.field.group.domain.image
-  - field.field.group.domain.layout_builder__layout
-  - field.field.group.domain.primary_color
-  - field.field.group.domain.visibility
-  - group.type.domain
-  - views.view.community_posts_block
-  - views.view.upcoming_events_block
+    - field.field.group.domain.description
+    - field.field.group.domain.hero_image
+    - field.field.group.domain.image
+    - field.field.group.domain.layout_builder__layout
+    - field.field.group.domain.primary_color
+    - group.type.domain
+    - views.view.community_posts_block
+    - views.view.upcoming_events_block
   module:
-  - color_field
-  - layout_builder
-  - layout_builder_restrictions
-  - odx_frontoffice
-  - options
-  - views
+    - color_field
+    - layout_builder
+    - layout_builder_restrictions
+    - odx_frontoffice
+    - options
+    - views
   theme:
-  - opendevx_theme
+    - opendevx_theme
 third_party_settings:
   layout_builder:
     allow_custom: true
     enabled: true
     sections:
-    - layout_id: opendevx_one_column
-      layout_settings:
-        label: Hero
-      components:
-        82c9717a-1eba-4e42-8e43-410459e928e0:
-          uuid: 82c9717a-1eba-4e42-8e43-410459e928e0
-          region: main
-          configuration:
-            id: odx_frontoffice_domain_hero_1
-            label: Domain Hero 1
-            provider: odx_frontoffice
-            label_display: "0"
-            context_mapping:
-              group: layout_builder.entity
-          additional: {}
-          weight: 0
-        af06ef29-5692-4f9b-8ef3-6f6b998fcbd2:
-          uuid: af06ef29-5692-4f9b-8ef3-6f6b998fcbd2
-          region: main
-          configuration:
-            label_display: "0"
-            context_mapping:
-              entity: layout_builder.entity
-            id: field_block:group:domain:visibility
-            formatter:
-              label: above
-              settings: {}
-              third_party_settings: {}
-              type: list_default
-          additional: {}
-          weight: 1
-      third_party_settings: {}
-    - layout_id: opendevx_two_column
-      layout_settings:
-        label: Products
-      components:
-        c435b296-5d12-4861-8598-e201bb8d1c42:
-          uuid: c435b296-5d12-4861-8598-e201bb8d1c42
-          region: main
-          configuration:
-            id: views_block:products-domain
-            label: ""
-            provider: views
-            label_display: "0"
-            views_label: ""
-            items_per_page: none
-            context_mapping: {}
-          additional: {}
-          weight: 0
-      third_party_settings: {}
-    - layout_id: opendevx_three_column
-      layout_settings:
-        label: Misc stuff
-      components:
-        e84dd75d-998e-4fc5-a686-fc65b14b3cc5:
-          uuid: e84dd75d-998e-4fc5-a686-fc65b14b3cc5
-          region: main
-          configuration:
-            id: views_block:community_posts_block-block
-            label: ""
-            provider: views
-            label_display: "0"
-            views_label: ""
-            items_per_page: none
-            context_mapping: {}
-          additional: {}
-          weight: 0
-        a62471cc-5805-4ca1-a6c4-7372c3ac9654:
-          uuid: a62471cc-5805-4ca1-a6c4-7372c3ac9654
-          region: sidebar1
-          configuration:
-            id: views_block:upcoming_events_block-block
-            label: ""
-            provider: views
-            label_display: "0"
-            views_label: ""
-            items_per_page: none
-            context_mapping: {}
-          additional: {}
-          weight: 0
-      third_party_settings: {}
+      -
+        layout_id: opendevx_one_column
+        layout_settings:
+          label: Hero
+        components:
+          82c9717a-1eba-4e42-8e43-410459e928e0:
+            uuid: 82c9717a-1eba-4e42-8e43-410459e928e0
+            region: main
+            configuration:
+              id: odx_frontoffice_domain_hero_1
+              label: 'Domain Hero 1'
+              provider: odx_frontoffice
+              label_display: '0'
+              context_mapping:
+                group: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: opendevx_two_column
+        layout_settings:
+          label: Products
+        components:
+          c435b296-5d12-4861-8598-e201bb8d1c42:
+            uuid: c435b296-5d12-4861-8598-e201bb8d1c42
+            region: main
+            configuration:
+              id: 'views_block:products-domain'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: opendevx_three_column
+        layout_settings:
+          label: 'Misc stuff'
+        components:
+          e84dd75d-998e-4fc5-a686-fc65b14b3cc5:
+            uuid: e84dd75d-998e-4fc5-a686-fc65b14b3cc5
+            region: main
+            configuration:
+              id: 'views_block:community_posts_block-block'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          a62471cc-5805-4ca1-a6c4-7372c3ac9654:
+            uuid: a62471cc-5805-4ca1-a6c4-7372c3ac9654
+            region: sidebar1
+            configuration:
+              id: 'views_block:upcoming_events_block-block'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
   layout_builder_restrictions:
-    allowed_block_categories: {}
+    allowed_block_categories: {  }
     entity_view_mode_restriction:
       whitelisted_blocks:
-        Chaos Tools: {}
-        Content fields:
-        - field_block:group:domain:hero_image
-        Custom block types: {}
-        Custom blocks: {}
-        Devel: {}
-        Forms: {}
-        Group: {}
-        Help: {}
-        Inline blocks: {}
-        Menus: {}
-        ODX Administration: {}
-        ODX Backoffice Guide: {}
-        ODX Frontend:
-        - views_block:products-domain
-        - views_block:community_posts_block-block
-        - views_block:products_block-block
-        - views_block:upcoming_events_block-block
-        Platformatory: {}
-        SimpleSAMLphp Authentication: {}
-        System: {}
-        Webform: {}
-        core: {}
-      blacklisted_blocks: {}
+        'Chaos Tools': {  }
+        'Content fields':
+          - 'field_block:group:domain:hero_image'
+        'Custom block types': {  }
+        'Custom blocks': {  }
+        Devel: {  }
+        Forms: {  }
+        Group: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        Menus: {  }
+        'ODX Administration': {  }
+        'ODX Backoffice Guide': {  }
+        'ODX Frontend':
+          - 'views_block:products-domain'
+          - 'views_block:community_posts_block-block'
+          - 'views_block:products_block-block'
+          - 'views_block:upcoming_events_block-block'
+        Platformatory: {  }
+        'SimpleSAMLphp Authentication': {  }
+        System: {  }
+        Webform: {  }
+        core: {  }
+      blacklisted_blocks: {  }
       allowed_layouts:
-      - opendevx_one_column
-      - opendevx_two_column
-      - opendevx_three_column
-      - opendevx_body_section
+        - opendevx_one_column
+        - opendevx_two_column
+        - opendevx_three_column
+        - opendevx_body_section
 id: group.domain.default
 targetEntityType: group
 bundle: domain
@@ -147,8 +134,8 @@ content:
   description:
     weight: -4
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: basic_string
     region: content
   hero_image:
@@ -158,7 +145,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {}
+    third_party_settings: {  }
     region: content
   image:
     type: entity_reference_entity_view
@@ -167,7 +154,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {}
+    third_party_settings: {  }
     region: content
   label:
     label: hidden
@@ -176,21 +163,21 @@ content:
     region: content
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
   primary_color:
     weight: 4
     label: above
     settings:
       format: hex
       opacity: true
-    third_party_settings: {}
+    third_party_settings: {  }
     type: color_field_formatter_text
     region: content
   visibility:
     weight: 7
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: list_default
     region: main
 hidden:
