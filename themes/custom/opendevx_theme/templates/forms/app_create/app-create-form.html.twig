@@ -14,5 +14,17 @@
   set classes = [ 'space-y-8' ]
 %}
 <form{{ attributes.addClass(classes) }}>
-  {{ children }}
+  {{ form.form_build_id }}
+  {{ form.form_token }}
+  {{ form.form_id }}
+
+  {{ form.name }}
+  {{ form.description }}
+  {{ form.product }}
+  {{ form.callback_url }}
+
+  {{ form.billing_plan }}
+  {{ form.subscription_period }}
+  {{ form.auto_renew }}
+  {{ form.actions.submit }}
 </form>

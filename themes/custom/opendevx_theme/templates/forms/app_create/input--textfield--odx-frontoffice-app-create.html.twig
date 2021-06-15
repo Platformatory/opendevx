@@ -10,6 +10,12 @@
  * @see template_preprocess_input()
  */
 #}
+{%
+  set classes = [
+    'max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md',
+    attributes.readonly? 'bg-gray-200',
+  ]
+%}
 <div class="mt-1 sm:mt-0 sm:col-span-2">
-<input{{ attributes.addClass('max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md') }} />{{ children }}
+<input{{ attributes.addClass(classes) }} />{{ children }}
 </div>

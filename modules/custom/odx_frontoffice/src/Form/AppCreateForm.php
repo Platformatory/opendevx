@@ -66,17 +66,14 @@ class AppCreateForm extends FormBase {
     $plans = $this->getPlans($product);
 
     if ($plan) {
-      $form['billing_plan_display'] = [
-        '#type' => 'textfield',
-        '#title' => t('Billing plan'),
-        '#value' => $plan->label(),
-        '#attributes' => ['readonly' => 'readonly'],
-      ];
       $form['billing_plan'] = [
-        '#type' => 'hidden',
-        '#value' => $plan->id(),
-      ];  
-    } else {
+        '#type' => 'radios',
+        '#title' => t('Billing plan'),
+        '#options' => $plans,
+        '#default_value' => $plan->id(),
+        '#description' => t('Choose an appropriate billing plan for your app.'),
+      ];
+  } else {
       // show billing plans if the product is
       // associated with one or more of them
       if ($plans) {
@@ -84,6 +81,7 @@ class AppCreateForm extends FormBase {
           '#type' => 'radios',
           '#title' => t('Billing plan'),
           '#options' => $plans,
+          '#default_value' => $plan->id(),
           '#description' => t('Choose an appropriate billing plan for your app.'),
         ];
       }
@@ -94,7 +92,7 @@ class AppCreateForm extends FormBase {
       'weekly' => t('Weekly'),
     ];
     $form['subscription_period'] = [
-      '#type' => 'select',
+      '#type' => 'radios',
       '#title' => t('Subscription period'),
       '#options' => $subscription_period_options,
     ];
@@ -112,6 +110,7 @@ class AppCreateForm extends FormBase {
       '#value' => $this->t('Create'),
     ];
 
+    $form['#theme'] = 'app_create_form';
     return $form;
   }
 

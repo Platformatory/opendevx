@@ -15,6 +15,9 @@
  */
 function odx_frontoffice_theme() {
   return [
+    'app_create_form' => [
+      'render element' => 'form',
+    ],    
     'user_nav' => [
       'variables' => [
         'menu' => NULL,
