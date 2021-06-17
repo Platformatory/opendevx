@@ -33,17 +33,50 @@ class AppCreateForm extends FormBase {
 
     $product_uuid = \Drupal::request()->query->get('product');
 
-    $product = \Drupal::service('entity_type.manager')->getStorage('node')
-          ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
-    $product = reset($product);
-    $app_id = $this->generateRandomString();
-    $form['name'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Name'),
-      '#required' => TRUE,
-      '#value' => 'app-'. $app_id . '-for-product-'. $this->slugify($product->label()) . '-subscription-'. $this->slugify($plan->label()),
-      '#attributes' => ['readonly' => 'readonly'],
-    ];
+    if ($product_uuid) {
+      $product = \Drupal::service('entity_type.manager')->getStorage('node')
+            ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
+      $product = reset($product);
+      $app_id = $this->generateRandomString();
+      $form['name'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Name'),
+        '#required' => TRUE,
+        '#value' => 'app-'. $app_id . '-for-product-'. $this->slugify($product->label()) . '-subscription-'. $this->slugify($plan->label()),
+        '#attributes' => ['readonly' => 'readonly'],
+      ];
+
+      $form['product'] = [
+        '#type' => 'hidden',
+        '#title' => t('Product'),
+        '#value' => $product->id(),
+      ];
+
+
+      $plans = $this->getPlans($product);
+
+      if ($plan) {
+        $form['billing_plan'] = [
+          '#type' => 'radios',
+          '#title' => t('Billing plan'),
+          '#options' => $plans,
+          '#default_value' => $plan->id(),
+          '#description' => t('Choose an appropriate billing plan for your app.'),
+        ];
+      } else {
+        // show billing plans if the product is
+        // associated with one or more of them
+        if ($plans) {
+          $form['billing_plan'] = [
+            '#type' => 'radios',
+            '#title' => t('Billing plan'),
+            '#options' => $plans,
+            '#default_value' => $plan->id(),
+            '#description' => t('Choose an appropriate billing plan for your app.'),
+          ];
+        }
+      }
+    }
 
     $form['version'] = [
       '#type' => 'textfield',
@@ -57,35 +90,6 @@ class AppCreateForm extends FormBase {
       '#required' => FALSE,
     ];
 
-    $form['product'] = [
-      '#type' => 'hidden',
-      '#title' => t('Product'),
-      '#value' => $product->id(),
-    ];
-
-    $plans = $this->getPlans($product);
-
-    if ($plan) {
-      $form['billing_plan'] = [
-        '#type' => 'radios',
-        '#title' => t('Billing plan'),
-        '#options' => $plans,
-        '#default_value' => $plan->id(),
-        '#description' => t('Choose an appropriate billing plan for your app.'),
-      ];
-  } else {
-      // show billing plans if the product is
-      // associated with one or more of them
-      if ($plans) {
-        $form['billing_plan'] = [
-          '#type' => 'radios',
-          '#title' => t('Billing plan'),
-          '#options' => $plans,
-          '#default_value' => $plan->id(),
-          '#description' => t('Choose an appropriate billing plan for your app.'),
-        ];
-      }
-    }
 
     $subscription_period_options = [
       'monthly' => t('Monthly'),

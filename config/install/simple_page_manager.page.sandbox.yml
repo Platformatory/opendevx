@@ -2,37 +2,38 @@ langcode: en
 status: true
 dependencies:
   module:
-  - odx_frontoffice
+    - odx_frontoffice
   theme:
-  - opendevx_theme
+    - opendevx_theme
 id: sandbox
-label: Create new app
+label: 'Create new app'
 path: /apps/create
 sections:
-- layout_id: opendevx_two_column
-  layout_settings:
-    label: Section
-  components:
-    6a22bb67-d1c6-43f5-8e3c-9d97d1fa91d5:
-      uuid: 6a22bb67-d1c6-43f5-8e3c-9d97d1fa91d5
-      region: main
-      configuration:
-        id: odx_frontoffice_create_app
-        label: Create a new App
-        provider: odx_frontoffice
-        label_display: visible
-        context_mapping: {}
-      additional: {}
-      weight: 0
-  third_party_settings: {}
+  -
+    layout_id: opendevx_app_form
+    layout_settings:
+      label: 'App form'
+    components:
+      a0961136-0485-4ed2-82c4-2b1f6cc0c9e8:
+        uuid: a0961136-0485-4ed2-82c4-2b1f6cc0c9e8
+        region: main
+        configuration:
+          id: odx_frontoffice_create_app
+          label: 'Create App'
+          provider: odx_frontoffice
+          label_display: '0'
+          context_mapping: {  }
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
 menu:
-  title: ""
-  description: ""
+  title: ''
+  description: ''
   weight: 0
   enabled: false
   menu_name: main
-  parent: ""
+  parent: ''
   expanded: false
 access:
   type: none
-  options: {}
+  options: {  }
