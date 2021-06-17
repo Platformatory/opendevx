@@ -52,6 +52,22 @@ class AppCreateForm extends FormBase {
         '#value' => $product->id(),
       ];
 
+      $form['billing_threshold'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Billing Threshold'),
+        '#description' => $this->t('Billing Threshold value in %.'),
+        '#required' => TRUE,
+        '#attributes' => array(
+          ' type' => 'number',
+        ),
+        '#maxlength' => 3,
+      ];
+
+      $form['callback_url'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Callback URL'),
+        '#required' => TRUE,
+      ];
 
       $plans = $this->getPlans($product);
 
@@ -120,7 +136,7 @@ class AppCreateForm extends FormBase {
 
   protected function slugify($string) {
     // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
-    return strtolower(preg_replace('/[^a-zA-Z0-9-]+/', '-', $string));
+    return strtolower(preg_replace('/[^a-z0-9-]+/', '-', $string));
   }  
 
   /**

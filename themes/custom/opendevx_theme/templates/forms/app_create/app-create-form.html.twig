@@ -13,18 +13,51 @@
 {%
   set classes = [ 'space-y-8' ]
 %}
+<div class="bg-gray-100 py-6 sm:px-6 lg:px-8 rounded-md">
 <form{{ attributes.addClass(classes) }}>
   {{ form.form_build_id }}
   {{ form.form_token }}
   {{ form.form_id }}
-
+<div class="mt-10 sm:mt-0">
+<div class="md:grid md:grid-cols-3 md:gap-6">
+<div class="md:col-span-1">
+  <div class="px-4 sm:px-0">
+    <h3 class="text-lg font-medium leading-6 text-gray-900">App Information</h3>
+    <p class="mt-1 text-sm text-gray-600">
+      Describe your application here.
+    </p>
+  </div>
+</div>
+<div class="mt-5 md:mt-0 md:col-span-2 shadow overflow-hidden sm:rounded-md bg-white py-6 sm:px-6 lg:px-8">
   {{ form.name }}
   {{ form.description }}
   {{ form.product }}
   {{ form.callback_url }}
-
+  {{ form.billing_threshold }}
+</div>  
+</div>  
+</div>
+<div class="hidden sm:block" aria-hidden="true">
+    <div class="py-5">
+      <div class="border-t border-gray-200"></div>
+    </div>
+</div>
+<div class="mt-10 sm:mt-0">
+<div class="md:grid md:grid-cols-3 md:gap-6">
+<div class="md:col-span-1">
+  <div class="px-4 sm:px-0">
+    <h3 class="text-lg font-medium leading-6 text-gray-900">Subscription Information</h3>
+  </div>
+</div>
+<div class="mt-5 md:mt-0 md:col-span-2 shadow overflow-hidden sm:rounded-md bg-white py-6 sm:px-6 lg:px-8">
   {{ form.billing_plan }}
   {{ form.subscription_period }}
   {{ form.auto_renew }}
+</div>  
+</div>  
+</div>
+<div class="flex justify-end py-6">
   {{ form.actions.submit }}
+</div>  
 </form>
+</div>
