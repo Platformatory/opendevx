@@ -49,3 +49,15 @@ opendevx_body_section:
   default_region: main
   icon_map:
     - [main]
+
+opendevx_app_form:
+  label: 'ODX App creation form'
+  category: 'ODX Layouts'
+  path: layouts/app_form
+  template: app-form
+  regions:
+    main:
+      label: Main content
+  default_region: main
+  icon_map:
+    - [main]

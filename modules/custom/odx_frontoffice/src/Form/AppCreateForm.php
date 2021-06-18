@@ -136,7 +136,7 @@ class AppCreateForm extends FormBase {
 
   protected function slugify($string) {
     // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
-    return strtolower(preg_replace('/[^a-zA-Z0-9-]+/', '-', $string));
+    return strtolower(preg_replace('/[^a-z0-9-]+/', '-', $string));
   }  
 
   /**
