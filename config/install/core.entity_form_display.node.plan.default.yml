@@ -2,82 +2,267 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.node.plan.billing_engine
-  - field.field.node.plan.currency
-  - field.field.node.plan.description
-  - field.field.node.plan.pricing_rules
-  - field.field.node.plan.products
-  - field.field.node.plan.usage_metric
-  - field.field.node.plan.usage_provider
-  - node.type.plan
+    - field.field.node.plan.api_calls_billing_metric
+    - field.field.node.plan.api_edge_proxy_help_text
+    - field.field.node.plan.api_gateway_agent_help_text
+    - field.field.node.plan.api_gateway_help_text
+    - field.field.node.plan.billing_engine
+    - field.field.node.plan.currency
+    - field.field.node.plan.description
+    - field.field.node.plan.log_collector_type
+    - field.field.node.plan.open_tracing_data_billing_metric
+    - field.field.node.plan.pricing_rules
+    - field.field.node.plan.products
+    - field.field.node.plan.request_billing_metric
+    - field.field.node.plan.response_billing_metric
+    - field.field.node.plan.usage_metric
+    - field.field.node.plan.usage_provider
+    - node.type.plan
   module:
-  - jsonb
+    - conditional_fields
+    - jsonb
+    - markup
 id: node.plan.default
 targetEntityType: node
 bundle: plan
 mode: default
 content:
+  api_calls_billing_metric:
+    third_party_settings:
+      conditional_fields:
+        9d32eaeb-aa22-4c38-af07-753ee28c3d8d:
+          dependee: usage_metric
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: api_call
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 29
+    settings: {  }
+    type: options_select
+    region: content
+  api_edge_proxy_help_text:
+    third_party_settings:
+      conditional_fields:
+        2dbabed6-900e-4196-8c49-98498f736e5d:
+          dependee: usage_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: gateway_proxy
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 28
+    settings: {  }
+    type: markup
+    region: content
+  api_gateway_agent_help_text:
+    third_party_settings:
+      conditional_fields:
+        6b114d20-cdfa-4cba-aa8f-6c5da748027d:
+          dependee: usage_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: gateway_agent
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 26
+    settings: {  }
+    type: markup
+    region: content
+  api_gateway_help_text:
+    third_party_settings:
+      conditional_fields:
+        4d14a88a-e130-46e5-a5f1-bde44c9165d3:
+          dependee: usage_provider
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: gateway
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 27
+    settings: {  }
+    type: markup
+    region: content
   billing_engine:
     weight: 2
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
     region: content
   currency:
-    weight: 5
+    weight: 6
     settings:
       size: 60
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
     type: string_textfield
     region: content
   description:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  log_collector_type:
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
+    region: content
+  open_tracing_data_billing_metric:
+    third_party_settings:
+      conditional_fields:
+        86a4228e-c9e9-449d-b830-2070793c2d45:
+          dependee: usage_metric
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: request_query_complexity
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 32
+    settings: {  }
+    type: options_select
+    region: content
+  pricing_rules:
     weight: 7
     settings:
       rows: 5
-      placeholder: ""
-    third_party_settings: {}
-    type: string_textarea
-    region: content
-  pricing_rules:
-    weight: 6
-    settings:
-      rows: 5
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
     type: jsonb_textarea
     region: content
   products:
     weight: 1
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
+    region: content
+  request_billing_metric:
+    third_party_settings:
+      conditional_fields:
+        d30cb29e-c5a8-4e6c-a632-6f7965650fe3:
+          dependee: usage_metric
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: request_bytes
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 30
+    settings: {  }
+    type: options_select
+    region: content
+  response_billing_metric:
+    third_party_settings:
+      conditional_fields:
+        5a69722c-570f-4b36-bb27-44b000a8298f:
+          dependee: usage_metric
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: response_bytes
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: plan
+    weight: 31
+    settings: {  }
+    type: options_select
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
-    third_party_settings: {}
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
   usage_metric:
-    weight: 4
-    settings: {}
-    third_party_settings: {}
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
     region: content
   usage_provider:
     weight: 3
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
     region: content
 hidden:

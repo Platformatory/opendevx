@@ -2,29 +2,66 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.node.plan.billing_engine
-  - field.field.node.plan.currency
-  - field.field.node.plan.description
-  - field.field.node.plan.pricing_rules
-  - field.field.node.plan.products
-  - field.field.node.plan.usage_metric
-  - field.field.node.plan.usage_provider
-  - node.type.plan
+    - field.field.node.plan.api_calls_billing_metric
+    - field.field.node.plan.api_edge_proxy_help_text
+    - field.field.node.plan.api_gateway_agent_help_text
+    - field.field.node.plan.api_gateway_help_text
+    - field.field.node.plan.billing_engine
+    - field.field.node.plan.currency
+    - field.field.node.plan.description
+    - field.field.node.plan.log_collector_type
+    - field.field.node.plan.open_tracing_data_billing_metric
+    - field.field.node.plan.pricing_rules
+    - field.field.node.plan.products
+    - field.field.node.plan.request_billing_metric
+    - field.field.node.plan.response_billing_metric
+    - field.field.node.plan.usage_metric
+    - field.field.node.plan.usage_provider
+    - node.type.plan
   module:
-  - jsonb
-  - options
-  - user
+    - jsonb
+    - markup
+    - options
+    - user
 id: node.plan.default
 targetEntityType: node
 bundle: plan
 mode: default
 content:
+  api_calls_billing_metric:
+    weight: 126
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  api_edge_proxy_help_text:
+    weight: 124
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  api_gateway_agent_help_text:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  api_gateway_help_text:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
   billing_engine:
     weight: 112
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     type: entity_reference_label
     region: content
   currency:
@@ -32,26 +69,40 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     type: string
     region: content
   description:
     weight: 121
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: basic_string
     region: content
   links:
     weight: 100
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  log_collector_type:
+    weight: 122
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  open_tracing_data_billing_metric:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   pricing_rules:
     weight: 119
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: jsonb_default
     region: content
   products:
@@ -59,21 +110,35 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  request_billing_metric:
+    weight: 127
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  response_billing_metric:
+    weight: 128
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   usage_metric:
     weight: 120
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: list_default
     region: content
   usage_provider:
     weight: 117
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: list_default
     region: content
-hidden: {}
+hidden: {  }

@@ -2,84 +2,125 @@ langcode: en
 status: true
 dependencies:
   config:
-  - core.entity_form_mode.node.odx
-  - field.field.node.plan.billing_engine
-  - field.field.node.plan.currency
-  - field.field.node.plan.description
-  - field.field.node.plan.pricing_rules
-  - field.field.node.plan.products
-  - field.field.node.plan.usage_metric
-  - field.field.node.plan.usage_provider
-  - node.type.plan
+    - core.entity_form_mode.node.odx
+    - field.field.node.plan.api_calls_billing_metric
+    - field.field.node.plan.api_edge_proxy_help_text
+    - field.field.node.plan.api_gateway_agent_help_text
+    - field.field.node.plan.api_gateway_help_text
+    - field.field.node.plan.billing_engine
+    - field.field.node.plan.currency
+    - field.field.node.plan.description
+    - field.field.node.plan.log_collector_type
+    - field.field.node.plan.open_tracing_data_billing_metric
+    - field.field.node.plan.pricing_rules
+    - field.field.node.plan.products
+    - field.field.node.plan.request_billing_metric
+    - field.field.node.plan.response_billing_metric
+    - field.field.node.plan.usage_metric
+    - field.field.node.plan.usage_provider
+    - node.type.plan
   module:
-  - field_group
-  - jsonb
+    - field_group
+    - jsonb
+    - markup
 third_party_settings:
   field_group:
     group_metadata:
       children:
-      - title
-      - description
-      - products
-      - usage_metric
-      parent_name: ""
+        - title
+        - description
+        - products
+        - usage_metric
+        - api_calls_billing_metric
+        - request_billing_metric
+        - response_billing_metric
+        - open_tracing_data_billing_metric
+      parent_name: ''
       weight: 0
       format_type: tab
       region: content
       format_settings:
-        id: ""
-        classes: ""
-        description: ""
-        formatter: closed
+        description: ''
+        formatter: open
         required_fields: true
+        id: ''
+        classes: ''
       label: Metadata
     group_pricing:
       children:
-      - currency
-      - pricing_rules
-      parent_name: ""
-      weight: 1
+        - currency
+        - pricing_rules
+      parent_name: ''
+      weight: 5
       format_type: tab
       region: content
       format_settings:
-        id: ""
-        classes: ""
-        description: ""
-        formatter: closed
+        description: ''
+        formatter: open
         required_fields: true
+        id: ''
+        classes: ''
       label: Pricing
     group_advanced_configuration:
       children:
-      - usage_provider
-      - billing_engine
-      parent_name: ""
-      weight: 2
+        - usage_provider
+        - api_gateway_help_text
+        - api_edge_proxy_help_text
+        - api_gateway_agent_help_text
+        - log_collector_type
+        - billing_engine
+      parent_name: ''
+      weight: 6
       format_type: tab
       region: content
       format_settings:
-        id: ""
-        classes: ""
-        description: ""
-        formatter: closed
+        description: ''
+        formatter: open
         required_fields: true
-      label: Advanced Configuration
+        id: ''
+        classes: ''
+      label: 'Advanced Configuration'
 id: node.plan.odx
 targetEntityType: node
 bundle: plan
 mode: odx
 content:
+  api_calls_billing_metric:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  api_edge_proxy_help_text:
+    type: markup
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  api_gateway_agent_help_text:
+    type: markup
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  api_gateway_help_text:
+    type: markup
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   billing_engine:
-    weight: 4
-    settings: {}
-    third_party_settings: {}
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
     region: content
   currency:
-    weight: 2
+    weight: 8
     settings:
       size: 60
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
     type: string_textfield
     region: content
   description:
@@ -88,49 +129,73 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
+  log_collector_type:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  open_tracing_data_billing_metric:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   pricing_rules:
     type: jsonb_textarea
-    weight: 3
+    weight: 9
     region: content
     settings:
       rows: 5
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
   products:
     weight: 3
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     type: options_buttons
     region: content
+  request_billing_metric:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  response_billing_metric:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 7
     region: content
-    third_party_settings: {}
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 1
     region: content
     settings:
       size: 60
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
   usage_metric:
     type: options_buttons
     weight: 4
     region: content
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
   usage_provider:
     type: options_buttons
-    weight: 3
+    weight: 8
     region: content
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   moderation_state: true

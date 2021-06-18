@@ -22,36 +22,6 @@ class AppCreateForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $form['name'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Name'),
-      '#required' => TRUE,
-    ];
-
-    $form['version'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Version'),
-      '#required' => TRUE,
-    ];
-
-    $form['description'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Description'),
-      '#required' => FALSE,
-    ];
-
-    $product_uuid = \Drupal::request()->query->get('product');
-
-    if ($product_uuid) {
-      $product = \Drupal::service('entity_type.manager')->getStorage('node')
-            ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
-      $product = reset($product);
-      $form['product'] = [
-        '#type' => 'hidden',
-        '#title' => t('Product'),
-        '#value' => $product->id(),
-      ];
-    }
     $plan_uuid = \Drupal::request()->query->get('plan');
 
     if ($plan_uuid) {
@@ -60,40 +30,98 @@ class AppCreateForm extends FormBase {
       $plan = reset($plan);
     }
 
-    if ($plan) {
-      $form['billing_plan'] = [
+
+    $product_uuid = \Drupal::request()->query->get('product');
+
+    if ($product_uuid) {
+      $product = \Drupal::service('entity_type.manager')->getStorage('node')
+            ->loadByProperties(['uuid' => $product_uuid, 'type' => 'product']);
+      $product = reset($product);
+      $app_id = $this->generateRandomString();
+      $form['name'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Name'),
+        '#required' => TRUE,
+        '#value' => 'app-'. $app_id . '-for-product-'. $this->slugify($product->label()) . '-subscription-'. $this->slugify($plan->label()),
+        '#attributes' => ['readonly' => 'readonly'],
+      ];
+
+      $form['product'] = [
         '#type' => 'hidden',
         '#title' => t('Product'),
-        '#value' => $plan->id(),
-      ];  
-    } else {
-      $plans = $product ? $this->getPlans($product):[];
-      // show billing plans if the product is
-      // associated with one or more of them
-      if ($plans) {
+        '#value' => $product->id(),
+      ];
+
+      $form['billing_threshold'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Billing Threshold'),
+        '#description' => $this->t('Billing Threshold value in %.'),
+        '#required' => TRUE,
+        '#attributes' => array(
+          ' type' => 'number',
+        ),
+        '#maxlength' => 3,
+      ];
+
+      $form['callback_url'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Callback URL'),
+        '#required' => TRUE,
+      ];
+
+      $plans = $this->getPlans($product);
+
+      if ($plan) {
         $form['billing_plan'] = [
           '#type' => 'radios',
           '#title' => t('Billing plan'),
           '#options' => $plans,
+          '#default_value' => $plan->id(),
           '#description' => t('Choose an appropriate billing plan for your app.'),
         ];
+      } else {
+        // show billing plans if the product is
+        // associated with one or more of them
+        if ($plans) {
+          $form['billing_plan'] = [
+            '#type' => 'radios',
+            '#title' => t('Billing plan'),
+            '#options' => $plans,
+            '#default_value' => $plan->id(),
+            '#description' => t('Choose an appropriate billing plan for your app.'),
+          ];
+        }
+      }
     }
-      $subscription_period_options = [
-        'monthly' => t('Monthly'),
-        'weekly' => t('Weekly'),
-      ];
-      $form['subscription_period'] = [
-        '#type' => 'select',
-        '#title' => t('Subscription period'),
-        '#options' => $subscription_period_options,
-      ];
-      $form['auto_renew'] = [
-        '#type' => 'checkbox',
-        '#title' => t('Auto Renew'),
-        '#default_value' => TRUE,
-      ];
 
-    }
+    $form['version'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Version'),
+      '#required' => FALSE,
+    ];
+
+    $form['description'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Description'),
+      '#required' => FALSE,
+    ];
+
+
+    $subscription_period_options = [
+      'monthly' => t('Monthly'),
+      'weekly' => t('Weekly'),
+    ];
+    $form['subscription_period'] = [
+      '#type' => 'radios',
+      '#title' => t('Subscription period'),
+      '#options' => $subscription_period_options,
+    ];
+    $form['auto_renew'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Auto Renew'),
+      '#default_value' => TRUE,
+    ];
+
     $form['actions'] = [
       '#type' => 'actions',
     ];
@@ -102,8 +130,14 @@ class AppCreateForm extends FormBase {
       '#value' => $this->t('Create'),
     ];
 
+    $form['#theme'] = 'app_create_form';
     return $form;
   }
+
+  protected function slugify($string) {
+    // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
+    return strtolower(preg_replace('/[^a-zA-Z0-9-]+/', '-', $string));
+  }  
 
   /**
    * {@inheritdoc}
@@ -130,7 +164,7 @@ class AppCreateForm extends FormBase {
     $this->messenger()->addStatus($this->t('Your app has been created.'));
     if ($form_state->getValue('billing_plan')) {
       $subscription = \Drupal::entityTypeManager()->getStorage('node')->create(['type' => 'subscription']);
-      $subscription->set('title', 'Subscription for' . $app->label());
+      $subscription->set('title', 'Subscription for ' . $app->label());
       $subscription->set('uid', $currentAccount->id());
       $subscription->applications[] = ['target_id' => (int) $app->id()];
       $subscription->set('auto_renew', $form_state->getValue('auto_renew'));
@@ -171,4 +205,14 @@ class AppCreateForm extends FormBase {
     }
     return $plans;
   }
+
+  protected function generateRandomString($length = 5) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+  }  
 }

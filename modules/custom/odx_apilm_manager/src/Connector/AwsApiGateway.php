@@ -84,7 +84,7 @@ class AwsApiGateway {
   }
 
   public function info() {
-    return ["version" => 1, "sdk_version" => 1];
+    return ["version" => 1, "sdk_version" => 1, "name" => "AwsApiGateway"];
   }
 
   public function connect() {
