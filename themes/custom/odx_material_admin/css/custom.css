@@ -1,7 +1,7 @@
-.btn,
+/* .btn,
 .btn:hover {
   background-color: #ec6302;
-}
+} */
 
 a.btn {
   text-decoration: none;
@@ -81,13 +81,6 @@ ul.dropdown-content a {
   margin-left: -30px;
 }
 
-#odx-page div.numbers-block {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
-  margin: auto;
-  height: 150px;
-}
-
 #odx-page div.numbers-block h1, #odx-page div.numbers-block h2, #odx-page div.numbers-block h3 {
   margin: 0;
 }
@@ -143,6 +136,11 @@ ul.dropdown-content a {
   float: left;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.87);
+}
+
+#odx-page nav.navbar .brand-logo img {
+  max-width: 260px;
+  margin-top: 5px;
 }
 
 #odx-page nav.navbar .brand-logo i {
@@ -438,7 +436,12 @@ ul.dropdown-content a {
 #odx-page .dropdown-trigger {
   cursor: pointer;
   width: 100%;
-  text-align: center;
+}
+
+#odx-page .select-wrapper {
+  width: 100%;
+  max-width: 40rem;
+  text-align: left;
 }
 
 #odx-page .context-switcher {
@@ -461,7 +464,7 @@ ul.dropdown-content a {
 }
 
 #odx-page .layout-content {
-  padding: 0 15px !important;
+  padding: 0 3px !important;
 }
 
 #odx-page .pagination {
@@ -766,13 +769,24 @@ ul.dropdown-content a {
   outline: none;
 }
 
+.block-odx-backoffice.block-odx-backoffice-side-nav {
+  box-shadow: 0px 0px 5px 0px #ccc;
+}
+
 #odx-page .layout-content-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  height: calc(100vh - 65px);
+  /* height: calc(100vh - 65px); */
   margin-bottom: 0;
   padding-left: 0px;
+  padding-right: 0;
+  padding-bottom: 0;
   padding-top: 0px;
+  background: #ffffff;
+}
+
+.vbo-table.views-table thead {
+  background: #e7e3df;
 }
 
 #odx-page .layout-content {
@@ -823,18 +837,18 @@ td.extra-info {
   display: flex;
   background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 7px #e6e6e6;
 }
 
 .group-form .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span, .group-form [type="radio"]:checked + span,
 .layout-node-form .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span,
 .layout-node-form [type="radio"]:checked + span {
   position: relative;
-  padding-left: 100px;
+  padding-left: 40px;
   cursor: pointer;
   display: inline-block;
   height: 60px;
-  line-height: 55px;
+  line-height: 25px;
   font-size: 1rem;
   /* color: transparent; */
   transition: .28s ease;
@@ -842,6 +856,9 @@ td.extra-info {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
 }
 
 .group-form .form-radios .form-item.form-type-radio label [type="radio"] + span:before,
@@ -858,6 +875,19 @@ td.extra-info {
   z-index: 0;
   transition: .28s ease;
 }
+#edit-provider-wrapper .group-form .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span, 
+#edit-provider-wrapper .group-form [type="radio"]:checked + span,
+#edit-provider-wrapper .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span,
+#edit-provider-wrapper [type="radio"]:checked + span {
+  font-size: 0;
+}
+
+#edit-billing-provider-wrapper .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span, 
+#edit-billing-provider-wrapper [type="radio"]:checked + span,
+#edit-billing-provider-wrapper .form-radios .form-item.form-type-radio label [type="radio"]:not(:checked) + span,
+#edit-billing-provider-wrapper [type="radio"]:checked + span {
+  font-size: 0;
+}
 
 i.block-btn {
   width: 100%;
@@ -868,4 +898,401 @@ i.login-icon {
     margin-left: 10px;
     margin-right: 0px;
     font-size: 2rem;
+}
+
+
+input:not([type]), input[type='text']:not(.browser-default), input[type='password']:not(.browser-default), input[type='email']:not(.browser-default), input[type='url']:not(.browser-default), input[type='time']:not(.browser-default), input[type='date']:not(.browser-default), input[type='datetime']:not(.browser-default), input[type='datetime-local']:not(.browser-default), input[type='tel']:not(.browser-default), input[type='number']:not(.browser-default), input[type='search']:not(.browser-default) {
+  width: 100%;
+  max-width: 40rem;
+}
+
+textarea.materialize-textarea {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.dashboard-content .numbers-block {
+  min-height: 110px;
+  height: auto !important;
+}
+
+.dashboard-two .numbers-block {
+  color: white;
+}
+
+.dashboard-content .numbers-block .icon i {
+  color: white;
+}
+
+.dashboard-content {
+  padding: 0px 20px 24px !important;
+}
+
+.dashboard-two .numbers-block .icon i{
+  font-size: 24px;
+}
+
+.section-graph-wrapper {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 5%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+  padding: 10px;
+  margin: auto auto 0 8px;;
+  background: #fff;
+}
+
+
+.blue-bg {
+  background: #4aaef9 !important;
+}
+
+.yellow-bg {
+  background: #f7c444 !important;
+}
+
+.meroon-bg {
+  background: #eb5281 !important;
+}
+
+.green-bg {
+  background: #83bb7c !important;
+}
+
+.pink-bg {
+  background: #7f6ab9 !important;
+}
+
+.section-wrapper {
+  padding: 0 20px;
+  position: relative;
+}
+
+body.material_login{
+  background: url(https://images.pexels.com/photos/2344306/pexels-photo-2344306.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body.material_login .layout-container > main {
+  background: transparent !important;
+}
+
+body.material_login .s12.m8 {
+  background: #212121;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0 !important;
+    padding: 20px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body.material_login input {
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body.material_login form#openid-connect-login-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body.material_login .card {
+  box-shadow: 0 0 0;
+  border-top: solid 1px #444;
+  background-color: transparent !important;
+}
+
+body.material_login .card .card-content {
+  padding: 10px 20px 0px;
+  border-radius: 0 0 2px 2px;
+}
+
+.form-item--error-message {
+  color: #fff;
+}
+
+.user-pass p {
+  color: #ccc;
+}
+
+input[value=apigee_hybrid]>span{
+  background :red;
+}
+
+input[value=apigee_hybrid]:not(:checked) + span, 
+input[value=apigee_hybrid]:checked + span {
+  background: url(../images/apigee-hybrid.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=apigee_saas]:not(:checked) + span, 
+input[value=apigee_saas]:checked + span {
+  background: url(../images/apigee-enterprise.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=kong]:not(:checked) + span, 
+input[value=kong]:checked + span {
+  background: url(../images/kong.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=istio]:not(:checked) + span, 
+input[value=istio]:checked + span {
+  background: url(../images/istio.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=aws]:not(:checked) + span, 
+input[value=aws]:checked + span {
+  background: url(../images/aws.png) no-repeat;
+    background-size: 150px;
+    width: 100%;
+    background-position: 24px center;
+}
+
+input[value=azure]:not(:checked) + span, 
+input[value=azure]:checked + span {
+  background: url(../images/azure.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 22px center;
+}
+
+input[value=layer7]:not(:checked) + span, 
+input[value=layer7]:checked + span {
+  background: url(../images/Broadcom_logo.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 24px center;
+}
+
+input[value=mulesoft]:not(:checked) + span, 
+input[value=mulesoft]:checked + span {
+  background: url(../images/mulesoft.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 28px center;
+}
+
+input[value=webmethods]:not(:checked) + span, 
+input[value=webmethods]:checked + span {
+  background: url(../images/webmethods.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 24px center;
+}
+
+input[value=wso2]:not(:checked) + span, 
+input[value=wso2]:checked + span {
+  background: url(../images/wso2.png) no-repeat;
+    background-size: 150px;
+    width: 100%;
+    background-position: 24px center;
+}
+
+
+input[value=stripe]:not(:checked) + span, 
+input[value=stripe]:checked + span {
+  background: url(../images/stripe.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=chargebee]:not(:checked) + span, 
+input[value=chargebee]:checked + span {
+  background: url(../images/chargebee.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=recurly]:not(:checked) + span, 
+input[value=recurly]:checked + span {
+  background: url(../images/recurly.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=zoho]:not(:checked) + span, 
+input[value=zoho2]:checked + span {
+  background: url(../images/zoho.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+input[value=zuora]:not(:checked) + span, 
+input[value=zuora]:checked + span {
+  background: url(../images/zuora.png) no-repeat;
+    background-size: 160px;
+    width: 100%;
+    background-position: 30px center;
+}
+
+fieldset.fieldgroup.form-wrapper legend span.fieldset-legend, label {
+  background: transparent;
+  padding-left: 0;
+  color: #4c4c4c;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+
+td.views-field.views-field-provider {
+  padding: 0 20px 15px;
+}
+
+.views-field-provider span, .views-field-billing-provider span {
+  width: 180px;
+  height: 35px;
+  display: inline-block;
+  color: transparent;
+  font-size: 0;
+}
+
+.views-field-provider span.kong {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/kong.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.apigee_hybrid {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/apigee-hybrid.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.azure {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/azure.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.istio {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/istio.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.aws {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/aws.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.layer7 {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/Broadcom_logo.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.mulesoft {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/mulesoft.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.webmethods {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/webmethods.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.wso2 {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/wso2.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.apigee_saas {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/apigee-enterprise.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.stripe {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/stripe.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.chargebee {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/chargebee.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.recurly {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/recurly.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.zoho {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/zoho.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.zuora {
+  background: url(/profiles/contrib/opendevx/themes/custom/odx_material_admin/images/zuora.png) no-repeat;
+    background-size: 160px;
+    background-position: -5px center;
+}
+
+.view-support .view-header {
+  padding: 20px 0px 0px;
+}
+
+.button.button-action.waves-effect.waves-light {
+  margin: 10px 0;
+}
+
+.table-filter .form-type-search label {
+  display: none;
+}
+
+.search-wrapper {
+  border-bottom: 1px solid #9e9e9e;
+}
+
+.search-wrapper input{
+  border-bottom: none !important;
+}
+
+.view-repositories .view-header, .view-domains .view-header, .view-apis .view-header, .view-users .view-header, .view-applications .view-header, .view-products .view-header, .view-domain-content .view-header, .view-billing-engines .view-header, .view-billing-plans .view-header, .view-subscriptions .view-header {
+  position: absolute;
+  z-index: 1;
+  top: 26px;
+  left: 10px;
+}
+
+#block-odx-material-admin-content .btn-floating.btn-large{
+  max-width: 32px;
+  max-height: 32px;
+  line-height: 32px;
+  position: relative;
+  top: 10px;
+  left: 0px;
+}
+
+#block-odx-material-admin-content .btn-floating.btn-large i {
+  line-height: 33px;
+  width: 30px;
 }

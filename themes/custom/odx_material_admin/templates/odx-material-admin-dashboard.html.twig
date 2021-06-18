@@ -59,7 +59,7 @@
             </div>
          </div>
       </div>
-      <div class="row dashboard-content dshboard-two">
+      <div class="row dashboard-content dashboard-two">
          <div class="col s2 center apis cont-block">
             <div class="numbers-block blue-bg">
                <div class="icon">
@@ -121,8 +121,10 @@
 
 
 <div class="row">
-  <div class="col s4 center">
-    <h1>{{ performance.title }}</h1>
-    {{ performance.graph }}
+  <div class="col s5 center">
+    <div class="section-graph-wrapper">
+      <h3>{{ performance.title }}</h3>
+      {{ performance.graph }}
+   </div>
   </div>
 </div>

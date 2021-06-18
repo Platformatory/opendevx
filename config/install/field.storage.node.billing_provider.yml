@@ -2,31 +2,34 @@ langcode: en
 status: true
 dependencies:
   module:
-  - node
-  - options
+    - node
+    - options
 id: node.billing_provider
 field_name: billing_provider
 entity_type: node
 type: list_string
 settings:
   allowed_values:
-  - value: stripe
-    label: Stripe
-  - value: chargebee
-    label: Chargebee
-  - value: recurly
-    label: Recurly
-  - value: zoho
-    label: Zoho
-  - value: zuora
-    label: Zuora
-  - value: custom
-    label: Custom
-  allowed_values_function: ""
+    -
+      value: stripe
+      label: Stripe
+    -
+      value: chargebee
+      label: Chargebee
+    -
+      value: recurly
+      label: Recurly
+    -
+      value: zoho
+      label: Zoho
+    -
+      value: zuora
+      label: Zuora
+  allowed_values_function: ''
 module: options
 locked: false
 cardinality: 1
 translatable: true
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
