@@ -147,7 +147,11 @@ nav.navbar .brand-logo {
 	position: relative;
 	float: left;
 	font-size: 18px;
-	color: rgba(0, 0, 0, 0.87)
+	color: #fff;
+	img {
+		max-width: 190px;
+		margin-top: 5px;
+	}
 }
 
 nav.navbar .brand-logo i {
