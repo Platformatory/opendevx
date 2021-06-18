@@ -181,6 +181,7 @@ class OdxApilmManagerController extends OdxBaseController {
     $node->set('api_type', $json->api_type);
     $node->set('source', $source_nid);
     $node->set('internal_metadata', json_encode($json->internal_metadata));
+    $node->set('remote', json_encode($json->remote));    
     //$node->set('is_api_product', 1); // This should be sourced from a gateway or global configuration
     $node->save();
   }
