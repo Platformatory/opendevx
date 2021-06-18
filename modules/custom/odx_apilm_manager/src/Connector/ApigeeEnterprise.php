@@ -94,7 +94,7 @@ class ApigeeEnterprise {
   }
 
   public function info() {
-    return ["version" => 1, "sdk_version" => 1];
+    return ["version" => 1, "sdk_version" => 1, "name" => "ApigeeEnterprise"];
   }
 
   public function connect() {

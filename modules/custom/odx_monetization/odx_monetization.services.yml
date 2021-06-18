@@ -4,3 +4,7 @@ services:
     arguments: ['@messenger']
     tags:
       - { name: event_subscriber }
+
+  odx_monetization.billing:
+    class: Drupal\odx_monetization\Billing
+    arguments: ['@entity_type.manager', '@database']

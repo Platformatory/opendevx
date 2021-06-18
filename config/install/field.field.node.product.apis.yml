@@ -10,7 +10,7 @@ field_name: apis
 entity_type: node
 bundle: product
 label: APIs
-description: Select APIs part of this product
+description: Select APIs part of this product.
 required: true
 translatable: true
 default_value: {}

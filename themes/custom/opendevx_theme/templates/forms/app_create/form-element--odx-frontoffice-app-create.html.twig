@@ -65,8 +65,8 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-    {% if type != 'radio' %}
-        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+    {% if type not in ['radio', 'checkbox'] %}
+        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
     {% endif %}
     {% if label_display in ['before', 'invisible'] %}
         {{ label }}
@@ -96,7 +96,7 @@
         {{ description.content }}
         </div>
     {% endif %}
-    {% if type != 'radio' %}
+    {% if type not in ['radio', 'checkbox'] %}
         </div>
     {% endif %}
 </div>
