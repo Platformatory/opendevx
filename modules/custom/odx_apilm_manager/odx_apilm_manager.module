@@ -42,7 +42,7 @@ function odx_apilm_manager_metadata() {
       'label' => 'Kong Enterprise',
       'disabled' => TRUE,
       'version' => 'v1',
-      'classpath' => '',
+      'classpath' => 'Drupal\odx_apilm_manager\Connector\KongEnterprise',
       ),
     'wso2' => array(
       'label' => 'WSO2 API Manager',
