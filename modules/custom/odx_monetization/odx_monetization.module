@@ -123,6 +123,8 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
   $usage_details = _odx_monetization_get_usage_for_app($app, $duration);
   $usage_details = reset($usage_details);
   $usage = $usage_details['usage'];
+  // usage smoke and mirrors !@!@!@
+  $usage = rand(0, 200);
   $pricing = json_decode($plan->pricing_rules->value, JSON_OBJECT_AS_ARRAY);
   $bill = array();
   $bill['total'] = '';
