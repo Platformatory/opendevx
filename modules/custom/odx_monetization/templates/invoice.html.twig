@@ -2,8 +2,6 @@
     <div class="w-240 p-16 rounded-2xl shadow bg-card print:w-auto print:rounded-none print:shadow-none print:bg-transparent">
         <div class="flex items-start justify-between">
             <div class="grid grid-cols-2 gap-x-4 gap-y-1">
-                <div class="text-4xl tracking-tight text-secondary">INVOICE</div>
-                <div class="text-4xl">#9-0004</div>
                 <div class="font-medium tracking-tight text-secondary">INVOICE DATE</div>
                 <div class="font-medium">{{ end_date }}</div>
                 <div class="font-medium tracking-tight text-secondary">START DATE</div>
@@ -11,19 +9,6 @@
                 <div class="font-medium tracking-tight text-secondary">TOTAL DUE</div>
                 <div class="font-medium">{{ invoice.total }}</div>
             </div>
-            <div class="grid auto-cols-max grid-flow-col gap-x-8 -mr-16 py-6 px-8 rounded-l-2xl bg-accent dark">
-                <div class="place-self-center w-24">
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow" class="w-24">
-                </div>
-                <div class="pl-10 border-l text-md">
-                    <div class="font-medium">Acme API Inc.</div>
-                </div>
-            </div>
-        </div>
-        <div class="text-md mt-12">
-            <div class="text-xl font-medium">Brian Hughes</div>
-            <div>9301 Wood Street Philadelphia, PA 19111</div>
-            <div>hughes.brian@company.com</div>
         </div>
         <div class="grid grid-cols-12 gap-x-1 mt-12">
             <div class="col-span-8 font-medium text-md text-secondary">SERVICE</div>
