@@ -165,7 +165,6 @@ install:
 - formdazzle
 - views
 - paragraphs
-- config_terms
 dependencies:
 - node
 - block
@@ -176,6 +175,7 @@ themes:
 - seven
 - stable
 - classy
+- bootstrap_barrio
 - material_admin
 - odx_material_admin
 - opendevx_theme
