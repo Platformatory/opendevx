@@ -48,6 +48,7 @@ class SiteSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
+    // will be removed or moved to a different config key
     $form['site_footer'] = [
       '#type' => 'textarea',
       '#title' => t('Footer'),
