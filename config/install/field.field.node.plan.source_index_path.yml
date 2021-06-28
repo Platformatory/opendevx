@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.node.source_index_path
+  - node.type.plan
+id: node.plan.source_index_path
+field_name: source_index_path
+entity_type: node
+bundle: plan
+label: Source Index Path
+description: ""
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ""
+settings: {}
+field_type: string

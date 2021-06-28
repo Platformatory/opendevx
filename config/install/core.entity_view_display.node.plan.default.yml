@@ -9,6 +9,7 @@ dependencies:
   - field.field.node.plan.filter_expression
   - field.field.node.plan.pricing_rules
   - field.field.node.plan.products
+  - field.field.node.plan.source_index_path
   - field.field.node.plan.usage_provider
   - node.type.plan
   module:
@@ -97,6 +98,14 @@ content:
       link: true
     third_party_settings: {}
     type: entity_reference_label
+    region: content
+  source_index_path:
+    weight: 128
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+    type: string
     region: content
   usage_provider:
     weight: 117

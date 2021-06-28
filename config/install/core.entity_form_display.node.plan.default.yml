@@ -9,6 +9,7 @@ dependencies:
   - field.field.node.plan.filter_expression
   - field.field.node.plan.pricing_rules
   - field.field.node.plan.products
+  - field.field.node.plan.source_index_path
   - field.field.node.plan.usage_provider
   - node.type.plan
   module:
@@ -154,6 +155,14 @@ content:
     settings: {}
     third_party_settings: {}
     type: options_buttons
+    region: content
+  source_index_path:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ""
+    third_party_settings: {}
+    type: string_textfield
     region: content
   status:
     type: boolean_checkbox
