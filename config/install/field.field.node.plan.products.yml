@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.products
-    - node.type.plan
-    - node.type.product
+  - field.storage.node.products
+  - node.type.plan
+  - node.type.product
 id: node.plan.products
 field_name: products
 entity_type: node
 bundle: plan
 label: Products
-description: 'Products this billing plan is available for'
+description: Products this billing plan is available for
 required: true
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:node'
+  handler: default:node
   handler_settings:
     target_bundles:
       product: product
@@ -24,5 +24,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ""
 field_type: entity_reference

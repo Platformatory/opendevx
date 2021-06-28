@@ -1,0 +1,19 @@
+langcode: en
+status: false
+dependencies:
+  module:
+  - system
+  theme:
+  - odx_bootstrap
+id: odx_bootstrap_breadcrumbs
+theme: odx_bootstrap
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs (Material Admin)
+  provider: system
+  label_display: "0"
+visibility: {}

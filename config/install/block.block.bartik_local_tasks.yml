@@ -1,11 +1,11 @@
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
   - bartik
 id: bartik_local_tasks
 theme: bartik
-region: content
+region: ""
 weight: -40
 provider: null
 plugin: local_tasks_block

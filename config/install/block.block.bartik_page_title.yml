@@ -1,11 +1,11 @@
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
   - bartik
 id: bartik_page_title
 theme: bartik
-region: content
+region: ""
 weight: -50
 provider: null
 plugin: page_title_block

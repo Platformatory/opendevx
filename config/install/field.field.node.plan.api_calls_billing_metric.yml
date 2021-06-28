@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.api_calls_billing_metric
-    - node.type.plan
+  - field.storage.node.api_calls_billing_metric
+  - node.type.plan
   module:
-    - options
+  - options
 id: node.plan.api_calls_billing_metric
 field_name: api_calls_billing_metric
 entity_type: node
 bundle: plan
-label: 'API Calls Billing metric'
-description: ''
+label: API Calls Billing metric
+description: ""
 required: false
 translatable: false
 default_value:
-  -
-    value: count
-default_value_callback: ''
-settings: {  }
+- value: count
+default_value_callback: ""
+settings: {}
 field_type: list_string
