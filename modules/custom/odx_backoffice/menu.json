@@ -27,7 +27,7 @@
       {
         "link": "/backoffice/discover/repositories",
         "icon": "storage",
-        "title": "Repositories"
+        "title": "API Sources"
       },
       {
         "link": "/backoffice/discover/apis",
@@ -37,7 +37,7 @@
       {
         "link": "/backoffice/discover/users",
         "icon": "recent_actors",
-        "title": "Developers"
+        "title": "Users"
       },
       {
         "link": "/backoffice/discover/applications",
