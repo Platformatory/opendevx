@@ -236,16 +236,32 @@ display:
               action_id: node_promote_action
               preconfiguration:
                 label_override: Add to featured
+                add_confirmation: 0
             2:
               action_id: node_make_unsticky_action
+              preconfiguration:
+                add_confirmation: 0
             5:
               action_id: node_unpromote_action
-            8:
-              action_id: entity:unpublish_action:node
+              preconfiguration:
+                add_confirmation: 0
             9:
+              action_id: odx_backoffice_move_items_to_existing_domain
+              preconfiguration:
+                add_confirmation: 0
+            11:
+              action_id: entity:unpublish_action:node
+              preconfiguration:
+                add_confirmation: 0
+            12:
               action_id: entity:publish_action:node
-            10:
+              preconfiguration:
+                add_confirmation: 0
+            13:
               action_id: entity:save_action:node
+              preconfiguration:
+                add_confirmation: 0
+          force_selection_info: false
           plugin_id: views_bulk_operations_bulk_form
         title:
           id: title
