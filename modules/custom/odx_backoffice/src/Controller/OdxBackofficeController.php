@@ -270,10 +270,6 @@ class OdxBackofficeController extends OdxBaseController {
         'title' => 'ARPD',
         'value' => '$1044',
       ],
-      '#performance' => [
-        'title' => 'Program performance',
-        'graph' => $performance,
-      ],
     ];
     // Program performance
     // Top products
