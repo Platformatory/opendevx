@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.log_collector_type
-    - node.type.plan
+  - field.storage.node.log_collector_type
+  - node.type.plan
   module:
-    - options
+  - options
 id: node.plan.log_collector_type
 field_name: log_collector_type
 entity_type: node
 bundle: plan
-label: 'Log collector type'
-description: ''
+label: Log collector type
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: list_string

@@ -2,23 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.api_edge_proxy_help_text
-    - node.type.plan
+  - field.storage.node.api_edge_proxy_help_text
+  - node.type.plan
   module:
-    - markup
+  - markup
 id: node.plan.api_edge_proxy_help_text
 field_name: api_edge_proxy_help_text
 entity_type: node
 bundle: plan
-label: 'API Edge Proxy Help Text'
-description: ''
+label: API Edge Proxy Help Text
+description: ""
 required: false
 translatable: false
 default_value:
-  - {  }
-default_value_callback: ''
+- {}
+default_value_callback: ""
 settings:
   markup:
-    value: "<p>You need to deploy Envoy in front of your API as an interception proxy and set Envoy log destination to&nbsp;<a href=\"http://telemetry.opendevx.io/\">telemetry.opendevx.io</a>.</p>\r\n"
+    value: "<p>You need to deploy Envoy in front of your API as an interception proxy
+      and set Envoy log destination to&nbsp;<a href=\"http://telemetry.opendevx.io/\">telemetry.opendevx.io</a>.</p>\r\n"
     format: basic_html
 field_type: markup

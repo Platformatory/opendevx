@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.node.filter_expression
+  - node.type.plan
+  module:
+  - jsonb
+id: node.plan.filter_expression
+field_name: filter_expression
+entity_type: node
+bundle: plan
+label: Filter Expression
+description: Qualifies valid transactions in the usage data. Used only if the usage
+  provider is "Common log store".
+required: true
+translatable: false
+default_value:
+- value: "[\r\n  {\r\n    \"response.status\": 200 \r\n   },\r\n  {\r\n   \"consumer.username\":
+    \ \"%credential.uid\"\r\n   }\r\n]"
+default_value_callback: ""
+settings: {}
+field_type: json

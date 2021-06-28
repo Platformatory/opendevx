@@ -1,0 +1,23 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ""
+  url: ""
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: false
+logo:
+  path: public://OpenDevX-logo.png
+  url: ""
+  use_default: false
+material_admin_node_actions: false
+material_admin_portal_login: true
+material_admin_jqueryui_dialog_background: false
+material_admin_jqueryui_dialog_close: false
+material_admin_collapse_module_list: false
+material_admin_message_length: null
+material_admin_message_prompt: false
+material_admin_datepicker_select_years: null
+material_admin_select_default: false

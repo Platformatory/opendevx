@@ -1,183 +1,181 @@
 name: OpenDevX
 type: profile
-description: 'Platform for Enterprise API Programs & Developer Ecosystems'
+description: Platform for Enterprise API Programs & Developer Ecosystems
 version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9
 distribution:
   name: OpenDevX
   langcode: en
-
 install:
-  - action
-  - admin_login_path
-  - automated_cron
-  - avatars
-  - avatars_gravatar
-  - basic_auth
-  - better_exposed_filters
-  - big_pipe
-  - block
-  - block_content
-  - block_list_override
-  - book
-  - bootstrap_paragraphs
-  - bp_callout
-  - bp_card
-  - bp_quicklinks
-  - bp_statistics
-  - br_group
-  - breakpoint
-  - business_rules
-  - chartjs_api
-  - checklistapi
-  - ckeditor
-  - color
-  - color_field
-  - computed_field
-  - conditional_fields
-  - config
-  - contact
-  - contact_formatter
-  - content_moderation
-  - contextual
-  - ctools
-  - datatables
-  - datetime
-  - dblog
-  - dbug
-  - devel
-  - dynamic_page_cache
-  - editor
-  - entity
-  - entity_browser
-  - entity_browser_entity_form
-  - entity_legal
-  - entity_reference_revisions
-  - entity_usage
-  - entityqueue
-  - entityqueue_smartqueue
-  - fac
-  - field
-  - field_group
-  - field_name_prefix_remove
-  - field_ui
-  - file
-  - file_url
-  - filter
-  - font_awesome
-  - gnode
-  - google_analytics
-  - google_analytics_reports
-  - google_analytics_reports_api
-  - group
-  - group_permissions
-  - help
-  - history
-  - image
-  - inline_entity_form
-  - inline_form_errors
-  - jquery_ui
-  - jquery_ui_datepicker
-  - jquery_ui_slider
-  - jsonapi
-  - jsonapi_extras
-  - jsonb
-  - layout_builder
-  - layout_builder_restrictions
-  - layout_discovery
-  - link
-  - link_attributes
-  - lp_fontawesome
-  - mail_login
-  - markdown
-  - markup
-  - masonry
-  - media
-  - media_entity_browser
-  - media_entity_browser_media_library
-  - media_library
-  - menu_link_content
-  - menu_ui
-  - module_builder
-  - node
-  - odx_apilm_manager
-  - odx_backoffice
-  - odx_backoffice_guide
-  - odx_developer_journey
-  - odx_forms
-  - odx_frontoffice
-  - odx_integrations
-  - odx_monetization
-  - openapi
-  - openapi_jsonapi
-  - openapi_ui
-  - openapi_ui_redoc
-  - openapi_ui_swagger
-  - openid_connect
-  - options
-  - page_cache
-  - paragraphs_library
-  - path
-  - path_alias
-  - quickedit
-  - rdf
-  - responsive_image
-  - rest
-  - restui
-  - schemata
-  - schemata_json_schema
-  - search
-  - serialization
-  - settings_tray
-  - shortcut
-  - simple_page_manager
-  - simplesamlphp_auth
-  - statistics
-  - swagger_ui_formatter
-  - syslog
-  - system
-  - taxonomy
-  - text
-  - token
-  - toolbar
-  - tour
-  - twig_tools
-  - twig_tweak
-  - unlimited_number
-  - user
-  - variationcache
-  - views_bulk_operations
-  - views_ui
-  - viewsreference
-  - webform
-  - webform_attachment
-  - webform_group
-  - webform_node
-  - webform_options_limit
-  - webform_submission_export_import
-  - webform_submission_log
-  - webform_ui
-  - workflows
-  - pathauto
-  - webform_bootstrap
-  - masonry_views
-  - externalauth
-  - formdazzle
-  - views
-  - paragraphs
-
+- action
+- admin_login_path
+- automated_cron
+- avatars
+- avatars_gravatar
+- basic_auth
+- better_exposed_filters
+- big_pipe
+- block
+- block_content
+- block_list_override
+- book
+- bootstrap_paragraphs
+- bp_callout
+- bp_card
+- bp_quicklinks
+- bp_statistics
+- br_group
+- breakpoint
+- business_rules
+- chartjs_api
+- checklistapi
+- ckeditor
+- color
+- color_field
+- computed_field
+- conditional_fields
+- config
+- contact
+- contact_formatter
+- content_moderation
+- contextual
+- ctools
+- datatables
+- datetime
+- dblog
+- dbug
+- devel
+- dynamic_page_cache
+- editor
+- entity
+- entity_browser
+- entity_browser_entity_form
+- entity_legal
+- entity_reference_revisions
+- entity_usage
+- entityqueue
+- entityqueue_smartqueue
+- fac
+- field
+- field_group
+- field_name_prefix_remove
+- field_ui
+- file
+- file_url
+- filter
+- font_awesome
+- gnode
+- google_analytics
+- google_analytics_reports
+- google_analytics_reports_api
+- group
+- group_permissions
+- help
+- history
+- image
+- inline_entity_form
+- inline_form_errors
+- jquery_ui
+- jquery_ui_datepicker
+- jquery_ui_slider
+- jsonapi
+- jsonapi_extras
+- jsonb
+- layout_builder
+- layout_builder_restrictions
+- layout_discovery
+- link
+- link_attributes
+- lp_fontawesome
+- mail_login
+- markdown
+- markup
+- masonry
+- media
+- media_entity_browser
+- media_entity_browser_media_library
+- media_library
+- menu_link_content
+- menu_ui
+- module_builder
+- node
+- odx_apilm_manager
+- odx_backoffice
+- odx_backoffice_guide
+- odx_developer_journey
+- odx_forms
+- odx_frontoffice
+- odx_integrations
+- odx_monetization
+- openapi
+- openapi_jsonapi
+- openapi_ui
+- openapi_ui_redoc
+- openapi_ui_swagger
+- openid_connect
+- options
+- page_cache
+- paragraphs_library
+- path
+- path_alias
+- quickedit
+- rdf
+- responsive_image
+- rest
+- restui
+- schemata
+- schemata_json_schema
+- search
+- serialization
+- settings_tray
+- shortcut
+- simple_page_manager
+- simplesamlphp_auth
+- statistics
+- swagger_ui_formatter
+- syslog
+- system
+- taxonomy
+- text
+- token
+- toolbar
+- tour
+- twig_tools
+- twig_tweak
+- unlimited_number
+- user
+- variationcache
+- views_bulk_operations
+- views_ui
+- viewsreference
+- webform
+- webform_attachment
+- webform_group
+- webform_node
+- webform_options_limit
+- webform_submission_export_import
+- webform_submission_log
+- webform_ui
+- workflows
+- pathauto
+- webform_bootstrap
+- masonry_views
+- externalauth
+- formdazzle
+- views
+- paragraphs
+- config_terms
 dependencies:
- - node
- - block
- - views
- - book
-
+- node
+- block
+- views
+- book
 themes:
-  - bartik
-  - seven
-  - stable
-  - classy
-  - material_admin
-  - odx_material_admin
-  - opendevx_theme
+- bartik
+- seven
+- stable
+- classy
+- material_admin
+- odx_material_admin
+- opendevx_theme

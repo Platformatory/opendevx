@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.response_billing_metric
-    - node.type.plan
+  - field.storage.node.response_billing_metric
+  - node.type.plan
   module:
-    - options
+  - options
 id: node.plan.response_billing_metric
 field_name: response_billing_metric
 entity_type: node
 bundle: plan
-label: 'Response Billing Metric'
-description: ''
+label: Response Billing Metric
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
+default_value: {}
+default_value_callback: ""
+settings: {}
 field_type: list_string
