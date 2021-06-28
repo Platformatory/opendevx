@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   module:
   - system
@@ -7,7 +7,7 @@ dependencies:
   - bartik
 id: bartik_branding
 theme: bartik
-region: header
+region: ""
 weight: 0
 provider: null
 plugin: system_branding_block

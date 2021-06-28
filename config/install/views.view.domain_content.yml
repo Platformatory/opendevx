@@ -4,6 +4,7 @@ dependencies:
   config:
   - field.storage.node.tags
   - group.type.domain
+  - node.type.book
   - node.type.event
   - node.type.faq
   - node.type.file
@@ -235,17 +236,49 @@ display:
           clear_on_exposed: true
           action_title: Action
           selected_actions:
-          - action_id: node_promote_action
-          - action_id: node_assign_owner_action
-          - action_id: node_make_unsticky_action
-          - action_id: node_unpublish_by_keyword_action
-          - action_id: node_make_sticky_action
-          - action_id: node_unpromote_action
-          - action_id: views_bulk_operations_delete_entity
-          - action_id: pathauto_update_alias
-          - action_id: entity:unpublish_action:node
-          - action_id: entity:publish_action:node
-          - action_id: entity:save_action:node
+            0:
+              action_id: node_promote_action
+              preconfiguration:
+                add_confirmation: 0
+            1:
+              action_id: node_assign_owner_action
+              preconfiguration:
+                add_confirmation: 0
+            2:
+              action_id: node_make_unsticky_action
+              preconfiguration:
+                add_confirmation: 0
+            3:
+              action_id: node_unpublish_by_keyword_action
+              preconfiguration:
+                add_confirmation: 0
+            4:
+              action_id: node_make_sticky_action
+              preconfiguration:
+                add_confirmation: 0
+            5:
+              action_id: node_unpromote_action
+              preconfiguration:
+                add_confirmation: 0
+            9:
+              action_id: odx_backoffice_move_items_to_existing_domain
+              preconfiguration:
+                add_confirmation: 0
+            10:
+              action_id: views_bulk_operations_delete_entity
+            11:
+              action_id: entity:unpublish_action:node
+              preconfiguration:
+                add_confirmation: 0
+            12:
+              action_id: entity:publish_action:node
+              preconfiguration:
+                add_confirmation: 0
+            13:
+              action_id: entity:save_action:node
+              preconfiguration:
+                add_confirmation: 0
+          force_selection_info: false
           plugin_id: views_bulk_operations_bulk_form
         title:
           id: title
@@ -807,8 +840,8 @@ display:
           entity_type: node
           plugin_id: entity_operations
       filters:
-        type:
-          id: type
+        type_1:
+          id: type_1
           table: node_field_data
           field: type
           relationship: none
@@ -816,34 +849,30 @@ display:
           admin_label: ""
           operator: in
           value:
+            news: news
+            book: book
             event: event
             faq: faq
-            file: file
-            media: media
-            news: news
             page: page
             usecase: usecase
             webform: webform
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: type_op
-            label: Content type
+            operator_id: ""
+            label: ""
             description: ""
             use_operator: false
-            operator: type_op
+            operator: ""
             operator_limit_selection: false
             operator_list: {}
-            identifier: type
+            identifier: ""
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: "0"
-              administrator: "0"
-              odx_administrator: "0"
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ""
@@ -902,6 +931,58 @@ display:
           plugin_id: boolean
           entity_type: node
           entity_field: status
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ""
+          operator: in
+          value:
+            event: event
+            faq: faq
+            file: file
+            media: media
+            news: news
+            page: page
+            usecase: usecase
+            webform: webform
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: Content type
+            description: ""
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {}
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: "0"
+              administrator: "0"
+              odx_administrator: "0"
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ""
+            description: ""
+            identifier: ""
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {}
+            group_items: {}
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
         created:
           id: created

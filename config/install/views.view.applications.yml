@@ -898,7 +898,7 @@ display:
               action_id: odx_apilm_manager_sync_api_lifecycle_entity
               preconfiguration:
                 add_confirmation: 0
-          force_selection_info: 0
+          force_selection_info: false
           plugin_id: views_bulk_operations_bulk_form
         title:
           id: title
