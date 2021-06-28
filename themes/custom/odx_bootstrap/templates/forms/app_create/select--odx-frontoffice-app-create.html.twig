@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the <select> tag.
+ * - options: The <option> element children.
+ *
+ * @see template_preprocess_select()
+ */
+#}
+<div class="mt-1 sm:mt-0 sm:col-span-2">
+{% apply spaceless %}
+  <select{{ attributes.addClass('max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md') }}>
+    {% for option in options %}
+      {% if option.type == 'optgroup' %}
+        <optgroup label="{{ option.label }}">
+          {% for sub_option in option.options %}
+            <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+          {% endfor %}
+        </optgroup>
+      {% elseif option.type == 'option' %}
+        <option value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+{% endapply %}
+</div>

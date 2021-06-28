@@ -1,0 +1,160 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: (optional) The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'flex',
+  ]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+  <div class="md:hidden">
+    <div class="fixed inset-0 z-40 flex">
+      <!--
+        Off-canvas menu overlay, show/hide based on off-canvas menu state.
+
+        Entering: "transition-opacity ease-linear duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "transition-opacity ease-linear duration-300"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div class="fixed inset-0" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+      </div>
+      <!--
+        Off-canvas menu, show/hide based on off-canvas menu state.
+
+        Entering: "transition ease-in-out duration-300 transform"
+          From: "-translate-x-full"
+          To: "translate-x-0"
+        Leaving: "transition ease-in-out duration-300 transform"
+          From: "translate-x-0"
+          To: "-translate-x-full"
+      -->
+      <div class="relative max-w-xs w-full bg-white pt-5 pb-4 flex-1 flex flex-col">
+        <div class="absolute top-0 right-0 -mr-12 pt-2">
+          <button class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <span class="sr-only">Close sidebar</span>
+            <!-- Heroicon name: outline/x -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-5 flex-1 h-0 overflow-y-auto">
+          {{ drupal_block('book_navigation', { block_mode: "book pages" }) }}
+        </div>
+      </div>
+      <div class="flex-shrink-0 w-14">
+        <!-- Dummy element to force sidebar to shrink to fit close icon -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Static sidebar for desktop -->
+  <div class="hidden md:flex md:flex-shrink-0">
+    <div class="w-64 flex flex-col">
+      <!-- Sidebar component, swap this element with another sidebar if you like -->
+      <div class="border-r border-gray-200 pt-5 pb-4 flex flex-col flex-grow overflow-y-auto">
+        <div class="flex-grow mt-5 flex flex-col">
+          {{ drupal_block('book_navigation', { block_mode: "book pages" }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-1 container mx-auto w-0 flex flex-col md:px-8 xl:px-0 overflow-visible">
+    <main class="flex-1 relative overflow-y-auto focus:outline-none" tabindex="0">
+      <div class="py-6">
+        <div class="px-4 sm:px-6 md:px-0">
+          <h1 class="text-2xl font-semibold text-gray-900">{{ label }}</h1>
+        </div>
+        <div class="px-4 sm:px-6 md:px-0">
+          <!-- Replace with your content -->
+          <div class="p-4">
+            {{ content|without('book_navigation', 'links') }}
+          </div>
+          <!-- /End replace -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+{{ attach_library('opendevx/highlightjs') }}
+{{ attach_library('opendevx/tabby') }}
