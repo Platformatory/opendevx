@@ -146,7 +146,18 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
 
   if($plan->usage_provider->value == 'standard_collector') {
     $analytics_service = _get_provisioned_usage_analytics_client($plan);
+    // get the index from plan
     $params['index'] = $plan->source_index_path->value;
+    // get the time range from subscription
+    $params['body']['query']['bool']['must'][] = [
+      'range' => [
+        '@timestamp' => [
+          'gte' => $duration['start'],
+          'lte' => $duration['end'],
+        ]
+      ]
+    ];
+    // get filter expression(s) from plan
     $filter_expression = json_decode($plan->filter_expression->value, JSON_OBJECT_AS_ARRAY);
     foreach($filter_expression as $expr) {
       $metric = reset(array_keys($expr));
@@ -154,18 +165,23 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
       $value = _odx_monetization_tokenize_value($app, $value);
       $params['body']['query']['bool']['must'][] = ['term' => [$metric => $value]];
     }
+    // get the aggregation expression(s) from plan
     $aggregation_expression = json_decode($plan->aggregation_expression->value, JSON_OBJECT_AS_ARRAY);
     foreach($aggregation_expression as $expr) {
       $metric = reset(array_keys($expr));
       $aggregation_fn = reset(array_values($expr));
       $params['body']['aggs'][$metric] = [$aggregation_fn => ['field' => $metric ]];
     }
+    // perform actual search
     $response = $analytics_service->search($params);
-    $ret = ['count' => $response['hits']['total']['value'], 'aggregations' => $response['aggregations']];
-    kpr($ret);
-    exit();
+    // construct response
+    $ret = [
+      'count' => $response['hits']['total']['value'], 
+      'aggregations' => $response['aggregations'],
+    ];
   }
 
+  $usage = $ret['count'];
   $pricing = json_decode($plan->pricing_rules->value, JSON_OBJECT_AS_ARRAY);
   $bill = array();
   $bill['total'] = '';
