@@ -91,6 +91,13 @@ function odx_monetization_node_view(array &$build, \Drupal\Core\Entity\EntityInt
   }
 }
 
+function _odx_monetization_tokenize_value(\Drupal\node\NodeInterface $app, $value) {
+  if ($value == '%credential.uid') {
+    return $app->getOwner()->getAccountName();
+  }
+  return $value;
+}
+
 function _odx_monetization_get_usage_for_app(\Drupal\node\NodeInterface $entity, $duration = FALSE) {
   $product = $entity->get('products')->first()->get('entity')->getTarget()->getValue();
   if(empty($duration)) {
@@ -140,10 +147,23 @@ function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscript
   if($plan->usage_provider->value == 'standard_collector') {
     $analytics_service = _get_provisioned_usage_analytics_client($plan);
     $params['index'] = $plan->source_index_path->value;
-    $params['body']['query']['bool']['must'][] = ['term' => ['response.status' => 200]];
-    $params['body']['query']['bool']['must'][] = ['term' => ['consumer.username' => 'admin']];
-    //$params['body']['aggs'][] = ['query_count' => ['sum' => ['field' => 'request.query.count' ]]];
+    $filter_expression = json_decode($plan->filter_expression->value, JSON_OBJECT_AS_ARRAY);
+    foreach($filter_expression as $expr) {
+      $metric = reset(array_keys($expr));
+      $value = reset(array_values($expr));
+      $value = _odx_monetization_tokenize_value($app, $value);
+      $params['body']['query']['bool']['must'][] = ['term' => [$metric => $value]];
+    }
+    $aggregation_expression = json_decode($plan->aggregation_expression->value, JSON_OBJECT_AS_ARRAY);
+    foreach($aggregation_expression as $expr) {
+      $metric = reset(array_keys($expr));
+      $aggregation_fn = reset(array_values($expr));
+      $params['body']['aggs'][$metric] = [$aggregation_fn => ['field' => $metric ]];
+    }
     $response = $analytics_service->search($params);
+    $ret = ['count' => $response['hits']['total']['value'], 'aggregations' => $response['aggregations']];
+    kpr($ret);
+    exit();
   }
 
   $pricing = json_decode($plan->pricing_rules->value, JSON_OBJECT_AS_ARRAY);
