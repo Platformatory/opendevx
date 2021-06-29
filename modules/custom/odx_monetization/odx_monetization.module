@@ -85,6 +85,7 @@ function odx_monetization_node_view(array &$build, \Drupal\Core\Entity\EntityInt
         ];
       }
     }
+    $build['#cache']['max-age'] = 0;
   }
   if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'product' && $view_mode == "hero") {
     $build['product_uuid']['#plain_text'] = $entity->uuid();
