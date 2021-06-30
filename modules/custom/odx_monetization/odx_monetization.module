@@ -10,6 +10,8 @@
  */
 
  use \Drupal\node\Entity\Node;
+ use Elasticsearch\ClientBuilder;
+ use Drupal\Core\Site\Settings;
 
 /**
  * Implements hook_theme().
@@ -83,10 +85,18 @@ function odx_monetization_node_view(array &$build, \Drupal\Core\Entity\EntityInt
         ];
       }
     }
+    $build['#cache']['max-age'] = 0;
   }
   if ($entity->getEntityType()->id() == 'node' && $entity->bundle() == 'product' && $view_mode == "hero") {
     $build['product_uuid']['#plain_text'] = $entity->uuid();
   }
+}
+
+function _odx_monetization_tokenize_value(\Drupal\node\NodeInterface $app, $value) {
+  if ($value == '%credential.uid') {
+    return $app->getOwner()->getAccountName();
+  }
+  return $value;
 }
 
 function _odx_monetization_get_usage_for_app(\Drupal\node\NodeInterface $entity, $duration = FALSE) {
@@ -113,18 +123,66 @@ function _odx_monetization_get_usage_for_app(\Drupal\node\NodeInterface $entity,
   return $usage;
 }
 
+function _get_provisioned_usage_analytics_client(\Drupal\node\NodeInterface $plan) {
+  $hosts = Settings::get('analytics_hosts');
+  $client = ClientBuilder::create()->setHosts($hosts)->build();
+  return $client;
+}
+
 function _odx_monetization_compute_billing(\Drupal\node\NodeInterface $subscription) {
   $app = $subscription->get('applications')->first()->get('entity')->getTarget()->getValue();
   $plan = $subscription->get('billing_plan')->first()->get('entity')->getTarget()->getValue();
+
   $duration = array(
     'start' => $subscription->start_date->date->format('Y-m-d'),
     'end' => $subscription->end_date->date->format('Y-m-d'),
   );
-  $usage_details = _odx_monetization_get_usage_for_app($app, $duration);
-  $usage_details = reset($usage_details);
-  $usage = $usage_details['usage'];
-  // usage smoke and mirrors !@!@!@
-  $usage = rand(0, 200);
+
+  // Check if the usage provider is gateway - proceed BAU
+
+  if($plan->usage_provider->value == 'gateway') {
+    $usage_details = _odx_monetization_get_usage_for_app($app, $duration);
+    $usage_details = reset($usage_details);
+  }
+
+  if($plan->usage_provider->value == 'standard_collector') {
+    $analytics_service = _get_provisioned_usage_analytics_client($plan);
+    // get the index from plan
+    $params['index'] = $plan->source_index_path->value;
+    // get the time range from subscription
+    $params['body']['query']['bool']['must'][] = [
+      'range' => [
+        '@timestamp' => [
+          'gte' => $duration['start'],
+          'lte' => $duration['end'],
+        ]
+      ]
+    ];
+    // get filter expression(s) from plan
+    $filter_expression = json_decode($plan->filter_expression->value, JSON_OBJECT_AS_ARRAY);
+    foreach($filter_expression as $expr) {
+      $metric = reset(array_keys($expr));
+      $value = reset(array_values($expr));
+      $value = _odx_monetization_tokenize_value($app, $value);
+      $params['body']['query']['bool']['must'][] = ['term' => [$metric => $value]];
+    }
+    // get the aggregation expression(s) from plan
+    $aggregation_expression = json_decode($plan->aggregation_expression->value, JSON_OBJECT_AS_ARRAY);
+    foreach($aggregation_expression as $expr) {
+      $metric = reset(array_keys($expr));
+      $aggregation_fn = reset(array_values($expr));
+      $params['body']['aggs'][$metric] = [$aggregation_fn => ['field' => $metric ]];
+    }
+    // perform actual search
+    $response = $analytics_service->search($params);
+    // construct response
+    $ret = [
+      'count' => $response['hits']['total']['value'], 
+      'aggregations' => $response['aggregations'],
+    ];
+  }
+
+  $usage = $ret['count'];
   $pricing = json_decode($plan->pricing_rules->value, JSON_OBJECT_AS_ARRAY);
   $bill = array();
   $bill['total'] = '';
