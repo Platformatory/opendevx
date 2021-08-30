@@ -34,6 +34,7 @@
         "drupal/color_field": "^2.4",
         "drupal/computed_field": "3.x",
         "drupal/conditional_fields": "^1.0@alpha",
+        "drupal/config_terms": "^1.4",
         "drupal/contact_formatter": "^2.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",

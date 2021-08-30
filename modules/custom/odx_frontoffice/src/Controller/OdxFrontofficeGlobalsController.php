@@ -46,6 +46,7 @@ class OdxFrontofficeGlobalsController extends ControllerBase {
       '#suffix' => '</div>',
   ];
     $build['subscriptions']['#attached']['library'][] = 'opendevx_theme/jquerymodal';
+    $build['#cache']['max-age'] = 0;
     return $build;
   }
 

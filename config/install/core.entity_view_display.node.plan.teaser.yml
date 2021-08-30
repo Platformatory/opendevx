@@ -10,6 +10,7 @@ dependencies:
   - field.field.node.plan.filter_expression
   - field.field.node.plan.pricing_rules
   - field.field.node.plan.products
+  - field.field.node.plan.source_index_path
   - field.field.node.plan.usage_provider
   - node.type.plan
   module:
@@ -35,4 +36,5 @@ hidden:
   filter_expression: true
   pricing_rules: true
   products: true
+  source_index_path: true
   usage_provider: true

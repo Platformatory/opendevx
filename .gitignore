@@ -6,6 +6,7 @@ profiles/opendevx/themes/custom/*/node_modules
 composer.lock
 
 /config/install/core.extension.yml
+/config/install/system.site.yml
 /config/install/update.settings.yml
 
 # Ignore sensitive information
